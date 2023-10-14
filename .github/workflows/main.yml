@@ -40,7 +40,7 @@ jobs:
 
       # Build
       - name: Build project
-        uses: game-ci/unity-builder@v3
+        uses: owof-games/unity-builder@27487e4cc4f5b624d566e4308f4eb0d56d4a13a1
         env:
           UNITY_LICENSE: ${{ secrets.UNITY_LICENSE }}
           UNITY_EMAIL: ${{ secrets.UNITY_EMAIL }}
