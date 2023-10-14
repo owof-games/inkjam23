@@ -42,8 +42,9 @@ jobs:
       - name: Build project (1)
         id: build-0
         continue-on-error: true
+        timeout-minutes: 20
         # use fixed docker windows usage, as per https://discord.com/channels/710946343828455455/1156880998122913872/1157680471451381831
-        uses: owof-games/unity-builder@96399801b32662bbe0d796d4df9682fd08fa9923
+        uses: owof-games/unity-builder@85008dd47f6f27b5d63b3ec2b194694414fbe7a8
         env:
           UNITY_LICENSE: ${{ secrets.UNITY_LICENSE }}
           UNITY_EMAIL: ${{ secrets.UNITY_EMAIL }}
@@ -61,13 +62,15 @@ jobs:
         if: steps.build-0.outcome == 'failure'
         id: build-1
         continue-on-error: true
-        uses: owof-games/unity-builder@96399801b32662bbe0d796d4df9682fd08fa9923
+        timeout-minutes: 20
+        uses: owof-games/unity-builder@85008dd47f6f27b5d63b3ec2b194694414fbe7a8
         env:
           UNITY_LICENSE: ${{ secrets.UNITY_LICENSE }}
           UNITY_EMAIL: ${{ secrets.UNITY_EMAIL }}
           UNITY_PASSWORD: ${{ secrets.UNITY_PASSWORD }}
         with:
           targetPlatform: StandaloneWindows
+          allowDirtyBuild: true
       
       - name: Sleep for Retry 2
         if: ${{ steps.build-0.outcome == 'failure' && steps.build-1.outcome == 'failure' }}
@@ -77,13 +80,15 @@ jobs:
       - name: Build project (2)
         if: ${{ steps.build-0.outcome == 'failure' && steps.build-1.outcome == 'failure' }}
         id: build-2
-        uses: owof-games/unity-builder@96399801b32662bbe0d796d4df9682fd08fa9923
+        timeout-minutes: 20
+        uses: owof-games/unity-builder@85008dd47f6f27b5d63b3ec2b194694414fbe7a8
         env:
           UNITY_LICENSE: ${{ secrets.UNITY_LICENSE }}
           UNITY_EMAIL: ${{ secrets.UNITY_EMAIL }}
           UNITY_PASSWORD: ${{ secrets.UNITY_PASSWORD }}
         with:
           targetPlatform: StandaloneWindows
+          allowDirtyBuild: true
 
       # Output
       - uses: actions/upload-artifact@v3
