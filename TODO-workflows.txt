@@ -1,0 +1,3 @@
+double flow for push on main, or tag on main => see buildsystem
+configuration matrix for all platforms => see manifesto
+check how to send only the mac build to a hosted runned, all others to self-hosted
