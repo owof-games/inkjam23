@@ -3,60 +3,60 @@ name: Actions 😎
 on: [push, pull_request, workflow_dispatch]
 
 jobs:
-  build-windows:
-    name: Build my project [windows] ✨
-    runs-on: [self-hosted, windows-containers]
-    steps:
-      # Checkout (without LFS)
-      - name: Checkout repository
-        uses: actions/checkout@v3
+  # build-windows:
+  #   name: Build my project [windows] ✨
+  #   runs-on: [self-hosted, windows-containers]
+  #   steps:
+  #     # Checkout (without LFS)
+  #     - name: Checkout repository
+  #       uses: actions/checkout@v3
 
-      # Git LFS
-      - name: Create LFS file list
-        shell: sh {0}
-        run: git lfs ls-files -l | cut -d' ' -f1 | sort > .lfs-assets-id
+  #     # Git LFS
+  #     - name: Create LFS file list
+  #       shell: sh {0}
+  #       run: git lfs ls-files -l | cut -d' ' -f1 | sort > .lfs-assets-id
 
-      - name: Restore LFS cache
-        uses: actions/cache@v3
-        id: lfs-cache
-        with:
-          path: .git/lfs
-          key: ${{ runner.os }}-lfs-${{ hashFiles('.lfs-assets-id') }}
+  #     - name: Restore LFS cache
+  #       uses: actions/cache@v3
+  #       id: lfs-cache
+  #       with:
+  #         path: .git/lfs
+  #         key: ${{ runner.os }}-lfs-${{ hashFiles('.lfs-assets-id') }}
 
-      - name: Git LFS Pull
-        shell: sh {0}
-        run: |
-          git lfs pull
-          git add .
-          git reset --hard
+  #     - name: Git LFS Pull
+  #       shell: sh {0}
+  #       run: |
+  #         git lfs pull
+  #         git add .
+  #         git reset --hard
 
-      # Cache
-      - uses: actions/cache@v3
-        with:
-          path: Library
-          key: Library-${{ hashFiles('Assets/**', 'Packages/**', 'ProjectSettings/**') }}
-          restore-keys: |
-            Library-
+  #     # Cache
+  #     - uses: actions/cache@v3
+  #       with:
+  #         path: Library
+  #         key: Library-${{ hashFiles('Assets/**', 'Packages/**', 'ProjectSettings/**') }}
+  #         restore-keys: |
+  #           Library-
 
-      # Build
-      - name: Build project
-        id: build
-        continue-on-error: true
-        timeout-minutes: 40
-        # use fixed docker windows usage, as per https://discord.com/channels/710946343828455455/1156880998122913872/1157680471451381831
-        uses: owof-games/unity-builder@96399801b32662bbe0d796d4df9682fd08fa9923
-        env:
-          UNITY_LICENSE: ${{ secrets.UNITY_LICENSE }}
-          UNITY_EMAIL: ${{ secrets.UNITY_EMAIL }}
-          UNITY_PASSWORD: ${{ secrets.UNITY_PASSWORD }}
-        with:
-          targetPlatform: StandaloneWindows
+  #     # Build
+  #     - name: Build project
+  #       id: build
+  #       continue-on-error: true
+  #       timeout-minutes: 40
+  #       # use fixed docker windows usage, as per https://discord.com/channels/710946343828455455/1156880998122913872/1157680471451381831
+  #       uses: owof-games/unity-builder@96399801b32662bbe0d796d4df9682fd08fa9923
+  #       env:
+  #         UNITY_LICENSE: ${{ secrets.UNITY_LICENSE }}
+  #         UNITY_EMAIL: ${{ secrets.UNITY_EMAIL }}
+  #         UNITY_PASSWORD: ${{ secrets.UNITY_PASSWORD }}
+  #       with:
+  #         targetPlatform: StandaloneWindows
   
-      # Output
-      - uses: actions/upload-artifact@v3
-        with:
-          name: StandaloneWindows
-          path: build
+  #     # Output
+  #     - uses: actions/upload-artifact@v3
+  #       with:
+  #         name: StandaloneWindows
+  #         path: build
 
   build-linux:
     name: Build my project [linux] ✨
@@ -106,6 +106,7 @@ jobs:
           UNITY_PASSWORD: ${{ secrets.UNITY_PASSWORD }}
         with:
           targetPlatform: StandaloneLinux64
+          customImage: ubuntu-2022.3.10f1-linux-il2cpp-2.0.0
   
       # Output
       - uses: actions/upload-artifact@v3
