@@ -16,10 +16,13 @@ jobs:
       - ${{ matrix.tag }}
     name: Build on ${{ matrix.tag }} 👷‍♀️
     steps:
-      # build:
+      - name: Fix permissions
+        shell: sh
+        run: chown -R $USER:$USER $GITHUB_WORKSPACE
+
       # Checkout (without LFS)
       - name: Checkout repository
-        uses: actions/checkout@v3.0.2
+        uses: actions/checkout@v3
 
       # Git LFS
       - name: Create LFS file list
