@@ -18,7 +18,7 @@ jobs:
     steps:
       - name: Fix permissions
         shell: sh
-        run: chown -R $USER:$USER $GITHUB_WORKSPACE
+        run: sudo chown -R $USER:$USER $GITHUB_WORKSPACE
 
       # Checkout (without LFS)
       - name: Checkout repository
