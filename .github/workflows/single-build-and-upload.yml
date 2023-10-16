@@ -28,6 +28,12 @@ on:
     secrets:
       BUTLER_CREDENTIALS:
         required: true
+      UNITY_LICENSE:
+        required: true
+      UNITY_EMAIL:
+        required: true
+      UNITY_PASSWORD:
+        required: true
 jobs:
   single-build-and-upload:
     runs-on: ${{ fromJson(inputs.tags) }}

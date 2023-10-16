@@ -26,7 +26,13 @@ on:
     secrets:
       BUTLER_CREDENTIALS:
         required: true
-
+      UNITY_LICENSE:
+        required: true
+      UNITY_EMAIL:
+        required: true
+      UNITY_PASSWORD:
+        required: true
+  
 jobs:
   windows:
     if: ${{ !inputs.excludes_windows }}
@@ -42,6 +48,9 @@ jobs:
       channel: win
     secrets:
       BUTLER_CREDENTIALS: ${{ secrets.BUTLER_CREDENTIALS }}
+      UNITY_LICENSE: ${{ secrets.UNITY_LICENSE }}
+      UNITY_EMAIL: ${{ secrets.UNITY_EMAIL }}
+      UNITY_PASSWORD: ${{ secrets.UNITY_PASSWORD }}
   linux:
     if: ${{ !inputs.excludes_linux }}
     uses: ./.github/workflows/single-build-and-upload.yml
@@ -56,6 +65,9 @@ jobs:
       channel: linux
     secrets:
       BUTLER_CREDENTIALS: ${{ secrets.BUTLER_CREDENTIALS }}
+      UNITY_LICENSE: ${{ secrets.UNITY_LICENSE }}
+      UNITY_EMAIL: ${{ secrets.UNITY_EMAIL }}
+      UNITY_PASSWORD: ${{ secrets.UNITY_PASSWORD }}
   webgl:
     if: ${{ !inputs.excludes_webgl }}
     uses: ./.github/workflows/single-build-and-upload.yml
@@ -70,6 +82,9 @@ jobs:
       channel: webgl
     secrets:
       BUTLER_CREDENTIALS: ${{ secrets.BUTLER_CREDENTIALS }}
+      UNITY_LICENSE: ${{ secrets.UNITY_LICENSE }}
+      UNITY_EMAIL: ${{ secrets.UNITY_EMAIL }}
+      UNITY_PASSWORD: ${{ secrets.UNITY_PASSWORD }}
   macos:
     if: ${{ !inputs.excludes_macos }}
     uses: ./.github/workflows/single-build-and-upload.yml
@@ -84,3 +99,6 @@ jobs:
       channel: mac
     secrets:
       BUTLER_CREDENTIALS: ${{ secrets.BUTLER_CREDENTIALS }}
+      UNITY_LICENSE: ${{ secrets.UNITY_LICENSE }}
+      UNITY_EMAIL: ${{ secrets.UNITY_EMAIL }}
+      UNITY_PASSWORD: ${{ secrets.UNITY_PASSWORD }}
