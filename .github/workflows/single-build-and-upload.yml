@@ -25,6 +25,10 @@ on:
       channel:
         required: true
         type: string
+      fix_permissions:
+        required: false
+        type: boolean
+        default: false
     secrets:
       BUTLER_CREDENTIALS:
         required: true
@@ -46,11 +50,9 @@ jobs:
       # This also contains info about running self-hosted docker as non-root:
       # https://github.com/actions/runner/issues/434
       - name: Fix permissions
+        if: ${{ inputs.fix_permissions }}
         shell: sh
-        run: |
-          if command -v sudo &>/dev/null ; then
-            sudo chown -R $USER:$USER $GITHUB_WORKSPACE 
-          fi
+        run: sudo chown -R $USER:$USER $GITHUB_WORKSPACE
 
       # Checkout (without LFS)
       - name: Checkout repository
