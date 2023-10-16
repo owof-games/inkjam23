@@ -1,0 +1,32 @@
+name: Manual Build ✍️
+
+on:
+  workflow_dispatch:
+    inputs:
+      exclude_windows:
+        type: boolean
+        default: true
+      exclude_macos:
+        type: boolean
+        default: true
+      exclude_linux:
+        type: boolean
+        default: true
+      exclude_webgl:
+        type: boolean
+        default: False
+
+jobs:
+  build-and-upload:
+    uses: ./.github/workflows/build-and-upload.yml
+    with:
+      project_name: ${{ vars.PRIVATE_PROJECT_NAME }}
+      excludes_windows: ${{ inputs.exclude_windows }}
+      excludes_macos: ${{ inputs.exclude_macos }}
+      excludes_linux: ${{ inputs.exclude_linux }}
+      excludes_webgl: ${{ inputs.exclude_webgl }}
+    secrets:
+      BUTLER_CREDENTIALS: ${{ secrets.BUTLER_CREDENTIALS }}
+      UNITY_LICENSE: ${{ secrets.UNITY_LICENSE }}
+      UNITY_EMAIL: ${{ secrets.UNITY_EMAIL }}
+      UNITY_PASSWORD: ${{ secrets.UNITY_PASSWORD }}
