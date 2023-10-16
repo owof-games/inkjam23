@@ -1,11 +1,11 @@
 on:
   workflow_call:
     inputs:
-      version:
-        required: false
-        type: string
       project_name:
         required: true
+        type: string
+      version:
+        required: false
         type: string
       tags:
         required: true

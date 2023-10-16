@@ -32,6 +32,8 @@ jobs:
     if: ${{ !inputs.excludes_windows }}
     uses: ./.github/workflows/single-build-and-upload.yml
     with:
+      project_name: ${{ inputs.project_name }}
+      version: ${{ inputs.version }}
       tags: '["self-hosted", "Windows"]'
       name: Windows 🗔
       targetPlatform: StandaloneWindows
@@ -44,6 +46,8 @@ jobs:
     if: ${{ !inputs.excludes_linux }}
     uses: ./.github/workflows/single-build-and-upload.yml
     with:
+      project_name: ${{ inputs.project_name }}
+      version: ${{ inputs.version }}
       tags: '["self-hosted", "Linux"]'
       name: Linux 🐧
       targetPlatform: StandaloneLinux64
@@ -56,6 +60,8 @@ jobs:
     if: ${{ !inputs.excludes_webgl }}
     uses: ./.github/workflows/single-build-and-upload.yml
     with:
+      project_name: ${{ inputs.project_name }}
+      version: ${{ inputs.version }}
       tags: '["self-hosted", "Linux"]'
       name: WebGL 🌐
       targetPlatform: WebGL
@@ -68,6 +74,8 @@ jobs:
     if: ${{ !inputs.excludes_macos }}
     uses: ./.github/workflows/single-build-and-upload.yml
     with:
+      project_name: ${{ inputs.project_name }}
+      version: ${{ inputs.version }}
       tags: '["macos-latest"]'
       name: MacOS 🍏
       targetPlatform: StandaloneOSX
