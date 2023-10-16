@@ -13,7 +13,7 @@ jobs:
           - tag: Linux
             name: Linux 🐧
             targetPlatform: StandaloneLinux64
-          - tag: X64
+          - tag: Linux
             name: WebGL 🌐
             targetPlatform: WebGL
     runs-on:
