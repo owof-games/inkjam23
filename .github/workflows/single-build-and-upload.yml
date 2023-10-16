@@ -1,0 +1,110 @@
+on:
+  workflow_call:
+    inputs:
+      version:
+        required: false
+        type: string
+      project_name:
+        required: true
+        type: string
+      tags:
+        required: true
+        type: string
+      name:
+        required: true
+        type: string
+      targetPlatform:
+        required: true
+        type: string
+      timeout:
+        required: true
+        type: number
+      buildContinueOnError:
+        required: true
+        type: boolean
+      channel:
+        required: true
+        type: string
+    secrets:
+      BUTLER_CREDENTIALS:
+        required: true
+jobs:
+  single-build-and-upload:
+    runs-on: ${{ fromJson(inputs.tags) }}
+    name: Build for ${{ inputs.name }}
+    steps:
+      # see https://github.com/actions/checkout/issues/211, and in particular
+      # https://github.com/actions/checkout/issues/211#issuecomment-611986243
+      # and
+      # https://github.com/actions/checkout/issues/211#issuecomment-1463921672
+      # This also contains info about running self-hosted docker as non-root:
+      # https://github.com/actions/runner/issues/434
+      - name: Fix permissions
+        shell: sh
+        run: |
+          if command -v sudo &>/dev/null ; then
+            sudo chown -R $USER:$USER $GITHUB_WORKSPACE 
+          fi
+
+      # Checkout (without LFS)
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      # Git LFS
+      - name: Create LFS file list
+        shell: sh {0}
+        run: git lfs ls-files -l | cut -d' ' -f1 | sort > .lfs-assets-id
+
+      - name: Restore LFS cache
+        uses: actions/cache@v3
+        id: lfs-cache
+        with:
+          path: .git/lfs
+          key: ${{ runner.os }}-lfs-${{ hashFiles('.lfs-assets-id') }}
+
+      - name: Git LFS Pull
+        shell: sh {0}
+        run: |
+          git lfs pull
+          git add .
+          git reset --hard
+
+      # Cache
+      - name: Cache Library
+        uses: actions/cache@v3
+        with:
+          path: Library
+          key: Library-${{ hashFiles('Assets/**', 'Packages/**', 'ProjectSettings/**') }}
+          restore-keys: |
+            Library-
+
+      # Build
+      - name: Build project
+        id: build
+        timeout-minutes: ${{ inputs.timeout }}
+        continue-on-error: ${{ inputs.buildContinueOnError }}
+        # use fixed docker windows usage, as per https://discord.com/channels/710946343828455455/1156880998122913872/1157680471451381831
+        uses: owof-games/unity-builder@96399801b32662bbe0d796d4df9682fd08fa9923
+        env:
+          UNITY_LICENSE: ${{ secrets.UNITY_LICENSE }}
+          UNITY_EMAIL: ${{ secrets.UNITY_EMAIL }}
+          UNITY_PASSWORD: ${{ secrets.UNITY_PASSWORD }}
+        with:
+          targetPlatform: ${{ inputs.targetPlatform }}
+
+      # Save as artifact
+      - name: Upload build as artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: ${{ inputs.targetPlatform }}
+          path: build
+
+      - name: Upload build to itch.io
+        uses: manleydev/butler-publish-itchio-action@master
+        env:
+          BUTLER_CREDENTIALS: ${{ secrets.BUTLER_CREDENTIALS }}
+          CHANNEL: ${{ inputs.channel }}
+          ITCH_GAME: ${{ inputs.project_name }}
+          ITCH_USER: ${{ vars.ITCH_USER }}
+          PACKAGE: build
+          VERSION: ${{ inputs.version }}

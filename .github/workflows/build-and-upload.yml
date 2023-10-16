@@ -1,0 +1,78 @@
+on:
+  workflow_call:
+    inputs:
+      version:
+        required: false
+        type: string
+      project_name:
+        required: true
+        type: string
+      excludes_windows:
+        required: false
+        type: boolean
+        default: false
+      excludes_linux:
+        required: false
+        type: boolean
+        default: false
+      excludes_macos:
+        required: false
+        type: boolean
+        default: false
+      excludes_webgl:
+        required: false
+        type: boolean
+        default: false
+    secrets:
+      BUTLER_CREDENTIALS:
+        required: true
+
+jobs:
+  windows:
+    if: !inputs.excludes_windows
+    uses: ./.github/workflows/single-build-and-upload.yml
+    with:
+      tags: '["self-hosted", "Windows"]'
+      name: Windows 🗔
+      targetPlatform: StandaloneWindows
+      timeout: 15
+      buildContinueOnError: true
+      channel: win
+    secrets:
+      BUTLER_CREDENTIALS: ${{ secrets.BUTLER_CREDENTIALS }}
+  linux:
+    if: !inputs.excludes_linux
+    uses: ./.github/workflows/single-build-and-upload.yml
+    with:
+      tags: '["self-hosted", "Linux"]'
+      name: Linux 🐧
+      targetPlatform: StandaloneLinux64
+      timeout: 360
+      buildContinueOnError: false
+      channel: linux
+    secrets:
+      BUTLER_CREDENTIALS: ${{ secrets.BUTLER_CREDENTIALS }}
+  webgl:
+    if: !inputs.excludes_webgl
+    uses: ./.github/workflows/single-build-and-upload.yml
+    with:
+      tags: '["self-hosted", "Linux"]'
+      name: WebGL 🌐
+      targetPlatform: WebGL
+      timeout: 360
+      buildContinueOnError: false
+      channel: webgl
+    secrets:
+      BUTLER_CREDENTIALS: ${{ secrets.BUTLER_CREDENTIALS }}
+  macos:
+    if: !inputs.excludes_macos
+    uses: ./.github/workflows/single-build-and-upload.yml
+    with:
+      tags: '["macos-latest"]'
+      name: MacOS 🍏
+      targetPlatform: StandaloneOSX
+      timeout: 360
+      buildContinueOnError: false
+      channel: mac
+    secrets:
+      BUTLER_CREDENTIALS: ${{ secrets.BUTLER_CREDENTIALS }}
