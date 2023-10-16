@@ -39,7 +39,7 @@ on:
       UNITY_PASSWORD:
         required: true
 jobs:
-  single-build-and-upload:
+  build:
     runs-on: ${{ fromJson(inputs.tags) }}
     name: Build for ${{ inputs.name }}
     steps:
@@ -106,13 +106,22 @@ jobs:
         with:
           name: ${{ inputs.targetPlatform }}
           path: build
-
-      - name: Upload build to itch.io
-        uses: manleydev/butler-publish-itchio-action@master
-        env:
-          BUTLER_CREDENTIALS: ${{ secrets.BUTLER_CREDENTIALS }}
-          CHANNEL: ${{ inputs.channel }}
-          ITCH_GAME: ${{ inputs.project_name }}
-          ITCH_USER: ${{ vars.ITCH_USER }}
-          PACKAGE: build
-          VERSION: ${{ inputs.version }}
+  upload:
+    runs-on: ['self-hosted']
+    name: Upload for ${{ inputs.name }}
+    needs: build
+    steps:
+    - name: Download build
+      uses: actions/download-artifact@v3
+      with:
+        name: ${{ inputs.targetPlatform }}
+        path: ${{ inputs.targetPlatform }}
+    - name: Upload build to itch.io
+      uses: manleydev/butler-publish-itchio-action@master
+      env:
+        BUTLER_CREDENTIALS: ${{ secrets.BUTLER_CREDENTIALS }}
+        CHANNEL: ${{ inputs.channel }}
+        ITCH_GAME: ${{ inputs.project_name }}
+        ITCH_USER: ${{ vars.ITCH_USER }}
+        PACKAGE: ${{ inputs.targetPlatform }}
+        VERSION: ${{ inputs.version }}
