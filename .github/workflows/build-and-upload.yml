@@ -29,7 +29,7 @@ on:
 
 jobs:
   windows:
-    if: !inputs.excludes_windows
+    if: ${{ !inputs.excludes_windows }}
     uses: ./.github/workflows/single-build-and-upload.yml
     with:
       tags: '["self-hosted", "Windows"]'
@@ -41,7 +41,7 @@ jobs:
     secrets:
       BUTLER_CREDENTIALS: ${{ secrets.BUTLER_CREDENTIALS }}
   linux:
-    if: !inputs.excludes_linux
+    if: ${{ !inputs.excludes_linux }}
     uses: ./.github/workflows/single-build-and-upload.yml
     with:
       tags: '["self-hosted", "Linux"]'
@@ -53,7 +53,7 @@ jobs:
     secrets:
       BUTLER_CREDENTIALS: ${{ secrets.BUTLER_CREDENTIALS }}
   webgl:
-    if: !inputs.excludes_webgl
+    if: ${{ !inputs.excludes_webgl }}
     uses: ./.github/workflows/single-build-and-upload.yml
     with:
       tags: '["self-hosted", "Linux"]'
@@ -65,7 +65,7 @@ jobs:
     secrets:
       BUTLER_CREDENTIALS: ${{ secrets.BUTLER_CREDENTIALS }}
   macos:
-    if: !inputs.excludes_macos
+    if: ${{ !inputs.excludes_macos }}
     uses: ./.github/workflows/single-build-and-upload.yml
     with:
       tags: '["macos-latest"]'
