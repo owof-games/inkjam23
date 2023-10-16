@@ -96,7 +96,6 @@ jobs:
       # Build
       - name: Build project
         id: build
-        continue-on-error: true
         timeout-minutes: 40
         # use fixed docker windows usage, as per https://discord.com/channels/710946343828455455/1156880998122913872/1157680471451381831
         uses: owof-games/unity-builder@96399801b32662bbe0d796d4df9682fd08fa9923
