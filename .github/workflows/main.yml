@@ -19,7 +19,7 @@ jobs:
       # build:
       # Checkout (without LFS)
       - name: Checkout repository
-        uses: actions/checkout@v3
+        uses: actions/checkout@v3.0.2
 
       # Git LFS
       - name: Create LFS file list
