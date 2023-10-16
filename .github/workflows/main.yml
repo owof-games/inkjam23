@@ -8,15 +8,18 @@ jobs:
       matrix:
         include:
           - tag: Windows
+            name: Windows 🗔
             targetPlatform: StandaloneWindows
           - tag: Linux
+            name: Linux 🐧
             targetPlatform: StandaloneLinux64
           - tag: X64
+            name: WebGL 🌐
             targetPlatform: WebGL
     runs-on:
       - self-hosted
       - ${{ matrix.tag }}
-    name: Build on ${{ matrix.tag }} 👷‍♀️
+    name: Build for ${{ matrix.name }}
     steps:
       # see https://github.com/actions/checkout/issues/211, and in particular
       # https://github.com/actions/checkout/issues/211#issuecomment-611986243
