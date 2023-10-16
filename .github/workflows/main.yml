@@ -7,18 +7,23 @@ jobs:
     strategy:
       matrix:
         include:
-          - tag: Windows
+          - tags: [self-hosted, Windows]
             name: Windows 🗔
             targetPlatform: StandaloneWindows
-          - tag: Linux
+            timeout: 10
+          - tags: [self-hosted, Linux]
             name: Linux 🐧
             targetPlatform: StandaloneLinux64
-          - tag: Linux
+            timeout: 360
+          - tags: [self-hosted, Linux]
             name: WebGL 🌐
             targetPlatform: WebGL
-    runs-on:
-      - self-hosted
-      - ${{ matrix.tag }}
+            timeout: 360
+          - tags: [MacOS]
+            name: MacOS 🍏
+            targetPlatform: StandaloneOSX
+            timeout: 360
+    runs-on: ${{ matrix.tags }}
     name: Build for ${{ matrix.name }}
     steps:
       # see https://github.com/actions/checkout/issues/211, and in particular
@@ -68,7 +73,7 @@ jobs:
       # Build
       - name: Build project
         id: build
-        timeout-minutes: 40
+        timeout-minutes: ${{ matrix.timeout }}
         # use fixed docker windows usage, as per https://discord.com/channels/710946343828455455/1156880998122913872/1157680471451381831
         uses: owof-games/unity-builder@96399801b32662bbe0d796d4df9682fd08fa9923
         env:
@@ -77,7 +82,7 @@ jobs:
           UNITY_PASSWORD: ${{ secrets.UNITY_PASSWORD }}
         with:
           targetPlatform: ${{ matrix.targetPlatform }}
-  
+
       # Output
       - uses: actions/upload-artifact@v3
         with:
