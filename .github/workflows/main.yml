@@ -11,6 +11,8 @@ jobs:
             targetPlatform: StandaloneWindows
           - tag: Linux
             targetPlatform: StandaloneLinux64
+          - tag: X64
+            targetPlatform: WebGL
     runs-on:
       - self-hosted
       - ${{ matrix.tag }}
@@ -20,6 +22,8 @@ jobs:
       # https://github.com/actions/checkout/issues/211#issuecomment-611986243
       # and
       # https://github.com/actions/checkout/issues/211#issuecomment-1463921672
+      # This also contains info about running self-hosted docker as non-root:
+      # https://github.com/actions/runner/issues/434
       - name: Fix permissions
         shell: sh
         run: |
