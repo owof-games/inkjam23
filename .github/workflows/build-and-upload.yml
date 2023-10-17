@@ -9,22 +9,22 @@ on:
       project_name:
         required: true
         type: string
-      excludes_windows:
+      include_windows:
         required: false
         type: boolean
-        default: false
-      excludes_linux:
+        default: true
+      include_linux:
         required: false
         type: boolean
-        default: false
-      excludes_macos:
+        default: true
+      include_macos:
         required: false
         type: boolean
-        default: false
-      excludes_webgl:
+        default: true
+      include_webgl:
         required: false
         type: boolean
-        default: false
+        default: true
     secrets:
       BUTLER_CREDENTIALS:
         required: true
@@ -37,7 +37,7 @@ on:
   
 jobs:
   windows:
-    if: ${{ !inputs.excludes_windows }}
+    if: ${{ inputs.include_windows }}
     uses: ./.github/workflows/single-build-and-upload.yml
     with:
       project_name: ${{ inputs.project_name }}
@@ -56,7 +56,7 @@ jobs:
       UNITY_EMAIL: ${{ secrets.UNITY_EMAIL }}
       UNITY_PASSWORD: ${{ secrets.UNITY_PASSWORD }}
   linux:
-    if: ${{ !inputs.excludes_linux }}
+    if: ${{ inputs.include_linux }}
     uses: ./.github/workflows/single-build-and-upload.yml
     with:
       project_name: ${{ inputs.project_name }}
@@ -74,7 +74,7 @@ jobs:
       UNITY_EMAIL: ${{ secrets.UNITY_EMAIL }}
       UNITY_PASSWORD: ${{ secrets.UNITY_PASSWORD }}
   webgl:
-    if: ${{ !inputs.excludes_webgl }}
+    if: ${{ inputs.include_webgl }}
     uses: ./.github/workflows/single-build-and-upload.yml
     with:
       project_name: ${{ inputs.project_name }}
@@ -92,7 +92,7 @@ jobs:
       UNITY_EMAIL: ${{ secrets.UNITY_EMAIL }}
       UNITY_PASSWORD: ${{ secrets.UNITY_PASSWORD }}
   macos:
-    if: ${{ !inputs.excludes_macos }}
+    if: ${{ inputs.include_macos }}
     uses: ./.github/workflows/single-build-and-upload.yml
     with:
       project_name: ${{ inputs.project_name }}
