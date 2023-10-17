@@ -103,6 +103,7 @@ jobs:
       timeout: 360
       buildContinueOnError: false
       channel: mac
+      fix_permissions: true
     secrets:
       BUTLER_CREDENTIALS: ${{ secrets.BUTLER_CREDENTIALS }}
       UNITY_LICENSE: ${{ secrets.UNITY_LICENSE }}
