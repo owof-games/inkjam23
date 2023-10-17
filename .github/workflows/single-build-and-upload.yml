@@ -22,8 +22,9 @@ on:
         required: true
         type: number
       buildContinueOnError:
-        required: true
+        required: false
         type: boolean
+        default: false
       channel:
         required: true
         type: string

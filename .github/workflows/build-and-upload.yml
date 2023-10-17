@@ -70,7 +70,6 @@ jobs:
       name: Linux 🐧
       targetPlatform: StandaloneLinux64
       timeout: 360
-      buildContinueOnError: false
       channel: linux
       fix_permissions: true
     secrets:
@@ -88,7 +87,6 @@ jobs:
       name: WebGL 🌐
       targetPlatform: WebGL
       timeout: 360
-      buildContinueOnError: false
       channel: webgl
       fix_permissions: true
     secrets:
@@ -106,7 +104,6 @@ jobs:
       name: MacOS 🍏
       targetPlatform: StandaloneOSX
       timeout: 360
-      buildContinueOnError: false
       channel: mac
     secrets:
       BUTLER_CREDENTIALS: ${{ secrets.BUTLER_CREDENTIALS }}
