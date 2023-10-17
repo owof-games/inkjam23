@@ -41,7 +41,7 @@ jobs:
       project_name: ${{ inputs.project_name }}
       version: ${{ inputs.version }}
       tags: '["self-hosted", "Windows"]'
-      name: Windows 🗔
+      name: Windows 🪟
       targetPlatform: StandaloneWindows
       channel: win
       # break forcefully after 15 minutes because of:
