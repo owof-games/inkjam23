@@ -43,9 +43,11 @@ jobs:
       tags: '["self-hosted", "Windows"]'
       name: Windows 🗔
       targetPlatform: StandaloneWindows
+      channel: win
+      # break forcefully after 15 minutes because of:
+      # https://github.com/game-ci/documentation/issues/430
       timeout: 15
       buildContinueOnError: true
-      channel: win
     secrets:
       BUTLER_CREDENTIALS: ${{ secrets.BUTLER_CREDENTIALS }}
       UNITY_LICENSE: ${{ secrets.UNITY_LICENSE }}
