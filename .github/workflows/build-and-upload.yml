@@ -97,7 +97,7 @@ jobs:
     with:
       project_name: ${{ inputs.project_name }}
       version: ${{ inputs.version }}
-      tags: '["macos-latest"]'
+      tags: '["self-hosted", "Linux"]'
       name: MacOS 🍏
       targetPlatform: StandaloneOSX
       timeout: 360
