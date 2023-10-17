@@ -111,6 +111,8 @@ jobs:
     name: Upload for ${{ inputs.name }}
     needs: build
     steps:
+    # this could get stuck for a LONG time
+    # maybe related to https://github.com/actions/upload-artifact/issues/270
     - name: Download build
       uses: actions/download-artifact@v3
       with:
