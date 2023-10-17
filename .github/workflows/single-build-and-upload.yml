@@ -107,7 +107,7 @@ jobs:
           name: ${{ inputs.targetPlatform }}
           path: build
   upload:
-    runs-on: ['self-hosted']
+    runs-on: ['self-hosted', 'Linux']
     name: Upload for ${{ inputs.name }}
     needs: build
     steps:
