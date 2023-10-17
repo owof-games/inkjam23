@@ -42,7 +42,7 @@ jobs:
     with:
       project_name: ${{ inputs.project_name }}
       version: ${{ inputs.version }}
-      tags: '["self-hosted", "Windows"]'
+      tags: '["self-hosted", "Linux"]'
       name: Windows 🪟
       targetPlatform: StandaloneWindows
       channel: win
@@ -50,6 +50,7 @@ jobs:
       # https://github.com/game-ci/documentation/issues/430
       timeout: 15
       buildContinueOnError: true
+      fix_permissions: true
     secrets:
       BUTLER_CREDENTIALS: ${{ secrets.BUTLER_CREDENTIALS }}
       UNITY_LICENSE: ${{ secrets.UNITY_LICENSE }}
