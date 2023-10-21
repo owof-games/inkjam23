@@ -9,11 +9,11 @@
 - (loop)
 ~ num_loop_rimanenti -= 1
 // passa alla scena lounge
-@lounge
+~ moveToLounge()
 
 -> inizio_lounge ->
 
-@lounge
+~ moveToLounge()
 // scelta del personaggio con cui parlare (vengono tolti in automatico quelli non più vivi)
 * {num_loop_rimanenti >= 0} [@BeBe]
   -> BeBe_choice
@@ -42,7 +42,7 @@ Piiiietro
 
 === passaggio_lounge_dogron
 
-@lounge
+~ moveToLounge()
 @dogron
 
 DOGRON: eccoci qua!
@@ -61,7 +61,7 @@ DOGRON: eccoci qua!
 === test_cucina
 
 // passa alla scena della cucina
-@kitchen
+~ moveToKitchen()
 // imposta gli ingredienti a disposizione per questa giornata
 ~ base_ingredients_of_the_day = (uova, pentola)
 
@@ -70,7 +70,7 @@ DOGRON: eccoci qua!
 - (loop)
 ~ num_loop_rimanenti -= 1
 Total è {total}
-@kitchen_choice
+#kitchen_choice
 + {num_loop_rimanenti >= 0} 1
   ~ total += 1
   -> loop

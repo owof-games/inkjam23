@@ -134,3 +134,17 @@ DOGRON: Vuoi riportare una persona concorrente tra noi?
 -
 TODO: aggiungere gli altri
 ->->
+
+
+
+
+
+
+
+EXTERNAL moveToLounge()
+=== function moveToLounge() ===
+[[[move to lounge]]]
+
+EXTERNAL moveToKitchen()
+=== function moveToKitchen() ===
+[[[move to kitchen]]]

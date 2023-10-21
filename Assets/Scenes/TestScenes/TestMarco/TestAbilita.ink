@@ -1,4 +1,5 @@
 === test_abilities
+~ moveToLounge()
 // permette di aggiungere o togliere concorrenti a seconda che l'abilità sia disponibile.
 
 //TEST: PRESENTAZIONE
