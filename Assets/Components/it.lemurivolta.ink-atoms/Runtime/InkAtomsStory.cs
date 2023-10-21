@@ -208,6 +208,10 @@ namespace LemuRivolta.InkAtoms
         /// <param name="flowName">Flow where we continue.</param>
         public void Continue(string flowName)
         {
+            if (debugCurrentState)
+            {
+                Debug.Log($"continuing on flow {flowName}");
+            }
             EnqueueCommand(() =>
             {
                 SwitchFlow(flowName);
@@ -234,6 +238,10 @@ namespace LemuRivolta.InkAtoms
         /// <param name="choiceIndex">Index of the choice that was made.</param>
         public void Choose(string flowName, int choiceIndex)
         {
+            if (debugCurrentState)
+            {
+                Debug.Log($"choosing index {choiceIndex} on flow {flowName}");
+            }
             EnqueueCommand(() =>
             {
                 SwitchFlow(flowName);
