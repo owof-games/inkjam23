@@ -2,6 +2,8 @@
 
 === passaggio_lounge
 
+~ moveToLounge()
+
 ~ temp num_loop_rimanenti = 2
 
 - (loop)
@@ -70,5 +72,14 @@ PAUSA
 -> loop
 
 = fine
-FINE
+~ moveToKitchen()
 -> END
+
+
+EXTERNAL moveToLounge()
+=== function moveToLounge() ===
+[[[move to lounge]]]
+
+EXTERNAL moveToKitchen()
+=== function moveToKitchen() ===
+[[[move to kitchen]]]
