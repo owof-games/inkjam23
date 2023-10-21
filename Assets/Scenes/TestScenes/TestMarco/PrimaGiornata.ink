@@ -1,3 +1,9 @@
+/***
+RECAP:
+GIORNO 1: 3 ingredienti, valori 1, 2, 3
+Dialoghi giorno 1..4: ogni personaggio ti da 2 ingredienti
+**/
+
 === passaggio_lounge
 
 ~ dialogue_ingredients_of_the_day = ()

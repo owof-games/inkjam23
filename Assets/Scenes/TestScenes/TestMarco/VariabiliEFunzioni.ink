@@ -132,5 +132,4 @@ DOGRON: Vuoi riportare una persona concorrente tra noi?
     ~ Resuscitatrice = true
     DOGRON: Toh, è tornato!
 -
-TODO: aggiungere gli altri
 ->->
