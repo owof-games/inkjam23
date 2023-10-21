@@ -4,12 +4,12 @@ GIORNO 1: 3 ingredienti, valori 1, 2, 3
 Dialoghi giorno 1..4: ogni personaggio ti da 2 ingredienti
 **/
 
-=== passaggio_lounge
+=== passaggio_lounge_giorno_uno
 
 ~ dialogue_ingredients_of_the_day = ()
 
 ~ temp num_loop_rimanenti = 2
-{ abilities has EvidenziaIngredienti:
+{ abilities has PNGParliExtra:
   ~ num_loop_rimanenti += 1
 }
 - (loop)
@@ -27,9 +27,11 @@ Dialoghi giorno 1..4: ogni personaggio ti da 2 ingredienti
   -> UgoEMimi_choice
 * {num_loop_rimanenti >= 0} [@Piiiietro]
   -> Piiiietro_choice
-* -> test_cucina
+  TODO: aggiungi PNG
   
-
+* -> cucina_giorno_uno
+  
+TODO: choice PNG (stich)
 = UgoEMimi_choice
 you: ciao
 UgoEMimi: ciao a te!
@@ -46,25 +48,8 @@ Piiiietro
 -> loop
 
 
-=== passaggio_lounge_dogron
 
-~ moveToLounge()
-@dogron
-
-DOGRON: eccoci qua!
-
--> END
-
-
-
-
-
-
-
-
-
-
-=== test_cucina
+=== cucina_giorno_uno
 
 // passa alla scena della cucina
 ~ moveToKitchen()
@@ -95,10 +80,16 @@ ok, finito
   -> non_ce_lhai_fatta
 }
 {
-  - total >= 7:
-    -> finale_strano
-  - total >= 4:
-    -> finale_intermedio
-  - else:
-    -> finale_normale
+  - total >= 15:
+    -> finale_cinque ->
+  - total >= 12:
+    -> finale_quattro ->
+  - total >= 9:
+    -> finale_tre ->
+-   total >= 6:
+    -> finale_due ->
+    - else:
+    -> finale_uno ->
 }
+
+-> passaggio_lounge_giorno_due

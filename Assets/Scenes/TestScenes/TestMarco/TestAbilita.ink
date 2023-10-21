@@ -180,4 +180,4 @@ GODRON: Hai seppellito qualcuno, ma non ti ricordi dove l'hai fatto, e sei molto
 {i < LIST_VALUE(LIST_MAX(LIST_ALL(abilities))):
     -> recap(i+1)
 }
--> passaggio_lounge
+-> passaggio_lounge_giorno_uno

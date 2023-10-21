@@ -1,21 +1,25 @@
 === non_ce_lhai_fatta
 -> END
 
-=== finale_strano
--> END
+=== finale_cinque
+->->
 
-=== finale_intermedio
--> END
+=== finale_quattro
+->->
 
-=== finale_normale
--> END
+=== finale_tre
+->->
 
+=== finale_due
+->->
 
+== finale_uno
+->->
 
 
 
 === finale ===
-// si usa per il finale del gioco, e per il finale delle giornate
+// si usa per il finale del gioco
 @endroom
 
 Parla Dogron e dice cose. 

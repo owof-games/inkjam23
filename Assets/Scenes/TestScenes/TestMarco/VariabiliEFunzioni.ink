@@ -16,7 +16,7 @@ VAR Eliminatrice = false
 VAR Resuscitatrice = false
 
 
-
+TODO: Assegna translate
 === function translate_ingredient(ingredient) ===
 { ingredient:
 - uova: uova
@@ -24,6 +24,7 @@ VAR Resuscitatrice = false
 - noce_moscata: noce moscata
 }
 
+TODO: Assegna valori
 === function value_ingredient(ingredient) ===
 { ingredient:
 - uova: 1
@@ -48,7 +49,7 @@ Rimossa {ability}.
 
 === inizio_lounge ===
 
-@lounge
+~ moveToLounge()
 
 DOGRON: eccoci con la nostra concorrente
 
