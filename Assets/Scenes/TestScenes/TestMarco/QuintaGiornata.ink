@@ -38,7 +38,7 @@ ne devi sempre beccare 3**/
 //RICETTA RICHIESTA: Qualcosa che gridi: sarò il genitore doggo migliore al mondo!
   
     = UgoEMimi_choice
-    //INGREDIENTI SUGGERITI: sventrare e emancipazione
+    //INGREDIENTI SUGGERITI: sventrare, emancipazione, MichelaMurgia
         you: ciao
         UgoEMimi: ciao a te!
         UgoEMimi: secondo me dovresti mettere delle <b>ciRichiamaConcorrenteatte</b> nella ricetta!
@@ -46,22 +46,22 @@ ne devi sempre beccare 3**/
         -> loop
     
     = BeBe_choice
-    //Ingredienti suggeriti: sacrificio e Peanutbutter
+    //Ingredienti suggeriti: sacrificio, Peanutbutter, collarePreferito
         BeBe
         -> loop
     
     = Piiiietro_choice
-    //Ingredienti: Kate Bush e l'idea di successo
+    //Ingredienti: Kate Bush, l'idea di successo, cassaPortatile
         Piiiietro
         -> loop
     
     = Quello_choice
-    //Ingredienti: Padre e funghicida
+    //Ingredienti: Padre, funghicida, mappa
         Piiiietro
         -> loop
         
     = IlDivo_choice
-    //Ingredienti: "Io sono ancora grande, è la ristorazione che è diventata piccola." e aiuto.
+    //Ingredienti: "Io sono ancora grande, è la ristorazione che è diventata piccola." e aiuto e aiuto.
 
         Piiiietro
         -> loop
@@ -73,7 +73,7 @@ ne devi sempre beccare 3**/
     // passa alla scena della cucina
     ~ moveToKitchen()
     // imposta gli ingredienti a disposizione per questa giornata
-    ~ base_ingredients_of_the_day = (uova, pentola)
+    ~ base_ingredients_of_the_day = (coccolare, carezzare, pettare, grattare, dormireAssieme, protezione, noGatti)
     
     ~ temp total = 0
     ~ temp num_loop_rimanenti = 5

@@ -4,7 +4,8 @@ LIST abilities = EvidenziaIngredienti, EvidenziaAzioni, ScelteLente, SceltaIngre
 LIST alive_characters = (UgoEMimi), (BeBe), (Piiiietro), (Quello), (ilDivo)
 
 // lista di tutti gli ingredienti possibili di tutte le giornate
-LIST ingredients = uova, pentola, noce_moscata, farina, saltare, sciogliere, lievitare, sale, cipolla, affettare, tonno_in_scatola, mescolare, burro, montare, zafferano, mantecare
+LIST ingredients = uova, pentola, noce_moscata, farina, saltare, sciogliere, lievitare, sale, cipolla, affettare, tonno_in_scatola, mescolare, burro, montare, zafferano, mantecare, braciola, arrosticino, costina, osso, grigliare, crocchette, versare, riempire, formaggio, fondere, coccole, brandina, cuccia, sgranocchiare, fidarsi, barattoloDelloYogurt, pettorina, trasportino, veterinario, automobile, viaggiare, inconscio, correreneisogni, coccolare, carezzare, pettare, grattare, dormireAssieme, protezione, noGatti, volAuVent, Skyrim, blocchiDiErba, uovaDiPecora, scolare, lacrime, cacaoAmaro, specchiarsi, scottare, iverivideogiochi, canapé, mungere, cardare, ChinottoDiSavona, raccontare, selfie, interviste, avvelenare, collareconetichetta, tonnoalnaturale, cantare, perdonare, evolversi, iomestessomemedesimo, selfcare, sventrare, emancipazione, MichelaMurgia, sacrificio, Peanutbutter, collarePreferito, KateBush, ideaDiSuccesso, cassaPortatile, padre, funghicida, mappa, grande, aiuto, aiutoooooo
+
 // variRichiamaConcorrenteile che tiene gli ingredienti che appaiono nella roulette russa per il giorno che stiamo giocando
 VAR base_ingredients_of_the_day = ()
 VAR dialogue_ingredients_of_the_day = ()
@@ -16,7 +17,6 @@ VAR Eliminatrice = false
 VAR Resuscitatrice = false
 
 
-TODO: Assegna translate
 === function translate_ingredient(ingredient) ===
     { ingredient:
     - uova: uova
@@ -35,9 +35,79 @@ TODO: Assegna translate
     - montare: montare
     - zafferano: zafferano
     - mantecare: mantecare
+    - braciola: braciola
+    - arrosticino: arrosticino
+    - costina: costina
+    - osso: osso
+    - grigliare: grigliare
+    - crocchette: crocchette
+    - versare: versare
+    - riempire: riempire
+    - formaggio: formaggio
+    - fondere: fondere
+    - coccole: coccole
+    - brandina: brandina
+    - cuccia: cuccia
+    - sgranocchiare: sgranocchiare
+    - fidarsi: fidarsi
+    - barattoloDelloYogurt: il barattolo dello Yogurt
+    - pettorina: pettorina
+    - trasportino: trasportino
+    - veterinario: veterinario
+    - automobile: automobile
+    - viaggiare: viaggiare
+    - inconscio: inconscio
+    - correreneisogni: correre nei sogni
+    - coccolare: coccolare
+    - carezzare: carezzare
+    - pettare: pettare
+    - grattare: grattare
+    - dormireAssieme: dormire assieme
+    - protezione: protezione
+    - noGatti: niente gatti!
+    - volAuVent: vol-au-vent
+    - Skyrim: Skyrim
+    - blocchiDiErba: blocchi di erba
+    - uovaDiPecora: uova di pecora
+    - scolare: scolare
+    - lacrime: lacrime
+    - cacaoAmaro: cacao amaro
+    - specchiarsi: specchiarsi
+    - scottare: scottare
+    - iverivideogiochi: i VERI videogiochi
+    - canapé: canapé
+    - mungere: mungere
+    - cardare: cardare
+    - ChinottoDiSavona: Chinotto di Savona
+    - raccontare: raccontare
+    - selfie: selfie
+    - interviste: interviste
+    - avvelenare: avvelenare
+    - collareconetichetta: collare con un'etichetta col nome Dogron
+    - tonnoalnaturale: tonno in scatola al naturale
+    - cantare: cantare
+    - perdonare: perdonare
+    - evolversi: evolversi
+    - iomestessomemedesimo: iomestessomemedesimo
+    - selfcare: hashtagselfcare
+    - sventrare: sventrare
+    - emancipazione: emancipazione
+    - MichelaMurgia: Michela Murgia
+    - sacrificio: sacrificio
+    - Peanutbutter: mr.Peanutbutter
+    - collarePreferito: il collare preferito di DOGRON
+    - KateBush: Kate Bush
+    - ideaDiSuccesso: l'idea del successo
+    - cassaPortatile: una cassa portatile
+    - padre: padre
+    - funghicida: funghicida
+    - mappa: mappa
+    - grande: Io sono ancora grande, è la ristorazione che è diventata piccola.
+    - aiuto: aiuto
+    - aiutoooooo: AIUTOOOOOOOOOOOOOOOOOOOO
+
     }
 
-TODO: Assegna valori
 === function value_ingredient(ingredient) ===
     { ingredient:
     - uova: 1
@@ -56,6 +126,76 @@ TODO: Assegna valori
     - montare: 3
     - zafferano: 3
     - mantecare: 3
+    - braciola: 2
+    - arrosticino: 3
+    - costina: 3
+    - osso: 2
+    - grigliare: 2
+    - crocchette: 1
+    - versare: 2
+    - riempire: 3
+    - formaggio: 2
+    - fondere: 2
+    - coccole: 3
+    - brandina: 3
+    - cuccia: 3
+    - sgranocchiare: 2
+    - fidarsi: 3
+    - barattoloDelloYogurt: 2
+    - pettorina: 3
+    - trasportino: 3
+    - veterinario: 3
+    - automobile: 3
+    - viaggiare: 2
+    - inconscio: 3
+    - correreneisogni: 2
+    - coccolare: 3
+    - carezzare: 2
+    - pettare: 3
+    - grattare: 4
+    - dormireAssieme: 4
+    - protezione: 2
+    - noGatti: 4
+    - volAuVent: 2
+    - Skyrim: 2
+    - blocchiDiErba: 2
+    - uovaDiPecora: 3
+    - scolare: 2
+    - lacrime: 3
+    - cacaoAmaro: 2
+    - specchiarsi: 3
+    - scottare: 2
+    - iverivideogiochi: 3
+    - canapé: 2
+    - mungere: 2
+    - cardare: 3
+    - ChinottoDiSavona: 2
+    - raccontare: 3
+    - selfie: 3
+    - interviste: 3
+    - avvelenare: 3
+    - collareconetichetta: 3
+    - tonnoalnaturale: 3
+    - cantare: 3
+    - perdonare: 3
+    - evolversi: 3
+    - iomestessomemedesimo: 3
+    - selfcare: 3
+    - sventrare: 3
+    - emancipazione: 4
+    - MichelaMurgia: 4
+    - sacrificio: 3
+    - Peanutbutter: 4
+    - collarePreferito: 4
+    - KateBush: 3
+    - ideaDiSuccesso: 4
+    - cassaPortatile: 4
+    - padre: 3
+    - funghicida: 4
+    - mappa: 4
+    - grande: 2
+    - aiuto: 3
+    - aiutoooooo: 4
     }
 
 

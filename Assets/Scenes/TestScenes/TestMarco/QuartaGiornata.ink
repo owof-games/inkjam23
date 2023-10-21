@@ -73,7 +73,7 @@ Dialoghi giorno 1..4: ogni personaggio ti da 2 ingredienti
     // passa alla scena della cucina
     ~ moveToKitchen()
     // imposta gli ingredienti a disposizione per questa giornata
-    ~ base_ingredients_of_the_day = (uova, pentola)
+    ~ base_ingredients_of_the_day = (pettorina, trasportino, veterinario, automobile, viaggiare, inconscio, correreneisogni)
     
     ~ temp total = 3
     ~ temp num_loop_rimanenti = 4
