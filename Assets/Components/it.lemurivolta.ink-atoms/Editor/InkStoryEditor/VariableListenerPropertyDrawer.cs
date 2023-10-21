@@ -8,7 +8,7 @@ using UnityEngine.UIElements;
 
 namespace LemuRivolta.InkAtoms.Editor
 {
-    [CustomPropertyDrawer(typeof(VariableListener))]
+    //[CustomPropertyDrawer(typeof(VariableListener))]
     public class VariableListenerPropertyDrawer : PropertyDrawer
     {
         private VisualElement matchNameContainer;

@@ -5,7 +5,7 @@ using UnityEngine.UIElements;
 
 namespace LemuRivolta.InkAtoms.Editor
 {
-    [CustomEditor(typeof(InkAtomsStory))]
+    //[CustomEditor(typeof(InkAtomsStory))]
     public class InkStoryEditor : UnityEditor.Editor
     {
         [SerializeField]

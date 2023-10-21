@@ -644,6 +644,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   continueEvent: {fileID: 11400000, guid: 74398120320ca8046ad055551d04ad1c, type: 2}
+  inkAsset: {fileID: 4900000, guid: fd818de9619667e4c841269d7110e132, type: 3}
+  inkAtomsStory: {fileID: 11400000, guid: cdd9a7ceac6a88c498b94bcf9065ba9d, type: 2}
 --- !u!4 &1525267581
 Transform:
   m_ObjectHideFlags: 0

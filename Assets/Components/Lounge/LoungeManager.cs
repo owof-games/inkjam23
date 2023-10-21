@@ -1,4 +1,3 @@
-using System;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -10,7 +9,7 @@ using UnityEngine;
 
 public class LoungeManager : MonoBehaviour
 {
-    public const string YouName = "you";
+    [SerializeField] private string youName = "YOU";
 
     [SerializeField] private GameObject contestantSelection;
     [SerializeField] private GameObject contestantSelectionRoot;
@@ -54,8 +53,8 @@ public class LoungeManager : MonoBehaviour
             {
                 characterTalking.gameObject.SetActive(characterTalking.CharacterName == character);
             }
-            var activeBalloon = character == YouName ? leftBalloon : rightBalloon;
-            var nonActiveBalloon = character == YouName ? rightBalloon : leftBalloon;
+            var activeBalloon = character == youName ? leftBalloon : rightBalloon;
+            var nonActiveBalloon = character == youName ? rightBalloon : leftBalloon;
             activeBalloon.gameObject.SetActive(true);
             activeBalloon.Write(text);
             activeBalloon.EnableAdvanceButton(storyStep.CanContinue);
@@ -88,7 +87,7 @@ public class LoungeManager : MonoBehaviour
             return (null, source);
         }
         var characterName = pieces[0];
-        if (characterName == YouName)
+        if (characterName == youName)
         {
             return (characterName, pieces[1]);
         }
