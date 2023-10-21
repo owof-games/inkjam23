@@ -85,6 +85,7 @@ namespace LemuRivolta.InkAtoms
 
                 story = new Story(actualInkTextAsset.text);
                 story.onDidContinue += Story_onDidContinue;
+                story.onError += Story_onError;
 
                 continueEvent.Register(OnContinueEvent);
                 choiceEvent.Register(OnChoiceEvent);
@@ -96,6 +97,17 @@ namespace LemuRivolta.InkAtoms
 
                 EditorApplication.playModeStateChanged += EditorApplication_playModeStateChanged;
             }
+        }
+
+        private void Story_onError(string message, Ink.ErrorType type)
+        {
+            var msg = $"{story.debugMetadata?.fileName}:{story.debugMetadata?.startLineNumber} - {message}";
+            switch (type)
+            {
+                case Ink.ErrorType.Author: Debug.Log(msg); break;
+                case Ink.ErrorType.Warning: Debug.LogWarning(msg); break;
+                default: Debug.LogError(msg); break;
+            };
         }
 
         private void Teardown()
