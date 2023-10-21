@@ -37,7 +37,7 @@ Dialoghi giorno 1..4: ogni personaggio ti da 2 ingredienti
 //RICETTA RICHIESTA: qualcosa per quando ti senti triste perché tutti gli umani sono scomparsi.
 
     = UgoEMimi_choice
-    //INGREDIENTI SUGGERITI: leggings e canapé
+    //INGREDIENTI SUGGERITI: iverivideogiochi e canapé
     
         you: ciao
         UgoEMimi: ciao a te!

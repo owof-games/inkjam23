@@ -61,6 +61,8 @@ ne devi sempre beccare 3**/
         -> loop
         
     = IlDivo_choice
+    //Ingredienti: "Io sono ancora grande, è la ristorazione che è diventata piccola." e aiuto.
+
         Piiiietro
         -> loop
 

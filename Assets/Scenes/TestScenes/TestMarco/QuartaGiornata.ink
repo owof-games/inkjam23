@@ -57,12 +57,13 @@ Dialoghi giorno 1..4: ogni personaggio ti da 2 ingredienti
         -> loop
     
     = Quello_choice
-        //Ingredienti: perdonare e evolversi
+    //Ingredienti: perdonare e evolversi
 
         Piiiietro
         -> loop
     
     = IlDivo_choice
+    //Ingredienti: iomestessomemedesimo e #selfcare
         Piiiietro
         -> loop
 

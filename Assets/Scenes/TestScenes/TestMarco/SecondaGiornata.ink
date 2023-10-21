@@ -38,7 +38,7 @@ Dialoghi giorno 1..4: ogni personaggio ti da 2 ingredienti
     //RICETTA RICHIESTA: un pasto per quando vengono i veri amici.
     
     = UgoEMimi_choice
-    //Ingredienti suggeriti: Vol-au-vent e farcire
+    //Ingredienti suggeriti: Vol-au-vent e Skyrim
         you: ciao
         UgoEMimi: ciao a te!
         UgoEMimi: secondo me dovresti mettere delle <b>ciRichiamaConcorrenteatte</b> nella ricetta!
