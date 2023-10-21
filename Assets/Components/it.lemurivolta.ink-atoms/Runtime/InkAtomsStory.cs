@@ -95,7 +95,9 @@ namespace LemuRivolta.InkAtoms
                 OnEnableCommandQueue();
                 OnEnableCommandLineParsers();
 
+#if UNITY_EDITOR
                 EditorApplication.playModeStateChanged += EditorApplication_playModeStateChanged;
+#endif
             }
         }
 
@@ -137,6 +139,7 @@ namespace LemuRivolta.InkAtoms
             Setup();
         }
 
+#if UNITY_EDITOR
         private void EditorApplication_playModeStateChanged(PlayModeStateChange obj)
         {
             if (obj == PlayModeStateChange.ExitingPlayMode)
@@ -144,6 +147,7 @@ namespace LemuRivolta.InkAtoms
                 OnDisableCommandQueue();
             }
         }
+#endif
 
         private void OnContinueEvent(string flowName) => Continue(flowName);
 
