@@ -14,6 +14,9 @@ public class LoungeManager : MonoBehaviour
     [SerializeField] private GameObject contestantSelectionRoot;
     [SerializeField] private GameObject characterTalk;
     [SerializeField] private GameObject charactersTalkingRoot;
+    [SerializeField] private GameObject leftBalloon;
+    [SerializeField] private GameObject rightBalloon;
+    [SerializeField] private GameObject choices;
 
     [SerializeField] private ChosenChoiceEvent chosenChoiceEvent;
     [SerializeField] private StringEvent continueEvent;
