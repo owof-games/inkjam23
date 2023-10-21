@@ -33,6 +33,8 @@ namespace LemuRivolta.InkAtoms
         [Tooltip("Whether to print the current state on console at each step")]
         [SerializeField] private bool debugCurrentState;
 
+        private TextAsset actualInkTextAsset;
+
         /// <summary>
         /// The compiled ink story in memory
         /// </summary>
@@ -62,6 +64,7 @@ namespace LemuRivolta.InkAtoms
             {
                 Debug.Log("No ink text asset set, skipping initialization on enable");
             }
+            actualInkTextAsset = inkTextAsset;
             Setup();
         }
 
@@ -72,16 +75,15 @@ namespace LemuRivolta.InkAtoms
 
         private void Setup()
         {
-            if (inkTextAsset != null)
+            if (actualInkTextAsset != null)
             {
-                Assert.IsNotNull(inkTextAsset, "Ink Text Asset must have a value");
-                Assert.IsFalse(string.IsNullOrWhiteSpace(inkTextAsset.text),
+                Assert.IsFalse(string.IsNullOrWhiteSpace(actualInkTextAsset.text),
                     "Ink Text Asset must point to a non-empty ink story");
                 Assert.IsNotNull(storyStepEvent);
                 Assert.IsNotNull(continueEvent);
                 Assert.IsNotNull(choiceEvent);
 
-                story = new Story(inkTextAsset.text);
+                story = new Story(actualInkTextAsset.text);
                 story.onDidContinue += Story_onDidContinue;
 
                 continueEvent.Register(OnContinueEvent);
@@ -98,7 +100,7 @@ namespace LemuRivolta.InkAtoms
 
         private void Teardown()
         {
-            if (inkTextAsset != null)
+            if (actualInkTextAsset != null)
             {
                 OnDisableCommandQueue();
                 OnDisableVariableStorage();
@@ -119,7 +121,7 @@ namespace LemuRivolta.InkAtoms
         public void SetInkTextAsset(TextAsset inkTextAsset)
         {
             Teardown();
-            this.inkTextAsset = inkTextAsset;
+            actualInkTextAsset = inkTextAsset;
             Setup();
         }
 

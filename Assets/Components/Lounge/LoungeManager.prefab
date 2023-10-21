@@ -312,6 +312,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6321e7ce3a2ac1647b5875dc8d49ac73, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  youName: YOU
   contestantSelection: {fileID: 2150387217572701217}
   contestantSelectionRoot: {fileID: 2289518780743797192}
   characterTalk: {fileID: 1270548673548663324}
@@ -1032,7 +1033,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8097558227889075932, guid: 790de23cb5f5d4042a16d9f0515696ec, type: 3}
       propertyPath: characterName
-      value: pluto
+      value: DOGRON
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
