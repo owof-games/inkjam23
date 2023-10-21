@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 308046141915542387}
   - component: {fileID: 3197264142857145947}
   m_Layer: 5
-  m_Name: Contestant
+  m_Name: ContestantInSelection
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

@@ -24,38 +24,38 @@
 
 = pippo_choice
 you: ciao
-dna: sono pippo!
-dna: secondo me dovresti mettere delle <b>ciabatte</b> nella ricetta!
+pippo: sono pippo!
+pippo: secondo me dovresti mettere delle <b>ciabatte</b> nella ricetta!
 -> loop
 
 = pluto_choice
 you: ciao
-dna: sono pluto!
-dna: secondo me dovresti mettere delle <b>ciabatte</b> nella ricetta!
+pluto: sono pluto!
+pluto: secondo me dovresti mettere delle <b>ciabatte</b> nella ricetta!
 -> loop
 
 = paperino_choice
 you: ciao
-dna: sono paperino!
-dna: secondo me dovresti mettere delle <b>ciabatte</b> nella ricetta!
+paperino: sono paperino!
+paperino: secondo me dovresti mettere delle <b>ciabatte</b> nella ricetta!
 -> loop
 
 = tre_choice
 you: ciao
-dna: sono tre!
-dna: secondo me dovresti mettere delle <b>ciabatte</b> nella ricetta!
+tre: sono tre!
+tre: secondo me dovresti mettere delle <b>ciabatte</b> nella ricetta!
 -> loop
 
 = quattro_choice
 you: ciao
-dna: sono quattro!
-dna: secondo me dovresti mettere delle <b>ciabatte</b> nella ricetta!
+quattro: sono quattro!
+quattro: secondo me dovresti mettere delle <b>ciabatte</b> nella ricetta!
 -> loop
 
 = cinque_choice
 you: ciao
-dna: sono cinque!
-dna: secondo me dovresti mettere delle <b>ciabatte</b> nella ricetta!
+cinque: sono cinque!
+cinque: secondo me dovresti mettere delle <b>ciabatte</b> nella ricetta!
 -> loop
 
 = fine

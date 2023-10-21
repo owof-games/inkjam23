@@ -3,7 +3,7 @@ using UnityAtoms.BaseAtoms;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class Contestant : MonoBehaviour
+public class ContestantInSelection : MonoBehaviour
 {
     [SerializeField] private string contestantName;
 
