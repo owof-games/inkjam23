@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Ink Atoms Story - Chosen Choice Event
   m_EditorClassIdentifier: 
   _developerDescription: 
-  _replayBufferSize: 1
+  _replayBufferSize: 0
   _inspectorRaiseValue:
     FlowName: 
     ChoiceIndex: 0

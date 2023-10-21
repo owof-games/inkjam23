@@ -10,18 +10,21 @@ using UnityEngine;
 
 public class LoungeManager : MonoBehaviour
 {
+    public const string YouName = "you";
+
     [SerializeField] private GameObject contestantSelection;
     [SerializeField] private GameObject contestantSelectionRoot;
     [SerializeField] private GameObject characterTalk;
     [SerializeField] private GameObject charactersTalkingRoot;
-    [SerializeField] private GameObject leftBalloon;
-    [SerializeField] private GameObject rightBalloon;
-    [SerializeField] private GameObject choices;
+    [SerializeField] private Balloon leftBalloon;
+    [SerializeField] private Balloon rightBalloon;
+    [SerializeField] private Choices choices;
 
     [SerializeField] private ChosenChoiceEvent chosenChoiceEvent;
     [SerializeField] private StringEvent continueEvent;
 
     private StoryChoice[] lastCharacterChoices;
+    private bool waitingForNextLine;
 
     public void OnStoryStepEvent(StoryStep storyStep)
     {
@@ -39,6 +42,7 @@ public class LoungeManager : MonoBehaviour
                 var selectable = characterChoices.Contains(contestant.ContestantName);
                 contestant.SetEnabled(selectable);
             }
+            return;
         }
 
         // check if a character is talking
@@ -50,18 +54,41 @@ public class LoungeManager : MonoBehaviour
             {
                 characterTalking.gameObject.SetActive(characterTalking.CharacterName == character);
             }
+            var activeBalloon = character == YouName ? leftBalloon : rightBalloon;
+            var nonActiveBalloon = character == YouName ? rightBalloon : leftBalloon;
+            activeBalloon.gameObject.SetActive(true);
+            activeBalloon.Write(text);
+            activeBalloon.EnableAdvanceButton(storyStep.CanContinue);
+            nonActiveBalloon.gameObject.SetActive(false);
+        }
+        waitingForNextLine = storyStep.CanContinue;
+
+        // check if there are choices
+        bool hasChoices = storyStep.Choices.Length > 0;
+        choices.gameObject.SetActive(hasChoices);
+        if (hasChoices)
+        {
+            choices.SetChoices(storyStep.Choices.Select(c => c.Text).ToArray());
+        }
+    }
+
+    private void Update()
+    {
+        if (waitingForNextLine && (Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.Return)))
+        {
+            continueEvent.Raise(null);
         }
     }
 
     private (string character, string text) GetTalkingData(string source)
     {
-        var pieces = source.Trim().Split(':', 2);
+        var pieces = source.Split(':', 2);
         if (pieces.Length < 2)
         {
             return (null, source);
         }
         var characterName = pieces[0];
-        if (characterName == "you")
+        if (characterName == YouName)
         {
             return (characterName, pieces[1]);
         }
@@ -69,7 +96,7 @@ public class LoungeManager : MonoBehaviour
         {
             if (characterTalking.CharacterName == characterName)
             {
-                return (characterName, pieces[1]);
+                return (characterName, pieces[1].Trim());
             }
         }
         return (null, source);
@@ -105,6 +132,5 @@ public class LoungeManager : MonoBehaviour
             FlowName = null,
             ChoiceIndex = lastCharacterChoices.First(c => c.Text == $"@{name}").Index
         });
-        continueEvent.Raise(null);
     }
 }
