@@ -24,7 +24,7 @@ VAR resuscitato = false
 
 # permette di aggiungere o togliere abilità a seconda delle scelte
 
-Vuoi l'abilità chiacchierona?
+godron: Vuoi l'abilità chiacchierona?
 * Sì
   ~ abilities += chiacchierona
 * No
@@ -34,7 +34,7 @@ Vuoi l'abilità chiacchierona?
   -> passaggio_lounge
 }
 
-Vuoi l'abilità vipera?
+godron: Vuoi l'abilità vipera?
 * Sì
   ~ abilities += vipera
 * No
@@ -46,7 +46,7 @@ Vuoi l'abilità vipera?
 
 TODO: aggiungere le altre abilità
 
-Complimenti, sei riuscita a non scegliere neanche un'abilità!
+godron: Complimenti, sei riuscita a non scegliere neanche un'abilità!
 - (loop)
 { LIST_COUNT(abilities) < 3:
     ~ temp value = RANDOM(1, 8)
@@ -54,7 +54,7 @@ Complimenti, sei riuscita a non scegliere neanche un'abilità!
     ~ abilities += ability
     -> loop
 - else:
-    Ti ho dato {abilities}
+    godron: Ti ho dato {abilities}
     -> passaggio_lounge
 }
 
