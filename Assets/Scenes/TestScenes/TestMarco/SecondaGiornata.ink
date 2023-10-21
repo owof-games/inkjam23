@@ -7,46 +7,64 @@ Dialoghi giorno 1..4: ogni personaggio ti da 2 ingredienti
 
 === passaggio_lounge_giorno_due
 
-~ dialogue_ingredients_of_the_day = ()
+    ~ dialogue_ingredients_of_the_day = ()
+    
+    ~ temp num_loop_rimanenti = 2
+    { abilities has PNGParliExtra:
+      ~ num_loop_rimanenti += 1
+    }
+    - (loop)
+    ~ num_loop_rimanenti -= 1
+    // passa alla scena lounge
+    ~ moveToLounge()
+    
+    -> inizio_lounge ->
+    
+    ~ moveToLounge()
+    // scelta del personaggio con cui parlare (vengono tolti in automatico quelli non più vivi)
+    * {num_loop_rimanenti >= 0} [@BeBe]
+      -> BeBe_choice
+    * {num_loop_rimanenti >= 0} [@UgoEMimi]
+      -> UgoEMimi_choice
+    * {num_loop_rimanenti >= 0} [@Piiiietro]
+      -> Piiiietro_choice
+    * {num_loop_rimanenti >= 0} [@Quello]
+      -> Quello_choice
+    * {num_loop_rimanenti >= 0} [@IlDivo]
+      -> IlDivo_choice  
+      
+    * -> cucina_giorno_due
+    
+    //RICETTA RICHIESTA: un pasto per quando vengono i veri amici.
+    
+    = UgoEMimi_choice
+    //Ingredienti suggeriti: Vol-au-vent e farcire
+        you: ciao
+        UgoEMimi: ciao a te!
+        UgoEMimi: secondo me dovresti mettere delle <b>ciRichiamaConcorrenteatte</b> nella ricetta!
+        ~ dialogue_ingredients_of_the_day += uova
+        -> loop
+    
+    = BeBe_choice
+    //Ingredienti: blocchi d'erba e uova di pecora (sacrificio)
 
-~ temp num_loop_rimanenti = 2
-{ abilities has PNGParliExtra:
-  ~ num_loop_rimanenti += 1
-}
-- (loop)
-~ num_loop_rimanenti -= 1
-// passa alla scena lounge
-~ moveToLounge()
-
--> inizio_lounge ->
-
-~ moveToLounge()
-// scelta del personaggio con cui parlare (vengono tolti in automatico quelli non più vivi)
-* {num_loop_rimanenti >= 0} [@BeBe]
-  -> BeBe_choice
-* {num_loop_rimanenti >= 0} [@UgoEMimi]
-  -> UgoEMimi_choice
-* {num_loop_rimanenti >= 0} [@Piiiietro]
-  -> Piiiietro_choice
-  TODO: aggiungi PNG
-  
-* -> cucina_giorno_due
-  
-TODO: choice PNG (stich)
-= UgoEMimi_choice
-you: ciao
-UgoEMimi: ciao a te!
-UgoEMimi: secondo me dovresti mettere delle <b>ciRichiamaConcorrenteatte</b> nella ricetta!
-~ dialogue_ingredients_of_the_day += uova
--> loop
-
-= BeBe_choice
-BeBe
--> loop
-
-= Piiiietro_choice
-Piiiietro
--> loop
+        BeBe
+        -> loop
+    
+    = Piiiietro_choice
+    //Ingredienti: tonno in scatola e scolare
+        Piiiietro
+        -> loop
+    
+    = Quello_choice
+    //Ingredienti: lacrime e cacao amaro
+        Piiiietro
+        -> loop
+    
+    = IlDivo_choice
+    //Ingredienti: specchiarsi e scottare
+        Piiiietro
+        -> loop
 
 
 

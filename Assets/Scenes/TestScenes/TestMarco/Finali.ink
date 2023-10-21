@@ -1,3 +1,6 @@
+TODO scrivere finali random
+
+
 === non_ce_lhai_fatta
 -> END
 
