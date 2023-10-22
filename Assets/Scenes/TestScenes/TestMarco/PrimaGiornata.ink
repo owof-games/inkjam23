@@ -93,7 +93,40 @@ Dialoghi giorno 1..4: ogni personaggio ti da 2 ingredienti
     = Piiiietro_choice
     ~ loungeDialogue(Piiiietro)
     //Ingredienti suggeriti: tonno in scatola e mescolare
-        Piiiietro
+    Piiiietro: Bruiser Woods! Dove sei finito? Cristo, ti sei portato via anche il mio rosario di Gucci!
+    Piiiietro: L'avevo detto a Snooki, oh se gliel'avevo detto, che era una pessima idea, ma lei no, no! Bruiser!
+        + YOU: Bruiser Woods?
+            Piiiietro: Sì, come quel Bruiser, e non lo trovo!
+        + YOU: Rosario di Gucci?
+            Piiiietro: Sì, un regalo di mia nonna Scianel per festeggiare il mio sedicesimo.
+        + YOU: Snookie?
+            Piiiietro: Scusa, ho firmato un NDA, non posso dire altro.
+        -
+    Piiiietro: Tornerà, spero. Questo pianeta sembra minuscolo comunque, non ci saranno altre cagnoline.
+    Piiiietro: Comunque piacere, sono Piiiietro, studentessa di matematica. A quattordici anni ho risolto il gioco di Collatz, a quindici le equazioni di Navier-Stokes ma non ho ancora ricevuto la medaglia Fields perché dopo quella storia di Perel'man hanno paura di fare casini.
+    Piiiietro: Ma tu non stai capendo una ceppa, vero?
+        + YOU: In realtà Perel'man alle medie mi copiava.
+        + YOU: Sto ancora pensando al rosario di Gucci.
+        + YOU: No, ma settimana scorsa ho azzeccato al primo colpo il resto al supermercato.
+        -
+    Piiiietro: Che se non trovo il rosario mia nonna mi uccide, sai?
+    Piiiietro: La famiglia tutta. Sono tutti così religiosi, pensa che hanno un santino di Paolo Brosio sul caminetto.
+    Piiiietro: Mi hanno obbligata a studiare matematica per confermare l'esistenza di Dio.
+        + YOU: E sei anche un'ottima cuoca, quindi?
+        -
+    Piiiietro: Cuoca? In che senso, cuoca?
+        + YOU: Beh, questo è un programma di cucina, credo ci abbiano rapite etc etc.
+        -
+    Piiiietro: Non siamo ad Amici?!?
+        + YOU: Dovremmo ballare su quell'enorme cucina a gas?
+        + YOU: Cuccarini ha detto cose che manco un cane, ma non credo.
+        + YOU: No grazie, preferisco il rapimento.
+        -
+    Piiiietro: Ma io so giusto cucinare un piatto di pasta col <b>tonno in scatola</b> e <b>mescolare</b>, cazzo ci faccio qui?
+       ~ dialogue_ingredients_of_the_day += tonno_in_scatola
+        ~ dialogue_ingredients_of_the_day += mescolare
+    Piiiietro: Bruiser, Bruiser dove sei? Dobbiamo andarcene da qui! A dopo, o a mai più!
+    
         -> loop
     
     = Quello_choice

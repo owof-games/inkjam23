@@ -99,7 +99,35 @@ ne devi sempre beccare 3**/
     
     = Piiiietro_choice
     //Ingredienti: Kate Bush, l'idea di successo, cassaPortatile
-        Piiiietro
+    Piiiietro: Ehi, ti stavo cercando. Volevo ringraziarti, sai?
+        + YOU: Uh, davvero?
+        -
+    Piiiietro: Sì. Vedere qualcuno fallire così grandiosamente tutto e nemmeno rendersene conto, è stato liberatorio. Cioè: se una persona può vivere comunque immersa in così tanta mediocrità, posso pure rinunciare all'<b>idea del successo</b> e prendermi qualche rischio.
+       ~ dialogue_ingredients_of_the_day += ideaDiSuccesso
+        + YOU: Grazie, credo?
+        + YOU: Senti, perché non vai un po' a fanculo?
+        + YOU: Ehi, io ce la sto mettendo tutta!!!
+        -
+    Piiiietro: Poi, insomma. Quanta gente può dire di avere una canzone dedicata da <b>Kate Bush</b>?
+       ~ dialogue_ingredients_of_the_day += KateBush
+    Piiiietro: Anche se sono sempre stata una da Gigi D'Agostino e Gabry Ponte.
+        + YOU: Faccio ancora parte di questa conversazione, o è un monologo?
+        + YOU: Che gusti da truzza!
+        + YOU: "Che ne sanno i 2000" batte "Bocca di Rosa" 10 a 1.
+        -
+    Piiiietro: Anche per questo volevo fossi tu la prima persona a saperlo: lascio la matematica.
+    Piiiietro: E tu dirai: Piiiietro ma sei una pi greco, che senso ha, che altro puoi fare?
+    Piiiietro: E io ti direi: non calpestare i miei sogni! Perché sono nata per cantare, per andare in giro con la mia <b>cassa portatile</b>, il mio album degli Eiffel 65 e cantare in giro per il mondo!
+       ~ dialogue_ingredients_of_the_day += cassaPortatile
+        + YOU: Cantare? Cosa c'è da cantare in Blue dabudidabuda?
+        + YOU: Woah, tu sì che sei una persona coraggiosa.
+        + YOU: Ma quella roba della medaglia Fields?
+        -
+    Piiiietro: E Snooki si arrabbierà e 'sti cazzi, si riprenderà qualche Rolex ma ehi, la pietra rimane pietra e la goccia è solo acqua!
+    Piiiietro: L'ho capito quando ho ritrovato il rosario! E sai qual è la cosa più bella?
+        + YOU: Vabbè ciao io esco da questo monologo Maria!
+        -
+    Piiiietro: Minimo faccio un video con Pauly D!    
         -> loop
     
     = Quello_choice

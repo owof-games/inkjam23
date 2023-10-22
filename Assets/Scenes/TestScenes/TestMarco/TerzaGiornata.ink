@@ -95,7 +95,32 @@ Dialoghi giorno 1..4: ogni personaggio ti da 2 ingredienti
     
     = Piiiietro_choice
     //Ingredienti: tonno in scatola e scolare
-        Piiiietro
+    Piiiietro: Eppure ero sicura che fosse un RE minore.
+        + YOU: Come, scusa?
+        + YOU: Eri sotto di un semitono.
+        + YOU: Ok, Carlo fa un po' cacare, però chiamarlo Re minore è crudele!
+        -
+    Piiiietro: Ma che tu entri sembre così, nelle stanze degli altri? Che cosa tamarra!
+        + YOU: A dire il vero questa è la lounge, ed è comune. Ma perché tu hai una stanza tua?
+        -
+    Piiiietro: Certo, sennò dove lo piazzavo il lettino UV e il sistema di casse?
+        + YOU: Ti prego ti prego dammi qualcosa che sembri del sole per un'ora!
+            Piiiietro: E se poi mi attacchi un eritema solare?!?
+        + YOU: Sistema di casse? Quindi eri tu a cantare prima?
+            Piiiietro: NO.
+        + YOU: Ma io non ho una stanza, dormo tra le travi sopra la cucina.
+            Piiiietro: E qui si vede chi ha un agente e chi no, mi dispiace!
+        -
+    Piiiietro: Forse comunque ci fanno fare un karaoke. Piccolo, stasera, dopo la prova. Sembra che la mia pasta con <b>tonno in scatola</b> e pure <b>scolata/b> male sia un successone. La ripropongo anche stasera!
+       ~ dialogue_ingredients_of_the_day += tonno_in_scatola
+        ~ dialogue_ingredients_of_the_day += scolare
+        + YOU: Ma a te il tema non preoccupa, per caso?
+        -
+    Piiiietro: E perché dovrebbe?
+        + YOU: Insomma, vedi altre persone umane?
+    Piiiietro: Ehi dolcezza, parla per te! Sono un genio della matematica, un'entità astratta, la definizione stessa della sezione aurea. E vesto leopardato. Col cazzo che sono un'umana!
+    Piiiietro: E ora vattene da camera mia, che devo creare un po' di drama tra BeBe e Dogron.
+    
         -> loop
     
     = Quello_choice

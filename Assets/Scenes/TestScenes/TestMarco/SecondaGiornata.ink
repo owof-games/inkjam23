@@ -98,9 +98,31 @@ Dialoghi giorno 1..4: ogni personaggio ti da 2 ingredienti
     
     = Piiiietro_choice
     //Ingredienti: tonno in scatola e scolare
-        Piiiietro
+    Piiiietro: <b>Tonno in scatola</b> e <b>scolare</b>.
+       ~ dialogue_ingredients_of_the_day += tonno_in_scatola
+        ~ dialogue_ingredients_of_the_day += scolare
+        + YOU: Come, scusa?
+        + YOU: Ah, perfetto, a dopo.
         -> loop
-    
+        + YOU: Non sai cucinare altro?
+        -
+    Piiiietro: Che ho visto ieri che guardavi cosa stavo cucinando. Fanno tutte così, a copiare il lavoro delle altre persone, e poi.
+        + YOU: Potrebbe sorprenderti, ma cucino persino peggio di te.
+            Piiiietro: Non esageriamo, ho visto cosa hai tirato fuori ieri!
+        + YOU: Hai trovato poi il tuo cane?
+            Piiiietro: No, e ho trovato la sua pelliccia di zibellino russo abbandonata dietro una poltrona.
+            Piiiietro: Ma fa sempre così, quando gli vieto di andare in vacanza da qualche parte.
+        + YOU: Ma il rosario poi?
+            Piiiietro: Credo di averlo visto addosso a Dogron, dovrò indagare meglio.
+        -
+    Piiiietro: Comunque ieri la produzione mi ha detto che non me ne posso andare, che ho firmato un contratto, e che se l'errore è del mio agente a loro non cambia nulla.
+        + YOU: Agente?
+        -
+    Piiiietro: Agente matematico. Facciamo sfide tipo come il rap, ma a suon di equazioni. Non sembra ma è superfaticoso, l'anno scorso due concorrenti sono morti disidratati pur di finire, oh, non ricordo manco cosa, tanto vinco sempre.
+    Piiiietro: Sono così brava in matematica.
+    Piiiietro: Ma ora ti saluto, che devo sistemare i diamantini sui denti prima dell'episodio.
+        -> loop
+        
     = Quello_choice
     //Ingredienti: lacrime e cacao amaro
     {not passaggio_lounge_giorno_uno.Quello_choice: Quello: Ciao! Io sono Quello, o Quello Lì a volte. Ti guardavo cucinare ieri e woah, te la cavi benissimo!}

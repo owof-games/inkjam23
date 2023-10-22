@@ -83,7 +83,33 @@ Dialoghi giorno 1..4: ogni personaggio ti da 2 ingredienti
     
     = Piiiietro_choice
     //Ingredienti: Tonno in scatola al naturale (più punti) e cantare
-        Piiiietro
+    Piiiietro: Alla fine, se ne è andato.
+        + YOU: Chi?
+        -
+    Piiiietro: Bruiser. Mi ha lasciato una lettera, dicendomi che ha trovato una Chihuahua Suprema, e che vivrà con lei. Che ha mandato un gatto di servizio e recuperare le sue ciotole leopardate e la cuccia di raso e diamanti, e mi invita a non cercarlo.
+    Piiiietro: Mi ringrazia per questi anni passati assieme, ma crede sia arrivato per lui il momento di stare con qualcuno che non si nasconde agli altri. Che non finga di essere infinito, dice.
+        + YOU: Che intende?
+        + YOU: Mi dispiace, credo?
+        + YOU: Bruiser sa scrivere?!?
+        -
+    Piiiietro: Ha ragione, sai? Tu, tu ti mostri per come sei, al mondo?
+        + YOU: Insomma, se le persone vedessero le doti che ho preso dal mio padre antico, verrebbero rese cieche dalla follia.
+        + YOU: Nel Culto ho imparato a nascondere chi sono, così da poter ottenere tutto.
+        + YOU: Una volta ci ho provato. Molto alcool, polizia, qualche giorno in cella per atti osceni in luogo pubblico. Povera pecora.
+        -
+    Piiiietro: Cavolo, hai avuto una vita interessante!
+    Piiiietro: La mia... Bruiser forse ha ragione, sai? Non mi vivo davvero. Devo, devo dire delle cose ad alta voce. Ma mi fa così paura farlo, cazzo.
+        + YOU: Siamo state rapite, siamo su un pianeta grosso come un negozio Ikea, non sapremo cosa sarà di noi domani. Se non le dici oggi, quando?
+            Piiiietro: Ma è difficile!
+        + YOU: Avrei un impegno...
+            Piiiietro: Due minuti!
+        + YOU: BeBe mi sembra una portata all'ascolto, sai?
+            Piiiietro: Quando deve dire il mio nome però si incarta.
+        -
+    Piiiietro: Stasera accoglierò anche io il cambiamento, sai? Come Bruiser. Basta con pasta al tonno in scatola. Farò della pasta con <b>tonno in scatola al naturale</b>! E lo presenterò <b>cantando</b>.
+       ~ dialogue_ingredients_of_the_day += tonnoalnaturale
+        ~ dialogue_ingredients_of_the_day += cantare
+    Piiiietro: Uh, l'ho detto. Devo correre ora, a dopo!
         -> loop
     
     = Quello_choice
