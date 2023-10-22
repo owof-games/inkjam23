@@ -88,7 +88,7 @@ Dialoghi giorno 1..4: ogni personaggio ti da 2 ingredienti
         + YOU: Ma non c'è il sole qui. Forse manco su tutto il pianeta.
             BeBe: Però c'è dell'erba, ne sento l'odore!
         + YOU: Mmm sì sì certo.
-            BeBe: Stai citando quel nuovo gruppo K-Pop?
+            BeBe: Stai citando quel nuovo gruppo K-Pop, le Blink of an eye?
         -
     BeBe: Ma come ti stai trovando qui, dolcezza? Hai tutto quello di cui hai bisogno?
         + YOU: Non so dove sono, vorrei solo scappare.
@@ -136,7 +136,7 @@ Dialoghi giorno 1..4: ogni personaggio ti da 2 ingredienti
         + YOU: No, ma settimana scorsa ho azzeccato al primo colpo il resto al supermercato.
         -
     Piiiietro: Che se non trovo il rosario mia nonna mi uccide, sai?
-    Piiiietro: La famiglia tutta. Sono tutti così religiosi, pensa che hanno un santino di Paolo Brosio sul caminetto.
+    Piiiietro: La famiglia tutta. Sono tutti così religiosi, pensa che hanno un santino di Paolo Brosio sul caminetto che sbatte gli occhi.
     Piiiietro: Mi hanno obbligata a studiare matematica per confermare l'esistenza di Dio.
         + YOU: E sei anche un'ottima cuoca, quindi?
         -
@@ -177,7 +177,7 @@ Dialoghi giorno 1..4: ogni personaggio ti da 2 ingredienti
         + YOU: Fuggendo mentre tutte voi cucinate.
         + YOU: Uova al tegamino?
         -
-    Quello: Woah, tu hai le idee chiarissime! Io volevo puntare su delle meringhe, ma il Divo l'ultima volta le ha definite troppo meringose, e non va bene.
+    Quello: Woah, tu hai le idee chiarissime! Io volevo puntare su delle meringhe, ma il Divo l'ultima volta le ha definite troppo meringose, e non va bene. Capisce cosa è giusto in un colpo d'occhio!
     Quello: So solo fare dolci, e allora pensavo di prendere del <b>burro</b> e un po' di altre cose, <b>montare</b> con pazienza a mano tutto e fare dei semplici baci di Dama.
     ~ dialogue_ingredients_of_the_day += burro
     ~ dialogue_ingredients_of_the_day += montare
