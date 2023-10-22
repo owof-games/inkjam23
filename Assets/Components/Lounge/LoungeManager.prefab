@@ -65,7 +65,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Texture: {fileID: 2800000, guid: 673815d67ad02fb488549cc6edeb5965, type: 3}
+  m_Texture: {fileID: 2800000, guid: 1bd135372faadf740b917df50a4e2584, type: 3}
   m_UVRect:
     serializedVersion: 2
     x: 0
@@ -212,7 +212,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Texture: {fileID: 2800000, guid: 65b722b67a430604a9a21fd606f0c973, type: 3}
+  m_Texture: {fileID: 2800000, guid: 643b8e923dd69324abe0e249b749a540, type: 3}
   m_UVRect:
     serializedVersion: 2
     x: 0
@@ -1063,6 +1063,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Choices
       objectReference: {fileID: 0}
+    - target: {fileID: 8757867792570844194, guid: 0b112bc251bcacd49acd172d2e9c366d, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1186,7 +1190,7 @@ PrefabInstance:
       objectReference: {fileID: 21300000, guid: e0520561d791e0f4385567d9545f40d5, type: 3}
     - target: {fileID: 8097558227889075932, guid: 790de23cb5f5d4042a16d9f0515696ec, type: 3}
       propertyPath: characterName
-      value: IlDivo
+      value: ilDivo
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2010,6 +2014,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: RightBalloon
       objectReference: {fileID: 0}
+    - target: {fileID: 4081609800331326434, guid: 5de3086bf2a3cef4a9fa9f3074f9027c, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4092781496698924181, guid: 5de3086bf2a3cef4a9fa9f3074f9027c, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0.905
@@ -2426,6 +2434,10 @@ PrefabInstance:
     - target: {fileID: 4081609800331326434, guid: 5de3086bf2a3cef4a9fa9f3074f9027c, type: 3}
       propertyPath: m_Name
       value: LeftBalloon
+      objectReference: {fileID: 0}
+    - target: {fileID: 4081609800331326434, guid: 5de3086bf2a3cef4a9fa9f3074f9027c, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4092781496698924181, guid: 5de3086bf2a3cef4a9fa9f3074f9027c, type: 3}
       propertyPath: m_AnchorMax.x
