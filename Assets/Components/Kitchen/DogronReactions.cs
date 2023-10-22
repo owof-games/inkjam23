@@ -10,26 +10,23 @@ public class DogronReactions : MonoBehaviour
     [SerializeField] private Sprite neutralDogron;
     [SerializeField] private Image image;
     [SerializeField] private float duration;
+    [SerializeField] private int numExpressions;
 
     private void Start()
     {
         image.sprite = neutralDogron;
     }
 
-    public void RightIngredientChosen()
-    {
+    public Coroutine RightIngredientChosen() =>
         LaunchCoroutine(ShowRightIngredientChosen());
-    }
 
-    public void WrongIngredientChosen()
-    {
+    public Coroutine WrongIngredientChosen() =>
         LaunchCoroutine(ShowWrongIngredientChosen());
-    }
 
-    private void LaunchCoroutine(IEnumerator enumerator)
+    private Coroutine LaunchCoroutine(IEnumerator enumerator)
     {
         StopAllCoroutines();
-        StartCoroutine(enumerator);
+        return StartCoroutine(enumerator);
     }
 
     private IEnumerator ShowRightIngredientChosen()
@@ -44,8 +41,12 @@ public class DogronReactions : MonoBehaviour
 
     private IEnumerator UseSprite(Sprite sprite)
     {
-        image.sprite = sprite;
-        yield return new WaitForSeconds(duration);
-        image.sprite = neutralDogron;
+        for (var i = 0; i < numExpressions; i++)
+        {
+            image.sprite = sprite;
+            yield return new WaitForSeconds(duration / numExpressions / 2);
+            image.sprite = neutralDogron;
+            yield return new WaitForSeconds(duration / numExpressions / 2);
+        }
     }
 }
