@@ -1979,10 +1979,6 @@ PrefabInstance:
       propertyPath: m_AnchorMin.y
       value: 0.54
       objectReference: {fileID: 0}
-    - target: {fileID: 8358557797366213033, guid: 5de3086bf2a3cef4a9fa9f3074f9027c, type: 3}
-      propertyPath: m_VerticalAlignment
-      value: 512
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2367,10 +2363,6 @@ PrefabInstance:
     - target: {fileID: 4092781496698924181, guid: 5de3086bf2a3cef4a9fa9f3074f9027c, type: 3}
       propertyPath: m_AnchorMin.y
       value: 0.54
-      objectReference: {fileID: 0}
-    - target: {fileID: 8358557797366213033, guid: 5de3086bf2a3cef4a9fa9f3074f9027c, type: 3}
-      propertyPath: m_VerticalAlignment
-      value: 512
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

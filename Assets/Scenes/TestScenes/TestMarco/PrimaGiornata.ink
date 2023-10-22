@@ -11,7 +11,8 @@ Dialoghi giorno 1..4: ogni personaggio ti da 2 ingredienti
     -> inizio_lounge ->
 
     ~ temp num_loop_rimanenti = 2
-
+    
+    ~ loungeDialogue(DOGRON)
     DOGRON: Buongiorno persone concorrenti, e benvenute a questa prima puntata di NOMEPROGRAMMA! Oggi vi metteremo alla prova chiedendovi di...
     DOGRON: Cucinare qualcosa che mangereste tutti i giorni!
     DOGRON: Avete a disposizione qualche minuto per chiacchierare tra voi, prima di buttarvi in cucina. Tradotto nelle regole del programma: un massimo di {num_loop_rimanenti+1} persone!
@@ -43,6 +44,7 @@ Dialoghi giorno 1..4: ogni personaggio ti da 2 ingredienti
   
     = UgoEMimi_choice
     //Ingredienti suggeriti: colla di pesce e frullare
+        ~ loungeDialogue(UgoEMimi)
         YOU: ciao
         UgoEMimi: ciao a te!
         UgoEMimi: secondo me dovresti mettere delle <b>ciRichiamaConcorrenteatte</b> nella ricetta!
@@ -51,6 +53,7 @@ Dialoghi giorno 1..4: ogni personaggio ti da 2 ingredienti
     
     = BeBe_choice
     //Ingredienti suggeriti: cipolla e affettare
+    ~ loungeDialogue(BeBe)
     BEBE: Eppure ero sicura di averli messi qui, acciderbolina!
         + YOU: Hai perso qualcosa?
         -
@@ -87,16 +90,19 @@ Dialoghi giorno 1..4: ogni personaggio ti da 2 ingredienti
         -> loop
     
     = Piiiietro_choice
+    ~ loungeDialogue(Piiiietro)
     //Ingredienti suggeriti: tonno in scatola e mescolare
         Piiiietro
         -> loop
     
     = Quello_choice
+    ~ loungeDialogue(Quello)
     //Ingredienti suggeriti: burro e montare
         Quello
         -> loop
     
     = IlDivo_choice
+    ~ loungeDialogue(ilDivo)
     //Ingredienti suggeriti: zafferanno e mantecare
     IlDivo
     -> loop

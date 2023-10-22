@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 67c2acc2794e0914f948b332ded2437d
+guid: e45e82751be87c34280c10e67eb6fb06
 TrueTypeFontImporter:
   externalObjects: {}
   serializedVersion: 4
@@ -8,7 +8,8 @@ TrueTypeFontImporter:
   characterSpacing: 0
   characterPadding: 1
   includeFontData: 1
-  fontNames: []
+  fontNames:
+  - Century Gothic
   fallbackFontReferences: []
   customCharacters: 
   fontRenderingMode: 0
