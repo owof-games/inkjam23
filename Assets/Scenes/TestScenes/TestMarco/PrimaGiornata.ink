@@ -26,9 +26,8 @@ Dialoghi giorno 1..4: ogni personaggio ti da 2 ingredienti
     - (loop)
     ~ num_loop_rimanenti -= 1
     
-
-    ~ moveToLounge()
     // scelta del personaggio con cui parlare (vengono tolti in automatico quelli non più vivi)
+    $
     * {num_loop_rimanenti >= 0} [@BeBe]
       -> BeBe_choice
     * {num_loop_rimanenti >= 0} [@UgoEMimi]
