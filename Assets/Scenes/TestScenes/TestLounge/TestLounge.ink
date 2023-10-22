@@ -7,7 +7,7 @@ VAR success = true
 LIST characters = Dogron, BeBe, UgoEMimi, Piiietro, Quello, IlDivo
 
 
--> passaggio_lounge
+-> passaggio_kitchen
     
 === passaggio_kitchen
 

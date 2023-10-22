@@ -266,6 +266,11 @@ namespace LemuRivolta.InkAtoms
             });
         }
 
+        public object EvaluateFunction(string functionName, out string textOutput, params object[] arguments)
+        {
+            return story.EvaluateFunction(functionName, out textOutput, arguments);
+        }
+
         #region variable storage
 
         private Dictionary<string, object> variableValues;
