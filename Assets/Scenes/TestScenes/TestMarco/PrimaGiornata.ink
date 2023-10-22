@@ -37,8 +37,8 @@ Dialoghi giorno 1..4: ogni personaggio ti da 2 ingredienti
       -> Piiiietro_choice
     * {num_loop_rimanenti >= 0} [@Quello]
       -> Quello_choice
-    * {num_loop_rimanenti >= 0} [@IlDivo]
-      -> IlDivo_choice  
+    * {num_loop_rimanenti >= 0} [@ilDivo]
+      -> ilDivo_choice  
   
     * -> cucina_giorno_uno
   
@@ -59,30 +59,32 @@ Dialoghi giorno 1..4: ogni personaggio ti da 2 ingredienti
         -
     BeBe: I miei occhiali da sole! Non mi piace andare in giro senza.
         + YOU: Li hai addosso, sai?
-            BEBE: Uh, che distratta che sono! Sai, avere otto, ehm, sette figlie rende tutto difficile.
+            BeBe: Uh, che distratta che sono! Sai, avere otto, ehm, sette figlie rende tutto difficile.
         + YOU: Ma non c'è il sole qui. Forse manco su tutto il pianeta.
-            BEBE: Però c'è dell'erba, ne sento l'odore!
+            BeBe: Però c'è dell'erba, ne sento l'odore!
         + YOU: Mmm sì sì certo.
-            BEBE: Stai citando quel nuovo gruppo K-Pop?
+            BeBe: Stai citando quel nuovo gruppo K-Pop?
         -
-    BEBE: Ma come ti stai trovando qui, dolcezza? Hai tutto quello di cui hai bisogno?
+    BeBe: Ma come ti stai trovando qui, dolcezza? Hai tutto quello di cui hai bisogno?
         + YOU: Non so dove sono, vorrei solo scappare.
-            BEBE: Se vinco, ti prometto che ti porterò con me, ho ancora una cameretta libera!
+            BeBe: Se vinco, ti prometto che ti porterò con me, ho ancora una cameretta libera!
         + YOU: L'ultima volta che ho cucinato, la mia casa è esplosa.
-            BEBE: Succede a tutte le persone, prima o poi.
+            BeBe: Succede a tutte le persone, prima o poi.
         + YOU: Non dovrei essere qui. Il Culto mi sta cercando.
-            BEBE: Culto?
+            BeBe: Culto?
         -
         + YOU: Piuttosto, cosa hai deciso di cucinare per la prima puntata?
         -
-    BEBE: Uh sai, pur essendo una pecora in carriera, essere una madre single di otto, uffa, sette agnelline ti obbliga a fare i conti coi soldi.
-    BEBE: Per cui penso preparerò della zuppa di pane e <b>cipolla</b> da <b>affettare</b>.
-    BEBE: La cipolla rende tutto buonissimo, e non costa niente.
+    BeBe: Uh sai, pur essendo una pecora in carriera, essere una madre single di otto, uffa, sette agnelline ti obbliga a fare i conti coi soldi.
+    BeBe: Per cui penso preparerò della zuppa di pane e <b>cipolla</b> da <b>affettare</b>.
+    BeBe: La cipolla rende tutto buonissimo, e non costa niente.
+    ~ dialogue_ingredients_of_the_day += cipolla
+    ~ dialogue_ingredients_of_the_day += affettare
         + YOU: Uh, ora capisco l'alito.
         + YOU: Io son più persona da snack, sai?
         + YOU: Grazie del consiglio.
         -
-    BEBE: Comunque non mi sono presentata! Sono Bebe. Ora vado a prepararmi per la fase di cucina, spero di ritrovarti presto!
+    BeBe: Comunque non mi sono presentata! Sono Bebe. Ora vado a prepararmi per la fase di cucina, spero di ritrovarti presto!
         + YOU: Buona fortuna.
         + YOU: Ti batterò.
         + YOU: Come si esce da qui?!?!?
@@ -101,10 +103,10 @@ Dialoghi giorno 1..4: ogni personaggio ti da 2 ingredienti
         Quello
         -> loop
     
-    = IlDivo_choice
+    = ilDivo_choice
     ~ loungeDialogue(ilDivo)
     //Ingredienti suggeriti: zafferanno e mantecare
-    IlDivo
+    ilDivo
     -> loop
 
 === cucina_giorno_uno

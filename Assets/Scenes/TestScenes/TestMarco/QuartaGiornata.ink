@@ -30,8 +30,8 @@ Dialoghi giorno 1..4: ogni personaggio ti da 2 ingredienti
           -> Piiiietro_choice
         * {num_loop_rimanenti >= 0} [@Quello]
           -> Quello_choice
-        * {num_loop_rimanenti >= 0} [@IlDivo]
-          -> IlDivo_choice  
+        * {num_loop_rimanenti >= 0} [@ilDivo]
+          -> ilDivo_choice  
           
         * -> cucina_giorno_quattro
   
@@ -48,21 +48,23 @@ Dialoghi giorno 1..4: ogni personaggio ti da 2 ingredienti
     
     = BeBe_choice
     //Ingredienti: avvelenare e collare con un'etichetta: DOGRON
-    BEBE: Accettare, certo. Ha ragione.
+    BeBe: Accettare, certo. Ha ragione.
         + YOU: Tutto bene, Bebe?
         -
-    BEBE: Sì sì sì, sono solo di fretta. Il cambiamento, è importante accogliere il cambiamento. Cambiare, per le mie otto, no, sette figlie. Sette.
+    BeBe: Sì sì sì, sono solo di fretta. Il cambiamento, è importante accogliere il cambiamento. Cambiare, per le mie otto, no, sette figlie. Sette.
         + YOU: Come mai citi sempre le tue figlie?
         -
-    BEBE: Perché il dovere di ogni madre è proteggerle. E se fallisce, vendicarsi. Portare il cambiamento.
+    BeBe: Perché il dovere di ogni madre è proteggerle. E se fallisce, vendicarsi. Portare il cambiamento.
         + YOU: Mi devo preocuppare?
         -
-    BEBE: No, tu no. Ma oggi porterò una ricetta davvero speciale, sai? Il cambiamento richiede un rischio, e per questo userò della cicuta. Un poco di <b>veleno</b>, scommettendo su quanto possa essere fatale. E il <b>collare</b> dell'assassino.
+    BeBe: No, tu no. Ma oggi porterò una ricetta davvero speciale, sai? Il cambiamento richiede un rischio, e per questo userò della cicuta. Un poco di <b>veleno</b>, scommettendo su quanto possa essere fatale. E il <b>collare</b> dell'assassino.
+    ~ dialogue_ingredients_of_the_day += avvelenare
+    ~ dialogue_ingredients_of_the_day += collareconetichetta
         + YOU: Ehm, credo di aver lasciato il gatto nel forno.
         + YOU: Forse l'aria del pianeta ti sta facendo male?
         + YOU: Ma stai sgocciolando latte?
         -
-    BEBE: Accettare. Bisogna accettarlo tutto. A dopo, ciao.    
+    BeBe: Accettare. Bisogna accettarlo tutto. A dopo, ciao.    
         -> loop
     
     = Piiiietro_choice
@@ -76,7 +78,7 @@ Dialoghi giorno 1..4: ogni personaggio ti da 2 ingredienti
         Piiiietro
         -> loop
     
-    = IlDivo_choice
+    = ilDivo_choice
     //Ingredienti: iomestessomemedesimo e #selfcare
         Piiiietro
         -> loop
