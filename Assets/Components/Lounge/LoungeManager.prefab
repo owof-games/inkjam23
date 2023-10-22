@@ -351,6 +351,7 @@ GameObject:
   - component: {fileID: 8042591303618415071}
   - component: {fileID: 7241373351094257162}
   - component: {fileID: 4818795489905146306}
+  - component: {fileID: 7950204462314884824}
   m_Layer: 5
   m_Name: LoungeManager
   m_TagString: Untagged
@@ -474,6 +475,44 @@ MonoBehaviour:
   _eventReference:
     _usage: 0
     _event: {fileID: 11400000, guid: 890212f1b68c88649ad2654f0d1f38ac, type: 2}
+    _eventInstancer: {fileID: 0}
+    _variable: {fileID: 0}
+    _variableInstancer: {fileID: 0}
+--- !u!114 &7950204462314884824
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5297160894864707518}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 775f7409782fa4b619d9153405dd1c25, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _developerDescription: 
+  _unityEventResponse:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 8042591303618415071}
+        m_TargetAssemblyTypeName: LoungeManager, Assembly-CSharp
+        m_MethodName: OnDialogueStarted
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  _actionResponses: []
+  _conditions: []
+  _operator: 0
+  _replayEventBufferOnRegister: 1
+  _eventReference:
+    _usage: 0
+    _event: {fileID: 11400000, guid: f53a016d66dcaf044851231d676c43a8, type: 2}
     _eventInstancer: {fileID: 0}
     _variable: {fileID: 0}
     _variableInstancer: {fileID: 0}
@@ -1100,7 +1139,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3653474391448687937, guid: 790de23cb5f5d4042a16d9f0515696ec, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6835919800482934052, guid: 790de23cb5f5d4042a16d9f0515696ec, type: 3}
       propertyPath: m_Sprite
@@ -1938,7 +1977,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4092781496698924181, guid: 5de3086bf2a3cef4a9fa9f3074f9027c, type: 3}
       propertyPath: m_AnchorMin.y
-      value: 0.52
+      value: 0.54
       objectReference: {fileID: 0}
     - target: {fileID: 8358557797366213033, guid: 5de3086bf2a3cef4a9fa9f3074f9027c, type: 3}
       propertyPath: m_VerticalAlignment

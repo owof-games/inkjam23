@@ -4,6 +4,8 @@ VAR base_ingredients_of_the_day = ()
 VAR dialogue_ingredients_of_the_day = ()
 VAR success = true
 
+LIST characters = Dogron, BeBe, UgoEMimi, Piiietro, Quello, IlDivo
+
 
 -> passaggio_lounge
     
@@ -309,30 +311,43 @@ DOGRON: e ora passiamo al giorno due
   
     = UgoEMimi_choice
     //Ingredienti suggeriti: colla di pesce e frullare
+        ~ loungeDialogue(UgoEMimi)
         YOU: ciao
         UgoEMimi: ciao a te!
-        UgoEMimi: secondo me dovresti mettere delle <b>ciRichiamaConcorrenteatte</b> nella ricetta!
+        UgoEMimi: secondo me dovresti mettere delle <b>ciabatte</b> nella ricetta!
         ~ dialogue_ingredients_of_the_day += uova
         -> loop
     
     = BeBe_choice
     //Ingredienti suggeriti: cipolla e affettare
-        BeBe
+        ~ loungeDialogue(BeBe)
+        BeBe: ciao
+        YOU: ciao
+        $
         -> loop
     
     = Piiiietro_choice
     //Ingredienti suggeriti: tonno in scatola e mescolare
-        Piiiietro
+        ~ loungeDialogue(Piiietro)
+        Piiiietro: ciao
+        YOU: ciao
+        $
         -> loop
     
     = Quello_choice
     //Ingredienti suggeriti: burro e montare
-        Quello
+        ~ loungeDialogue(Quello)
+        Quello: ciao
+        YOU: ciao
+        $
         -> loop
     
     = IlDivo_choice
     //Ingredienti suggeriti: zafferanno e mantecare
-    IlDivo
+        ~ loungeDialogue(IlDivo)
+        IlDivo: ciao
+        YOU: ciao
+        $
     -> loop
 
     = cucina_giorno_uno
@@ -345,3 +360,7 @@ EXTERNAL moveToLounge()
 EXTERNAL moveToKitchen()
 === function moveToKitchen() ===
 [[[move to kitchen]]]
+
+EXTERNAL loungeDialogue(char)
+=== function loungeDialogue(char) ===
+[[[talk with {char}]]]

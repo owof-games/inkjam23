@@ -49,10 +49,6 @@ public class LoungeManager : MonoBehaviour
         if (character != null)
         {
             SetRoomStyle(false);
-            foreach (var characterTalking in GetCharactersTalking())
-            {
-                characterTalking.gameObject.SetActive(characterTalking.CharacterName == character);
-            }
             var activeBalloon = character == youName ? leftBalloon : rightBalloon;
             var nonActiveBalloon = character == youName ? rightBalloon : leftBalloon;
             activeBalloon.gameObject.SetActive(true);
@@ -134,5 +130,13 @@ public class LoungeManager : MonoBehaviour
             FlowName = null,
             ChoiceIndex = lastCharacterChoices.First(c => c.Text == $"@{name}").Index
         });
+    }
+
+    public void OnDialogueStarted(string characterName)
+    {
+        foreach (var characterTalking in GetCharactersTalking())
+        {
+            characterTalking.gameObject.SetActive(characterTalking.CharacterName == characterName);
+        }
     }
 }
