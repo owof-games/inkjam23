@@ -9,8 +9,8 @@ LIST extra_characters = DOGRON
 
 LIST abilities = EvidenziaIngredienti, ScelteLente, (SceltaIngrediente), PNGParliExtra, SaltaMorte, EliminaConcorrente, RichiamaConcorrente
 
-// -> passaggio_kitchen
--> passaggio_lounge
+-> passaggio_kitchen
+// -> passaggio_lounge
 // -> test_pick_list
     
 === passaggio_kitchen

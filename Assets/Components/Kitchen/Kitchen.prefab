@@ -423,6 +423,7 @@ GameObject:
   - component: {fileID: 5775970061001948352}
   - component: {fileID: 6251227977639045371}
   - component: {fileID: 2857217187368606482}
+  - component: {fileID: 8196912222860468998}
   m_Layer: 5
   m_Name: Dogron
   m_TagString: Untagged
@@ -477,7 +478,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: f39948d75e9636840a6ef87438d6cbfd, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 089f08f8f1776d9498b15f50dde4e63e, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -508,6 +509,23 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &8196912222860468998
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4228174114641776798}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d55469e786f05b942a10ec3f1b562860, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  wrongIngredientDogron: {fileID: 21300000, guid: 0f4e9f8d506b3fd4bac99b770a92bf17, type: 3}
+  rightIngredientDogron: {fileID: 21300000, guid: 53bcd34cf65b6b64b85d48b857f14d58, type: 3}
+  neutralDogron: {fileID: 21300000, guid: 089f08f8f1776d9498b15f50dde4e63e, type: 3}
+  image: {fileID: 6251227977639045371}
+  duration: 0.8
 --- !u!1 &4618558986170547459
 GameObject:
   m_ObjectHideFlags: 0
@@ -1380,6 +1398,7 @@ MonoBehaviour:
     ricetta!
   infoBoxRoot: {fileID: 6229847992700167359}
   infoBoxText: {fileID: 2853091321624602604}
+  dogronReactions: {fileID: 8196912222860468998}
 --- !u!114 &8449911695939338529
 MonoBehaviour:
   m_ObjectHideFlags: 0
