@@ -13,7 +13,7 @@ Dialoghi giorno 1..4: ogni personaggio ti da 2 ingredienti
     //RICETTA RICHIESTA: un pasto per quando vengono i veri amici.
 
     ~ loungeDialogue(DOGRON)
-    DOGRON: Ma persone amiche, siamo già alla seconda giornata di THE GOOD DOG (very very good dog!)!!! Non siete supermegafelici e scodinzolanti?!? Oh, quanto non vorrei vedervi mai andare via!
+    DOGRON: Ma persone amiche, siamo già alla seconda giornata di THE GOOD DOG (very very good dog!)!!! Non siete suuuuuupermegafelici e scodinzolanti?!? Oh, quanto non vorrei vedervi mai andare via!
     DOGRON: Ma se non eliminassimo qualcuno, come potremmo trovare un sostituto perfetto per, per, per la cucina più grande di Urano?
     DOGRON: E a proposito di Uuuuuuuurano, il tema di oggi è: un pasto per quando vengono i veri veri amici!
     DOGRON: Vi lascio qualche minuto per le chiacchiere e poi si parte!
@@ -49,10 +49,22 @@ Dialoghi giorno 1..4: ogni personaggio ti da 2 ingredienti
     
     = UgoEMimi_choice
     //Ingredienti suggeriti: Vol-au-vent e Skyrim
-        you: ciao
-        UgoEMimi: ciao a te!
-        UgoEMimi: secondo me dovresti mettere delle <b>ciRichiamaConcorrenteatte</b> nella ricetta!
-        ~ dialogue_ingredients_of_the_day += uova
+    UgoEMimi: Mimi, no, sei tu che non capisci! Kojima l'ha paragonato a <b>Skyrim</b>! E Kojima non sbaglia mai!
+        ~ dialogue_ingredients_of_the_day += Skyrim
+    UgoEMimi: Ugo, non voglio contraddirti, lo sai, ma era un sogno!
+    UgoEMimi: E mi dici che i sogni mentono, eh?! Non sognavi di cucinare per sempre, e ora vedi dove siamo?
+    UgoEMimi: Il mio sogno era aprire un negozio di attrezzi per elettricisti, non cucinare <b>vol-au-vent</b> tutto il sabato per quei buzzurri dei tuoi amici!
+     ~ dialogue_ingredients_of_the_day += volAuVent
+    UgoEMimi: Mimi, stai esagerando, ora! E sai cosa succede quando mi incazzo!
+        + YOU: Signor Ugo, quindi sta creando un videogioco?
+            UgoEMimi: Oh, più di un videogioco, IL videogioco! Sarà uno sparatutto slasher stealth ma non troppo con elementi 4X e una gara di macchine e gestione delle risorse in modalità multiplayer con microtransazioni, NFT e un sacco di DLC!
+            UgoEMimi: Ma per ora Ugo ha creato solo il titolo e una cover con Paint.
+        + YOU: Signora Mimi, quindi è appassionata di elettricismo, si dice così?
+            UgoEMimi: Una donna non può appassionarsi di elettricità, Mimì è brava solo a pulire, cucinare e stirare.
+            UgoEMimi: Infatti viviamo solo in una casa dove ho fatto tutte le messe a terra.
+        + YOU: Non so cosa abbiate, ma nel culto se non ti fai i cazzi tuoi muori male. Ciaone.
+        -
+    
         -> loop
     
     = BeBe_choice
@@ -200,7 +212,7 @@ Total è {total}
 - not success && not ScampataLaMorte && abilities has SaltaMorte:
   ~ ScampataLaMorte = true
   ~ abilities -= SaltaMorte
-  DOGRON: Uh, ma una persona qui ha usato la possibilità di scampare la morte, anche se ha perso! Fortunata questa persona casuale, sì sì!
+  DOGRON: Uh, ma una persona qui ha usato la possibilità di scampare la morte, anche se ha perso! Fortuuuuuuuunata questa persona casuale, sì sì!
 - else:
   -> non_ce_lhai_fatta
 }

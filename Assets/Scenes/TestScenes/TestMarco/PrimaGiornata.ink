@@ -13,10 +13,10 @@ Dialoghi giorno 1..4: ogni personaggio ti da 2 ingredienti
     ~ temp num_loop_rimanenti = 2
     
     ~ loungeDialogue(DOGRON)
-    DOGRON: Buongiorno persone concorrenti, e benvenute a questa prima puntata di THE GOOD DOG! Oggi vi metteremo alla prova chiedendovi di...
+    DOGRON: Buuuuuuuuongiorno persone concorrenti, e benvenute a questa prima puntata di THE GOOD DOG! Oggi vi metteremo alla prova chiedendovi di...
     DOGRON: Cucinare qualcosa che mangereste tuuuuuuutti i giorni!
     DOGRON: Avete a disposizione qualche minuto per chiacchierare tra voi, prima di buuuuttarvi in cucina. Tradotto nelle regole del programma: un massimo di {num_loop_rimanenti+1} persone!
-    DOGRON: Starà a voi decidere se condividere i vostri segreti, ingannare le altre persone, o farvi dare dei grattini! E massima attenzione, perché in THE GOOD DOG tutto cambia in un battito di ciglia!
+    DOGRON: Starà a voi decidere se condividere i vostri segreti, ingannare le altre persone, o farvi dare dei grattini! E massima attenzione, perché in THE GOOD DOG tuuuutto cambia in un battito di ciglia!
 
     ~ dialogue_ingredients_of_the_day = ()
     
@@ -42,12 +42,38 @@ Dialoghi giorno 1..4: ogni personaggio ti da 2 ingredienti
     * -> cucina_giorno_uno
   
     = UgoEMimi_choice
-    //Ingredienti suggeriti: colla di pesce e frullare
+    //Ingredienti suggeriti: colla di pesce e filtrare
         ~ loungeDialogue(UgoEMimi)
-        YOU: ciao
-        UgoEMimi: ciao a te!
-        UgoEMimi: secondo me dovresti mettere delle <b>ciRichiamaConcorrenteatte</b> nella ricetta!
-        ~ dialogue_ingredients_of_the_day += uova
+    UgoEMimi: Ugo, non credo sia il caso.
+    UgoEMimi: Mimi, decido IO quando è il caso. E si dia il caso che qui sono pieni di soldi e io ho bisogno di un publisher!
+    UgoEMimi: Ugo, una persona ci sta guardando.
+        + YOU: Ehm, salve!
+            UgoEMimi: Salve, io sono Ugo, e lei è mia moglie Mimi. Mia.
+        + YOU: Anche voi siete qui contro la vostra volontà?
+            UgoEMimi: Beh, mio marito...
+            UgoEMimi: Mimi è timida ma sì, siamo qui perché lo vogliamo.
+        + YOU: Bel taglio di capelli, signora!
+            UgoEMimi: Merito mio, ho scelto io la sua parrucchiera, da bravo marito!
+        -
+    UgoEMimi: E tu, cosa ci fai qui?
+    UgoEMimi: Ugo, non essere scortese, siamo tutte tese da questa novità!
+        + YOU: Me lo chiedo anche io.
+        + YOU: Credo sia una punizione da parte del Culto.
+        + YOU: Ricordo solo la mia stanza, del cloroformio...
+        -
+    UgoEMimi: Hai bisogno di una mano per cucinare, tesoro?
+    UgoEMimi: Mimi! Che aiuti la concorrenza? Mi servono i soldi per il publisher!
+    UgoEMimi: Ugo, ma non è che voglio dire a questa persona che per un aspic perfetto il segreto è la migliore <b>colla di pesce</b> e <b>filtrarla</b> con delicatezza.
+        ~ dialogue_ingredients_of_the_day += colladipesce
+        ~ dialogue_ingredients_of_the_day += filtrare
+        + YOU: La ringrazio signora, ma gli anni'80 sono finiti da quel dì!
+        + YOU: Non mangio un aspic dal giorno in cui hanno sacrificato nonna a Adramelech per la mia iniziazione, quanti ricordi!
+        + YOU: Signora, se ha bisogno di aiuto batta le ciglia due volte.
+            YOU: Con questa luce non si capisce un cazzo. Riprovi!
+        -
+    UgoEMimi: Mimi, andiamocene! Credo di aver visto una tizia con un iPod, forse è un audio designer!    
+        
+        
         -> loop
     
     = BeBe_choice

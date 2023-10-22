@@ -13,7 +13,7 @@ Dialoghi giorno 1..4: ogni personaggio ti da 2 ingredienti
 //RICETTA RICHIESTA: qualcosa per quando ti senti triste perché tutti gli umani sono scomparsi.
 
     ~ loungeDialogue(DOGRON)
-    DOGRON: Buondì a tutte e benvenute alla terza puntata di THE VERY VERY VERY GOOD GOOD DOG!
+    DOGRON: Buondì a tuuuuuuuuuuuutte e benvenute alla terza puntata di THE VERY VERY VERY GOOD GOOD DOG!
     DOGRON: Non sentite un po' la tristezza? Già due persone ci hanno lasciate, e a me non va di farvi andare via, nuuuuuuuuuuuu!
     DOGRON: Ma la Suprema Chihuahua e il Gran Consiglio dei Carlini- no, nella loro saggezza loro sanno che è importante trovare la padroncina perfetta, no, la personcina perfetta per il ristorante su Satuuuuuurno!
     DOGRON: E di sicuuuuuro questa persona magnifica con delle mani magnifiche che fanno dei bellissimi pat-pat sulla testa, deve sapere fare una ricetta per...
@@ -50,10 +50,28 @@ Dialoghi giorno 1..4: ogni personaggio ti da 2 ingredienti
     = UgoEMimi_choice
     //INGREDIENTI SUGGERITI: iverivideogiochi e canapé
     
-        you: ciao
-        UgoEMimi: ciao a te!
-        UgoEMimi: secondo me dovresti mettere delle <b>ciRichiamaConcorrenteatte</b> nella ricetta!
-        ~ dialogue_ingredients_of_the_day += uova
+    UgoEMimi: ...
+        + YOU: So che me ne pentirò di dirlo, ma mi sembrate molto silenziose, oggi.
+        -
+    UgoEMimi: Ugo ha parlato con uno dei produtti, per il suo videogioco.
+    UgoEMimi: Venditori di cianfrusaglie, sono. Ma lo sapevi che i produttori sono dei carlini?!?!
+    UgoEMimi: E gli è stato detto che il progetto manca di una narrazione coerente, e di una connessione tra gameplay, narrativa ed elementi grafici.
+    UgoEMimi: Mi hanno detto in sostanza che non ha senso! Che è un gioco dove accadono cose senza senso! Ma io gioco <b>i veri videogiochi</b> da sempre! Questi son carlini da walking simulator e visual novel!
+        ~ dialogue_ingredients_of_the_day += iverivideogiochi
+        + YOU: E ora che farete?
+        -
+    UgoEMimi: Oh, io cucinerò dei <b>canapé</b> mentre Ugo si riprende dal dolore.
+        ~ dialogue_ingredients_of_the_day += canapé
+    UgoEMimi: Io non soffro! Gli uomini non soffrono!
+    UgoEMimi: E allora cosa sono, quelle lacrime?
+        + YOU: Non siete spaventati per quella cosa degli umani scomparsi?
+        -
+    UgoEMimi: Uh, mi spiace per loro, ma non siamo mai andati d'accordo con gli umani. Non dopo il fallimento del Virtual Boy.
+    UgoEMimi: Parla per te, Ugo. Personalmente ho sempre amato gli umani, mi veniva una pizzaiola buonissima quando potevo ancora cucinarli.
+        + YOU: Oh, e io che temevo di esser l'unica persona ad aver mangiato carne umana!
+        + YOU: Ho troppe schifezze in corpo perché la mia carne sia gustosa.
+        + YOU: Credo sia giunto il momento per me di andare su Urano.
+        -
         -> loop
     
     = BeBe_choice
@@ -210,7 +228,7 @@ Dialoghi giorno 1..4: ogni personaggio ti da 2 ingredienti
 - not success && not ScampataLaMorte && abilities has SaltaMorte:
   ~ ScampataLaMorte = true
   ~ abilities -= SaltaMorte
-  DOGRON: Uh, ma una persona qui ha usato la possibilità di scampare la morte, anche se ha perso! Fortunata questa persona casuale, sì sì!
+  DOGRON: Uh, ma una persona quuuuuuuuuui ha usato la possibilità di scampare la morte, anche se ha perso! Fortunata questa persona casuale, sì sì!
 - else:
   -> non_ce_lhai_fatta
 }

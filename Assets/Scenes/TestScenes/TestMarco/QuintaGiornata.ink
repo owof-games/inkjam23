@@ -14,9 +14,9 @@ ne devi sempre beccare 3**/
 //RICETTA RICHIESTA: Qualcosa che gridi: sarò il genitore doggo migliore al mondo!
 
     ~ loungeDialogue(DOGRON)
-    DOGRON: No no no amiche, non sono lacrime quelle che vedete, è solo allergia al fatto che è l'ultima puntata.
+    DOGRON: No no no amiche, non sono lacrime quelle che vedete, è solo allergia al fatto che è l'uuuultima puntata.
     DOGRON: Sob.
-    DOGRON: L'ultima puntata di THE VERYSSIMAMENTE GOOD DOGGO BUONO BUONO DOGRON BUONO, QUALCUNO DICA A DOGRON CHE è BUONO e si merita un pat-pat. Uno!
+    DOGRON: L'ultima puntata di THE VERYSSIMAMENTE GOOD DOGGO BUONO BUONO DOGRON BUONO, QUALCUNO DICA A DOGRON CHE è BUUUUUUUUUUONO e si merita un pat-pat. U-u-u-u-uuuno!
     DOGRON: Vi ricordo, finaliste, che in palio c'è la possibilità di avere un proprio mega ristorante su Nettuuuuuuuuuuuuuuuuuuuno, casualmente vicinissimo alla mia casetta senza uuuumani, e a quella del Grande Consiglio dei Carlini e della Suprema Chihuahua.
     DOGRON: Noi brave dogghe, si si.
     DOGRON: E per questo il tema di oggi, l'ultimo grande tema è:
@@ -51,10 +51,26 @@ ne devi sempre beccare 3**/
   
     = UgoEMimi_choice
     //INGREDIENTI SUGGERITI: sventrare, emancipazione, MichelaMurgia
-        you: ciao
-        UgoEMimi: ciao a te!
-        UgoEMimi: secondo me dovresti mettere delle <b>ciRichiamaConcorrenteatte</b> nella ricetta!
-        ~ dialogue_ingredients_of_the_day += uova
+    UgoEMimi: Quindi: "Accabadora", "Stai zitta!", "God Save the Queer"...
+        + YOU: Sta pregando, signora Mimi?
+    UgoEMimi: Ah ah no tesoro, no. Stavo controllando la lista di libri che mi aveva consigliato BeBe a inizio programma, tutti titoli di <b>Michela Murgia</b>.
+    ~ dialogue_ingredients_of_the_day += MichelaMurgia
+    UgoEMimi: Davvero in gamba quella Bebe, così indipendente. L'avessi conosciuta anni fa, avrei capito prima cosa significa <b>emanciparsi</b>.
+    ~ dialogue_ingredients_of_the_day += emancipazione
+    UgoEMimi: Anche se lo <b>sventramento</b> di Ugo non mi è dispiaciuto.
+        ~ dialogue_ingredients_of_the_day += sventrare
+        + YOU: Quindi l'ha davvero ucciso?
+            UgoEMimi: Per Ugo, eravamo alla morte celebrale già da decenni, tesorino.
+        + YOU: Quindi l'abbiamo mangiato ieri?
+            UgoEMimi: Poco poco, spero non vi sia stato indigesto.
+        + YOU: Quindi potrebbe darmi due dritte se avessi un problema simile?
+            UgoEMimi: Non sarebbe mai esattamente lo stesso problema, visto che non vedo una seconda testa attaccata al tuo collo, ma la carne è pur sempre carne, no?
+        -
+    UgoEMimi: Fa strano che questo percorso stia finendo, sai? Quante cose sono cambiate!
+        + YOU: Ora aprirà il suo negozio di elettricista?
+        -
+    UgoEMimi: Ancora non lo so. Credo di volermi prendere un anno sabbatico. Soldi, sesso, viaggi. Reiniziare la vita a 96 anni può essere un'esperienza esaltante.
+    UgoEMimi: Ma prima devo batterti in quest'ultima giornata. A dopo tesoro!
         -> loop
     
     = BeBe_choice
@@ -216,7 +232,7 @@ ne devi sempre beccare 3**/
 - not success && not ScampataLaMorte && abilities has SaltaMorte:
   ~ ScampataLaMorte = true
   ~ abilities -= SaltaMorte
-  DOGRON: Uh, ma una persona qui ha usato la possibilità di scampare la morte, anche se ha perso! Fortunata questa persona casuale, sì sì!
+  DOGRON: Uuuuuuuuh, ma una persona qui ha usato la possibilità di scampare la morte, anche se ha perso! Fortunata questa persona casuale, sì sì!
 - else:
   -> non_ce_lhai_fatta
 }

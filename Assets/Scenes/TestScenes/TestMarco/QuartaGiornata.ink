@@ -16,9 +16,9 @@ Dialoghi giorno 1..4: ogni personaggio ti da 2 ingredienti
     ~ loungeDialogue(DOGRON)
     DOGRON: Coda, vieni qua! Coda, coda! Fermati! Cattiva coda, cattiva!
     DOGRON: Ah, siamo in onda?
-    DOGRON: Benvenute alla quarta e penultima puntata di THE VERYSSIMAMENTE GOOD DOGGO BUONO BUONO DOGGO BUONO! Qui è il vostro conduttore preferito, vero che sono il vostro conduttore preferito?
-    DOGRON: Chi è il conduttore più bravo al mondo? Chi è?
-    DOGRON: Il tema di oggi ci riguarda tutte. Quel tema che ti viene in mente quando la tua tazza preferita si rompe, o le crocchette sono nuove e hanno un sapore inaspettato o il postino ha una divisa pulita.
+    DOGRON: Benvenute alla quarta e penuuuuuultima puntata di THE VERYSSIMAMENTE GOOD DOGGO BUONO BUONO DOGGO BUONO! Qui è il vostro conduttore preferito, vero che sono il vostro conduttore preferito?
+    DOGRON: Chi è il conduuuuttore più bravo al mondo? Chi è?
+    DOGRON: Il tema di oggi ci riguarda tutte. Quel tema che ti viene in mente quando la tua tazza preferita si rompe, o le crocchette sono nuuuuuove e hanno un sapore inaspettato o il postino ha una divisa pulita.
     DOGRON: O quando prendono un cuuuuuucciolo e ti dicono che tutto rimarrà come prima ma non è vero, quel cucciolo inizia a camminare, ad andare a stuuudiare e tu ti ci sei affezionato e luuuuuuuuui si dimentica di te.
     DOGRON: Il tema di oggi è il cambiamento, qualcosa per accettare il cambiamento.
     DOGRON: Un'altra grande idea della Suprema Chihuahua e del Consiglio dei Carlini.
@@ -53,11 +53,23 @@ Dialoghi giorno 1..4: ogni personaggio ti da 2 ingredienti
   
     = UgoEMimi_choice
     //INGREDIENTI: Mazinga e Le orecchie di Ugo    
-
-        you: ciao
-        UgoEMimi: ciao a te!
-        UgoEMimi: secondo me dovresti mettere delle <b>ciRichiamaConcorrenteatte</b> nella ricetta!
-        ~ dialogue_ingredients_of_the_day += uova
+    UgoEMimi: Ma ciao, splendore!
+        + YOU: Signora Mimi, noto qualcosa di diverso!
+        -
+    UgoEMimi: Uh, sarà il taglio di capelli. Mi sono ispirata a Venusia di <b>Mazinga</b>. Uh, sai che avevo una cotta per Tetsuya?
+            ~ dialogue_ingredients_of_the_day += Mazinga
+        + YOU: Aveva il suo perché con quel ciuffo.
+        + YOU: Ma il signor Ugo?
+        + YOU: No, intendevo il fatto che le manchi una testa, tipo.
+        -
+    UgoEMimi: Oggi mi sento così leggera, sai? Non mi capitava da tempo. Prima mi son messa a saldare un po' di prese elettriche, e ho aiutato il cameraman con un problema ai suoi circuiti androidici.
+    UgoEMimi: E per celebrare il cambiamento, come richiesto da Dogron e i suoi amici cani, credo farò una insalata russa con le <b>orecchie di Ugo</b>.
+            ~ dialogue_ingredients_of_the_day += orecchieUgo
+            + YOU: Ricordo quelle di Eustacchio, coi funghi furono una bomba.
+            + YOU: Forse conviene sentir prima che ne pensa la giuria?
+            + YOU: Il signor Ugo ne sentirà la mancanza?
+            -
+    UgoEMimi: Ma ora vado, tesorino, che ho un appuntamento con un certo androide. A dopo!        
         -> loop
     
     = BeBe_choice
@@ -202,7 +214,7 @@ Dialoghi giorno 1..4: ogni personaggio ti da 2 ingredienti
 - not success && not ScampataLaMorte && abilities has SaltaMorte:
   ~ ScampataLaMorte = true
   ~ abilities -= SaltaMorte
-  DOGRON: Uh, ma una persona qui ha usato la possibilità di scampare la morte, anche se ha perso! Fortunata questa persona casuale, sì sì!
+  DOGRON: Uh, ma una persona qui ha usato la possibilità di scampare la morte, anche se ha perso! Fortunata questa persona casuuuuuuuale, sì sì!
 - else:
   -> non_ce_lhai_fatta
 }
