@@ -1,5 +1,3 @@
-using LemuRivolta.InkAtoms;
-
 using TMPro;
 
 using UnityAtoms.BaseAtoms;

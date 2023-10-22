@@ -18,7 +18,17 @@ MonoBehaviour:
   choiceEvent: {fileID: 11400000, guid: 08a0c689302d3d6458a756b554ef004b, type: 2}
   debugCurrentState: 1
   inkStoryWrapperEvent: {fileID: 11400000, guid: b5c2665501748d442a951876b74d7149, type: 2}
-  variableListeners: []
+  variableListeners:
+  - MatchKind: 0
+    Name: base_ingredients_of_the_day
+    Regex: 
+    List: []
+    VariableChangeEvent: {fileID: 11400000, guid: 75dc2ac826ed1bb4f84ee182386229d0, type: 2}
+  - MatchKind: 0
+    Name: dialogue_ingredients_of_the_day
+    Regex: 
+    List: []
+    VariableChangeEvent: {fileID: 11400000, guid: f72ad21cbec4f6441a64a048e5b50ff3, type: 2}
   FirstElement:
     MatchKind: 0
     Name: 

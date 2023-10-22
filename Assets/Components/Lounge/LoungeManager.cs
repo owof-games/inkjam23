@@ -1,6 +1,8 @@
 using System.Collections.Generic;
 using System.Linq;
 
+using Ink.Runtime;
+
 using LemuRivolta.InkAtoms;
 
 using UnityAtoms.BaseAtoms;
@@ -52,6 +54,10 @@ public class LoungeManager : MonoBehaviour
             var activeBalloon = character == youName ? leftBalloon : rightBalloon;
             var nonActiveBalloon = character == youName ? rightBalloon : leftBalloon;
             activeBalloon.gameObject.SetActive(true);
+            if (!hasHighlightIngredients)
+            {
+                text = text.Replace("<b>", "").Replace("</b>", "");
+            }
             activeBalloon.Write(text);
             activeBalloon.EnableAdvanceButton(storyStep.CanContinue);
             nonActiveBalloon.gameObject.SetActive(false);
@@ -138,5 +144,13 @@ public class LoungeManager : MonoBehaviour
         {
             characterTalking.gameObject.SetActive(characterTalking.CharacterName == characterName);
         }
+    }
+
+    private bool hasHighlightIngredients;
+
+    public void OnAbilitiesChanged(VariableValuePair pair)
+    {
+        var newValue = pair.Item2.Value as InkList;
+        hasHighlightIngredients = newValue.Keys.Any(key => key.itemName == "EvidenziaIngredienti");
     }
 }

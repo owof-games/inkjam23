@@ -7,6 +7,8 @@ VAR success = true
 LIST characters = BeBe, UgoEMimi, Piiietro, Quello, IlDivo
 LIST extra_characters = DOGRON
 
+LIST abilities = EvidenziaIngredienti, ScelteLente, SceltaIngrediente, PNGParliExtra, SaltaMorte, EliminaConcorrente, RichiamaConcorrente
+
 -> passaggio_lounge
     
 === passaggio_kitchen
@@ -332,7 +334,7 @@ DOGRON: e ora passiamo al giorno due
     = BeBe_choice
     //Ingredienti suggeriti: cipolla e affettare
         ~ loungeDialogue(BeBe)
-        BeBe: ciao
+        BeBe: <b>ciao</b>
         YOU: ciao
         BeBe: dimmi qualcosa
         * YOU: qualcosa
