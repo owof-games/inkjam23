@@ -40,7 +40,8 @@ public class LoungeManager : MonoBehaviour
             SetRoomStyle(true);
             foreach (var contestant in GetContestantsInSelection())
             {
-                var selectable = characterChoices.Contains(contestant.ContestantName);
+                var selectable = characterChoices.Contains(contestant.ContestantName) &&
+                    aliveCharacters.Contains(contestant.ContestantName);
                 contestant.SetEnabled(selectable);
             }
             return;
@@ -163,5 +164,13 @@ public class LoungeManager : MonoBehaviour
     {
         var newValue = pair.Item2.Value as InkList;
         hasHighlightIngredients = newValue.Keys.Any(key => key.itemName == "EvidenziaIngredienti");
+    }
+
+    private string[] aliveCharacters;
+
+    public void OnAliveCharactersChanged(VariableValuePair pair)
+    {
+        var newValue = pair.Item2.Value as InkList;
+        aliveCharacters = newValue.Keys.Select(key => key.itemName).ToArray();
     }
 }

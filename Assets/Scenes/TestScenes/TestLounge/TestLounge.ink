@@ -4,13 +4,13 @@ VAR base_ingredients_of_the_day = ()
 VAR dialogue_ingredients_of_the_day = ()
 VAR success = true
 
-LIST characters = BeBe, UgoEMimi, Piiietro, Quello, ilDivo
+LIST alive_characters = UgoEMimi, BeBe, (Piiiietro), (Quello), (ilDivo)
 LIST extra_characters = DOGRON
 
 LIST abilities = EvidenziaIngredienti, ScelteLente, (SceltaIngrediente), PNGParliExtra, SaltaMorte, EliminaConcorrente, RichiamaConcorrente
 
--> passaggio_kitchen
-// -> passaggio_lounge
+// -> passaggio_kitchen
+-> passaggio_lounge
 // -> test_pick_list
     
 === passaggio_kitchen
@@ -353,7 +353,7 @@ DOGRON: a fare facce buffe!
     
     = Piiiietro_choice
     //Ingredienti suggeriti: tonno in scatola e mescolare
-        ~ loungeDialogue(Piiietro)
+        ~ loungeDialogue(Piiiietro)
         Piiiietro: ciao
         YOU: ciao
         -> loop
@@ -465,7 +465,7 @@ LIST listatest = (uno), due, (tre), quattro, cinque
     
     = Piiiietro_choice
     //Ingredienti suggeriti: tonno in scatola e mescolare
-        ~ loungeDialogue(Piiietro)
+        ~ loungeDialogue(Piiiietro)
         Piiiietro: ciao
         YOU: ciao
         -> loop
