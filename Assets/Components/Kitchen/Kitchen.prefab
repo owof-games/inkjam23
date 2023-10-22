@@ -909,6 +909,7 @@ GameObject:
   - component: {fileID: 3634788085722785186}
   - component: {fileID: 7508669743596127057}
   - component: {fileID: 7497322383809971518}
+  - component: {fileID: 1820281109982665474}
   m_Layer: 5
   m_Name: IngredientsScroll
   m_TagString: Untagged
@@ -977,7 +978,47 @@ MonoBehaviour:
   rectTransform: {fileID: 3634788085722785186}
   heightOutOfBounds: -420
   ingredientPrefab: {fileID: 1871669491962177717, guid: 96a2edf62ca4d814c9ed0225c1ebf829, type: 3}
-  Speed: 200
+  speed: 350
+  slowChoicesRate: 0.5
+  slowChoicesFadeIn: 2
+--- !u!114 &1820281109982665474
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6144227327466504799}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 52f8946478ac180408351273913920b1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _developerDescription: 
+  _unityEventResponse:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 7497322383809971518}
+        m_TargetAssemblyTypeName: IngredientsScroll, Assembly-CSharp
+        m_MethodName: OnAbilitiesChanged
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  _actionResponses: []
+  _conditions: []
+  _operator: 0
+  _replayEventBufferOnRegister: 1
+  _eventReference:
+    _usage: 0
+    _event: {fileID: 11400000, guid: 00603e64f5c9552449d987e3ab55da31, type: 2}
+    _eventInstancer: {fileID: 0}
+    _variable: {fileID: 0}
+    _variableInstancer: {fileID: 0}
 --- !u!1 &7098409789611761066
 GameObject:
   m_ObjectHideFlags: 0

@@ -5,9 +5,9 @@ using System.Linq;
 
 using DG.Tweening;
 
-using Unity.VisualScripting;
+using Ink.Runtime;
 
-using UnityEditor.Rendering.LookDev;
+using UnityAtoms.BaseAtoms;
 
 using UnityEngine;
 using UnityEngine.UI;
@@ -19,7 +19,9 @@ public class IngredientsScroll : MonoBehaviour
     [SerializeField] private float heightOutOfBounds = -420;
     [SerializeField] private GameObject ingredientPrefab;
 
-    public float Speed;
+    [SerializeField] public float speed = 350;
+    [SerializeField] public float slowChoicesRate = 0.5f;
+    [SerializeField] public float slowChoicesFadeIn = 1f;
 
     private List<IngredientDescription> previousDescriptions;
 
@@ -80,17 +82,33 @@ public class IngredientsScroll : MonoBehaviour
         rectTransform.offsetMax = new(0, h);
 
         // start animation
-        DOTween.To(() => rectTransform.offsetMin.y,
+        var tween = DOTween.To(() => rectTransform.offsetMin.y,
             newValue =>
             {
                 rectTransform.offsetMin = new(0, newValue);
                 rectTransform.offsetMax = new(0, newValue);
             },
             heightOutOfBounds,
-            Speed)
+            speed)
             .SetSpeedBased()
             .SetEase(Ease.Linear)
             .SetLoops(-1)
+            .SetTarget(rectTransform)
             .SetLink(gameObject, LinkBehaviour.KillOnDisable);
+        if (hasSlowChoices)
+        {
+            tween.DOTimeScale(slowChoicesRate, slowChoicesFadeIn)
+                .SetEase(Ease.Linear)
+                .SetLink(gameObject, LinkBehaviour.KillOnDisable);
+        }
     }
+
+    private bool hasSlowChoices;
+
+    public void OnAbilitiesChanged(VariableValuePair pair)
+    {
+        var newValue = pair.Item2.Value as InkList;
+        hasSlowChoices = newValue.Keys.Any(key => key.itemName == "ScelteLente");
+    }
+
 }

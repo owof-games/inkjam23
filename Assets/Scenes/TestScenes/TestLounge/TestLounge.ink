@@ -7,9 +7,9 @@ VAR success = true
 LIST characters = BeBe, UgoEMimi, Piiietro, Quello, IlDivo
 LIST extra_characters = DOGRON
 
-LIST abilities = EvidenziaIngredienti, ScelteLente, SceltaIngrediente, PNGParliExtra, SaltaMorte, EliminaConcorrente, RichiamaConcorrente
+LIST abilities = EvidenziaIngredienti, (ScelteLente), SceltaIngrediente, PNGParliExtra, SaltaMorte, EliminaConcorrente, RichiamaConcorrente
 
--> passaggio_lounge
+-> passaggio_kitchen
     
 === passaggio_kitchen
 
