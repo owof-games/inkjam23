@@ -1,6 +1,7 @@
 // lista di tutte le RichiamaConcorrenteilità possibili, verrà popolata durante il primo dialogo
-TODO: eliminare EvidenziaAzioni
-LIST abilities = EvidenziaIngredienti, EvidenziaAzioni, ScelteLente, SceltaIngrediente, PNGParliExtra, SaltaMorte, EliminaConcorrente, RichiamaConcorrente
+TODO: Mettere in giro riferimenti a "in un battito di ciglia"
+TODO: Se usiamo una abilità durante quella giornata, non avere rimozione di altre.
+LIST abilities = EvidenziaIngredienti, ScelteLente, SceltaIngrediente, PNGParliExtra, SaltaMorte, EliminaConcorrente, RichiamaConcorrente
 // lista dei personaggi in vita, all'inizio dovranno essere selezionati tutti
 LIST alive_characters = (UgoEMimi), (BeBe), (Piiiietro), (Quello), (ilDivo)
 LIST extra_characters = DOGRON
@@ -17,6 +18,7 @@ VAR success = true
 
 VAR Eliminatrice = false
 VAR Resuscitatrice = false
+VAR ScampataLaMorte = false
 
 
 === function translate_ingredient(ingredient) ===
@@ -204,7 +206,7 @@ VAR Resuscitatrice = false
 
 === function remove_random_ability() ===
 
-    ~ abilities = (EvidenziaIngredienti, EvidenziaAzioni, ScelteLente, SceltaIngrediente, PNGParliExtra, SaltaMorte)
+    ~ abilities = (EvidenziaIngredienti, ScelteLente, SceltaIngrediente, PNGParliExtra, SaltaMorte)
     
     ~ temp value = RANDOM(1, 8)
     ~ temp ability = abilities(value)
@@ -227,7 +229,6 @@ VAR Resuscitatrice = false
     ~ temp ability = abilities(value)
     { ability:
       - EvidenziaIngredienti: DOGRON: Non potrai più vedere in modo chiaro gli ingredienti.
-      - EvidenziaAzioni: DOGRON: Non potrai più vedere in modo chiaro le azioni.
       - ScelteLente: DOGRON: Le scelte ora scorreranno più veloci. 
       - SceltaIngrediente: DOGRON: Non avrai più un ingrediente a scelta da selezionare a inizio partita.
       - PNGParliExtra: DOGRON: Basta con le chiacchiere extra!
@@ -259,21 +260,26 @@ VAR Resuscitatrice = false
                 ~ alive_characters -= BeBe
                 DOGRON: Bebe, per te Miss Italia finisce qui!
                 ~ Eliminatrice = true
+                ~ abilities -= EliminaConcorrente
             * {alive_characters has Piiiietro} Piiiietro.
                 ~ alive_characters -= Piiiietro
                 ~ Eliminatrice = true
+                ~ abilities -= EliminaConcorrente
                 DOGRON: Piiiietro, il mio numero preferito: sei stato eliminato!
             * {alive_characters has UgoEMimi} Mimi.
                 ~ alive_characters -= UgoEMimi
                 ~ Eliminatrice = true
+                ~ abilities -= EliminaConcorrente
                 DOGRON: Mimi, sashay away.
             * {alive_characters has Quello} L'aspirapolvere.
                 ~ alive_characters -= Quello
                 ~ Eliminatrice = true
+                ~ abilities -= EliminaConcorrente
                 DOGRON: Oh. Oh. Amico mio, spero perdonerai questa persona concorrente, ma dovrai andartene. Ci rivedremo nel prato infinito!
             * {alive_characters has ilDivo} Il divo.
                 ~ alive_characters -= ilDivo
                 ~ Eliminatrice = true 
+                ~ abilities -= EliminaConcorrente
                 DOGRON: spiace, circa. Addio Divo!
             -
         ->->
@@ -284,22 +290,27 @@ VAR Resuscitatrice = false
             * { alive_characters hasnt BeBe } BeBe!
             ~ alive_characters += BeBe
             ~ Resuscitatrice = true
+            ~ abilities -= RichiamaConcorrente
             DOGRON:Bentornata BeBe!
             * { alive_characters hasnt Piiiietro } Piiiietro!
             ~ alive_characters += Piiiietro
             ~ Resuscitatrice = true
+            ~ abilities -= RichiamaConcorrente
             DOGRON: Ed ecco a voi di nuovo: Piiiietro!
             * { alive_characters hasnt UgoEMimi } Mimi!
             ~ alive_characters += UgoEMimi
             ~ Resuscitatrice = true
+            ~ abilities -= RichiamaConcorrente
             DOGRON: Mimììì! Che bello averti qui con noi di nuovo!
             * { alive_characters hasnt Quello } L'aspirapolvere.
             ~ alive_characters += Quello
             ~ Resuscitatrice = true
+            ~ abilities -= RichiamaConcorrente
             DOGRON: Ma ciao amico mio, finalmente!
             * { alive_characters hasnt ilDivo } Il Divo.
             ~ alive_characters += ilDivo
             ~ Resuscitatrice = true
+            ~ abilities -= RichiamaConcorrente
             DOGRON: Toh, è tornato!
             + ->
             DOGRON: Tutte le giocatrici sono in vita, non ha senso!

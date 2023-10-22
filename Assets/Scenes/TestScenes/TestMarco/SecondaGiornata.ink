@@ -121,6 +121,7 @@ Dialoghi giorno 1..4: ogni personaggio ti da 2 ingredienti
     Piiiietro: Agente matematico. Facciamo sfide tipo come il rap, ma a suon di equazioni. Non sembra ma è superfaticoso, l'anno scorso due concorrenti sono morti disidratati pur di finire, oh, non ricordo manco cosa, tanto vinco sempre.
     Piiiietro: Sono così brava in matematica.
     Piiiietro: Ma ora ti saluto, che devo sistemare i diamantini sui denti prima dell'episodio.
+    {not passaggio_lounge_giorno_uno.Piiiietro_choice: Piiiietro: Ah, ieri non ci siamo presentate: mi chiamo Piiiietro.}
         -> loop
         
     = Quello_choice
@@ -145,7 +146,25 @@ Dialoghi giorno 1..4: ogni personaggio ti da 2 ingredienti
     
     = ilDivo_choice
     //Ingredienti: specchiarsi e scottare
-        Piiiietro
+    ilDivo: Ho capito che è il Papa, ma può pure aspettare, che c'ho da aprire una nuova sede a Dubai prima di pranzo, va bene?!?
+        + YOU: Ma perché mi ostino a parlare con questo?
+        -
+    ilDivo: Ma ciao splendore! Ci conosciamo?
+        + {passaggio_lounge_giorno_uno.ilDivo_choice} YOU: Abbiamo parlato ieri assieme, tipo. Oprah, la bamba, lo zafferano?
+        + {not passaggio_lounge_giorno_uno.ilDivo_choice} YOU: Non ho ancora avuto la fortuna, no.
+        -
+    ilDivo: Mi chiamano il Divo, ma è un eufemismo. Pensa che alla Casa Bianca hanno un mio ritratto, così per dire.
+    ilDivo: Sulla Treccani c'è la mia foto sotto la definizione di "In", non come la preposizione ovvio ma che te lo dico che forse non hai fatto le medie ma te l'ho già chiesto, sei single?
+        + YOU: Sì, e ogni volta che incontro un uomo mi ricordo perché.
+        + YOU: No, ho qualcuno che mi aspetta a casa, ma non so come tornarci!
+        + YOU: Credo di avere una cotta per una delle persone qui in studio.
+        -
+    ilDivo: Ovvio che poi ti innamori di me, ovvio. Bella Hadid ha deciso di non <b>specchiarsi</b> più dopo che mi ha visto.
+        ~ dialogue_ingredients_of_the_day += specchiarsi
+    ilDivo: Però poi la vita è difficile.
+    ilDivo: Perché ti dicono "Ehi, che fortuna essere una specie con 23000 generi sessuali diversi, deve essere una gran bazza", ma poi anche da noi ci son cose binarie, e finisce che io mi innamoro, e...
+    ilDivo: Ma che ti sto a dire? Io sono roba che <b>scotta</b> baby, mica mi puoi agguantare così! E ora devo lavorare, lavorare, produrre, riempire il vuoto! Vattene!
+        ~ dialogue_ingredients_of_the_day += scottare
         -> loop
 
 
@@ -176,8 +195,13 @@ Total è {total}
   -> end
 
 - (end)
-ok, finito
-{ not success:
+
+{ 
+- not success && not ScampataLaMorte && abilities has SaltaMorte:
+  ~ ScampataLaMorte = true
+  ~ abilities -= SaltaMorte
+  DOGRON: Uh, ma una persona qui ha usato la possibilità di scampare la morte, anche se ha perso! Fortunata questa persona casuale, sì sì!
+- else:
   -> non_ce_lhai_fatta
 }
 {

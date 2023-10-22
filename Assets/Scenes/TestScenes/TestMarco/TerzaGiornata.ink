@@ -151,7 +151,29 @@ Dialoghi giorno 1..4: ogni personaggio ti da 2 ingredienti
     
     = ilDivo_choice
     //Ingredienti: selfie e interviste
-        Piiiietro
+    ilDivo: Trovami Quello, subito!
+        + YOU: Quello chi?
+        + YOU: Starà pulendo qualcosa di tuo?
+        + YOU: Hai capito che non lavoro per te, vero?
+        -
+    ilDivo: Aveva sempre ragione mamma, alla fine le cose le devi fare da solo.
+    ilDivo: Che incubo poi che questa vostra lingua c'ha solo due generi da definire.
+    ilDivo: Non mi pagano abbastanza per tutto questo!
+        + YOU: In che senso, due generi?
+        + YOU: In che senso, da solo?
+        + YOU: In che senso, TI PAGANO?!?!
+        -
+    ilDivo: Te lo starai chiedendo da sempre, e sì, essere ricco e famoso è dannatamente difficile. Pensa che tipo, come lo capisco se una persona mi ama?
+        + YOU: Ma sei qui per il concorso di cucina, o per trovare l'amore?
+        -
+    ilDivo: Io? Un concorso di cucina? Ma per chi mi hai preso?!?
+    ilDivo: Xi Jinping ha pagato 7.759.312.650,00 di Yuan per un <b>selfie</b> con me!
+            ~ dialogue_ingredients_of_the_day += selfie
+    ilDivo: Ho imparato a ricevere <b>interviste</b> prima ancora di camminare!
+            ~ dialogue_ingredients_of_the_day += interviste
+    ilDivo: Un concorso di cucina, tsè. Ci pensa Quello a cucinare per entrambi, che ti credi?
+        + YOU: Ooooooook, è il caso che levi le tende.
+        -
         -> loop
 
 
@@ -183,8 +205,13 @@ Dialoghi giorno 1..4: ogni personaggio ti da 2 ingredienti
       -> end
 
 - (end)
-DEBUG: ok, finito
-{ not success:
+
+{ 
+- not success && not ScampataLaMorte && abilities has SaltaMorte:
+  ~ ScampataLaMorte = true
+  ~ abilities -= SaltaMorte
+  DOGRON: Uh, ma una persona qui ha usato la possibilità di scampare la morte, anche se ha perso! Fortunata questa persona casuale, sì sì!
+- else:
   -> non_ce_lhai_fatta
 }
 {

@@ -133,11 +133,13 @@ ne devi sempre beccare 3**/
     = Quello_choice
     //Ingredienti: Padre, funghicida, mappa
     Quello: Bene, ho la <b>mappa</b> per fuggire da qui, persona amica!
+    ~ dialogue_ingredients_of_the_day += mappa
         + YOU: Finalmente!
         + YOU: E poi dove andiamo?
         + YOU: Ora che mi stavo ambientando!
         -
     Quello: Strano, ora che mi sento più leggero, certe cose sono più facili. Stupirò Dogron, vincerò il premio, e ucciderò mio <b>padre</b>.
+    ~ dialogue_ingredients_of_the_day += padre
         + YOU: Simbolicamente, giusto?
         + YOU: E quella roba del perdono?
         + YOU: Io ci ho provato sei volte, ma non è facile ferire qualcuno che ha otto dimensioni.
@@ -146,6 +148,7 @@ ne devi sempre beccare 3**/
         + YOU: Questa cosa sta escalando rapidamente, mi sembra.
         -
     Quello: E prima di andarmene, un ultimo regalo per il Divo: meringhe arricchite di <b>funghicida</b>.
+    ~ dialogue_ingredients_of_the_day += funghicida
         + YOU: Io non ho sentito nulla e ora me ne vado, ciao.
         + YOU: Ricordami di non invitarti a cena. A dopo.
         + YOU: Spero ce la farai a, a fare questo sterminio? Dov'è la sicurezza?
@@ -154,8 +157,27 @@ ne devi sempre beccare 3**/
         
     = ilDivo_choice
     //Ingredienti: "Io sono ancora grande, è la ristorazione che è diventata piccola." e aiuto e aiuto.
-
-        Piiiietro
+    ilDivo: <b>Io sono ancora grande, è la ristorazione che è diventata piccola.</b>
+    ~ dialogue_ingredients_of_the_day += grande
+        + YOU: Me la ricordavo diversa.
+        + YOU: Come, scusa?
+        + YOU: Lo dicevo, nella ristorazione c'è qualcosa che non va.
+        -
+    ilDivo: E Quello... Quello se ne è andato, e il mio cuore, il mio cuore che non ho nemmeno perché sono un fungo ma oh, il mio cuore, aiuto!
+    ~ dialogue_ingredients_of_the_day += aiuto
+    ilDivo: Ma non importa. Piuttosto, voi: la bara deve essere bianca, e imbottita di seta rosa carico. Rosa, oppure bianca. O meglio rossa. Sì, un bel rosso fiamma, sarà più gaya.
+        + YOU: Hai ucciso Quello?
+        + YOU: Se è grande abbastanza mi ci metto pure io.
+        + YOU: Non credo che il rosso sia il colore adatto.
+        -
+    ilDivo: Oh, aiuto! Quale scena è, dove mi trovo? Sei tu, DeMille?
+    ~ dialogue_ingredients_of_the_day += aiutoooooo
+        + YOU: Sei sullo scalone del palazzo.
+            ilDivo: Oh, sì, è vero. Ricordo.
+        + YOU: Beeeene, si è fatta una certa, io me ne vado, ok?
+        + YOU: Tu piaceresti un sacco a mio padre. Un sacco!
+        -
+    ilDivo: Voglio dirvi quanto mi siete mancati, tutti voi, ma vi prometto che non vi lascerò mai più. Vedete, questà è la mia vita, e lo sarà per sempre. Non esiste altro, solo noi.        
         -> loop
 
 
@@ -189,10 +211,16 @@ ne devi sempre beccare 3**/
       -> end
 
 - (end)
-    DEBUG: ok, finito
-    { not success:
-      -> non_ce_lhai_fatta
-    }
+
+{ 
+- not success && not ScampataLaMorte && abilities has SaltaMorte:
+  ~ ScampataLaMorte = true
+  ~ abilities -= SaltaMorte
+  DOGRON: Uh, ma una persona qui ha usato la possibilità di scampare la morte, anche se ha perso! Fortunata questa persona casuale, sì sì!
+- else:
+  -> non_ce_lhai_fatta
+}
+
     {
       - total >= 15:
         -> finale_cinque ->

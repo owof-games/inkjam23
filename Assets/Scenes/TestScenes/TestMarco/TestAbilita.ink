@@ -65,7 +65,6 @@ DOGRON: Tuuuutte le persone attorno a te parlano di colori, ma tuuuuu non hai ca
 // TEST: DOMANDA 3: abilità EvidenziaAzioni
 DOGRON: Qualcosa con i baffi lunghi il pelo corto e l'abilità di infilarsi negli scatoloni ha distrutto il tuo gioco preferito. Come reagisci?
     + YOU: Distruggo tutto ciò che ha di più caro.
-      ~ abilities += EvidenziaAzioni
     + YOU: Ma che c'entra tutto questo con un concorso di cucina?
     + YOU: Strano, tutto questo mi ricorda Micia.
     -
@@ -170,7 +169,6 @@ DOGRON: Hai seppellito qualcuno, ma non ti ricordi dove l'hai fatto, e sei molto
     DOGRON: Ti assegno <>
     {ability:
     - EvidenziaIngredienti: la capacità di notare subito gli ingredienti!
-    - EvidenziaAzioni: la dote di poter vedere facilmente le azioni da compiere!
     - ScelteLente: la possibilità di rallentare il tempo.
     - SceltaIngrediente: la fortuna di poterti scegliere un ingrediente a inizio ricetta.
     - PNGParliExtra: il diritto di chiacchierare con una persona in più in lounge.

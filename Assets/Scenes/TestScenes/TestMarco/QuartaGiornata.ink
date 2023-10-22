@@ -146,7 +146,29 @@ Dialoghi giorno 1..4: ogni personaggio ti da 2 ingredienti
     
     = ilDivo_choice
     //Ingredienti: iomestessomemedesimo e #selfcare
-        Piiiietro
+        ilDivo: Uh, la persona concorrente che preferisco! Come stai?
+            + YOU: Mi ritrovo qui senza capire come. Sto andando avanti e non capisco in cosa. Come dovrei stare?!?
+            + YOU: Credo di aver appena visto un cetriolo fare una dichiarazione d'amore a un cameraman morto.
+            + YOU: Non l'avrei mai detto, ma mi manca il Culto. I riti, i morti, il sangue, le fughe dagli esorcisti.
+            -
+        ilDivo: Sicuramente hai una vita favolosa, vero?
+        ilDivo: Ma mai quanto la mia!
+            + YOU: Te pareva.
+            -
+        ilDivo: Ho trovato il vero amore. Qui, su questo minuscolo pianeta, ho capito tutto. Mi son fermato un attimo, un tiro di bamba e un momento di <b>hashtag selfcare</b> ed eccolo lì, il vero amore della mia vita!
+            ~ dialogue_ingredients_of_the_day +=selfcare
+            + YOU: Bruiser?
+            + YOU: Ermenegildo?
+            + YOU: La Chihuahua Suprema?
+            -
+        ilDivo: <b>Io, me stesso,me medesimo</b>. C'è un unico grande amore in questa vita, e posso solo essere io. Solo!
+            ~ dialogue_ingredients_of_the_day += iomestessomemedesimo
+        ilDivo: Vuoi celebrare il mio matrimonio con me stesso?
+            + YOU: Mi dispiace ma devo farmi cavare le orecchie prima di continuare questo spettacolo.
+            + YOU: Non posso, devo farmi cascare un riflettore in testa e sperare di morire.
+            + YOU: Certo, dopo aver fatto il bagno col mio amato tostapane.
+            -
+        ilDivo: Quanto mi sento amato!    
         -> loop
 
 
@@ -176,10 +198,15 @@ Dialoghi giorno 1..4: ogni personaggio ti da 2 ingredienti
       -> end
     
     - (end)
-    DEBUG:ok, finito
-    { not success:
-      -> non_ce_lhai_fatta
-    }
+{ 
+- not success && not ScampataLaMorte && abilities has SaltaMorte:
+  ~ ScampataLaMorte = true
+  ~ abilities -= SaltaMorte
+  DOGRON: Uh, ma una persona qui ha usato la possibilità di scampare la morte, anche se ha perso! Fortunata questa persona casuale, sì sì!
+- else:
+  -> non_ce_lhai_fatta
+}
+
     {
       - total >= 15:
         -> finale_cinque ->

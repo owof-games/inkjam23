@@ -16,7 +16,7 @@ Dialoghi giorno 1..4: ogni personaggio ti da 2 ingredienti
     DOGRON: Buongiorno persone concorrenti, e benvenute a questa prima puntata di THE GOOD DOG! Oggi vi metteremo alla prova chiedendovi di...
     DOGRON: Cucinare qualcosa che mangereste tuuuuuuutti i giorni!
     DOGRON: Avete a disposizione qualche minuto per chiacchierare tra voi, prima di buuuuttarvi in cucina. Tradotto nelle regole del programma: un massimo di {num_loop_rimanenti+1} persone!
-    DOGRON: Starà a voi decidere se condividere i vostri segreti, ingannare le altre persone, o farvi dare dei grattini!
+    DOGRON: Starà a voi decidere se condividere i vostri segreti, ingannare le altre persone, o farvi dare dei grattini! E massima attenzione, perché in THE GOOD DOG tutto cambia in un battito di ciglia!
 
     ~ dialogue_ingredients_of_the_day = ()
     
@@ -165,7 +165,29 @@ Dialoghi giorno 1..4: ogni personaggio ti da 2 ingredienti
     = ilDivo_choice
     ~ loungeDialogue(ilDivo)
     //Ingredienti suggeriti: zafferanno e mantecare
-    ilDivo
+    ilDivo: No no, niente Oprah per me, non mi abbasso certo al suo livello!
+    ilDivo: Ehi, ehi tu!
+        + YOU: Dici a me?
+        -
+    ilDivo: Sì, a te, mica c'è altra gente in giro. Che ce l'hai un po' di <b>zafferano</b>?
+    ~ dialogue_ingredients_of_the_day += zafferano
+        + YOU: Sento un attimo lo spaccino e ti dico.
+            ilDivo: Ok, senti se ha anche della bamba allora.
+        + YOU: Per questo sei tutto giallo?
+            ilDivo: Guarda che son rosso. Te li ha insegnati Dogron, i colori?
+        + YOU: Tu hai idea di dove siamo, piuttosto?
+            ilDivo: Stagista inutile. Sempre inutili, cristo!
+        -
+    ilDivo: No no, non parlavo con te. Oh, madonna, ascolta, ci sentiamo dopo. E vedi di fare quelle tre ore di straordinario non pagato per cui siamo d'accordo, va bene?!?!
+    ilDivo: E pulisci la cucina, non mi importa che il ristorante sia chiuso.
+    ilDivo: Eccomi, ovviamente ti starai chiedendo cosa ci faccio qui.
+        + YOU: Dici a me?
+        -
+    ilDivo: E a chi sennò, bauscia?!? Vuoi un autografo, immagino?
+    ilDivo: O il mio segreto per <b>mantecare</b> il risotto ala milanese?
+    ~ dialogue_ingredients_of_the_day += mantecare 
+    ilDivo: Che sei single?
+    ilDivo: Ah, non mi far perdere tempo. Cercami Quello, e portami un paio di etti di caviale e coca per la merendina del campione.
     -> loop
 
 === cucina_giorno_uno
@@ -195,8 +217,13 @@ Dialoghi giorno 1..4: ogni personaggio ti da 2 ingredienti
     
     - (end)
 
-DEBUG:ok, finito
-{ not success:
+
+{ 
+- not success && not ScampataLaMorte && abilities has SaltaMorte:
+  ~ ScampataLaMorte = true
+  ~ abilities -= SaltaMorte
+  DOGRON: Uh, ma una persona qui ha usato la possibilità di scampare la morte, anche se ha perso! Fortunata questa persona casuale, sì sì!
+- else:
   -> non_ce_lhai_fatta
 }
 {
