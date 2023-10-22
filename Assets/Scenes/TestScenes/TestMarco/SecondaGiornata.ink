@@ -13,7 +13,7 @@ Dialoghi giorno 1..4: ogni personaggio ti da 2 ingredienti
     //RICETTA RICHIESTA: un pasto per quando vengono i veri amici.
 
     ~ loungeDialogue(DOGRON)
-    DOGRON: Ma persone amiche, siamo già alla seconda giornata di THE GOOD DOG (very very good dog!)!!! Non siete suuuuuupermegafelici e scodinzolanti?!? Oh, quanto non vorrei vedervi mai andare via!
+    DOGRON: Ma persone amiche, siamo già alla seconda giornata di THE GOOD DOG (very very good dog!) SHOW!!! Non siete suuuuuupermegafelici e scodinzolanti?!? Oh, quanto non vorrei vedervi mai andare via!
     DOGRON: Ma se non eliminassimo qualcuno, come potremmo trovare un sostituto perfetto per, per, per la cucina più grande di Urano?
     DOGRON: E a proposito di Uuuuuuuurano, il tema di oggi è: un pasto per quando vengono i veri veri amici!
     DOGRON: Vi lascio qualche minuto per le chiacchiere e poi si parte!

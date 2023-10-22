@@ -13,7 +13,7 @@ Dialoghi giorno 1..4: ogni personaggio ti da 2 ingredienti
     ~ temp num_loop_rimanenti = 2
     
     ~ loungeDialogue(DOGRON)
-    DOGRON: Buuuuuuuuongiorno persone concorrenti, e benvenute a questa prima puntata di THE GOOD DOG! Oggi vi metteremo alla prova chiedendovi di...
+    DOGRON: Buuuuuuuuongiorno persone concorrenti, e benvenute a questa prima puntata di THE GOOD DOG SHOW! Oggi vi metteremo alla prova chiedendovi di...
     DOGRON: Cucinare qualcosa che mangereste tuuuuuuutti i giorni!
     DOGRON: Avete a disposizione qualche minuto per chiacchierare tra voi, prima di buuuuttarvi in cucina. Tradotto nelle regole del programma: un massimo di {num_loop_rimanenti+1} persone!
     DOGRON: Starà a voi decidere se condividere i vostri segreti, ingannare le altre persone, o farvi dare dei grattini! E massima attenzione, perché in THE GOOD DOG tuuuutto cambia in un battito di ciglia!

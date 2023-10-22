@@ -13,7 +13,7 @@ Dialoghi giorno 1..4: ogni personaggio ti da 2 ingredienti
 //RICETTA RICHIESTA: qualcosa per quando ti senti triste perché tutti gli umani sono scomparsi.
 
     ~ loungeDialogue(DOGRON)
-    DOGRON: Buondì a tuuuuuuuuuuuutte e benvenute alla terza puntata di THE VERY VERY VERY GOOD GOOD DOG!
+    DOGRON: Buondì a tuuuuuuuuuuuutte e benvenute alla terza puntata di THE VERY VERY VERY GOOD GOOD DOG SHOW!
     DOGRON: Non sentite un po' la tristezza? Già due persone ci hanno lasciate, e a me non va di farvi andare via, nuuuuuuuuuuuu!
     DOGRON: Ma la Suprema Chihuahua e il Gran Consiglio dei Carlini- no, nella loro saggezza loro sanno che è importante trovare la padroncina perfetta, no, la personcina perfetta per il ristorante su Satuuuuuurno!
     DOGRON: E di sicuuuuuro questa persona magnifica con delle mani magnifiche che fanno dei bellissimi pat-pat sulla testa, deve sapere fare una ricetta per...

@@ -16,7 +16,7 @@ Dialoghi giorno 1..4: ogni personaggio ti da 2 ingredienti
     ~ loungeDialogue(DOGRON)
     DOGRON: Coda, vieni qua! Coda, coda! Fermati! Cattiva coda, cattiva!
     DOGRON: Ah, siamo in onda?
-    DOGRON: Benvenute alla quarta e penuuuuuultima puntata di THE VERYSSIMAMENTE GOOD DOGGO BUONO BUONO DOGGO BUONO! Qui è il vostro conduttore preferito, vero che sono il vostro conduttore preferito?
+    DOGRON: Benvenute alla quarta e penuuuuuultima puntata di THE VERYSSIMAMENTE GOOD DOGGO BUONO BUONO DOGGO BUONO! E SHOW! Qui è il vostro conduttore preferito, vero che sono il vostro conduttore preferito?
     DOGRON: Chi è il conduuuuttore più bravo al mondo? Chi è?
     DOGRON: Il tema di oggi ci riguarda tutte. Quel tema che ti viene in mente quando la tua tazza preferita si rompe, o le crocchette sono nuuuuuove e hanno un sapore inaspettato o il postino ha una divisa pulita.
     DOGRON: O quando prendono un cuuuuuucciolo e ti dicono che tutto rimarrà come prima ma non è vero, quel cucciolo inizia a camminare, ad andare a stuuudiare e tu ti ci sei affezionato e luuuuuuuuui si dimentica di te.

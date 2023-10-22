@@ -227,7 +227,7 @@ VAR ScampataLaMorte = false
 
     ~ moveToLounge()
     
-    DOGRON: eccoci con la nostra concorrente
+    DOGRON: Eccoci con la nostra persona concorrente preferita insieme a tutte le altre!
     
     DOGRON: Personcina bella, ti ricordo che ogni giorno perderai una delle tue abilità.
     ~ temp ability = LIST_RANDOM(abilities)

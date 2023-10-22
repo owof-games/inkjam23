@@ -5,8 +5,8 @@ TODO: riduci a uno ingrediente
 // permette di aggiungere o togliere concorrenti a seconda che l'abilità sia disponibile.
 
 //TEST: PRESENTAZIONE
-DOGRON: Eccoci qui! Sono suuuuperfelice che tu sia qui con me e i miei nuovi amici in questa stuuuuuuuuupenda avventura!
-DOGRON: Affronterai cinque episodi di NOME PROGRAMMA e sono sicuuuuro che sarai la persona che vincerà! Lo sono sicuuuuro di tutte le persone in realtà!
+DOGRON: Eccoci qui personcina umana! Sono suuuuperfelice che tu sia qui con me e i miei nuovi amici in questa stuuuuuuuuupenda avventura!
+DOGRON: Affronterai cinque episodi di THE GOOD DOG SHOW e sono sicuuuuro che sarai la persona che vincerà! Lo sono sicuuuuro di tutte le persone in realtà!
 DOGRON: E questo rende il programma difficile, forse.
 DOGRON: Comunque: per conoscerci meglio vorrei farti qualche domanda, giusto per vedere come te la cavi in cucina, e capire che concorrente sarai. Iniziamo?
 
