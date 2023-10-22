@@ -129,7 +129,8 @@ Dialoghi giorno 1..4: ogni personaggio ti da 2 ingredienti
             Piiiietro: Scusa, ho firmato un NDA, non posso dire altro.
         -
     Piiiietro: Tornerà, spero. Questo pianeta sembra minuscolo comunque, non ci saranno altre cagnoline.
-    Piiiietro: Comunque piacere, sono Piiiietro, studentessa di matematica. A quattordici anni ho risolto il gioco di Collatz, a quindici le equazioni di Navier-Stokes ma non ho ancora ricevuto la medaglia Fields perché dopo quella storia di Perel'man hanno paura di fare casini.
+    Piiiietro: Comunque piacere, sono Piiiietro, studentessa di matematica. A quattordici anni ho risolto il gioco di Collatz.
+    Piiiietro: A quindici le equazioni di Navier-Stokes ma non ho ancora ricevuto la medaglia Fields perché dopo quella storia di Perel'man hanno paura di fare casini.
     Piiiietro: Ma tu non stai capendo una ceppa, vero?
         + YOU: In realtà Perel'man alle medie mi copiava.
         + YOU: Sto ancora pensando al rosario di Gucci.
@@ -195,7 +196,7 @@ Dialoghi giorno 1..4: ogni personaggio ti da 2 ingredienti
     ilDivo: Ehi, ehi tu!
         + YOU: Dici a me?
         -
-    ilDivo: Sì, a te, mica c'è altra gente in giro. Che ce l'hai un po' di <b>zafferano</b>?
+    ilDivo: Sì, a te, mica c'è altra gente in giro. Ah no, sì, ero al telefono con la segretaria. Di nuovo! Che ce l'hai un po' di <b>zafferano</b>?
     ~ dialogue_ingredients_of_the_day += zafferano
         + YOU: Sento un attimo lo spaccino e ti dico.
             ilDivo: Ok, senti se ha anche della bamba allora.
@@ -213,7 +214,7 @@ Dialoghi giorno 1..4: ogni personaggio ti da 2 ingredienti
     ilDivo: O il mio segreto per <b>mantecare</b> il risotto ala milanese?
     ~ dialogue_ingredients_of_the_day += mantecare 
     ilDivo: Che sei single?
-    ilDivo: Ah, non mi far perdere tempo. Cercami Quello, e portami un paio di etti di caviale e coca per la merendina del campione.
+    ilDivo: Ah, ma non mi far perdere tempo. Cercami Quello, e portami un paio di etti di caviale e coca per la merendina del campione.
     -> loop
 
 === cucina_giorno_uno

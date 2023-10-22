@@ -159,6 +159,7 @@ DOGRON: Hai seppellito qualcuno, ma non ti ricordi dove l'hai fatto, e sei molto
     ~ abilities += ability
     -> loop
 - else:
+    DOGRON: Le domande sono finite! E grazie al nostro accuratissimo sistema psicologico approvato dal Gran Consiglio dei Carlini e dalla Suprema Chihuahua, io, Dogron III Ti assegno <>
     -> recap(LIST_VALUE(LIST_MIN(LIST_ALL(abilities))))
 }
 
@@ -166,7 +167,7 @@ DOGRON: Hai seppellito qualcuno, ma non ti ricordi dove l'hai fatto, e sei molto
 
 ~ temp ability = abilities(i)
 {abilities has ability:
-    DOGRON: Ti assegno <>
+    
     {ability:
     - EvidenziaIngredienti: la capacità di notare subito gli ingredienti!
     - ScelteLente: la possibilità di rallentare il tempo.

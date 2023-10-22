@@ -227,9 +227,8 @@ VAR ScampataLaMorte = false
 
     ~ moveToLounge()
     
-    DOGRON: Eccoci con la nostra persona concorrente preferita insieme a tutte le altre!
-    
-    DOGRON: Personcina bella, ti ricordo che ogni giorno perderai una delle tue abilità.
+    DOGRON: Ed ora, nostra persona concorrente preferita insieme a tutte le altre, ti ricordo che:
+    DOGRON: Ogni giorno perderai una delle tue abilità. Quelle che perdi oggi sono:
     ~ temp ability = LIST_RANDOM(abilities)
     { ability:
       - EvidenziaIngredienti: DOGRON: Non potrai più vedere in modo chiaro gli ingredienti.
@@ -268,12 +267,12 @@ VAR ScampataLaMorte = false
                 ~ Eliminatrice = true
                 ~ abilities -= EliminaConcorrente
                 DOGRON: Piiiietro, il mio numero preferito: sei stato eliminato!
-            * {alive_characters has UgoEMimi} Mimi.
+            * {alive_characters has UgoEMimi} UgoEMimiMimi.
                 ~ alive_characters -= UgoEMimi
                 ~ Eliminatrice = true
                 ~ abilities -= EliminaConcorrente
                 DOGRON: Mimi, sashay away.
-            * {alive_characters has Quello} L'aspirapolvere.
+            * {alive_characters has Quello} Quello.
                 ~ alive_characters -= Quello
                 ~ Eliminatrice = true
                 ~ abilities -= EliminaConcorrente
