@@ -1,6 +1,11 @@
+using System;
 using System.Collections;
+using System.Collections.Generic;
+using System.Linq;
 
 using DG.Tweening;
+
+using UnityEditor.Rendering.LookDev;
 
 using UnityEngine;
 using UnityEngine.UI;
@@ -14,8 +19,27 @@ public class IngredientsScroll : MonoBehaviour
 
     public float Speed;
 
-    public IEnumerator StartScroll(string[] names)
+    private Tweener tweener;
+
+    private List<IngredientDescription> previousDescriptions;
+
+    private System.Comparison<IngredientDescription> ic = new Comparison<IngredientDescription>(CompareIngredients);
+
+    private static int CompareIngredients(IngredientDescription x, IngredientDescription y)
     {
+        return x.Name.CompareTo(y.Name);
+    }
+
+    public IEnumerator StartScroll(IngredientDescription[] ingredientDescriptions)
+    {
+        var newDescriptions = new List<IngredientDescription>(ingredientDescriptions);
+        newDescriptions.Sort(ic);
+        if (previousDescriptions != null && Enumerable.SequenceEqual(previousDescriptions, newDescriptions))
+        {
+            yield break;
+        }
+        previousDescriptions = newDescriptions;
+
         // move away
         rectTransform.offsetMin = new(0, 4000);
         rectTransform.offsetMax = new(0, 4000);
@@ -35,11 +59,11 @@ public class IngredientsScroll : MonoBehaviour
         }
 
         // add new children
-        foreach (var name in names)
+        foreach (var description in ingredientDescriptions)
         {
             var ingredientGO = Instantiate(ingredientPrefab, transform);
             var ingredient = ingredientGO.GetComponent<Ingredient>();
-            ingredient.SetText(name);
+            ingredient.SetDescription(description);
         }
 
         // let layout be recomputed
@@ -51,7 +75,7 @@ public class IngredientsScroll : MonoBehaviour
         rectTransform.offsetMax = new(0, h);
 
         // start animation
-        DOTween.To(() => rectTransform.offsetMin.y,
+        tweener = DOTween.To(() => rectTransform.offsetMin.y,
             newValue =>
             {
                 rectTransform.offsetMin = new(0, newValue);

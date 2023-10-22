@@ -33,6 +33,8 @@ namespace LemuRivolta.InkAtoms
         [Tooltip("Whether to print the current state on console at each step")]
         [SerializeField] private bool debugCurrentState;
 
+        [SerializeField] private InkStoryWrapperEvent inkStoryWrapperEvent;
+
         private TextAsset actualInkTextAsset;
 
         /// <summary>
@@ -98,8 +100,16 @@ namespace LemuRivolta.InkAtoms
 #if UNITY_EDITOR
                 EditorApplication.playModeStateChanged += EditorApplication_playModeStateChanged;
 #endif
+                inkStoryWrapperEvent.Raise(new(story));
+                lastStory = story;
             }
         }
+
+        // don't know why, the event system doesn't work
+        public static Ink.Runtime.Story lastStory;
+
+        // fucked up evaluation of functions
+        public static bool disableEventPropagation;
 
         private void Story_onError(string message, Ink.ErrorType type)
         {
@@ -166,7 +176,13 @@ namespace LemuRivolta.InkAtoms
             }
             else
             {
-                MainThreadQueue.Enqueue(() => storyStepEvent.Raise(currentStoryStep));
+                if (!disableEventPropagation)
+                {
+                    MainThreadQueue.Enqueue(() =>
+                    {
+                        storyStepEvent.Raise(currentStoryStep);
+                    });
+                }
             }
         }
 
@@ -326,16 +342,19 @@ namespace LemuRivolta.InkAtoms
                     Item1 = new() { Name = variableName, Value = oldValue },
                     Item2 = new() { Name = variableName, Value = value }
                 };
-                MainThreadQueue.Enqueue(() =>
+                if (!disableEventPropagation)
                 {
-                    foreach (var variableListener in variableListeners)
+                    MainThreadQueue.Enqueue(() =>
                     {
-                        if (variableListener.IsMatch(variableName))
+                        foreach (var variableListener in variableListeners)
                         {
-                            variableListener.VariableChangeEvent.Raise(variableValuePair);
+                            if (variableListener.IsMatch(variableName))
+                            {
+                                variableListener.VariableChangeEvent.Raise(variableValuePair);
+                            }
                         }
-                    }
-                });
+                    });
+                }
             }
             else
             {

@@ -600,7 +600,7 @@ GameObject:
   - component: {fileID: 7961799250983672683}
   - component: {fileID: 6077671562273319045}
   m_Layer: 5
-  m_Name: PNG
+  m_Name: PG
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

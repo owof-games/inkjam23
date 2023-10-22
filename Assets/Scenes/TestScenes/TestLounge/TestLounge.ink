@@ -4,8 +4,8 @@ VAR base_ingredients_of_the_day = ()
 VAR dialogue_ingredients_of_the_day = ()
 VAR success = true
 
-LIST characters = Dogron, BeBe, UgoEMimi, Piiietro, Quello, IlDivo
-
+LIST characters = BeBe, UgoEMimi, Piiietro, Quello, IlDivo
+LIST extra_characters = DOGRON
 
 -> passaggio_kitchen
     
@@ -30,6 +30,9 @@ LIST characters = Dogron, BeBe, UgoEMimi, Piiietro, Quello, IlDivo
       -> loop
     + {num_loop_rimanenti >= 0} 3
       ~ total += 3
+      -> loop
+    + {num_loop_rimanenti >= 0} 4
+      ~ total += 4
       -> loop
     + {num_loop_rimanenti == -1} done
       -> end
@@ -57,37 +60,44 @@ DEBUG: ok, finito
 
 = non_ce_lhai_fatta
 ~ moveToLounge()
+~ loungeDialogue(DOGRON)
 DOGRON: è un peccato che tu non ce l'abbia fatta!
 -> END
 
 = finale_uno
 ~ moveToLounge()
+~ loungeDialogue(DOGRON)
 DOGRON: questo è il finale uno
 ->->
 
 = finale_due
 ~ moveToLounge()
+~ loungeDialogue(DOGRON)
 DOGRON: questo è il finale due
 ->->
 
 = finale_tre
 ~ moveToLounge()
+~ loungeDialogue(DOGRON)
 DOGRON: questo è il finale tre
 ->->
 
 = finale_quattro
 ~ moveToLounge()
+~ loungeDialogue(DOGRON)
 DOGRON: questo è il finale quattro
 ->->
 
 = finale_cinque
 ~ moveToLounge()
+~ loungeDialogue(DOGRON)
 DOGRON: questo è il finale cinque
 ->->
 
 = passaggio_lounge_giorno_due
 
 ~ moveToLounge()
+~ loungeDialogue(DOGRON)
 DOGRON: e ora passiamo al giorno due
 -> END
 
