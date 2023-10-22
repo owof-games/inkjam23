@@ -28,7 +28,7 @@ Dialoghi giorno 1..4: ogni personaggio ti da 2 ingredienti
       ~ num_loop_rimanenti += 1
     }
     - (loop)
-    ~ num_loop_rimanenti -= 2
+    ~ num_loop_rimanenti -= 1
     ~ loungeDialogue(DOGRON)
     
     // scelta del personaggio con cui parlare (vengono tolti in automatico quelli non più vivi)

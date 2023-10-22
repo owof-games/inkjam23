@@ -10,7 +10,7 @@ ne devi sempre beccare 3**/
     ~ moveToLounge()
     
     -> inizio_lounge ->
-    ~ temp num_loop_rimanenti = 2
+    ~ temp num_loop_rimanenti = 1
 //RICETTA RICHIESTA: Qualcosa che gridi: sarò il genitore doggo migliore al mondo!
 
     ~ loungeDialogue(DOGRON)
@@ -30,7 +30,7 @@ ne devi sempre beccare 3**/
       ~ num_loop_rimanenti += 1
     }
     - (loop)
-    ~ num_loop_rimanenti -= 2
+    ~ num_loop_rimanenti -= 1
     ~ loungeDialogue(DOGRON)
     
     // scelta del personaggio con cui parlare (vengono tolti in automatico quelli non più vivi)

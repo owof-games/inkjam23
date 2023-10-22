@@ -257,64 +257,66 @@ VAR ScampataLaMorte = false
     = Eliminatrice_choice
         // TODO: visualizzare solo se ci sono almeno 2 persone vive
         DOGRON: Hai la possibilità di eliminare una di queste belle persone, di chi ti vuoi liberare?
-            * {alive_characters has BeBe} BeBe.
+            + {alive_characters has BeBe} YOU:BeBe.
                 ~ alive_characters -= BeBe
                 DOGRON: Bebe, per te Miss Italia finisce qui!
                 ~ Eliminatrice = true
                 ~ abilities -= EliminaConcorrente
-            * {alive_characters has Piiiietro} Piiiietro.
+            + {alive_characters has Piiiietro} YOU:Piiiietro.
                 ~ alive_characters -= Piiiietro
                 ~ Eliminatrice = true
                 ~ abilities -= EliminaConcorrente
                 DOGRON: Piiiietro, il mio numero preferito: sei stato eliminato!
-            * {alive_characters has UgoEMimi} UgoEMimiMimi.
+            + {alive_characters has UgoEMimi} YOU:Ugo e Mimi.
                 ~ alive_characters -= UgoEMimi
                 ~ Eliminatrice = true
                 ~ abilities -= EliminaConcorrente
                 DOGRON: Mimi, sashay away.
-            * {alive_characters has Quello} Quello.
+            + {alive_characters has Quello} YOU:Quello.
                 ~ alive_characters -= Quello
                 ~ Eliminatrice = true
                 ~ abilities -= EliminaConcorrente
                 DOGRON: Oh. Oh. Amico mio, spero perdonerai questa persona concorrente, ma dovrai andartene. Ci rivedremo nel prato infinito!
-            * {alive_characters has ilDivo} Il divo.
+            + {alive_characters has ilDivo} YOU:Il divo.
                 ~ alive_characters -= ilDivo
                 ~ Eliminatrice = true 
                 ~ abilities -= EliminaConcorrente
                 DOGRON: spiace, circa. Addio Divo!
+            + YOU: Nessuna persona!
+                DOGRON: Mi piace questo modo di ragionare!
             -
         ->->
     
     = Resuscitatrice_choice
         // TODO: visualizzare solo se c'è almeno una persona che è uscita
         DOGRON: Vuoi riportare una persona concorrente tra noi?
-            * { alive_characters hasnt BeBe } BeBe!
+            + { alive_characters hasnt BeBe } YOU:BeBe!
             ~ alive_characters += BeBe
             ~ Resuscitatrice = true
             ~ abilities -= RichiamaConcorrente
             DOGRON:Bentornata BeBe!
-            * { alive_characters hasnt Piiiietro } Piiiietro!
+            + { alive_characters hasnt Piiiietro } YOU:Piiiietro!
             ~ alive_characters += Piiiietro
             ~ Resuscitatrice = true
             ~ abilities -= RichiamaConcorrente
             DOGRON: Ed ecco a voi di nuovo: Piiiietro!
-            * { alive_characters hasnt UgoEMimi } Mimi!
+            + { alive_characters hasnt UgoEMimi } YOU: Ugo e Mimi!
             ~ alive_characters += UgoEMimi
             ~ Resuscitatrice = true
             ~ abilities -= RichiamaConcorrente
             DOGRON: Mimììì! Che bello averti qui con noi di nuovo!
-            * { alive_characters hasnt Quello } L'aspirapolvere.
+            + { alive_characters hasnt Quello } YOU: Quello.
             ~ alive_characters += Quello
             ~ Resuscitatrice = true
             ~ abilities -= RichiamaConcorrente
             DOGRON: Ma ciao amico mio, finalmente!
-            * { alive_characters hasnt ilDivo } Il Divo.
+            + { alive_characters hasnt ilDivo } YOU: Il Divo.
             ~ alive_characters += ilDivo
             ~ Resuscitatrice = true
             ~ abilities -= RichiamaConcorrente
             DOGRON: Toh, è tornato!
-            + ->
-            DOGRON: Tutte le giocatrici sono in vita, non ha senso!
+            + YOU: MMM, sto bene così, grazie.
+                DOGRON: Ah, uuuuh, mi sembra crudele ma il gioco è questo, no?
             -
         ->->
 

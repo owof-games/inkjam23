@@ -4,13 +4,14 @@ GIORNO 4: 4 ingredienti, valori 2 (solo 2), 3; AGGIUNGERE 3 AL RISULTATO
 Dialoghi giorno 1..4: ogni personaggio ti da 2 ingredienti
 **/
 
+TODO: dopo aver fatto i conti delle PNG, fare funzione che permetta che il numero di loop non superi il numero di personagge vive.
 
 === passaggio_lounge_giorno_quattro
 
    ~ moveToLounge()
     
     -> inizio_lounge ->
-    ~ temp num_loop_rimanenti = 2
+    ~ temp num_loop_rimanenti = 1
  //RICETTA RICHIESTA: qualcosa per accettare il cambiamento. 
 
     ~ loungeDialogue(DOGRON)
@@ -32,7 +33,7 @@ Dialoghi giorno 1..4: ogni personaggio ti da 2 ingredienti
       ~ num_loop_rimanenti += 1
     }
     - (loop)
-    ~ num_loop_rimanenti -= 2
+    ~ num_loop_rimanenti -= 1
     ~ loungeDialogue(DOGRON)
     
     // scelta del personaggio con cui parlare (vengono tolti in automatico quelli non più vivi)

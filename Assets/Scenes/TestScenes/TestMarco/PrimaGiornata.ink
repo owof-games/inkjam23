@@ -10,7 +10,7 @@ Dialoghi giorno 1..4: ogni personaggio ti da 2 ingredienti
     ~ moveToLounge()
     -> inizio_lounge ->
 
-    ~ temp num_loop_rimanenti = 2
+    ~ temp num_loop_rimanenti = 3
     
     ~ loungeDialogue(DOGRON)
     DOGRON: Buuuuuuuuongiorno persone concorrenti, e benvenute a questa prima puntata di THE GOOD DOG SHOW! Oggi vi metteremo alla prova chiedendovi di...
@@ -229,7 +229,6 @@ Dialoghi giorno 1..4: ogni personaggio ti da 2 ingredienti
     - (loop)
     ~ num_loop_rimanenti -= 1
     Total è {total}
-    #kitchen_choice
     + {num_loop_rimanenti >= 0} 1
       ~ total += 1
       -> loop
@@ -244,6 +243,7 @@ Dialoghi giorno 1..4: ogni personaggio ti da 2 ingredienti
     
     - (end)
 
+    ~ moveToLounge()
 
 { 
 - not success && not ScampataLaMorte && abilities has SaltaMorte:

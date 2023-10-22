@@ -9,7 +9,7 @@ Dialoghi giorno 1..4: ogni personaggio ti da 2 ingredienti
     ~ moveToLounge()
     
     -> inizio_lounge ->
-    ~ temp num_loop_rimanenti = 2
+    ~ temp num_loop_rimanenti = 3
     //RICETTA RICHIESTA: un pasto per quando vengono i veri amici.
 
     ~ loungeDialogue(DOGRON)
@@ -26,7 +26,7 @@ Dialoghi giorno 1..4: ogni personaggio ti da 2 ingredienti
       ~ num_loop_rimanenti += 1
     }
     - (loop)
-    ~ num_loop_rimanenti -= 2
+    ~ num_loop_rimanenti -= 1
     ~ loungeDialogue(DOGRON)
     
 
