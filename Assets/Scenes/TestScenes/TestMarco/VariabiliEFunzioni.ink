@@ -1,6 +1,5 @@
 // lista di tutte le RichiamaConcorrenteilità possibili, verrà popolata durante il primo dialogo
 TODO: Mettere in giro riferimenti a "in un battito di ciglia"
-TODO: Se usiamo una abilità durante quella giornata, non avere rimozione di altre.
 LIST abilities = EvidenziaIngredienti, ScelteLente, SceltaIngrediente, PNGParliExtra, SaltaMorte, EliminaConcorrente, RichiamaConcorrente
 // lista dei personaggi in vita, all'inizio dovranno essere selezionati tutti
 LIST alive_characters = (UgoEMimi), (BeBe), (Piiiietro), (Quello), (ilDivo)
@@ -232,9 +231,7 @@ VAR ScampataLaMorte = false
     DOGRON: eccoci con la nostra concorrente
     
     DOGRON: Personcina bella, ti ricordo che ogni giorno perderai una delle tue abilità.
-    TODO: far levare solo le abilità che la giocatrice ha già.
-    ~ temp value = RANDOM(1, 8)
-    ~ temp ability = abilities(value)
+    ~ temp ability = LIST_RANDOM(abilities)
     { ability:
       - EvidenziaIngredienti: DOGRON: Non potrai più vedere in modo chiaro gli ingredienti.
       - ScelteLente: DOGRON: Le scelte ora scorreranno più veloci. 
@@ -245,17 +242,15 @@ VAR ScampataLaMorte = false
       - RichiamaConcorrente: DOGRON: Niente potere di richiamare una persona che se ne è andata.
     }
     
+    ~ abilities -= ability
+    
     { abilities has PNGParliExtra:
       DOGRON: Ti ricordo cara persona che potrai parlare con una persona in più.
     }
-    
-    ~ abilities -= ability
-    
     { abilities has EliminaConcorrente and not Eliminatrice:
         -> Eliminatrice_choice ->
     }
-    
-    { abilities has RichiamaConcorrente and not Resuscitatrice:
+        { abilities has RichiamaConcorrente and not Resuscitatrice:
         -> Resuscitatrice_choice ->
     }
 
@@ -325,6 +320,16 @@ VAR ScampataLaMorte = false
             -
         ->->
 
+
+
+
+
+== EliminazioneConcorrente
+
+~ temp da_eliminare = LIST_RANDOM(alive_characters)
+DOGRON: Complimenti, hai vinto a scapito di: {da_eliminare}
+~ alive_characters -= da_eliminare
+->->
 
 
 

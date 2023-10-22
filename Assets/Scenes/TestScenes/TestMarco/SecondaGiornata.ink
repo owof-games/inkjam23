@@ -76,8 +76,7 @@ Dialoghi giorno 1..4: ogni personaggio ti da 2 ingredienti
         + YOU: Perché giri con una mannaia?
             BeBe: Mannaia? Quale mannaia?
         + YOU: Mi dispiace per chi è uscito. Ma scusa, chi è uscito?!?
-            BeBe:
-            TODO: Se si riesce, mettere il nome di chi è stato eliminato.
+            BeBe: Secondo te mi ricordo i nomi di tutti voi, con le mie agnelline a casa?
         -
     BeBe: Ma parliamo di cose belle, visto il tema di oggi: hai persone amiche che ti aspettano? Io ho solo le mie otto, uh, sette figlie, e sono la loro migliore amica.
     BeBe: La migliore mamma e amica che ci sia. Farei di tutto per loro!

@@ -1,4 +1,4 @@
-TODO: riduci a uno ingrediente e azione in bold
+TODO: riduci a uno ingrediente
 === test_abilities
 ~ moveToLounge()
 ~ loungeDialogue(DOGRON)
