@@ -1,4 +1,5 @@
 // lista di tutte le RichiamaConcorrenteilità possibili, verrà popolata durante il primo dialogo
+TODO: eliminare EvidenziaAzioni
 LIST abilities = EvidenziaIngredienti, EvidenziaAzioni, ScelteLente, SceltaIngrediente, PNGParliExtra, SaltaMorte, EliminaConcorrente, RichiamaConcorrente
 // lista dei personaggi in vita, all'inizio dovranno essere selezionati tutti
 LIST alive_characters = (UgoEMimi), (BeBe), (Piiiietro), (Quello), (ilDivo)

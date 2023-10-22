@@ -2,6 +2,7 @@ TODO scrivere finali random
 
 
 === non_ce_lhai_fatta
+TODO: se ho SaltaMorte e non l'ho ancora fatto, posso salvarmi
 {~ Il Gran Consiglio dei Carlini ha scoperto che coppi le ricette da Benedetta Parodi|La Suprema Chihuahua ti ha morso il calcagno, ripetutamente. Morirai di rabbia|Bruiser Woods è entrato nel Gran Consiglio e ha fatto vincere Piiiietro}. THE GOOD DOG per te finisce qua.
 -> END
 

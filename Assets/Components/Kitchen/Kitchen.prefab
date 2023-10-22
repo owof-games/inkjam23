@@ -990,7 +990,7 @@ GameObject:
   - component: {fileID: 4923617043263175984}
   - component: {fileID: 6547250559407228922}
   m_Layer: 5
-  m_Name: Banconi primo-secondo piano
+  m_Name: Banconi secondo piano
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
