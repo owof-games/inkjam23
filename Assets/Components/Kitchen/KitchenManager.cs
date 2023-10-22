@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using System.Linq;
 
 using Ink.Runtime;
@@ -20,6 +21,7 @@ public class KitchenManager : MonoBehaviour
     [SerializeField] private string chooseIngredientText;
     [SerializeField] private GameObject infoBoxRoot;
     [SerializeField] private TextMeshProUGUI infoBoxText;
+    [SerializeField] private DogronReactions dogronReactions;
 
     private int numRightIngredients;
     private bool hasUsedChooseIngredientAbility;
@@ -28,6 +30,7 @@ public class KitchenManager : MonoBehaviour
     {
         numRightIngredients = 0;
         hasUsedChooseIngredientAbility = false;
+        chosenIngredients.Clear();
     }
 
     public void OnStoryStep(StoryStep storyStep)
@@ -78,6 +81,7 @@ public class KitchenManager : MonoBehaviour
                     }
                     var ingredients = dialogueIngredients
                         .Concat(chooseIngredient ? Array.Empty<InkListItem>() : baseIngredients)
+                        .Where(i => !chosenIngredients.Contains(i.itemName))
                         .OrderBy(item => r.Next())
                         .Select(i =>
                         {
@@ -136,12 +140,23 @@ public class KitchenManager : MonoBehaviour
         });
     }
 
+    private List<string> chosenIngredients = new();
+
     public void OnIngredientNameClicked(string name)
     {
         Debug.Log("Got the ingredient " + name);
+        chosenIngredients.Add(name);
         var isRight = dialogueIngredients.Any(di => di.itemName == name);
         Debug.Log($"is right? {isRight}");
-        if (isRight) { numRightIngredients++; }
+        if (isRight)
+        {
+            numRightIngredients++;
+            dogronReactions.RightIngredientChosen();
+        }
+        else
+        {
+            dogronReactions.WrongIngredientChosen();
+        }
         Debug.Log($"by now you got {numRightIngredients} right");
     }
 

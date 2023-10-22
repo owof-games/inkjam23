@@ -246,6 +246,11 @@ namespace LemuRivolta.InkAtoms
             }
             EnqueueCommand(() =>
             {
+                if(!story.canContinue)
+                {
+                    Debug.LogWarning("Tried to continue but couldn't continue any longer");
+                    return;
+                }
                 SwitchFlow(flowName);
                 story.Continue();
             });

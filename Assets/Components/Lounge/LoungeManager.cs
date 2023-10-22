@@ -40,7 +40,8 @@ public class LoungeManager : MonoBehaviour
             SetRoomStyle(true);
             foreach (var contestant in GetContestantsInSelection())
             {
-                var selectable = characterChoices.Contains(contestant.ContestantName);
+                var selectable = characterChoices.Contains(contestant.ContestantName) &&
+                    aliveCharacters.Contains(contestant.ContestantName);
                 contestant.SetEnabled(selectable);
             }
             return;
@@ -61,6 +62,10 @@ public class LoungeManager : MonoBehaviour
             activeBalloon.Write(text);
             activeBalloon.EnableAdvanceButton(storyStep.CanContinue);
             nonActiveBalloon.gameObject.SetActive(false);
+            if (character != youName && lastCharacterTalkingAnimation != null)
+            {
+                lastCharacterTalkingAnimation.ChangeSpriteAtRandom();
+            }
         }
         waitingForNextLine = storyStep.CanContinue;
 
@@ -138,11 +143,18 @@ public class LoungeManager : MonoBehaviour
         });
     }
 
+    private CharacterTalkingAnimation lastCharacterTalkingAnimation;
+
     public void OnDialogueStarted(string characterName)
     {
         foreach (var characterTalking in GetCharactersTalking())
         {
-            characterTalking.gameObject.SetActive(characterTalking.CharacterName == characterName);
+            bool isActive = characterTalking.CharacterName == characterName;
+            characterTalking.gameObject.SetActive(isActive);
+            if (isActive && !characterTalking.TryGetComponent(out lastCharacterTalkingAnimation))
+            {
+                lastCharacterTalkingAnimation = null;
+            }
         }
     }
 
@@ -152,5 +164,13 @@ public class LoungeManager : MonoBehaviour
     {
         var newValue = pair.Item2.Value as InkList;
         hasHighlightIngredients = newValue.Keys.Any(key => key.itemName == "EvidenziaIngredienti");
+    }
+
+    private string[] aliveCharacters;
+
+    public void OnAliveCharactersChanged(VariableValuePair pair)
+    {
+        var newValue = pair.Item2.Value as InkList;
+        aliveCharacters = newValue.Keys.Select(key => key.itemName).ToArray();
     }
 }

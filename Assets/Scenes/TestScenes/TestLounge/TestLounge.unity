@@ -1183,6 +1183,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Kitchen
       objectReference: {fileID: 0}
+    - target: {fileID: 8780434349121354943, guid: 269480b6f1f2d7e4297131956f57243e, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8880113914669956868, guid: 269480b6f1f2d7e4297131956f57243e, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0

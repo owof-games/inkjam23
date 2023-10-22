@@ -4,12 +4,14 @@ VAR base_ingredients_of_the_day = ()
 VAR dialogue_ingredients_of_the_day = ()
 VAR success = true
 
-LIST characters = BeBe, UgoEMimi, Piiietro, Quello, IlDivo
+LIST alive_characters = UgoEMimi, BeBe, (Piiiietro), (Quello), (ilDivo)
 LIST extra_characters = DOGRON
 
 LIST abilities = EvidenziaIngredienti, ScelteLente, (SceltaIngrediente), PNGParliExtra, SaltaMorte, EliminaConcorrente, RichiamaConcorrente
 
--> passaggio_kitchen
+// -> passaggio_kitchen
+-> passaggio_lounge
+// -> test_pick_list
     
 === passaggio_kitchen
 
@@ -100,7 +102,11 @@ DOGRON: questo è il finale cinque
 
 ~ moveToLounge()
 ~ loungeDialogue(DOGRON)
-DOGRON: e ora passiamo al giorno due
+DOGRON: credevi di aver finito eh? e invece no!
+~ moveToLounge()
+
+-> passaggio_lounge2
+
 -> END
 
 === function translate_ingredient(ingredient) ===
@@ -301,6 +307,10 @@ DOGRON: e ora passiamo al giorno due
 === passaggio_lounge
 
 ~ moveToLounge()
+~ loungeDialogue(DOGRON)
+DOGRON: che bello essere qua!
+DOGRON: a parlare!
+DOGRON: a fare facce buffe!
 
 ~ temp num_loop_rimanenti = 3
 
@@ -317,8 +327,8 @@ DOGRON: e ora passiamo al giorno due
       -> Piiiietro_choice
     * {num_loop_rimanenti >= 0} [@Quello]
       -> Quello_choice
-    * {num_loop_rimanenti >= 0} [@IlDivo]
-      -> IlDivo_choice  
+    * {num_loop_rimanenti >= 0} [@ilDivo]
+      -> ilDivo_choice  
   
     * -> cucina_giorno_uno
   
@@ -343,7 +353,7 @@ DOGRON: e ora passiamo al giorno due
     
     = Piiiietro_choice
     //Ingredienti suggeriti: tonno in scatola e mescolare
-        ~ loungeDialogue(Piiietro)
+        ~ loungeDialogue(Piiiietro)
         Piiiietro: ciao
         YOU: ciao
         -> loop
@@ -355,15 +365,15 @@ DOGRON: e ora passiamo al giorno due
         YOU: ciao
         -> loop
     
-    = IlDivo_choice
+    = ilDivo_choice
     //Ingredienti suggeriti: zafferanno e mantecare
-        ~ loungeDialogue(IlDivo)
-        IlDivo: ciao
+        ~ loungeDialogue(ilDivo)
+        ilDivo: ciao
         YOU: ciao
     -> loop
 
     = cucina_giorno_uno
-    -> END
+    -> passaggio_kitchen
 
 EXTERNAL moveToLounge()
 === function moveToLounge() ===
@@ -376,3 +386,103 @@ EXTERNAL moveToKitchen()
 EXTERNAL loungeDialogue(char)
 === function loungeDialogue(char) ===
 [[[talk with {char}]]]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+LIST listatest = (uno), due, (tre), quattro, cinque
+
+=== test_pick_list
+
+{LIST_RANDOM(listatest)}
+
+-> END
+
+
+
+
+
+
+
+
+
+
+
+
+
+=== passaggio_lounge2
+
+~ moveToLounge()
+
+~ temp num_loop_rimanenti = 3
+
+- (loop)
+~ num_loop_rimanenti -= 1
+
+    // scelta del personaggio con cui parlare (vengono tolti in automatico quelli non più vivi)
+    $
+    * {num_loop_rimanenti >= 0} [@BeBe]
+      -> BeBe_choice
+    * {num_loop_rimanenti >= 0} [@UgoEMimi]
+      -> UgoEMimi_choice
+    * {num_loop_rimanenti >= 0} [@Piiiietro]
+      -> Piiiietro_choice
+    * {num_loop_rimanenti >= 0} [@Quello]
+      -> Quello_choice
+    * {num_loop_rimanenti >= 0} [@ilDivo]
+      -> ilDivo_choice  
+  
+    * -> cucina_giorno_uno
+  
+    = UgoEMimi_choice
+    //Ingredienti suggeriti: colla di pesce e frullare
+        ~ loungeDialogue(UgoEMimi)
+        YOU: ciao
+        UgoEMimi: ciao a te!
+        UgoEMimi: secondo me dovresti mettere delle <b>ciabatte</b> nella ricetta!
+        ~ dialogue_ingredients_of_the_day += uova
+        -> loop
+    
+    = BeBe_choice
+    //Ingredienti suggeriti: cipolla e affettare
+        ~ loungeDialogue(BeBe)
+        BeBe: <b>ciao</b>
+        YOU: ciao
+        BeBe: dimmi qualcosa
+        * YOU: qualcosa
+        BeBe: molto divertente
+        -> loop
+    
+    = Piiiietro_choice
+    //Ingredienti suggeriti: tonno in scatola e mescolare
+        ~ loungeDialogue(Piiiietro)
+        Piiiietro: ciao
+        YOU: ciao
+        -> loop
+    
+    = Quello_choice
+    //Ingredienti suggeriti: burro e montare
+        ~ loungeDialogue(Quello)
+        Quello: ciao
+        YOU: ciao
+        -> loop
+    
+    = ilDivo_choice
+    //Ingredienti suggeriti: zafferanno e mantecare
+        ~ loungeDialogue(ilDivo)
+        ilDivo: ciao
+        YOU: ciao
+    -> loop
+
+    = cucina_giorno_uno
+    -> passaggio_kitchen
