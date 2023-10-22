@@ -1,6 +1,7 @@
 TODO: riduci a uno ingrediente e azione in bold
 === test_abilities
 ~ moveToLounge()
+~ loungeDialogue(DOGRON)
 // permette di aggiungere o togliere concorrenti a seconda che l'abilità sia disponibile.
 
 //TEST: PRESENTAZIONE

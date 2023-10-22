@@ -1823,7 +1823,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3197264142857145947, guid: ed8d9871df5130c4f8d79d13c6ed750d, type: 3}
       propertyPath: contestantName
-      value: IlDivo
+      value: ilDivo
       objectReference: {fileID: 0}
     - target: {fileID: 4704026585395195260, guid: ed8d9871df5130c4f8d79d13c6ed750d, type: 3}
       propertyPath: m_Name

@@ -54,10 +54,10 @@ Dialoghi giorno 1..4: ogni personaggio ti da 2 ingredienti
     = BeBe_choice
     //Ingredienti suggeriti: cipolla e affettare
     ~ loungeDialogue(BeBe)
-    BEBE: Eppure ero sicura di averli messi qui, acciderbolina!
+    BeBe: Eppure ero sicura di averli messi qui, acciderbolina!
         + YOU: Hai perso qualcosa?
         -
-    BEBE: I miei occhiali da sole! Non mi piace andare in giro senza.
+    BeBe: I miei occhiali da sole! Non mi piace andare in giro senza.
         + YOU: Li hai addosso, sai?
             BEBE: Uh, che distratta che sono! Sai, avere otto, ehm, sette figlie rende tutto difficile.
         + YOU: Ma non c'è il sole qui. Forse manco su tutto il pianeta.
