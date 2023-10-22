@@ -486,7 +486,7 @@ namespace LemuRivolta.InkAtoms
                 var tagProcessor = tagProcessors.FirstOrDefault(tag => tag.Name == tagName);
                 if (tagProcessor == null)
                 {
-                    Debug.LogError($"Could not find tag processor for '{tagName}'");
+                    Debug.LogWarning($"Could not find tag processor for '{tagName}'");
                 }
                 else
                 {
