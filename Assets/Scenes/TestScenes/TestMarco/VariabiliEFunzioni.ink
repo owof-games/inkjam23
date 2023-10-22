@@ -2,7 +2,6 @@
 LIST abilities = EvidenziaIngredienti, EvidenziaAzioni, ScelteLente, SceltaIngrediente, PNGParliExtra, SaltaMorte, EliminaConcorrente, RichiamaConcorrente
 // lista dei personaggi in vita, all'inizio dovranno essere selezionati tutti
 LIST alive_characters = (UgoEMimi), (BeBe), (Piiiietro), (Quello), (ilDivo)
-LIST characters = Dogron, BeBe, UgoEMimi, Piiiietro, Quello, ilDivo
 
 // lista di tutti gli ingredienti possibili di tutte le giornate
 LIST ingredients = uova, pentola, noce_moscata, farina, saltare, sciogliere, lievitare, sale, cipolla, affettare, tonno_in_scatola, mescolare, burro, montare, zafferano, mantecare, braciola, arrosticino, costina, osso, grigliare, crocchette, versare, riempire, formaggio, fondere, coccole, brandina, cuccia, sgranocchiare, fidarsi, barattoloDelloYogurt, pettorina, trasportino, veterinario, automobile, viaggiare, inconscio, correreneisogni, coccolare, carezzare, pettare, grattare, dormireAssieme, protezione, noGatti, volAuVent, Skyrim, blocchiDiErba, uovaDiPecora, scolare, lacrime, cacaoAmaro, specchiarsi, scottare, iverivideogiochi, canapé, mungere, cardare, ChinottoDiSavona, raccontare, selfie, interviste, avvelenare, collareconetichetta, tonnoalnaturale, cantare, perdonare, evolversi, iomestessomemedesimo, selfcare, sventrare, emancipazione, MichelaMurgia, sacrificio, Peanutbutter, giocattoloPreferito, KateBush, ideaDiSuccesso, cassaPortatile, padre, funghicida, mappa, grande, aiuto, aiutoooooo
@@ -316,7 +315,3 @@ EXTERNAL moveToLounge()
 EXTERNAL moveToKitchen()
 === function moveToKitchen() ===
 [[[move to kitchen]]]
-
-EXTERNAL loungeDialogue(char)
-=== function loungeDialogue(char) ===
-[[[talk with {char}]]]
