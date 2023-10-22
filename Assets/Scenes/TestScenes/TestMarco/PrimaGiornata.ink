@@ -98,9 +98,36 @@ Dialoghi giorno 1..4: ogni personaggio ti da 2 ingredienti
         -> loop
     
     = Quello_choice
-    ~ loungeDialogue(Quello)
     //Ingredienti suggeriti: burro e montare
-        Quello
+    ~ loungeDialogue(Quello)
+    Quello: Ma buongiorno splendore lunare! Non trovi che questo posto sia magnifico?
+        + YOU: Ma tu sai come sei arrivato qui?
+        + YOU: Credo di aver visto un cadavere prima dietro alla telecamera. E mi ha fatto l'occhiolino.
+        + YOU: Sempre meglio della Chiesa del Culto, credo.
+        -
+    Quello: Sento un po' la pressione, sai? Tutta questa gente professionista, e io che sono solo un piccolo pasticcere, come mi ricorda sempre il Divo. Molto molto piccolo. Infimo quasi.
+        + YOU: Il Divo?
+            Quello: Sì, il mio capo, un uomo severo ma affettuoso a modo suo. Mi ha obbligato a venire qui, così se vinco i soldi vanno al suo ristorante.
+        + YOU: Ti lasci dire queste cose?
+            Quello: Ogni apprendista merita la lezione dell'umiltà, non trovi?
+        + YOU: La cosa più complessa che ho cucinato è una caprese, e ci ho perso un dito.
+            Quello: Il Divo dice che è importante lasciare sempre qualcosa di sé in ciò che cuciniamo, sai?
+        -
+    Quello: Comunque piacere, il mio nome è Quello. A volte Quello Lì, altre volte Quell'altro. Le persone sanno essere così creative.
+    Quello: Come cercherai di stupire Dogron?
+        + YOU: Non ferendo nessuno.
+        + YOU: Fuggendo mentre tutte voi cucinate.
+        + YOU: Uova al tegamino?
+        -
+    Quello: Woah, tu hai le idee chiarissime! Io volevo puntare su delle meringhe, ma il Divo l'ultima volta le ha definite troppo meringose, e non va bene.
+    Quello: So solo fare dolci, e allora pensavo di prendere del <b>burro</b> e un po' di altre cose, <b>montare</b> con pazienza a mano tutto e fare dei semplici baci di Dama.
+    ~ dialogue_ingredients_of_the_day += burro
+    ~ dialogue_ingredients_of_the_day += montare
+        + YOU: Semplici. Certo.
+        -
+    Quello: Ora vado a pulire le unghie de il Divo, che poverino da solo non riesce. A dopo, è stato bello parlarti. Parlare.    
+        
+     
         -> loop
     
     = ilDivo_choice

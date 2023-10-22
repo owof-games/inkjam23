@@ -89,7 +89,28 @@ Dialoghi giorno 1..4: ogni personaggio ti da 2 ingredienti
     
     = Quello_choice
     //Ingredienti: Chinotto di Savona e raccontare
-        Piiiietro
+    Quello: Che tema del cazzo.
+        + YOU: Va tutto bene?
+            Quello: Sì, sì, credo.
+        + YOU: Sembri arrabbiato.
+            Quello: No, che dici? La rabbia è VIETATA dal contratto lavorativo.
+        + YOU: Questa cosa del "tutti gli umani sono scomparsi" è inquietante, non trovi?
+            Quello: Si sopravvive, sai?
+        -
+    Quello: Oh, scusa se sono amaro.
+    Quello: Fa un po' strano però pensare a un tema come questo, quando tuo padre ha fatto, ha fatto delle cose orribili.
+        + YOU: In che senso?
+        + YOU: Sai, anche il mio, quando è diventato uno degli Eoni...
+        + YOU: Tutte noi facciamo degli errori, non trovi?
+        -
+    Quello: il Divo dice sempre che il lavoro risolve ogni problema però, ogni paura. Quindi mi metterò a cucinare. Pensavo che la scomparsa è una cosa amara, e potrei fare una treccia che è un <b>raccontare</b> la storia degli altri aspirapolvere come me.
+    ~ dialogue_ingredients_of_the_day += raccontare
+    Quello: Farla dolce ma riempirla di pezzettini di <b>Chinotto di Savona</b> che esaltino l'amaro di certe esperienze.
+    ~ dialogue_ingredients_of_the_day += ChinottoDiSavona
+    Quello: Un po' come quando tuo padre stermina un'intera popolazione con la sua invenzione.
+        + YOU: O tuo padre aggiunge una dimensione spazio temporale al tuo pianeta perché ha litigato con l'altro tuo padre.
+        -
+    Quello: Esatto. Tu sì che mi capisci. Vado a pulire gli ingredienti del Divo e poi comincio la mia ricetta. Grazie per la comprensione!
         -> loop
     
     = ilDivo_choice

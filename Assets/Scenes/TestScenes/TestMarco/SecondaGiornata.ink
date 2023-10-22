@@ -93,7 +93,22 @@ Dialoghi giorno 1..4: ogni personaggio ti da 2 ingredienti
     
     = Quello_choice
     //Ingredienti: lacrime e cacao amaro
-        Piiiietro
+    {not passaggio_lounge_giorno_uno.Quello_choice: Quello: Ciao! Io sono Quello, o Quello Lì a volte. Ti guardavo cucinare ieri e woah, te la cavi benissimo!}
+    Quello: Io sono un po' in difficoltà oggi, sai?
+    Quello: Tutti i miei "veri amici" sono morti, sai?
+        + YOU: Ma come quella battuta sui dinosauri?
+        + YOU: Questo è il momento in cui devo dire che mi dispiace, vero?
+        + YOU: Ho visto una pecora molto amichevole prima. Se vuoi parlare con lei...
+        -
+    Quello: Non ti ammorbo con questa storia triste, promesso. Però non riesco a non pensare a ricette che non abbiano delle <b>lacrime</b>. Un sacco.
+    ~ dialogue_ingredients_of_the_day += lacrime
+        + YOU: Non rovinano il sapore?
+        -
+    Quello: Dipende. Con il <b>cacao amaro</b> il salato ci sta bene. Potrei fare una torta.
+    ~ dialogue_ingredients_of_the_day += cacaoAmaro
+    Quello: Una torta da non dividere con nessuna persona.
+    Quello: A parte il Divo, che non mangerebbe però mai, perché gli farebbe schifo sulla fiducia. E ha ragione.
+    Quello: Scusa, la tristezza è vietata dal contratto di lavoro. A dopo, in bocca al lupo!
         -> loop
     
     = ilDivo_choice

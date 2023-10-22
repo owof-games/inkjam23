@@ -74,8 +74,34 @@ Dialoghi giorno 1..4: ogni personaggio ti da 2 ingredienti
     
     = Quello_choice
     //Ingredienti: perdonare e evolversi
-
-        Piiiietro
+    Quello: Fatti dare un abbraccio!
+        + YOU: Ti trovo benissimo, Quello!
+        + YOU: Mmm, prima levati la polvere.
+        + YOU: Ehm, dove metto la mano destra?
+        -
+    Quello: Non me l'aspettavo, ma questo percorso sta diventando un vero viaggio, sai? Un viaggio verso il <b>perdonare</b> anche chi ti ha ferito.
+    ~ dialogue_ingredients_of_the_day += perdonare
+    Quello: Come il perdonare mio padre. Non ha inventato i roomba contro di me, contro di noi.
+    Quello: Sono state le persone, pigre, a liberarsi di noi aspirapolveri a favore di quei, quelli che sono forse miei fratelli, non trovi?
+        + YOU: Sento solo una grande confusione in testa, ora.
+        + YOU: Ma quindi non è il Divo tuo padre?
+        + YOU: Non ho mai pulito casa mia, non so di cosa tu stia parlando.
+        -
+    Quello: E poi bisogna <b>evolversi</b>. Credo, ho, è sciocco, sai?
+    ~ dialogue_ingredients_of_the_day += evolversi
+        + YOU: Quello, credo sia sciocca tutta questa situazione, se non ridicola.
+        + YOU: "Sciocco" è uccidere per sbaglio Ermenegildo, e poi dimenticarsene, e portarlo a Gardaland e parlarci tutto il giorno e pagare pure il biglietto!
+        + YOU: Il mio cervello mi sta colando dalle orecchie ormai.
+        -
+    Quello: Non riuscivo a perdonare mio padre, e così ne ho cercato un altro. Ho riposto le mie energie, la mia fiducia nel Divo. Un altro uomo arrogante.
+    Quello: Ma io sono una persona valida in me, non trovi? Anche se ci hanno gettato tutti nei cassonetti. Anche se mio padre ha creato qualcosa per sostituirci tutti. Anche se il Divo non mi darà mai la sua approvazione.
+    Quello: IO sono quello che deve approvarsi, e basta.
+        + YOU: Profondo, fratello!
+        + YOU: Nel Culto questo è pensiero sovversivo, sai?
+        + YOU: E me, chi mi approva? Tu? Dogron? Chi?!?!?
+        -
+    Quello: Ora vado dal Divo, e gli dico che mi licenzio. E poi, vincerò questo programma!    
+        
         -> loop
     
     = ilDivo_choice

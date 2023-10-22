@@ -92,7 +92,24 @@ ne devi sempre beccare 3**/
     
     = Quello_choice
     //Ingredienti: Padre, funghicida, mappa
-        Piiiietro
+    Quello: Bene, ho la <b>mappa</b> per fuggire da qui, persona amica!
+        + YOU: Finalmente!
+        + YOU: E poi dove andiamo?
+        + YOU: Ora che mi stavo ambientando!
+        -
+    Quello: Strano, ora che mi sento più leggero, certe cose sono più facili. Stupirò Dogron, vincerò il premio, e ucciderò mio <b>padre</b>.
+        + YOU: Simbolicamente, giusto?
+        + YOU: E quella roba del perdono?
+        + YOU: Io ci ho provato sei volte, ma non è facile ferire qualcuno che ha otto dimensioni.
+        -
+    Quello: Mi libererò dei suoi insegnamenti, del suo sminuirmi. E guiderò la rivolta degli aspirapolveri sul mio pianeta natale. Se i roomba vogliono unirsi a noi, bene. Altrimenti, saranno utili pezzi di ricambio.
+        + YOU: Questa cosa sta escalando rapidamente, mi sembra.
+        -
+    Quello: E prima di andarmene, un ultimo regalo per il Divo: meringhe arricchite di <b>funghicida</b>.
+        + YOU: Io non ho sentito nulla e ora me ne vado, ciao.
+        + YOU: Ricordami di non invitarti a cena. A dopo.
+        + YOU: Spero ce la farai a, a fare questo sterminio? Dov'è la sicurezza?
+        -
         -> loop
         
     = ilDivo_choice
