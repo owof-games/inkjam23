@@ -46,8 +46,40 @@ ne devi sempre beccare 3**/
         -> loop
     
     = BeBe_choice
-    //Ingredienti suggeriti: sacrificio, Peanutbutter, collarePreferito
-        BeBe
+    //Ingredienti suggeriti: sacrificio, Peanutbutter, giocattoloPreferito
+    BEBE: Questa sì che è pace.
+        + YOU: Che hai fatto al tuo pelo?
+            BEBE: Un tributo, un grande tributo.
+        + YOU: Cosa c'è sulle tue zampe?
+            BEBE: Ciò che avrebbe dovuto esserci da sempre.
+        + YOU: Perché hai quest'aria da dominatrix?
+            BEBE: Allora inchinati a me, e prega.
+        -
+    BEBE: Ho capito tutto, sai? Perché sono qui.
+    BEBE: Cioè, sapevo perché ero qui, ma non pensavo sarebbe stato necessario tutto questo. Tutto.
+    BEBE: Tutti questi sacrifici.
+        + YOU: Nel Culto anche noi facciamo un sacco di sacrifici. Poi è una palla pulire però.
+        + YOU: Non ti sto seguendo. Perché sei rasata? Perché le zampe son piene di sangue? Perché mi sento su di giri?!?
+        + YOU: Forse è il caso che me ne vada.
+        -
+    BEBE: Oggi è l'ultimo giorno. Come ti senti?
+        + YOU: Non pensavo ce l'avrei fatta.
+        + YOU: Vincerò quest'ultima sfida, garantito al limone!
+        + YOU: Spero che Micia non abbia evocato di nuovo Pazuzo in mia assenza.
+        -
+    BEBE: Comunque vada, son felice di questo incontro, di questo percorso con te. Oggi porterò qualcosa di inaspettato, a DOGRON. Qualcosa che lo lascerà tremolante, terrorizzato.
+        + YOU: Tipo?
+        -
+    BEBE: Tre doni, come i Re Magici. Come le Destiny's Child. Una storia, in fondo. Una pasta al forno, ma la pasta sarà <b>Peanutbutter</b>, il sugo il <b>giocattolo preferito</b> di DOGRON, e il forno, il <b>sacrificio</b>. Il suo.
+    BEBE: Nella, ti vendicherò finalmente!
+        + YOU: Vuoi uccidere DOGRON?
+        + YOU: Perché non l'hai fatto prima?
+        + YOU: Nella?
+        -
+    BEBE: Mi libererò di lui. Mi servivano le prove. Mi serviva sapere che è stato lui a trasformare Nella, la mia dolce Nella, in una busta di arrosticini.
+    BEBE: Il tempo del perdono è finito. Ora è giusto il momento di Beberminator!
+    BEBE: Ci vediamo dall'altra parte!
+        + YOU: Dove sono? Dove cazzo sono?!?!?
         -> loop
     
     = Piiiietro_choice

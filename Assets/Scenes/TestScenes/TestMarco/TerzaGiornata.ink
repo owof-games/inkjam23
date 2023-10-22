@@ -46,9 +46,38 @@ Dialoghi giorno 1..4: ogni personaggio ti da 2 ingredienti
         -> loop
     
     = BeBe_choice
-
     //Ingredienti suggeriti: mungere e cardare
-        BeBe
+    BEBE: Ehi, ciao, ero distratta e non mi sono accorta del tuo arrivo.
+        + YOU: Tutto ok?
+            BEBE: Oh sì certo, sono così felice di essere qui!
+        + YOU: Nel culto dicono: "La distrazione è il dono di Belial".
+            BEBE: Belial? Culto?
+        + YOU: Come mai la zampetta fasciata?
+            BEBE: Uh, un errore durante la pedicure.
+        -
+    BEBE: Piuttosto: sei qui da tre episodi ormai, e non racconti molto di te. Ti va di confidarmi qualcosa, qualcosa che rimarrà tra te e me?
+        + YOU: Quando sogno vedo l'arrivo dell'Apocalisse, e tutti i Cavallieri dell'Apocalisse hanno il volto di Barbara d'Urso.
+            BEBE: Credo sia una cosa comune dopo la cacciata da Pomeriggio 5.
+        + YOU: Sono la seconda persona più importante del fanclub di Gabriella Golia.
+            BEBE: Chi?
+        + YOU: Non so come mai sono qui, temo sia una punizione del culto per quell'errore con Ermenegildo.
+            BEBE: Sembri una persona molto confusa, sai?
+        -
+    BEBE: Ma, non trovi un po' strano il tema di oggi? In che senso "gli umani sono tutti scomparsi"? E poi cosa sono gli umani?
+        + YOU: Ehm, io sono una persona umana?
+        -
+    BEBE: Uh, ecco perché quella faccia senza peli, e il fatto che non rumini! Che buffo. E da dove vieni ci sono anche le pecore?
+        + YOU: Moltissime, sono tra gli animali più diffusi.
+        -
+    BEBE: In che senso, animali? Certo, deve essere un luogo evoluto, con così tante pecore, bene bene!
+        + YOU: Le alleviamo per mangiarle, fare la lana, farci il latte.
+            BEBE: Ah. Mi sa che torno alle mie cose. Ciao. -> loop
+        + YOU: Sì, esatto, molto evoluto, ehm.
+        + YOU: Beh, sono ottimi animali sacrificali per il Culto!
+            BEBE: In che senso? No, non lo voglio sapere. Non voglio.
+        -
+    BEBE: Oggi voglio colpire DOGRON: la scomparsa comporta sofferenza, e la sofferenza si supera col dolore. Per questo cucinerò qualcosa <b>mungendomi</b> e poi <b>cardando</b> la mia stessa lana.
+    BEBE: Per questo ti saluto ora, e ti auguro il meglio.
         -> loop
     
     = Piiiietro_choice

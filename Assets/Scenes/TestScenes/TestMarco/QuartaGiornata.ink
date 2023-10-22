@@ -48,7 +48,21 @@ Dialoghi giorno 1..4: ogni personaggio ti da 2 ingredienti
     
     = BeBe_choice
     //Ingredienti: avvelenare e collare con un'etichetta: DOGRON
-        BeBe
+    BEBE: Accettare, certo. Ha ragione.
+        + YOU: Tutto bene, Bebe?
+        -
+    BEBE: Sì sì sì, sono solo di fretta. Il cambiamento, è importante accogliere il cambiamento. Cambiare, per le mie otto, no, sette figlie. Sette.
+        + YOU: Come mai citi sempre le tue figlie?
+        -
+    BEBE: Perché il dovere di ogni madre è proteggerle. E se fallisce, vendicarsi. Portare il cambiamento.
+        + YOU: Mi devo preocuppare?
+        -
+    BEBE: No, tu no. Ma oggi porterò una ricetta davvero speciale, sai? Il cambiamento richiede un rischio, e per questo userò della cicuta. Un poco di <b>veleno</b>, scommettendo su quanto possa essere fatale. E il <b>collare</b> dell'assassino.
+        + YOU: Ehm, credo di aver lasciato il gatto nel forno.
+        + YOU: Forse l'aria del pianeta ti sta facendo male?
+        + YOU: Ma stai sgocciolando latte?
+        -
+    BEBE: Accettare. Bisogna accettarlo tutto. A dopo, ciao.    
         -> loop
     
     = Piiiietro_choice

@@ -4,7 +4,7 @@ LIST abilities = EvidenziaIngredienti, EvidenziaAzioni, ScelteLente, SceltaIngre
 LIST alive_characters = (UgoEMimi), (BeBe), (Piiiietro), (Quello), (ilDivo)
 
 // lista di tutti gli ingredienti possibili di tutte le giornate
-LIST ingredients = uova, pentola, noce_moscata, farina, saltare, sciogliere, lievitare, sale, cipolla, affettare, tonno_in_scatola, mescolare, burro, montare, zafferano, mantecare, braciola, arrosticino, costina, osso, grigliare, crocchette, versare, riempire, formaggio, fondere, coccole, brandina, cuccia, sgranocchiare, fidarsi, barattoloDelloYogurt, pettorina, trasportino, veterinario, automobile, viaggiare, inconscio, correreneisogni, coccolare, carezzare, pettare, grattare, dormireAssieme, protezione, noGatti, volAuVent, Skyrim, blocchiDiErba, uovaDiPecora, scolare, lacrime, cacaoAmaro, specchiarsi, scottare, iverivideogiochi, canapé, mungere, cardare, ChinottoDiSavona, raccontare, selfie, interviste, avvelenare, collareconetichetta, tonnoalnaturale, cantare, perdonare, evolversi, iomestessomemedesimo, selfcare, sventrare, emancipazione, MichelaMurgia, sacrificio, Peanutbutter, collarePreferito, KateBush, ideaDiSuccesso, cassaPortatile, padre, funghicida, mappa, grande, aiuto, aiutoooooo
+LIST ingredients = uova, pentola, noce_moscata, farina, saltare, sciogliere, lievitare, sale, cipolla, affettare, tonno_in_scatola, mescolare, burro, montare, zafferano, mantecare, braciola, arrosticino, costina, osso, grigliare, crocchette, versare, riempire, formaggio, fondere, coccole, brandina, cuccia, sgranocchiare, fidarsi, barattoloDelloYogurt, pettorina, trasportino, veterinario, automobile, viaggiare, inconscio, correreneisogni, coccolare, carezzare, pettare, grattare, dormireAssieme, protezione, noGatti, volAuVent, Skyrim, blocchiDiErba, uovaDiPecora, scolare, lacrime, cacaoAmaro, specchiarsi, scottare, iverivideogiochi, canapé, mungere, cardare, ChinottoDiSavona, raccontare, selfie, interviste, avvelenare, collareconetichetta, tonnoalnaturale, cantare, perdonare, evolversi, iomestessomemedesimo, selfcare, sventrare, emancipazione, MichelaMurgia, sacrificio, Peanutbutter, giocattoloPreferito, KateBush, ideaDiSuccesso, cassaPortatile, padre, funghicida, mappa, grande, aiuto, aiutoooooo
 
 // variRichiamaConcorrenteile che tiene gli ingredienti che appaiono nella roulette russa per il giorno che stiamo giocando
 VAR base_ingredients_of_the_day = ()
@@ -95,7 +95,7 @@ VAR Resuscitatrice = false
     - MichelaMurgia: Michela Murgia
     - sacrificio: sacrificio
     - Peanutbutter: mr.Peanutbutter
-    - collarePreferito: il collare preferito di DOGRON
+    - giocattoloPreferito: la pallina preferita di DOGRON
     - KateBush: Kate Bush
     - ideaDiSuccesso: l'idea del successo
     - cassaPortatile: una cassa portatile
@@ -186,7 +186,7 @@ VAR Resuscitatrice = false
     - MichelaMurgia: 4
     - sacrificio: 3
     - Peanutbutter: 4
-    - collarePreferito: 4
+    - giocattoloPreferito: 4
     - KateBush: 3
     - ideaDiSuccesso: 4
     - cassaPortatile: 4
@@ -293,10 +293,12 @@ VAR Resuscitatrice = false
             ~ alive_characters += Quello
             ~ Resuscitatrice = true
             DOGRON: Ma ciao amico mio, finalmente!
-            * { alive_characters hasnt ilDivo } Il divo.
+            * { alive_characters hasnt ilDivo } Il Divo.
             ~ alive_characters += ilDivo
             ~ Resuscitatrice = true
             DOGRON: Toh, è tornato!
+            + ->
+            DOGRON: Tutte le giocatrici sono in vita, non ha senso!
             -
         ->->
 

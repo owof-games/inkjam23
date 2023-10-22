@@ -47,8 +47,41 @@ Dialoghi giorno 1..4: ogni personaggio ti da 2 ingredienti
     
     = BeBe_choice
     //Ingredienti: blocchi d'erba e uova di pecora (sacrificio)
-
-        BeBe
+    BEBE: Ma ciao! Chi l'avrebbe mai detto che sarei sopravvissuta al primo giorno? Nella non ce l'ha fatta.
+    {not passaggio_lounge_giorno_uno.BeBe_choice: BEBE: Comunque ieri non ho avuto modo di presentarmi, sono BeBe, madre single di otto, ehm, sette agnelline.}
+        + YOU: Nella?
+            BEBE: Una lunga storia, una lunga lunga storia.
+        + YOU: Perché giri con una mannaia?
+            BEBE: Mannaia? Quale mannaia?
+        + YOU: Mi dispiace per chi è uscito. Ma scusa, chi è uscito?!?
+            BEBE:
+            TODO: Se si riesce, mettere il nome di chi è stato eliminato.
+        -
+    BEBE: Ma parliamo di cose belle, visto il tema di oggi: hai persone amiche che ti aspettano? Io ho solo le mie otto, uh, sette figlie, e sono la loro migliore amica.
+    BEBE: La migliore mamma e amica che ci sia. Farei di tutto per loro!
+        + YOU: Certo, se ne sei convinta tu...
+        + YOU: Ho Micia che mi aspetta a casa, lei è la mia vita.
+        + YOU: Ci sono un po' di persone nel culto con cui vado d'accordo, sai? Ma non troppe.
+        -
+        + YOU: Hai qualche ricetta segreta su cui puntare, oggi?
+        -
+    BEBE: Se te la dicessi, non sarebbe segreta, non trovi?
+    BEBE: Scherzo, se il tema è "cibo per persone amiche" è ovvio che condivido.
+    BEBE: E tu sei una persona amica per me vero?
+        + YOU: Ceeerto che sì!
+        + YOU: (menti) Ceeeerto che sì!
+        + YOU: (ironicamente) Ceeerto che sì!
+        -
+    BEBE: Questo mi rassicura. Non amo le persone che mi prendono per le orecchie.
+    BEBE: Comunque, pensavo: cos'è la vera amicizia? E ovviamente ho pensato alle mie otto, ehm, sette figlie. E cosa amano fare quando siamo tutte assieme? I videogiochi!
+    BEBE: Mi diverte un sacco quando dicono in modo affettuoso "No mamma, non giocare con noi stasera, ti preghiamo!". Son così tenere.
+    BEBE: E quindi pensavo di fare dei cestini con dei <b>blocchi d'erba</b> fritti, e le <b>uova di pecora</b>.
+        + YOU: Uova di pecora?
+        -
+    BEBE: Certo. In amicizia il sacrificio è importante!.
+    BEBE: Ma ora devo andare un attimo a covare. A dopo!
+        + YOU: Ehm, a dopo.
+        -
         -> loop
     
     = Piiiietro_choice
