@@ -307,6 +307,10 @@ DOGRON: credevi di aver finito eh? e invece no!
 === passaggio_lounge
 
 ~ moveToLounge()
+~ loungeDialogue(DOGRON)
+DOGRON: che bello essere qua!
+DOGRON: a parlare!
+DOGRON: a fare facce buffe!
 
 ~ temp num_loop_rimanenti = 3
 

@@ -61,6 +61,10 @@ public class LoungeManager : MonoBehaviour
             activeBalloon.Write(text);
             activeBalloon.EnableAdvanceButton(storyStep.CanContinue);
             nonActiveBalloon.gameObject.SetActive(false);
+            if (character != youName && lastCharacterTalkingAnimation != null)
+            {
+                lastCharacterTalkingAnimation.ChangeSpriteAtRandom();
+            }
         }
         waitingForNextLine = storyStep.CanContinue;
 
@@ -138,11 +142,18 @@ public class LoungeManager : MonoBehaviour
         });
     }
 
+    private CharacterTalkingAnimation lastCharacterTalkingAnimation;
+
     public void OnDialogueStarted(string characterName)
     {
         foreach (var characterTalking in GetCharactersTalking())
         {
-            characterTalking.gameObject.SetActive(characterTalking.CharacterName == characterName);
+            bool isActive = characterTalking.CharacterName == characterName;
+            characterTalking.gameObject.SetActive(isActive);
+            if (isActive && !characterTalking.TryGetComponent(out lastCharacterTalkingAnimation))
+            {
+                lastCharacterTalkingAnimation = null;
+            }
         }
     }
 
