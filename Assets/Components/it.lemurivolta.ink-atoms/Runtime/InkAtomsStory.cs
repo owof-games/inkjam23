@@ -85,6 +85,7 @@ namespace LemuRivolta.InkAtoms
 
                 story = new Story(actualInkTextAsset.text);
                 story.onDidContinue += Story_onDidContinue;
+                story.onError += Story_onError;
 
                 continueEvent.Register(OnContinueEvent);
                 choiceEvent.Register(OnChoiceEvent);
@@ -94,8 +95,21 @@ namespace LemuRivolta.InkAtoms
                 OnEnableCommandQueue();
                 OnEnableCommandLineParsers();
 
+#if UNITY_EDITOR
                 EditorApplication.playModeStateChanged += EditorApplication_playModeStateChanged;
+#endif
             }
+        }
+
+        private void Story_onError(string message, Ink.ErrorType type)
+        {
+            var msg = $"{story.debugMetadata?.fileName}:{story.debugMetadata?.startLineNumber} - {message}";
+            switch (type)
+            {
+                case Ink.ErrorType.Author: Debug.Log(msg); break;
+                case Ink.ErrorType.Warning: Debug.LogWarning(msg); break;
+                default: Debug.LogError(msg); break;
+            };
         }
 
         private void Teardown()
@@ -125,6 +139,7 @@ namespace LemuRivolta.InkAtoms
             Setup();
         }
 
+#if UNITY_EDITOR
         private void EditorApplication_playModeStateChanged(PlayModeStateChange obj)
         {
             if (obj == PlayModeStateChange.ExitingPlayMode)
@@ -132,6 +147,7 @@ namespace LemuRivolta.InkAtoms
                 OnDisableCommandQueue();
             }
         }
+#endif
 
         private void OnContinueEvent(string flowName) => Continue(flowName);
 
@@ -208,6 +224,10 @@ namespace LemuRivolta.InkAtoms
         /// <param name="flowName">Flow where we continue.</param>
         public void Continue(string flowName)
         {
+            if (debugCurrentState)
+            {
+                Debug.Log($"continuing on flow {flowName}");
+            }
             EnqueueCommand(() =>
             {
                 SwitchFlow(flowName);
@@ -234,6 +254,10 @@ namespace LemuRivolta.InkAtoms
         /// <param name="choiceIndex">Index of the choice that was made.</param>
         public void Choose(string flowName, int choiceIndex)
         {
+            if (debugCurrentState)
+            {
+                Debug.Log($"choosing index {choiceIndex} on flow {flowName}");
+            }
             EnqueueCommand(() =>
             {
                 SwitchFlow(flowName);

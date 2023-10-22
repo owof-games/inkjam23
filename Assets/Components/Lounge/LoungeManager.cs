@@ -67,7 +67,7 @@ public class LoungeManager : MonoBehaviour
         choices.gameObject.SetActive(hasChoices);
         if (hasChoices)
         {
-            choices.SetChoices(storyStep.Choices.Select(c => c.Text).ToArray());
+            choices.SetChoices(storyStep.Choices.Select(c => GetTalkingData(c.Text).text).ToArray());
         }
     }
 
@@ -84,21 +84,21 @@ public class LoungeManager : MonoBehaviour
         var pieces = source.Split(':', 2);
         if (pieces.Length < 2)
         {
-            return (null, source);
+            return (null, source.Trim());
         }
         var characterName = pieces[0];
         if (characterName == youName)
         {
-            return (characterName, pieces[1]);
+            return (characterName.Trim(), pieces[1].Trim());
         }
         foreach (var characterTalking in GetCharactersTalking())
         {
             if (characterTalking.CharacterName == characterName)
             {
-                return (characterName, pieces[1].Trim());
+                return (characterName.Trim(), pieces[1].Trim());
             }
         }
-        return (null, source);
+        return (null, source.Trim());
     }
 
     private void SetRoomStyle(bool showCharacterSelection)

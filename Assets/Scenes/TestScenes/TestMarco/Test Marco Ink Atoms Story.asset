@@ -16,7 +16,7 @@ MonoBehaviour:
   storyStepEvent: {fileID: 11400000, guid: 3812deb4ef13d7b46bd2f1d2ab7053a7, type: 2}
   continueEvent: {fileID: 11400000, guid: 74398120320ca8046ad055551d04ad1c, type: 2}
   choiceEvent: {fileID: 11400000, guid: 08a0c689302d3d6458a756b554ef004b, type: 2}
-  debugCurrentState: 0
+  debugCurrentState: 1
   variableListeners: []
   FirstElement:
     MatchKind: 0
