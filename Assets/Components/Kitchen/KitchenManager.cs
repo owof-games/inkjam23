@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -36,6 +37,13 @@ public class KitchenManager : MonoBehaviour
 
     public void OnStoryStep(StoryStep storyStep)
     {
+        StartCoroutine(OnStoryStepCoroutine(storyStep));
+    }
+
+    private IEnumerator OnStoryStepCoroutine(StoryStep storyStep)
+    {
+        yield return animationCoroutine;
+        ingredientsScroll.gameObject.SetActive(true);
         if (!string.IsNullOrEmpty(storyStep.Text))
         {
             // just print it
@@ -160,6 +168,7 @@ public class KitchenManager : MonoBehaviour
         {
             animationCoroutine = dogronReactions.WrongIngredientChosen();
         }
+        ingredientsScroll.gameObject.SetActive(false);
         potAnimation.PutIngredient();
         Debug.Log($"by now you got {numRightIngredients} right");
     }
