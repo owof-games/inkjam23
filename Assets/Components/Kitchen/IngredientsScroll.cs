@@ -80,7 +80,7 @@ public class IngredientsScroll : MonoBehaviour
         rectTransform.offsetMax = new(0, h);
 
         // start animation
-        tweener = DOTween.To(() => rectTransform.offsetMin.y,
+        DOTween.To(() => rectTransform.offsetMin.y,
             newValue =>
             {
                 rectTransform.offsetMin = new(0, newValue);
