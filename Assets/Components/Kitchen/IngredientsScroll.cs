@@ -5,6 +5,8 @@ using System.Linq;
 
 using DG.Tweening;
 
+using Unity.VisualScripting;
+
 using UnityEditor.Rendering.LookDev;
 
 using UnityEngine;
@@ -19,15 +21,18 @@ public class IngredientsScroll : MonoBehaviour
 
     public float Speed;
 
-    private Tweener tweener;
-
     private List<IngredientDescription> previousDescriptions;
 
-    private System.Comparison<IngredientDescription> ic = new Comparison<IngredientDescription>(CompareIngredients);
+    private readonly Comparison<IngredientDescription> ic = new(CompareIngredients);
 
     private static int CompareIngredients(IngredientDescription x, IngredientDescription y)
     {
         return x.Name.CompareTo(y.Name);
+    }
+
+    private void OnDisable()
+    {
+        previousDescriptions = null;
     }
 
     public IEnumerator StartScroll(IngredientDescription[] ingredientDescriptions)
@@ -85,6 +90,7 @@ public class IngredientsScroll : MonoBehaviour
             Speed)
             .SetSpeedBased()
             .SetEase(Ease.Linear)
-            .SetLoops(-1);
+            .SetLoops(-1)
+            .SetLink(gameObject, LinkBehaviour.KillOnDisable);
     }
 }
