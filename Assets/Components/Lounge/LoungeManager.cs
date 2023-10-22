@@ -111,7 +111,10 @@ public class LoungeManager : MonoBehaviour
     {
         foreach (Transform child in contestantSelectionRoot.transform)
         {
-            yield return child.GetComponent<ContestantInSelection>();
+            if (child.TryGetComponent<ContestantInSelection>(out var contestant))
+            {
+                yield return contestant;
+            }
         }
     }
 

@@ -5,20 +5,21 @@ VAR dialogue_ingredients_of_the_day = ()
 VAR success = true
 
 
--> passaggio_kitchen
+-> passaggio_lounge
     
 === passaggio_kitchen
 
 ~ moveToKitchen()
 
     ~ base_ingredients_of_the_day = (uova, farina, saltare, sciogliere, lievitare, sale)
+    ~ dialogue_ingredients_of_the_day += arrosticino
+    ~ dialogue_ingredients_of_the_day += cipolla
 
     ~ temp total = 0
     ~ temp num_loop_rimanenti = 3
     - (loop)
     ~ num_loop_rimanenti -= 1
     Total è {total}
-    #kitchen_choice
     + {num_loop_rimanenti >= 0} 1
       ~ total += 1
       -> loop
@@ -88,6 +89,186 @@ DOGRON: questo è il finale cinque
 DOGRON: e ora passiamo al giorno due
 -> END
 
+=== function translate_ingredient(ingredient) ===
+    { ingredient:
+    - uova: uova
+    - pentola: pentola
+    - noce_moscata: noce moscata
+    - farina: farina
+    - saltare: saltare
+    - sciogliere: sciogliere
+    - lievitare: lievitare
+    - sale: sale
+    - cipolla: cipolla
+    - affettare: affettare
+    - tonno_in_scatola: tonno in scatola
+    - mescolare: mescolare
+    - burro: burro
+    - montare: montare
+    - zafferano: zafferano
+    - mantecare: mantecare
+    - braciola: braciola
+    - arrosticino: arrosticino
+    - costina: costina
+    - osso: osso
+    - grigliare: grigliare
+    - crocchette: crocchette
+    - versare: versare
+    - riempire: riempire
+    - formaggio: formaggio
+    - fondere: fondere
+    - coccole: coccole
+    - brandina: brandina
+    - cuccia: cuccia
+    - sgranocchiare: sgranocchiare
+    - fidarsi: fidarsi
+    - barattoloDelloYogurt: il barattolo dello Yogurt
+    - pettorina: pettorina
+    - trasportino: trasportino
+    - veterinario: veterinario
+    - automobile: automobile
+    - viaggiare: viaggiare
+    - inconscio: inconscio
+    - correreneisogni: correre nei sogni
+    - coccolare: coccolare
+    - carezzare: carezzare
+    - pettare: pettare
+    - grattare: grattare
+    - dormireAssieme: dormire assieme
+    - protezione: protezione
+    - noGatti: niente gatti!
+    - volAuVent: vol-au-vent
+    - Skyrim: Skyrim
+    - blocchiDiErba: blocchi di erba
+    - uovaDiPecora: uova di pecora
+    - scolare: scolare
+    - lacrime: lacrime
+    - cacaoAmaro: cacao amaro
+    - specchiarsi: specchiarsi
+    - scottare: scottare
+    - iverivideogiochi: i VERI videogiochi
+    - canapé: canapé
+    - mungere: mungere
+    - cardare: cardare
+    - ChinottoDiSavona: Chinotto di Savona
+    - raccontare: raccontare
+    - selfie: selfie
+    - interviste: interviste
+    - avvelenare: avvelenare
+    - collareconetichetta: collare con un'etichetta col nome Dogron
+    - tonnoalnaturale: tonno in scatola al naturale
+    - cantare: cantare
+    - perdonare: perdonare
+    - evolversi: evolversi
+    - iomestessomemedesimo: iomestessomemedesimo
+    - selfcare: hashtagselfcare
+    - sventrare: sventrare
+    - emancipazione: emancipazione
+    - MichelaMurgia: Michela Murgia
+    - sacrificio: sacrificio
+    - Peanutbutter: mr.Peanutbutter
+    - collarePreferito: il collare preferito di DOGRON
+    - KateBush: Kate Bush
+    - ideaDiSuccesso: l'idea del successo
+    - cassaPortatile: una cassa portatile
+    - padre: padre
+    - funghicida: funghicida
+    - mappa: mappa
+    - grande: Io sono ancora grande, è la ristorazione che è diventata piccola.
+    - aiuto: aiuto
+    - aiutoooooo: AIUTOOOOOOOOOOOOOOOOOOOO
+
+    }
+
+=== function value_ingredient(ingredient) ===
+    { ingredient:
+    - uova: 1
+    - pentola: 2
+    - noce_moscata: 1
+    - farina: 1
+    - saltare: 1
+    - sciogliere: 2
+    - lievitare: 2
+    - sale: 1
+    - cipolla: 1
+    - affettare: 3
+    - tonno_in_scatola: 1
+    - mescolare: 1
+    - burro: 1
+    - montare: 3
+    - zafferano: 3
+    - mantecare: 3
+    - braciola: 2
+    - arrosticino: 3
+    - costina: 3
+    - osso: 2
+    - grigliare: 2
+    - crocchette: 1
+    - versare: 2
+    - riempire: 3
+    - formaggio: 2
+    - fondere: 2
+    - coccole: 3
+    - brandina: 3
+    - cuccia: 3
+    - sgranocchiare: 2
+    - fidarsi: 3
+    - barattoloDelloYogurt: 2
+    - pettorina: 3
+    - trasportino: 3
+    - veterinario: 3
+    - automobile: 3
+    - viaggiare: 2
+    - inconscio: 3
+    - correreneisogni: 2
+    - coccolare: 3
+    - carezzare: 2
+    - pettare: 3
+    - grattare: 4
+    - dormireAssieme: 4
+    - protezione: 2
+    - noGatti: 4
+    - volAuVent: 2
+    - Skyrim: 2
+    - blocchiDiErba: 2
+    - uovaDiPecora: 3
+    - scolare: 2
+    - lacrime: 3
+    - cacaoAmaro: 2
+    - specchiarsi: 3
+    - scottare: 2
+    - iverivideogiochi: 3
+    - canapé: 2
+    - mungere: 2
+    - cardare: 3
+    - ChinottoDiSavona: 2
+    - raccontare: 3
+    - selfie: 3
+    - interviste: 3
+    - avvelenare: 3
+    - collareconetichetta: 3
+    - tonnoalnaturale: 3
+    - cantare: 3
+    - perdonare: 3
+    - evolversi: 3
+    - iomestessomemedesimo: 3
+    - selfcare: 3
+    - sventrare: 3
+    - emancipazione: 4
+    - MichelaMurgia: 4
+    - sacrificio: 3
+    - Peanutbutter: 4
+    - collarePreferito: 4
+    - KateBush: 3
+    - ideaDiSuccesso: 4
+    - cassaPortatile: 4
+    - padre: 3
+    - funghicida: 4
+    - mappa: 4
+    - grande: 2
+    - aiuto: 3
+    - aiutoooooo: 4
+    }
 
 
 
@@ -112,67 +293,50 @@ DOGRON: e ora passiamo al giorno due
 - (loop)
 ~ num_loop_rimanenti -= 1
 
-$
-* {num_loop_rimanenti >= 0} [@pippo]
-  -> pippo_choice
-* {num_loop_rimanenti >= 0} [@pluto]
-  -> pluto_choice
-* {num_loop_rimanenti >= 0} [@paperino]
-  -> paperino_choice
-* {num_loop_rimanenti >= 0} [@tre]
-  -> tre_choice
-* {num_loop_rimanenti >= 0} [@quattro]
-  -> quattro_choice
-* {num_loop_rimanenti >= 0} [@cinque]
-  -> cinque_choice
-* -> fine
+    // scelta del personaggio con cui parlare (vengono tolti in automatico quelli non più vivi)
+    * {num_loop_rimanenti >= 0} [@BeBe]
+      -> BeBe_choice
+    * {num_loop_rimanenti >= 0} [@UgoEMimi]
+      -> UgoEMimi_choice
+    * {num_loop_rimanenti >= 0} [@Piiiietro]
+      -> Piiiietro_choice
+    * {num_loop_rimanenti >= 0} [@Quello]
+      -> Quello_choice
+    * {num_loop_rimanenti >= 0} [@IlDivo]
+      -> IlDivo_choice  
   
+    * -> cucina_giorno_uno
+  
+    = UgoEMimi_choice
+    //Ingredienti suggeriti: colla di pesce e frullare
+        YOU: ciao
+        UgoEMimi: ciao a te!
+        UgoEMimi: secondo me dovresti mettere delle <b>ciRichiamaConcorrenteatte</b> nella ricetta!
+        ~ dialogue_ingredients_of_the_day += uova
+        -> loop
+    
+    = BeBe_choice
+    //Ingredienti suggeriti: cipolla e affettare
+        BeBe
+        -> loop
+    
+    = Piiiietro_choice
+    //Ingredienti suggeriti: tonno in scatola e mescolare
+        Piiiietro
+        -> loop
+    
+    = Quello_choice
+    //Ingredienti suggeriti: burro e montare
+        Quello
+        -> loop
+    
+    = IlDivo_choice
+    //Ingredienti suggeriti: zafferanno e mantecare
+    IlDivo
+    -> loop
 
-= pippo_choice
-you: ciao
-pippo: sono pippo!
-pippo: secondo me dovresti mettere delle <b>ciabatte</b> nella ricetta!
-+ you: seriamente?
-+ you: se lo dici tu
-+ you: lo farò di sicuro
--
-pippo: ottimo.
--> loop
-
-= pluto_choice
-you: ciao
-pluto: sono pluto!
-pluto: secondo me dovresti mettere delle <b>ciabatte</b> nella ricetta!
--> loop
-
-= paperino_choice
-you: ciao
-paperino: sono paperino!
-paperino: secondo me dovresti mettere delle <b>ciabatte</b> nella ricetta!
--> loop
-
-= tre_choice
-you: ciao
-tre: sono tre!
-tre: secondo me dovresti mettere delle <b>ciabatte</b> nella ricetta!
--> loop
-
-= quattro_choice
-you: ciao
-quattro: sono quattro!
-quattro: secondo me dovresti mettere delle <b>ciabatte</b> nella ricetta!
--> loop
-
-= cinque_choice
-you: ciao
-cinque: sono cinque!
-cinque: secondo me dovresti mettere delle <b>ciabatte</b> nella ricetta!
--> loop
-
-= fine
-~ moveToKitchen()
--> END
-
+    = cucina_giorno_uno
+    -> END
 
 EXTERNAL moveToLounge()
 === function moveToLounge() ===

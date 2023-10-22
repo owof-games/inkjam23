@@ -1,18 +1,28 @@
-using System.Collections;
-using System.Collections.Generic;
+using LemuRivolta.InkAtoms;
+
+using UnityAtoms.BaseAtoms;
+
 using UnityEngine;
 
 public class KitchenManager : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    [SerializeField] private StringEvent continueEvent;
 
-    // Update is called once per frame
-    void Update()
+    public void OnStoryStep(StoryStep storyStep)
     {
-        
+        if(!string.IsNullOrEmpty(storyStep.Text))
+        {
+            // just print it
+            Debug.Log(storyStep.Text, this);
+        }
+        if(storyStep.CanContinue)
+        {
+            // if there's debug text, just continue
+            continueEvent.Raise();
+        }
+        if(storyStep.Choices.Length > 0)
+        {
+            // if there are choices, we can only display kitchen choices
+        }
     }
 }
