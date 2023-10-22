@@ -17,6 +17,7 @@ MonoBehaviour:
   continueEvent: {fileID: 11400000, guid: 74398120320ca8046ad055551d04ad1c, type: 2}
   choiceEvent: {fileID: 11400000, guid: 08a0c689302d3d6458a756b554ef004b, type: 2}
   debugCurrentState: 1
+  inkStoryWrapperEvent: {fileID: 11400000, guid: b5c2665501748d442a951876b74d7149, type: 2}
   variableListeners:
   - MatchKind: 0
     Name: base_ingredients_of_the_day

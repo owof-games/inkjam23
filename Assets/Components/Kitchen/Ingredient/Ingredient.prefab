@@ -255,7 +255,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 6561239693352268939}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 186243788006998713}
+        m_TargetAssemblyTypeName: Ingredient, Assembly-CSharp
+        m_MethodName: OnClick
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &186243788006998713
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -269,3 +281,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   textMeshPro: {fileID: 890560049882509794}
+  ingredientValueClicked: {fileID: 11400000, guid: 8193f8c9e2177d8448e65d4ab184fc33, type: 2}
+  ingredientNameClicked: {fileID: 11400000, guid: e3ea2acf99720ba4eb414772c5dcd466, type: 2}
