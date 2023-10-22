@@ -74,7 +74,8 @@ public class IngredientsScroll : MonoBehaviour
         }
 
         // let layout be recomputed
-        yield return null;
+        Canvas.ForceUpdateCanvases();
+        //yield return null;
 
         // move to the actual top
         var h = verticalLayoutGroup.preferredHeight;
@@ -90,6 +91,7 @@ public class IngredientsScroll : MonoBehaviour
             },
             heightOutOfBounds,
             speed)
+            .From(h)
             .SetSpeedBased()
             .SetEase(Ease.Linear)
             .SetLoops(-1)

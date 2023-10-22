@@ -1,8 +1,11 @@
+using System;
 using System.Linq;
 
 using Ink.Runtime;
 
 using LemuRivolta.InkAtoms;
+
+using TMPro;
 
 using UnityAtoms.BaseAtoms;
 
@@ -14,12 +17,17 @@ public class KitchenManager : MonoBehaviour
     [SerializeField] private IngredientsScroll ingredientsScroll;
     [SerializeField] private ChosenChoiceEvent chosenChoiceEvent;
     [SerializeField] private int minRightIngredients = 2;
+    [SerializeField] private string chooseIngredientText;
+    [SerializeField] private GameObject infoBoxRoot;
+    [SerializeField] private TextMeshProUGUI infoBoxText;
 
     private int numRightIngredients;
+    private bool hasUsedChooseIngredientAbility;
 
     private void OnEnable()
     {
         numRightIngredients = 0;
+        hasUsedChooseIngredientAbility = false;
     }
 
     public void OnStoryStep(StoryStep storyStep)
@@ -58,7 +66,18 @@ public class KitchenManager : MonoBehaviour
                 try
                 {
                     var r = new System.Random();
-                    var ingredients = baseIngredients.Concat(dialogueIngredients)
+                    bool chooseIngredient = hasChooseIngredient && !hasUsedChooseIngredientAbility;
+                    if (chooseIngredient)
+                    {
+                        infoBoxRoot.SetActive(true);
+                        infoBoxText.text = chooseIngredientText;
+                    }
+                    else
+                    {
+                        infoBoxRoot.SetActive(false);
+                    }
+                    var ingredients = dialogueIngredients
+                        .Concat(chooseIngredient ? Array.Empty<InkListItem>() : baseIngredients)
                         .OrderBy(item => r.Next())
                         .Select(i =>
                         {
@@ -75,6 +94,7 @@ public class KitchenManager : MonoBehaviour
                         })
                         .ToArray();
                     StartCoroutine(ingredientsScroll.StartScroll(ingredients));
+                    hasUsedChooseIngredientAbility = true;
                 }
                 finally
                 {
@@ -123,5 +143,13 @@ public class KitchenManager : MonoBehaviour
         Debug.Log($"is right? {isRight}");
         if (isRight) { numRightIngredients++; }
         Debug.Log($"by now you got {numRightIngredients} right");
+    }
+
+    private bool hasChooseIngredient;
+
+    public void OnAbilitiesChanged(VariableValuePair pair)
+    {
+        var newValue = pair.Item2.Value as InkList;
+        hasChooseIngredient = newValue.Keys.Any(key => key.itemName == "SceltaIngrediente");
     }
 }
