@@ -29,6 +29,11 @@ MonoBehaviour:
     Regex: 
     List: []
     VariableChangeEvent: {fileID: 11400000, guid: f72ad21cbec4f6441a64a048e5b50ff3, type: 2}
+  - MatchKind: 0
+    Name: abilities
+    Regex: 
+    List: []
+    VariableChangeEvent: {fileID: 11400000, guid: 00603e64f5c9552449d987e3ab55da31, type: 2}
   FirstElement:
     MatchKind: 0
     Name: 
