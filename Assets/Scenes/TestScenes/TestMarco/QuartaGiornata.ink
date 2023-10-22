@@ -7,18 +7,33 @@ Dialoghi giorno 1..4: ogni personaggio ti da 2 ingredienti
 
 === passaggio_lounge_giorno_quattro
 
+   ~ moveToLounge()
+    
+    -> inizio_lounge ->
+    ~ temp num_loop_rimanenti = 2
+ //RICETTA RICHIESTA: qualcosa per accettare il cambiamento. 
+
+    ~ loungeDialogue(DOGRON)
+    DOGRON: Coda, vieni qua! Coda, coda! Fermati! Cattiva coda, cattiva!
+    DOGRON: Ah, siamo in onda?
+    DOGRON: Benvenute alla quarta e penultima puntata di THE VERYSSIMAMENTE GOOD DOGGO BUONO BUONO DOGGO BUONO! Qui è il vostro conduttore preferito, vero che sono il vostro conduttore preferito?
+    DOGRON: Chi è il conduttore più bravo al mondo? Chi è?
+    DOGRON: Il tema di oggi ci riguarda tutte. Quel tema che ti viene in mente quando la tua tazza preferita si rompe, o le crocchette sono nuove e hanno un sapore inaspettato o il postino ha una divisa pulita.
+    DOGRON: O quando prendono un cuuuuuucciolo e ti dicono che tutto rimarrà come prima ma non è vero, quel cucciolo inizia a camminare, ad andare a stuuudiare e tu ti ci sei affezionato e luuuuuuuuui si dimentica di te.
+    DOGRON: Il tema di oggi è il cambiamento, qualcosa per accettare il cambiamento.
+    DOGRON: Un'altra grande idea della Suprema Chihuahua e del Consiglio dei Carlini.
+    DOGRON: Potete chiacchierare un attimo tra voi, e poi iniziamo a cucinare.
+    DOGRON: Vieni qui, coda!
+    
+    
     ~ dialogue_ingredients_of_the_day = ()
     
-    ~ temp num_loop_rimanenti = 2
     { abilities has PNGParliExtra:
       ~ num_loop_rimanenti += 1
     }
     - (loop)
-    ~ num_loop_rimanenti -= 1
-    // passa alla scena lounge
-    ~ moveToLounge()
-    
-    -> inizio_lounge ->
+    ~ num_loop_rimanenti -= 2
+    ~ loungeDialogue(DOGRON)
     
     // scelta del personaggio con cui parlare (vengono tolti in automatico quelli non più vivi)
     $
@@ -35,7 +50,6 @@ Dialoghi giorno 1..4: ogni personaggio ti da 2 ingredienti
           
         * -> cucina_giorno_quattro
   
- //RICETTA RICHIESTA: qualcosa per accettare il cambiamento. 
   
     = UgoEMimi_choice
     //INGREDIENTI: Mazinga e Le orecchie di Ugo    

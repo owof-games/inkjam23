@@ -7,18 +7,31 @@ ne devi sempre beccare 3**/
 
 === passaggio_lounge_giorno_cinque
 
+    ~ moveToLounge()
+    
+    -> inizio_lounge ->
+    ~ temp num_loop_rimanenti = 2
+//RICETTA RICHIESTA: Qualcosa che gridi: sarò il genitore doggo migliore al mondo!
+
+    ~ loungeDialogue(DOGRON)
+    DOGRON: No no no amiche, non sono lacrime quelle che vedete, è solo allergia al fatto che è l'ultima puntata.
+    DOGRON: Sob.
+    DOGRON: L'ultima puntata di THE VERYSSIMAMENTE GOOD DOGGO BUONO BUONO DOGRON BUONO, QUALCUNO DICA A DOGRON CHE è BUONO e si merita un pat-pat. Uno!
+    DOGRON: Vi ricordo, finaliste, che in palio c'è la possibilità di avere un proprio mega ristorante su Nettuuuuuuuuuuuuuuuuuuuno, casualmente vicinissimo alla mia casetta senza uuuumani, e a quella del Grande Consiglio dei Carlini e della Suprema Chihuahua.
+    DOGRON: Noi brave dogghe, si si.
+    DOGRON: E per questo il tema di oggi, l'ultimo grande tema è:
+    DOGRON: Un piatto che gridi al mondo che sei la migliore genitora per dogghe al mondo!
+    DOGRON: Scaldate i motori, e che vinca la miglior dog queen!
+    
+    
     ~ dialogue_ingredients_of_the_day = ()
     
-    ~ temp num_loop_rimanenti = 2
     { abilities has PNGParliExtra:
       ~ num_loop_rimanenti += 1
     }
     - (loop)
-    ~ num_loop_rimanenti -= 1
-    // passa alla scena lounge
-    ~ moveToLounge()
-    
-    -> inizio_lounge ->
+    ~ num_loop_rimanenti -= 2
+    ~ loungeDialogue(DOGRON)
     
     // scelta del personaggio con cui parlare (vengono tolti in automatico quelli non più vivi)
     $
@@ -35,7 +48,6 @@ ne devi sempre beccare 3**/
           
         * -> cucina_giorno_cinque
 
-//RICETTA RICHIESTA: Qualcosa che gridi: sarò il genitore doggo migliore al mondo!
   
     = UgoEMimi_choice
     //INGREDIENTI SUGGERITI: sventrare, emancipazione, MichelaMurgia

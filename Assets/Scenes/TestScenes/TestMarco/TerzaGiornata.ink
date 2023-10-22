@@ -6,18 +6,30 @@ Dialoghi giorno 1..4: ogni personaggio ti da 2 ingredienti
 
 === passaggio_lounge_giorno_tre
 
+    ~ moveToLounge()
+    
+    -> inizio_lounge ->
+    ~ temp num_loop_rimanenti = 2
+//RICETTA RICHIESTA: qualcosa per quando ti senti triste perché tutti gli umani sono scomparsi.
+
+    ~ loungeDialogue(DOGRON)
+    DOGRON: Buondì a tutte e benvenute alla terza puntata di THE VERY VERY VERY GOOD GOOD DOG!
+    DOGRON: Non sentite un po' la tristezza? Già due persone ci hanno lasciate, e a me non va di farvi andare via, nuuuuuuuuuuuu!
+    DOGRON: Ma la Suprema Chihuahua e il Gran Consiglio dei Carlini- no, nella loro saggezza loro sanno che è importante trovare la padroncina perfetta, no, la personcina perfetta per il ristorante su Satuuuuuurno!
+    DOGRON: E di sicuuuuuro questa persona magnifica con delle mani magnifiche che fanno dei bellissimi pat-pat sulla testa, deve sapere fare una ricetta per...
+    DOGRON: ... quando ti senti triste perché tuuuuuuutti gli uuuumani sono scomparsi!
+    DOGRON: Come sempre avete qualche minuto per le chiacchiere, e poi si inizia a cuuuucinare!
+    // passa alla scena lounge
+    
+    
     ~ dialogue_ingredients_of_the_day = ()
     
-    ~ temp num_loop_rimanenti = 2
     { abilities has PNGParliExtra:
       ~ num_loop_rimanenti += 1
     }
     - (loop)
-    ~ num_loop_rimanenti -= 1
-    // passa alla scena lounge
-    ~ moveToLounge()
-    
-    -> inizio_lounge ->
+    ~ num_loop_rimanenti -= 2
+    ~ loungeDialogue(DOGRON)
     
     // scelta del personaggio con cui parlare (vengono tolti in automatico quelli non più vivi)
     $
@@ -34,7 +46,6 @@ Dialoghi giorno 1..4: ogni personaggio ti da 2 ingredienti
           
         * -> cucina_giorno_tre
       
-//RICETTA RICHIESTA: qualcosa per quando ti senti triste perché tutti gli umani sono scomparsi.
 
     = UgoEMimi_choice
     //INGREDIENTI SUGGERITI: iverivideogiochi e canapé

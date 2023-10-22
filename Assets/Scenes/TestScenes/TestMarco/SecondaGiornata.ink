@@ -6,19 +6,30 @@ Dialoghi giorno 1..4: ogni personaggio ti da 2 ingredienti
 
 
 === passaggio_lounge_giorno_due
+    ~ moveToLounge()
+    
+    -> inizio_lounge ->
+    ~ temp num_loop_rimanenti = 2
+    //RICETTA RICHIESTA: un pasto per quando vengono i veri amici.
 
+    ~ loungeDialogue(DOGRON)
+    DOGRON: Ma persone amiche, siamo già alla seconda giornata di THE GOOD DOG (very very good dog!)!!! Non siete supermegafelici e scodinzolanti?!? Oh, quanto non vorrei vedervi mai andare via!
+    DOGRON: Ma se non eliminassimo qualcuno, come potremmo trovare un sostituto perfetto per, per, per la cucina più grande di Urano?
+    DOGRON: E a proposito di Uuuuuuuurano, il tema di oggi è: un pasto per quando vengono i veri veri amici!
+    DOGRON: Vi lascio qualche minuto per le chiacchiere e poi si parte!
+    // passa alla scena lounge
+    
+    
     ~ dialogue_ingredients_of_the_day = ()
     
-    ~ temp num_loop_rimanenti = 2
     { abilities has PNGParliExtra:
       ~ num_loop_rimanenti += 1
     }
     - (loop)
-    ~ num_loop_rimanenti -= 1
-    // passa alla scena lounge
-    ~ moveToLounge()
+    ~ num_loop_rimanenti -= 2
+    ~ loungeDialogue(DOGRON)
     
-    -> inizio_lounge ->
+
     
     // scelta del personaggio con cui parlare (vengono tolti in automatico quelli non più vivi)
     $
@@ -35,7 +46,6 @@ Dialoghi giorno 1..4: ogni personaggio ti da 2 ingredienti
       
     * -> cucina_giorno_due
     
-    //RICETTA RICHIESTA: un pasto per quando vengono i veri amici.
     
     = UgoEMimi_choice
     //Ingredienti suggeriti: Vol-au-vent e Skyrim
