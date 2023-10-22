@@ -143,6 +143,8 @@ public class KitchenManager : MonoBehaviour
 
     private List<string> chosenIngredients = new();
 
+    private Coroutine animationCoroutine;
+
     public void OnIngredientNameClicked(string name)
     {
         Debug.Log("Got the ingredient " + name);
@@ -152,11 +154,11 @@ public class KitchenManager : MonoBehaviour
         if (isRight)
         {
             numRightIngredients++;
-            dogronReactions.RightIngredientChosen();
+            animationCoroutine = dogronReactions.RightIngredientChosen();
         }
         else
         {
-            dogronReactions.WrongIngredientChosen();
+            animationCoroutine = dogronReactions.WrongIngredientChosen();
         }
         potAnimation.PutIngredient();
         Debug.Log($"by now you got {numRightIngredients} right");
