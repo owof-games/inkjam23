@@ -19,6 +19,7 @@ Dialoghi giorno 1..4: ogni personaggio ti da 2 ingredienti
     
     -> inizio_lounge ->
 
+        ~ loungeDialogue(characters.Quello)
 TODO: Rifare: viene suggerito un tema per la giornata, da interpretare. Qui è: qualcosa che mangeresti tutti i giorni.
     DOGRON: Buongiorno persone concorrenti, e benvenute a questa prima puntata di NOMEPROGRAMMA! Oggi vi metteremo alla prova cucinando qualcosa di molto molto semplice: del pane.
     DOGRON: Quuuuuuuuanto è buono il pane, vero?
@@ -43,6 +44,7 @@ TODO: Rifare: viene suggerito un tema per la giornata, da interpretare. Qui è: 
   
     = UgoEMimi_choice
     //Ingredienti suggeriti: colla di pesce e frullare
+        ~ loungeDialogue(characters.UgoEMimi)
         YOU: ciao
         UgoEMimi: ciao a te!
         UgoEMimi: secondo me dovresti mettere delle <b>ciRichiamaConcorrenteatte</b> nella ricetta!
@@ -50,21 +52,25 @@ TODO: Rifare: viene suggerito un tema per la giornata, da interpretare. Qui è: 
         -> loop
     
     = BeBe_choice
+        ~ loungeDialogue(characters.BeBe)
     //Ingredienti suggeriti: cipolla e affettare
         BeBe: Ciao
         -> loop
     
     = Piiiietro_choice
+        ~ loungeDialogue(characters.Piiiietro)
     //Ingredienti suggeriti: tonno in scatola e mescolare
         Piiiietro: Ciao
         -> loop
     
     = Quello_choice
+        ~ loungeDialogue(characters.Quello)
     //Ingredienti suggeriti: burro e montare
         Quello: Ciao
         -> loop
     
     = IlDivo_choice
+        ~ loungeDialogue(characters.ilDivo)
     //Ingredienti suggeriti: zafferanno e mantecare
     IlDivo: Ciao
     -> loop
