@@ -7,7 +7,7 @@ VAR success = true
 LIST characters = BeBe, UgoEMimi, Piiietro, Quello, IlDivo
 LIST extra_characters = DOGRON
 
--> passaggio_kitchen
+-> passaggio_lounge
     
 === passaggio_kitchen
 
@@ -306,6 +306,7 @@ DOGRON: e ora passiamo al giorno due
 ~ num_loop_rimanenti -= 1
 
     // scelta del personaggio con cui parlare (vengono tolti in automatico quelli non più vivi)
+    $
     * {num_loop_rimanenti >= 0} [@BeBe]
       -> BeBe_choice
     * {num_loop_rimanenti >= 0} [@UgoEMimi]
@@ -333,7 +334,9 @@ DOGRON: e ora passiamo al giorno due
         ~ loungeDialogue(BeBe)
         BeBe: ciao
         YOU: ciao
-        $
+        BeBe: dimmi qualcosa
+        * YOU: qualcosa
+        BeBe: molto divertente
         -> loop
     
     = Piiiietro_choice
@@ -341,7 +344,6 @@ DOGRON: e ora passiamo al giorno due
         ~ loungeDialogue(Piiietro)
         Piiiietro: ciao
         YOU: ciao
-        $
         -> loop
     
     = Quello_choice
@@ -349,7 +351,6 @@ DOGRON: e ora passiamo al giorno due
         ~ loungeDialogue(Quello)
         Quello: ciao
         YOU: ciao
-        $
         -> loop
     
     = IlDivo_choice
@@ -357,7 +358,6 @@ DOGRON: e ora passiamo al giorno due
         ~ loungeDialogue(IlDivo)
         IlDivo: ciao
         YOU: ciao
-        $
     -> loop
 
     = cucina_giorno_uno
