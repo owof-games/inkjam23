@@ -22,6 +22,7 @@ public class KitchenManager : MonoBehaviour
     [SerializeField] private GameObject infoBoxRoot;
     [SerializeField] private TextMeshProUGUI infoBoxText;
     [SerializeField] private DogronReactions dogronReactions;
+    [SerializeField] private PotAnimation potAnimation;
 
     private int numRightIngredients;
     private bool hasUsedChooseIngredientAbility;
@@ -157,6 +158,7 @@ public class KitchenManager : MonoBehaviour
         {
             dogronReactions.WrongIngredientChosen();
         }
+        potAnimation.PutIngredient();
         Debug.Log($"by now you got {numRightIngredients} right");
     }
 

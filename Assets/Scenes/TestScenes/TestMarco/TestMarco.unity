@@ -470,6 +470,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   continueEvent: {fileID: 0}
+  ingredientsScroll: {fileID: 0}
+  chosenChoiceEvent: {fileID: 0}
+  minRightIngredients: 2
+  chooseIngredientText: 
+  infoBoxRoot: {fileID: 0}
+  infoBoxText: {fileID: 0}
+  dogronReactions: {fileID: 0}
 --- !u!224 &882141167
 RectTransform:
   m_ObjectHideFlags: 0
@@ -906,7 +913,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5297160894864707518, guid: 1464de2a6ae1fbc4c88bbec07b54997d, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5953038624920676112, guid: 1464de2a6ae1fbc4c88bbec07b54997d, type: 3}
       propertyPath: m_Pivot.x
