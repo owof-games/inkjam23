@@ -76,7 +76,7 @@ Dialoghi giorno 1..4: ogni personaggio ti da 2 ingredienti
         -> loop
     
     = BeBe_choice
-    ~ loungeDialogue(Bebe)
+    ~ loungeDialogue(BeBe)
     //Ingredienti suggeriti: mungere e cardare
     BeBe: Ehi, ciao, ero distratta e non mi sono accorta del tuo arrivo.
         + YOU: Tutto ok?

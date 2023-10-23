@@ -160,6 +160,7 @@ DOGRON: Hai seppellito qualcuno, ma non ti ricordi dove l'hai fatto, e sei molto
     -> loop
 - else:
     DOGRON: Le domande sono finite! E grazie al nostro accuratissimo sistema psicologico approvato dal Gran Consiglio dei Carlini e dalla Suprema Chihuahua, io, Dogron III Ti assegno...
+
     -> recap(LIST_VALUE(LIST_MIN(LIST_ALL(abilities))))
 }
 
