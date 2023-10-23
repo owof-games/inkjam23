@@ -11,8 +11,11 @@ public class AreaManager : MonoBehaviour
 
     [SerializeField] private bool skipMenu = false;
 
+    public static AreaManager Instance;
+
     private void Start()
     {
+        Instance = this;
         if (!skipMenu)
         {
             menu.gameObject.SetActive(true);
@@ -57,8 +60,19 @@ public class AreaManager : MonoBehaviour
         }
     }
 
+    public enum AreaKind
+    {
+        Lounge,
+        Kitchen,
+        End
+    }
+
+    public AreaKind Area { get; private set; }
+
     private IEnumerator StartSwitch(bool showLounge, bool isEnd)
     {
+        Area = showLounge && isEnd ? AreaKind.End :
+            showLounge ? AreaKind.Lounge : AreaKind.Kitchen;
         Loader.ShowLoader();
         yield return Loader.WaitForPhase(Loader.Phase.ShowFullVideo);
         loungeManager.gameObject.SetActive(showLounge);

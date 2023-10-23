@@ -40,12 +40,18 @@ public class KitchenManager : MonoBehaviour
 
     public void OnStoryStep(StoryStep storyStep)
     {
+        if (AreaManager.Instance.Area != AreaManager.AreaKind.Kitchen)
+        {
+            Debug.Log("received a message even when we're not in the kitchen");
+            return;
+        }
         StartCoroutine(OnStoryStepCoroutine(storyStep));
     }
 
     private IEnumerator OnStoryStepCoroutine(StoryStep storyStep)
     {
         yield return animationCoroutine;
+
         ingredientsScroll.gameObject.SetActive(true);
         if (!string.IsNullOrEmpty(storyStep.Text))
         {
@@ -167,6 +173,7 @@ public class KitchenManager : MonoBehaviour
         Debug.Log("Got the ingredient " + name);
         chosenIngredients.Add(name);
         var isRight = dialogueIngredients.Any(di => di.itemName == name);
+        Debug.Log($"right ingredients: " + string.Join(", ", dialogueIngredients.Select(di => di.itemName)));
         Debug.Log($"is right? {isRight}");
         if (isRight)
         {

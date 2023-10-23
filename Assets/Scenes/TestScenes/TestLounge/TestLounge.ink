@@ -67,9 +67,13 @@ DEBUG: ok, finito
 -> passaggio_lounge_giorno_due
 
 = non_ce_lhai_fatta
-~ moveToLounge()
-~ loungeDialogue(DOGRON)
+~ moveToEnd()
 DOGRON: è un peccato che tu non ce l'abbia fatta!
+DOGRON: cosa ne pensi?
++ YOU: che è un peccato
++ YOU: che è ingiusto
++ YOU: che uffi però
+DOGRON: hai proprio ragione!
 -> END
 
 = finale_uno
