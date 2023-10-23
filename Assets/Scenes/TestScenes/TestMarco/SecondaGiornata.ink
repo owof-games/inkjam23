@@ -207,7 +207,8 @@ Total è {total}
 
 - (end)
 
- ~ moveToLounge()
+    ~ moveToLounge()
+    ~ loungeDialogue(DOGRON)
 
 { 
 - not success && not ScampataLaMorte && abilities has SaltaMorte:
