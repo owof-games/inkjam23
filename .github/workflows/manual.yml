@@ -12,9 +12,9 @@ on:
       include_linux:
         type: boolean
         default: false
-      include_webgl:
-        type: boolean
-        default: true
+      # include_webgl:
+      #   type: boolean
+      #   default: true
 
 jobs:
   build-and-upload:
@@ -24,7 +24,7 @@ jobs:
       include_windows: ${{ inputs.include_windows }}
       include_macos: ${{ inputs.include_macos }}
       include_linux: ${{ inputs.include_linux }}
-      include_webgl: ${{ inputs.include_webgl }}
+      # include_webgl: ${{ inputs.include_webgl }}
     secrets:
       BUTLER_CREDENTIALS: ${{ secrets.BUTLER_CREDENTIALS }}
       UNITY_LICENSE: ${{ secrets.UNITY_LICENSE }}
