@@ -7,13 +7,17 @@ VAR success = true
 LIST alive_characters = UgoEMimi, BeBe, (Piiiietro), (Quello), (ilDivo)
 LIST extra_characters = DOGRON
 
-LIST abilities = EvidenziaIngredienti, ScelteLente, (SceltaIngrediente), PNGParliExtra, SaltaMorte, EliminaConcorrente, RichiamaConcorrente
+LIST abilities = EvidenziaIngredienti, (ScelteLente), SceltaIngrediente, PNGParliExtra, SaltaMorte, EliminaConcorrente, RichiamaConcorrente
+
+VAR num_ingredients = 0
 
 -> passaggio_kitchen
 // -> passaggio_lounge
 // -> test_pick_list
     
 === passaggio_kitchen
+
+~ num_ingredients = 3
 
 ~ moveToKitchen()
 

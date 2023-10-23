@@ -347,3 +347,10 @@ EXTERNAL moveToKitchen()
 EXTERNAL loungeDialogue(char)
 === function loungeDialogue(char) ===
 [[[talk with {char}]]]
+
+
+
+
+
+
+VAR num_ingredients = 0

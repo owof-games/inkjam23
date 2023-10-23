@@ -187,6 +187,8 @@ TODO: dopo aver fatto i conti delle PNG, fare funzione che permetta che il numer
 
 === cucina_giorno_quattro
 
+    ~ num_ingredients = 4
+
     // passa alla scena della cucina
     ~ moveToKitchen()
     // imposta gli ingredienti a disposizione per questa giornata

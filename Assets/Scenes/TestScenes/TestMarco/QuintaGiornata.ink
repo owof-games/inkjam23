@@ -200,6 +200,8 @@ ne devi sempre beccare 3**/
 
 === cucina_giorno_cinque
 
+    ~ num_ingredients = 5
+
     // passa alla scena della cucina
     ~ moveToKitchen()
     // imposta gli ingredienti a disposizione per questa giornata

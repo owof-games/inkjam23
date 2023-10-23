@@ -219,6 +219,8 @@ Dialoghi giorno 1..4: ogni personaggio ti da 2 ingredienti
 
 === cucina_giorno_uno
 
+    ~ num_ingredients = 3
+
     // passa alla scena della cucina
     ~ moveToKitchen()
     // imposta gli ingredienti a disposizione per questa giornata
