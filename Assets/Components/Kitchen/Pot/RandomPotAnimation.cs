@@ -8,9 +8,9 @@ public class RandomPotAnimation : MonoBehaviour
     [SerializeField] private float minWaitBetweenAnimations = 0.5f;
     [SerializeField] private float maxWaitBetweenAnimations = 2;
 
-    private void Start()
+    private void OnEnable()
     {
-          StartCoroutine(RandomAnimations());
+        StartCoroutine(RandomAnimations());
     }
 
     private IEnumerator RandomAnimations()
