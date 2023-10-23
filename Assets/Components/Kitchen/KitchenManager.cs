@@ -9,8 +9,6 @@ using LemuRivolta.InkAtoms;
 
 using TMPro;
 
-using Unity.Collections.LowLevel.Unsafe;
-
 using UnityAtoms.BaseAtoms;
 
 using UnityEngine;
@@ -22,6 +20,7 @@ public class KitchenManager : MonoBehaviour
     [SerializeField] private ChosenChoiceEvent chosenChoiceEvent;
     [SerializeField] private int minRightIngredients = 2;
     [SerializeField] private string chooseIngredientText;
+    [SerializeField] private string explanationText;
     [SerializeField] private GameObject infoBoxRoot;
     [SerializeField] private TextMeshProUGUI infoBoxText;
     [SerializeField] private DogronReactions dogronReactions;
@@ -29,11 +28,13 @@ public class KitchenManager : MonoBehaviour
 
     private int numRightIngredients;
     private bool hasUsedChooseIngredientAbility;
+    private bool hasDisplayedExplanationBox;
 
     private void OnEnable()
     {
         numRightIngredients = 0;
         hasUsedChooseIngredientAbility = false;
+        hasDisplayedExplanationBox = false;
         chosenIngredients.Clear();
     }
 
@@ -85,6 +86,13 @@ public class KitchenManager : MonoBehaviour
                     {
                         infoBoxRoot.SetActive(true);
                         infoBoxText.text = chooseIngredientText;
+                        hasUsedChooseIngredientAbility = true;
+                    }
+                    else if (!hasDisplayedExplanationBox)
+                    {
+                        infoBoxRoot.SetActive(true);
+                        infoBoxText.text = explanationText.Replace("{X}", numIngredients.ToString());
+                        hasDisplayedExplanationBox = true;
                     }
                     else
                     {
@@ -109,7 +117,6 @@ public class KitchenManager : MonoBehaviour
                         })
                         .ToArray();
                     StartCoroutine(ingredientsScroll.StartScroll(ingredients));
-                    hasUsedChooseIngredientAbility = true;
                 }
                 finally
                 {
@@ -191,5 +198,12 @@ public class KitchenManager : MonoBehaviour
         {
             partOfKitchen.SetVisibility(aliveCharacters.Contains(partOfKitchen.CharacterName));
         }
+    }
+
+    private int numIngredients;
+
+    public void OnNumIngredientsChangedEvent(VariableValuePair pair)
+    {
+        numIngredients = (int)pair.Item2.Value;
     }
 }
