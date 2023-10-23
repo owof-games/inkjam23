@@ -622,8 +622,8 @@ MonoBehaviour:
   rectTransform: {fileID: 3634788085722785186}
   heightOutOfBounds: -420
   ingredientPrefab: {fileID: 1871669491962177717, guid: 96a2edf62ca4d814c9ed0225c1ebf829, type: 3}
-  speed: 350
-  slowChoicesRate: 0.5
+  speed: 270
+  slowChoicesRate: 0.7
   slowChoicesFadeIn: 2
 --- !u!114 &1820281109982665474
 MonoBehaviour:
