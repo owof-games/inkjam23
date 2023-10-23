@@ -10,7 +10,7 @@ public class RandomPotAnimation : MonoBehaviour
 
     private void Start()
     {
-        StartCoroutine(RandomAnimations());
+          StartCoroutine(RandomAnimations());
     }
 
     private IEnumerator RandomAnimations()

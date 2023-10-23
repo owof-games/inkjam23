@@ -211,6 +211,10 @@ TODO: dopo aver fatto i conti delle PNG, fare funzione che permetta che il numer
       -> end
     
     - (end)
+    
+    ~ moveToLounge()
+    ~ loungeDialogue(DOGRON)
+
 { 
 - not success && not ScampataLaMorte && abilities has SaltaMorte:
   ~ ScampataLaMorte = true

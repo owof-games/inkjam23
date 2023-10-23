@@ -1,5 +1,5 @@
 === non_ce_lhai_fatta
-DOGRON: {~ Il Gran Consiglio dei Carlini ha scoperto che coppi le ricette da Benedetta Parodi|La Suprema Chihuahua ti ha morso il calcagno, ripetutamente. Morirai di rabbia|Bruiser Woods è entrato nel Gran Consiglio e ha fatto vincere Piiiietro}. THE GOOD DOG per te finisce qua.
+DOGRON: {~ Il Gran Consiglio dei Carlini ha scoperto che copi le ricette da Benedetta Parodi|La Suprema Chihuahua ti ha morso il calcagno, ripetutamente. Morirai di rabbia|Bruiser Woods è entrato nel Gran Consiglio e ha fatto vincere Piiiietro}. THE GOOD DOG per te finisce qua.
 -> END
 
 === finale_cinque

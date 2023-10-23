@@ -224,6 +224,9 @@ Dialoghi giorno 1..4: ogni personaggio ti da 2 ingredienti
 
 - (end)
 
+    ~ moveToLounge()
+    ~ loungeDialogue(DOGRON)
+
 { 
 - not success && not ScampataLaMorte && abilities has SaltaMorte:
   ~ ScampataLaMorte = true
