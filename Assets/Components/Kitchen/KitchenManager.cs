@@ -9,6 +9,8 @@ using LemuRivolta.InkAtoms;
 
 using TMPro;
 
+using Unity.Collections.LowLevel.Unsafe;
+
 using UnityAtoms.BaseAtoms;
 
 using UnityEngine;
@@ -179,5 +181,15 @@ public class KitchenManager : MonoBehaviour
     {
         var newValue = pair.Item2.Value as InkList;
         hasChooseIngredient = newValue.Keys.Any(key => key.itemName == "SceltaIngrediente");
+    }
+
+    public void OnAliveCharactersChanged(VariableValuePair pair)
+    {
+        var newValue = pair.Item2.Value as InkList;
+        var aliveCharacters = newValue.Keys.Select(key => key.itemName).ToList();
+        foreach (var partOfKitchen in GetComponentsInChildren<PartOfKitchenCharacter>())
+        {
+            partOfKitchen.SetVisibility(aliveCharacters.Contains(partOfKitchen.CharacterName));
+        }
     }
 }
