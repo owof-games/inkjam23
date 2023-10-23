@@ -383,6 +383,10 @@ EXTERNAL moveToLounge()
 === function moveToLounge() ===
 [[[move to lounge]]]
 
+EXTERNAL moveToEnd()
+=== function moveToEnd() ===
+[[[move to end]]]
+
 EXTERNAL moveToKitchen()
 === function moveToKitchen() ===
 [[[move to kitchen]]]

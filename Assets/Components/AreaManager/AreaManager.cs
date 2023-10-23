@@ -37,14 +37,17 @@ public class AreaManager : MonoBehaviour
 
     public void OnMoveToKitchenCommand() => OnMoveTo(false);
 
-    private void OnMoveTo(bool showLounge)
+    public void OnMoveToEndCommand() => OnMoveTo(true, true);
+
+    private void OnMoveTo(bool showLounge, bool isEnd = false)
     {
-        if (loungeManager.gameObject.activeSelf != showLounge &&
+        if (isEnd || (loungeManager.gameObject.activeSelf != showLounge &&
             kitchenManager.gameObject.activeSelf == showLounge &&
-            !menu.gameObject.activeSelf)
+            !menu.gameObject.activeSelf))
         {
             // we must switch to the new view and the menu is not active to cover up for the operations
-            StartCoroutine(StartSwitch(showLounge));
+            // (or we forced the thing)
+            StartCoroutine(StartSwitch(showLounge, isEnd));
         }
         else
         {
@@ -52,14 +55,14 @@ public class AreaManager : MonoBehaviour
             loungeManager.gameObject.SetActive(showLounge);
             kitchenManager.gameObject.SetActive(!showLounge);
         }
-
     }
 
-    private IEnumerator StartSwitch(bool showLounge)
+    private IEnumerator StartSwitch(bool showLounge, bool isEnd)
     {
         Loader.ShowLoader();
         yield return Loader.WaitForPhase(Loader.Phase.ShowFullVideo);
         loungeManager.gameObject.SetActive(showLounge);
+        loungeManager.SetIsEnd(isEnd);
         kitchenManager.gameObject.SetActive(!showLounge);
     }
 }
