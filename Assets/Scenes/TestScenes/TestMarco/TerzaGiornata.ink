@@ -102,7 +102,7 @@ Dialoghi giorno 1..4: ogni personaggio ti da 2 ingredienti
         -
     BeBe: In che senso, animali? Certo, deve essere un luogo evoluto, con così tante pecore, bene bene!
         + YOU: Le alleviamo per mangiarle, fare la lana, farci il latte.
-            BeBe: Ah. Mi sa che torno alle mie cose. Ciao. -> loop
+            BeBe: Ma siete dei mostri!!!
         + YOU: Sì, esatto, molto evoluto, ehm.
         + YOU: Beh, sono ottimi animali sacrificali per il Culto!
             BeBe: In che senso? No, non lo voglio sapere. Non voglio.
