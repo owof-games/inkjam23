@@ -222,7 +222,7 @@ Total è {total}
   ~ ScampataLaMorte = true
   ~ abilities -= SaltaMorte
   DOGRON: Uh, avresti dovuto perdere, ma hai il bonus che ti permette di salvarti una volta ! Fortuuuna a te, sì sì!
-- else:
+- not success:
   -> non_ce_lhai_fatta
 }
 {
