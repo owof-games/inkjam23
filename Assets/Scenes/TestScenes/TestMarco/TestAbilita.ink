@@ -159,7 +159,7 @@ DOGRON: Hai seppellito qualcuno, ma non ti ricordi dove l'hai fatto, e sei molto
     ~ abilities += ability
     -> loop
 - else:
-    DOGRON: Le domande sono finite! E grazie al nostro accuratissimo sistema psicologico approvato dal Gran Consiglio dei Carlini e dalla Suprema Chihuahua, io, Dogron III Ti assegno <>
+    DOGRON: Le domande sono finite! E grazie al nostro accuratissimo sistema psicologico approvato dal Gran Consiglio dei Carlini e dalla Suprema Chihuahua, io, Dogron III Ti assegno...
     -> recap(LIST_VALUE(LIST_MIN(LIST_ALL(abilities))))
 }
 
@@ -169,13 +169,13 @@ DOGRON: Hai seppellito qualcuno, ma non ti ricordi dove l'hai fatto, e sei molto
 {abilities has ability:
     
     {ability:
-    - EvidenziaIngredienti: la capacità di notare subito gli ingredienti!
-    - ScelteLente: la possibilità di rallentare il tempo.
-    - SceltaIngrediente: la fortuna di poterti scegliere un ingrediente a inizio ricetta.
-    - PNGParliExtra: il diritto di chiacchierare con una persona in più in lounge.
-    - SaltaMorte: il, ehm, uh, lapossibilitàdisaltarelatuamorteunavolta uh guarda che bello un labrador!
-    - EliminaConcorrente: il diritto di cacciare dal programma un'altra persona che è qui a conconcorrere. Conrerrere. Cha fai il concorso.
-    - RichiamaConcorrente: il potere di richiamare una volta i morti. Woah!
+    - EvidenziaIngredienti: ...la capacità di notare subito gli ingredienti!
+    - ScelteLente: ...la possibilità di rallentare il tempo.
+    - SceltaIngrediente: ...la fortuna di poterti scegliere un ingrediente a inizio ricetta.
+    - PNGParliExtra: ...il diritto di chiacchierare con una persona in più in lounge.
+    - SaltaMorte: ...il, ehm, uh, lapossibilitàdisaltarelatuamorteunavolta uh guarda che bello un labrador!
+    - EliminaConcorrente: ...il diritto di cacciare dal programma un'altra persona che è qui a conconcorrere. Conrerrere. Cha fai il concorso.
+    - RichiamaConcorrente: ...il potere di richiamare una volta i morti. Woah!
     }
 }
 {i < LIST_VALUE(LIST_MAX(LIST_ALL(abilities))):

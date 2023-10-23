@@ -48,6 +48,7 @@ Dialoghi giorno 1..4: ogni personaggio ti da 2 ingredienti
     
     
     = UgoEMimi_choice
+    ~ loungeDialogue(UgoEMimi)
     //Ingredienti suggeriti: Vol-au-vent e Skyrim
     UgoEMimi: Mimi, no, sei tu che non capisci! Kojima l'ha paragonato a <b>Skyrim</b>! E Kojima non sbaglia mai!
         ~ dialogue_ingredients_of_the_day += Skyrim
@@ -68,6 +69,7 @@ Dialoghi giorno 1..4: ogni personaggio ti da 2 ingredienti
         -> loop
     
     = BeBe_choice
+    ~ loungeDialogue(BeBe)
     //Ingredienti: blocchi d'erba e uova di pecora (sacrificio)
     BeBe: Ma ciao! Chi l'avrebbe mai detto che sarei sopravvissuta al primo giorno? Nella non ce l'ha fatta.
     {not passaggio_lounge_giorno_uno.BeBe_choice: BeBe: Comunque ieri non ho avuto modo di presentarmi, sono BeBe, madre single di otto, ehm, sette agnelline.}
@@ -108,6 +110,7 @@ Dialoghi giorno 1..4: ogni personaggio ti da 2 ingredienti
         -> loop
     
     = Piiiietro_choice
+    ~ loungeDialogue(Piiiietro)
     //Ingredienti: tonno in scatola e scolare
     Piiiietro: <b>Tonno in scatola</b> e <b>scolare</b>.
        ~ dialogue_ingredients_of_the_day += tonno_in_scatola
@@ -136,6 +139,7 @@ Dialoghi giorno 1..4: ogni personaggio ti da 2 ingredienti
         -> loop
         
     = Quello_choice
+    ~ loungeDialogue(Quello)
     //Ingredienti: lacrime e cacao amaro
     {not passaggio_lounge_giorno_uno.Quello_choice: Quello: Ciao! Io sono Quello, o Quello Lì a volte. Ti guardavo cucinare ieri e woah, te la cavi benissimo!}
     Quello: Io sono un po' in difficoltà oggi, sai?
@@ -156,6 +160,7 @@ Dialoghi giorno 1..4: ogni personaggio ti da 2 ingredienti
         -> loop
     
     = ilDivo_choice
+    ~ loungeDialogue(ilDivo)
     //Ingredienti: specchiarsi e scottare
     ilDivo: Ho capito che è il Papa, ma può pure aspettare, che c'ho da aprire una nuova sede a Dubai prima di pranzo, va bene?!?
         + YOU: Ma perché mi ostino a parlare con questo?

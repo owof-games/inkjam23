@@ -50,6 +50,7 @@ Dialoghi giorno 1..4: ogni personaggio ti da 2 ingredienti
     = UgoEMimi_choice
     //INGREDIENTI SUGGERITI: iverivideogiochi e canapé
     
+    ~ loungeDialogue(UgoEMimi)
     UgoEMimi: ...
         + YOU: So che me ne pentirò di dirlo, ma mi sembrate molto silenziose, oggi.
         -
@@ -75,6 +76,7 @@ Dialoghi giorno 1..4: ogni personaggio ti da 2 ingredienti
         -> loop
     
     = BeBe_choice
+    ~ loungeDialogue(Bebe)
     //Ingredienti suggeriti: mungere e cardare
     BeBe: Ehi, ciao, ero distratta e non mi sono accorta del tuo arrivo.
         + YOU: Tutto ok?
@@ -112,6 +114,7 @@ Dialoghi giorno 1..4: ogni personaggio ti da 2 ingredienti
         -> loop
     
     = Piiiietro_choice
+    ~ loungeDialogue(Piiiietro)
     //Ingredienti: tonno in scatola e scolare
     Piiiietro: Eppure ero sicura che fosse un RE minore.
         + YOU: Come, scusa?
@@ -142,6 +145,7 @@ Dialoghi giorno 1..4: ogni personaggio ti da 2 ingredienti
         -> loop
     
     = Quello_choice
+    ~ loungeDialogue(Quello)
     //Ingredienti: Chinotto di Savona e raccontare
     Quello: Che tema del cazzo.
         + YOU: Va tutto bene?
@@ -168,6 +172,7 @@ Dialoghi giorno 1..4: ogni personaggio ti da 2 ingredienti
         -> loop
     
     = ilDivo_choice
+    ~ loungeDialogue(ilDivo)
     //Ingredienti: selfie e interviste
     ilDivo: Trovami Quello, subito!
         + YOU: Quello chi?

@@ -53,6 +53,7 @@ TODO: dopo aver fatto i conti delle PNG, fare funzione che permetta che il numer
   
   
     = UgoEMimi_choice
+    ~ loungeDialogue(UgoEMimi)
     //INGREDIENTI: Mazinga e Le orecchie di Ugo    
     UgoEMimi: Ma ciao, splendore!
         + YOU: Signora Mimi, noto qualcosa di diverso!
@@ -74,6 +75,7 @@ TODO: dopo aver fatto i conti delle PNG, fare funzione che permetta che il numer
         -> loop
     
     = BeBe_choice
+    ~ loungeDialogue(BeBe)
     //Ingredienti: avvelenare e collare con un'etichetta: DOGRON
     BeBe: Accettare, certo. Ha ragione.
         + YOU: Tutto bene, Bebe?
@@ -95,6 +97,7 @@ TODO: dopo aver fatto i conti delle PNG, fare funzione che permetta che il numer
         -> loop
     
     = Piiiietro_choice
+    ~ loungeDialogue(Piiiietro)
     //Ingredienti: Tonno in scatola al naturale (più punti) e cantare
     Piiiietro: Alla fine, se ne è andato.
         + YOU: Chi?
@@ -126,6 +129,7 @@ TODO: dopo aver fatto i conti delle PNG, fare funzione che permetta che il numer
         -> loop
     
     = Quello_choice
+    ~ loungeDialogue(Quello)
     //Ingredienti: perdonare e evolversi
     Quello: Fatti dare un abbraccio!
         + YOU: Ti trovo benissimo, Quello!
@@ -158,6 +162,7 @@ TODO: dopo aver fatto i conti delle PNG, fare funzione che permetta che il numer
         -> loop
     
     = ilDivo_choice
+    ~ loungeDialogue(ilDivo)
     //Ingredienti: iomestessomemedesimo e #selfcare
         ilDivo: Uh, la persona concorrente che preferisco! Come stai?
             + YOU: Mi ritrovo qui senza capire come. Sto andando avanti e non capisco in cosa. Come dovrei stare?!?

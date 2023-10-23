@@ -227,8 +227,9 @@ VAR ScampataLaMorte = false
 
     ~ moveToLounge()
     
-    DOGRON: Ed ora, nostra persona concorrente preferita insieme a tutte le altre, ti ricordo che:
-    DOGRON: Ogni giorno perderai una delle tue abilità. Quelle che perdi oggi sono:
+    DOGRON: E ora, un benvenuto a tutte le persone concorrenti!
+    DOGRON: E un saluto alle persone belle che ci seguono da casa!
+    DOGRON: Concorrenti, ricordatevi che ogni giorno perderete una delle vostre abilità.  Persona umana qui davanti a me! Tu oggi perderai, rullo di tamburi...
     ~ temp ability = LIST_RANDOM(abilities)
     { ability:
       - EvidenziaIngredienti: DOGRON: Non potrai più vedere in modo chiaro gli ingredienti.

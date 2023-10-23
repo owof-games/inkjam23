@@ -50,6 +50,7 @@ ne devi sempre beccare 3**/
 
   
     = UgoEMimi_choice
+    ~ loungeDialogue(UgoEMimi)
     //INGREDIENTI SUGGERITI: sventrare, emancipazione, MichelaMurgia
     UgoEMimi: Quindi: "Accabadora", "Stai zitta!", "God Save the Queer"...
         + YOU: Sta pregando, signora Mimi?
@@ -74,6 +75,7 @@ ne devi sempre beccare 3**/
         -> loop
     
     = BeBe_choice
+    ~ loungeDialogue(BeBe)
     //Ingredienti suggeriti: sacrificio, Peanutbutter, giocattoloPreferito
     BeBe: Questa sì che è pace.
         + YOU: Che hai fatto al tuo pelo?
@@ -114,6 +116,7 @@ ne devi sempre beccare 3**/
         -> loop
     
     = Piiiietro_choice
+    ~ loungeDialogue(Piiiietro)
     //Ingredienti: Kate Bush, l'idea di successo, cassaPortatile
     Piiiietro: Ehi, ti stavo cercando. Volevo ringraziarti, sai?
         + YOU: Uh, davvero?
@@ -147,6 +150,7 @@ ne devi sempre beccare 3**/
         -> loop
     
     = Quello_choice
+    ~ loungeDialogue(Quello)
     //Ingredienti: Padre, funghicida, mappa
     Quello: Bene, ho la <b>mappa</b> per fuggire da qui, persona amica!
     ~ dialogue_ingredients_of_the_day += mappa
@@ -172,6 +176,7 @@ ne devi sempre beccare 3**/
         -> loop
         
     = ilDivo_choice
+    ~ loungeDialogue(ilDivo)
     //Ingredienti: "Io sono ancora grande, è la ristorazione che è diventata piccola." e aiuto e aiuto.
     ilDivo: <b>Io sono ancora grande, è la ristorazione che è diventata piccola.</b>
     ~ dialogue_ingredients_of_the_day += grande
