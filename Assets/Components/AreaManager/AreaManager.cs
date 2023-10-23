@@ -1,6 +1,8 @@
 using System;
 using System.Collections;
 
+using DG.Tweening;
+
 using UnityEngine;
 
 public class AreaManager : MonoBehaviour
@@ -8,6 +10,10 @@ public class AreaManager : MonoBehaviour
     [SerializeField] private LoungeManager loungeManager;
     [SerializeField] private KitchenManager kitchenManager;
     [SerializeField] private Menu menu;
+
+    [SerializeField] private AudioClip chillMusic;
+    [SerializeField] private AudioClip dangerMusic;
+    [SerializeField] private AudioSource audioSource;
 
     [SerializeField] private bool skipMenu = false;
 
@@ -20,6 +26,8 @@ public class AreaManager : MonoBehaviour
         {
             menu.gameObject.SetActive(true);
         }
+        audioSource.clip = chillMusic;
+        audioSource.Play();
     }
 
     public void StartGame()
@@ -70,6 +78,13 @@ public class AreaManager : MonoBehaviour
         var prevArea = Area;
         Area = showLounge && isEnd ? AreaKind.End :
             showLounge ? AreaKind.Lounge : AreaKind.Kitchen;
+        var newMusic = Area == AreaKind.Kitchen ? dangerMusic : chillMusic;
+
+        if (audioSource.clip != newMusic)
+        {
+            StartCoroutine(FadeMusicTo(newMusic));
+        }
+
         if (isEnd || (prevArea != Area))
         {
             // we must switch to the new view and the menu is not active to cover up for the operations
@@ -82,6 +97,17 @@ public class AreaManager : MonoBehaviour
             loungeManager.gameObject.SetActive(showLounge);
             kitchenManager.gameObject.SetActive(!showLounge);
         }
+    }
+
+    [SerializeField] private float fadeInOutDuration = 0.5f;
+
+    private IEnumerator FadeMusicTo(AudioClip newMusic)
+    {
+        yield return audioSource.DOFade(0, fadeInOutDuration / 2).AsyncWaitForCompletion();
+        audioSource.Stop();
+        audioSource.clip = newMusic;
+        audioSource.Play();
+        yield return audioSource.DOFade(1, fadeInOutDuration / 2).AsyncWaitForCompletion();
     }
 
     private IEnumerator StartSwitch(bool showLounge, bool isEnd)

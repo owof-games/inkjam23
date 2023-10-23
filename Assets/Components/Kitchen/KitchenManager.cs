@@ -168,11 +168,22 @@ public class KitchenManager : MonoBehaviour
 
     private Coroutine animationCoroutine;
 
+    [SerializeField] AudioSource rightIngredientAudioSource;
+    [SerializeField] AudioSource wrongIngredientAudioSource;
+
     public void OnIngredientNameClicked(string name)
     {
         Debug.Log("Got the ingredient " + name);
         chosenIngredients.Add(name);
         var isRight = dialogueIngredients.Any(di => di.itemName == name);
+        if (isRight)
+        {
+            rightIngredientAudioSource.Play();
+        }
+        else
+        {
+            wrongIngredientAudioSource.Play();
+        }
         Debug.Log($"right ingredients: " + string.Join(", ", dialogueIngredients.Select(di => di.itemName)));
         Debug.Log($"is right? {isRight}");
         if (isRight)

@@ -436,6 +436,9 @@ LIST listatest = (uno), due, (tre), quattro, cinque
 === passaggio_lounge2
 
 ~ moveToLounge()
+~ loungeDialogue(DOGRON)
+
+DOGRON: Eccoci quindi al secondo giorno!
 
 ~ temp num_loop_rimanenti = 3
 
