@@ -344,6 +344,10 @@ EXTERNAL moveToKitchen()
 === function moveToKitchen() ===
 [[[move to kitchen]]]
 
+EXTERNAL moveToEnd()
+=== function moveToEnd() ===
+[[[move to kitchen]]]
+
 EXTERNAL loungeDialogue(char)
 === function loungeDialogue(char) ===
 [[[talk with {char}]]]

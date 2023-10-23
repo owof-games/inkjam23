@@ -31,8 +31,8 @@ DOGRON: In merito alla tua ricetta: {~ Quello che c'è nella padella non grida, 
 
 === finale ===
 // si usa per il finale del gioco
-@endroom
-    ~ loungeDialogue(DOGRON)
+    ~ moveToEnd()
+    // ~ loungeDialogue(DOGRON)
     DOGRON: Uh, guarda che bella devastazione! Avresti mai pensato di vincere questo programma?
         + YOU: Ovvio, son l'unica persona che ha davvero cucinato.
         + YOU: Non stai per uccidermi, vero?
