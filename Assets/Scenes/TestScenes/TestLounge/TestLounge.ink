@@ -17,9 +17,9 @@ VAR num_ingredients = 0
     
 === passaggio_kitchen
 
-~ num_ingredients = 3
-
 ~ moveToKitchen()
+
+~ num_ingredients = 3
 
     ~ base_ingredients_of_the_day = (uova, farina, saltare, sciogliere, lievitare, sale)
     ~ dialogue_ingredients_of_the_day += arrosticino
@@ -29,7 +29,7 @@ VAR num_ingredients = 0
     ~ temp num_loop_rimanenti = 3
     - (loop)
     ~ num_loop_rimanenti -= 1
-    Total è {total}
+    Total è {total}, num loop rimanenti è {num_loop_rimanenti}
     + {num_loop_rimanenti >= 0} 1
       ~ total += 1
       -> loop
@@ -47,7 +47,6 @@ VAR num_ingredients = 0
     
     - (end)
 
-DEBUG: ok, finito
 { not success:
   -> non_ce_lhai_fatta
 }
@@ -73,7 +72,10 @@ DOGRON: cosa ne pensi?
 + YOU: che è un peccato
 + YOU: che è ingiusto
 + YOU: che uffi però
+-
 DOGRON: hai proprio ragione!
+DOGRON: per questo comunque vai al secondo giorno.
+-> passaggio_lounge2
 -> END
 
 = finale_uno
@@ -111,7 +113,6 @@ DOGRON: questo è il finale cinque
 ~ moveToLounge()
 ~ loungeDialogue(DOGRON)
 DOGRON: credevi di aver finito eh? e invece no!
-~ moveToLounge()
 
 -> passaggio_lounge2
 

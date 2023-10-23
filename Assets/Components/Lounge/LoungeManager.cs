@@ -58,32 +58,40 @@ public class LoungeManager : MonoBehaviour
         if (character != null)
         {
             SetRoomStyle(false);
-            var actualLeftBalloon = isEnd ? endLeftBalloon : leftBalloon;
-            var actualRightBalloon = isEnd ? endRightBalloon : rightBalloon;
-            var activeBalloon = character == youName ? actualLeftBalloon : actualRightBalloon;
-            var nonActiveBalloon = character == youName ? actualRightBalloon : actualLeftBalloon;
-            activeBalloon.gameObject.SetActive(true);
-            if (!hasHighlightIngredients)
+            for (var ie = 0; ie < 2; ie++)
             {
-                text = text.Replace("<b>", "").Replace("</b>", "");
-            }
-            activeBalloon.Write(text);
-            activeBalloon.EnableAdvanceButton(storyStep.CanContinue);
-            nonActiveBalloon.gameObject.SetActive(false);
-            if (character != youName && lastCharacterTalkingAnimation != null)
-            {
-                lastCharacterTalkingAnimation.ChangeSpriteAtRandom();
+                var isEnd = ie == 0;
+                var actualLeftBalloon = isEnd ? endLeftBalloon : leftBalloon;
+                var actualRightBalloon = isEnd ? endRightBalloon : rightBalloon;
+                var activeBalloon = character == youName ? actualLeftBalloon : actualRightBalloon;
+                var nonActiveBalloon = character == youName ? actualRightBalloon : actualLeftBalloon;
+                activeBalloon.gameObject.SetActive(true);
+                if (!hasHighlightIngredients)
+                {
+                    text = text.Replace("<b>", "").Replace("</b>", "");
+                }
+                activeBalloon.Write(text);
+                activeBalloon.EnableAdvanceButton(storyStep.CanContinue);
+                nonActiveBalloon.gameObject.SetActive(false);
+                if (character != youName && lastCharacterTalkingAnimation != null)
+                {
+                    lastCharacterTalkingAnimation.ChangeSpriteAtRandom();
+                }
             }
         }
         waitingForNextLine = storyStep.CanContinue;
 
         // check if there are choices
         bool hasChoices = storyStep.Choices.Length > 0;
-        var actualChoices = (isEnd ? endChoices : choices);
-        actualChoices.gameObject.SetActive(hasChoices);
-        if (hasChoices)
+        for (var ie = 0; ie < 2; ie++)
         {
-            actualChoices.SetChoices(storyStep.Choices.Select(c => GetTalkingData(c.Text).text).ToArray());
+            var isEnd = ie == 0;
+            var actualChoices = (isEnd ? endChoices : choices);
+            actualChoices.gameObject.SetActive(hasChoices);
+            if (hasChoices)
+            {
+                actualChoices.SetChoices(storyStep.Choices.Select(c => GetTalkingData(c.Text).text).ToArray());
+            }
         }
     }
 
@@ -170,14 +178,19 @@ public class LoungeManager : MonoBehaviour
         {
             // there's only dogron
             lastCharacterTalkingAnimation = endDogronCharacterTalkingAnimation;
+            //characterTalking.gameObject.SetActive(false);
         }
-        foreach (var characterTalking in GetCharactersTalking())
+        else
         {
-            bool isActive = characterTalking.CharacterName == characterName;
-            characterTalking.gameObject.SetActive(isActive);
-            if (isActive && !characterTalking.TryGetComponent(out lastCharacterTalkingAnimation))
+            SetRoomStyle(false);
+            foreach (var characterTalking in GetCharactersTalking())
             {
-                lastCharacterTalkingAnimation = null;
+                bool isActive = characterTalking.CharacterName == characterName;
+                characterTalking.gameObject.SetActive(isActive);
+                if (isActive && !characterTalking.TryGetComponent(out lastCharacterTalkingAnimation))
+                {
+                    lastCharacterTalkingAnimation = null;
+                }
             }
         }
     }
@@ -203,5 +216,7 @@ public class LoungeManager : MonoBehaviour
     internal void SetIsEnd(bool isEnd)
     {
         this.isEnd = isEnd;
+        SetRoomStyle(true);
+        OnDialogueStarted("DOGRON");
     }
 }
