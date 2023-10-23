@@ -228,11 +228,13 @@ ne devi sempre beccare 3**/
 
 - (end)
 
+ ~ moveToLounge()
+
 { 
 - not success && not ScampataLaMorte && abilities has SaltaMorte:
   ~ ScampataLaMorte = true
   ~ abilities -= SaltaMorte
-  DOGRON: Uuuuuuuuh, ma una persona qui ha usato la possibilità di scampare la morte, anche se ha perso! Fortunata questa persona casuale, sì sì!
+ DOGRON: Uh, avresti dovuto perdere, ma hai il bonus che ti permette di salvarti una volta ! Fortuuuna a te, sì sì!
 - else:
   -> non_ce_lhai_fatta
 }
