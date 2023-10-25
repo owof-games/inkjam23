@@ -50,6 +50,7 @@ Dialoghi giorno 1..4: ogni personaggio ti da 2 ingredienti
     = UgoEMimi_choice
     //INGREDIENTI SUGGERITI: iverivideogiochi e canapé
     
+    ~ loungeDialogue(UgoEMimi)
     UgoEMimi: ...
         + YOU: So che me ne pentirò di dirlo, ma mi sembrate molto silenziose, oggi.
         -
@@ -75,6 +76,7 @@ Dialoghi giorno 1..4: ogni personaggio ti da 2 ingredienti
         -> loop
     
     = BeBe_choice
+    ~ loungeDialogue(BeBe)
     //Ingredienti suggeriti: mungere e cardare
     BeBe: Ehi, ciao, ero distratta e non mi sono accorta del tuo arrivo.
         + YOU: Tutto ok?
@@ -100,7 +102,7 @@ Dialoghi giorno 1..4: ogni personaggio ti da 2 ingredienti
         -
     BeBe: In che senso, animali? Certo, deve essere un luogo evoluto, con così tante pecore, bene bene!
         + YOU: Le alleviamo per mangiarle, fare la lana, farci il latte.
-            BeBe: Ah. Mi sa che torno alle mie cose. Ciao. -> loop
+            BeBe: Ma siete dei mostri!!!
         + YOU: Sì, esatto, molto evoluto, ehm.
         + YOU: Beh, sono ottimi animali sacrificali per il Culto!
             BeBe: In che senso? No, non lo voglio sapere. Non voglio.
@@ -112,6 +114,7 @@ Dialoghi giorno 1..4: ogni personaggio ti da 2 ingredienti
         -> loop
     
     = Piiiietro_choice
+    ~ loungeDialogue(Piiiietro)
     //Ingredienti: tonno in scatola e scolare
     Piiiietro: Eppure ero sicura che fosse un RE minore.
         + YOU: Come, scusa?
@@ -142,6 +145,7 @@ Dialoghi giorno 1..4: ogni personaggio ti da 2 ingredienti
         -> loop
     
     = Quello_choice
+    ~ loungeDialogue(Quello)
     //Ingredienti: Chinotto di Savona e raccontare
     Quello: Che tema del cazzo.
         + YOU: Va tutto bene?
@@ -168,6 +172,7 @@ Dialoghi giorno 1..4: ogni personaggio ti da 2 ingredienti
         -> loop
     
     = ilDivo_choice
+    ~ loungeDialogue(ilDivo)
     //Ingredienti: selfie e interviste
     ilDivo: Trovami Quello, subito!
         + YOU: Quello chi?
@@ -197,6 +202,8 @@ Dialoghi giorno 1..4: ogni personaggio ti da 2 ingredienti
 
 === cucina_giorno_tre
 
+    ~ num_ingredients = 4
+
 
 
     // passa alla scena della cucina
@@ -224,12 +231,15 @@ Dialoghi giorno 1..4: ogni personaggio ti da 2 ingredienti
 
 - (end)
 
+    ~ moveToLounge()
+    ~ loungeDialogue(DOGRON)
+
 { 
 - not success && not ScampataLaMorte && abilities has SaltaMorte:
   ~ ScampataLaMorte = true
   ~ abilities -= SaltaMorte
-  DOGRON: Uh, ma una persona quuuuuuuuuui ha usato la possibilità di scampare la morte, anche se ha perso! Fortunata questa persona casuale, sì sì!
-- else:
+ DOGRON: Uh, avresti dovuto perdere, ma hai il bonus che ti permette di salvarti una volta ! Fortuuuna a te, sì sì!
+- not success:
   -> non_ce_lhai_fatta
 }
 {

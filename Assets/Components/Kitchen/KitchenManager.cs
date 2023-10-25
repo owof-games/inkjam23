@@ -20,6 +20,7 @@ public class KitchenManager : MonoBehaviour
     [SerializeField] private ChosenChoiceEvent chosenChoiceEvent;
     [SerializeField] private int minRightIngredients = 2;
     [SerializeField] private string chooseIngredientText;
+    [SerializeField] private string explanationText;
     [SerializeField] private GameObject infoBoxRoot;
     [SerializeField] private TextMeshProUGUI infoBoxText;
     [SerializeField] private DogronReactions dogronReactions;
@@ -27,22 +28,30 @@ public class KitchenManager : MonoBehaviour
 
     private int numRightIngredients;
     private bool hasUsedChooseIngredientAbility;
+    private bool hasDisplayedExplanationBox;
 
     private void OnEnable()
     {
         numRightIngredients = 0;
         hasUsedChooseIngredientAbility = false;
+        hasDisplayedExplanationBox = false;
         chosenIngredients.Clear();
     }
 
     public void OnStoryStep(StoryStep storyStep)
     {
+        if (AreaManager.Instance.Area != AreaManager.AreaKind.Kitchen)
+        {
+            Debug.Log("received a message even when we're not in the kitchen");
+            return;
+        }
         StartCoroutine(OnStoryStepCoroutine(storyStep));
     }
 
     private IEnumerator OnStoryStepCoroutine(StoryStep storyStep)
     {
         yield return animationCoroutine;
+
         ingredientsScroll.gameObject.SetActive(true);
         if (!string.IsNullOrEmpty(storyStep.Text))
         {
@@ -83,6 +92,13 @@ public class KitchenManager : MonoBehaviour
                     {
                         infoBoxRoot.SetActive(true);
                         infoBoxText.text = chooseIngredientText;
+                        hasUsedChooseIngredientAbility = true;
+                    }
+                    else if (!hasDisplayedExplanationBox)
+                    {
+                        infoBoxRoot.SetActive(true);
+                        infoBoxText.text = explanationText.Replace("{X}", numIngredients.ToString());
+                        hasDisplayedExplanationBox = true;
                     }
                     else
                     {
@@ -107,7 +123,6 @@ public class KitchenManager : MonoBehaviour
                         })
                         .ToArray();
                     StartCoroutine(ingredientsScroll.StartScroll(ingredients));
-                    hasUsedChooseIngredientAbility = true;
                 }
                 finally
                 {
@@ -153,11 +168,23 @@ public class KitchenManager : MonoBehaviour
 
     private Coroutine animationCoroutine;
 
+    [SerializeField] AudioSource rightIngredientAudioSource;
+    [SerializeField] AudioSource wrongIngredientAudioSource;
+
     public void OnIngredientNameClicked(string name)
     {
         Debug.Log("Got the ingredient " + name);
         chosenIngredients.Add(name);
         var isRight = dialogueIngredients.Any(di => di.itemName == name);
+        if (isRight)
+        {
+            rightIngredientAudioSource.Play();
+        }
+        else
+        {
+            wrongIngredientAudioSource.Play();
+        }
+        Debug.Log($"right ingredients: " + string.Join(", ", dialogueIngredients.Select(di => di.itemName)));
         Debug.Log($"is right? {isRight}");
         if (isRight)
         {
@@ -179,5 +206,22 @@ public class KitchenManager : MonoBehaviour
     {
         var newValue = pair.Item2.Value as InkList;
         hasChooseIngredient = newValue.Keys.Any(key => key.itemName == "SceltaIngrediente");
+    }
+
+    public void OnAliveCharactersChanged(VariableValuePair pair)
+    {
+        var newValue = pair.Item2.Value as InkList;
+        var aliveCharacters = newValue.Keys.Select(key => key.itemName).ToList();
+        foreach (var partOfKitchen in GetComponentsInChildren<PartOfKitchenCharacter>())
+        {
+            partOfKitchen.SetVisibility(aliveCharacters.Contains(partOfKitchen.CharacterName));
+        }
+    }
+
+    private int numIngredients;
+
+    public void OnNumIngredientsChangedEvent(VariableValuePair pair)
+    {
+        numIngredients = (int)pair.Item2.Value;
     }
 }

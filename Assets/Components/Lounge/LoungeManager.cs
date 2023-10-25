@@ -17,9 +17,15 @@ public class LoungeManager : MonoBehaviour
     [SerializeField] private GameObject contestantSelectionRoot;
     [SerializeField] private GameObject characterTalk;
     [SerializeField] private GameObject charactersTalkingRoot;
+    [SerializeField] private GameObject endTalkingRoot;
     [SerializeField] private Balloon leftBalloon;
     [SerializeField] private Balloon rightBalloon;
     [SerializeField] private Choices choices;
+
+    [SerializeField] private Balloon endLeftBalloon;
+    [SerializeField] private Balloon endRightBalloon;
+    [SerializeField] private Choices endChoices;
+    [SerializeField] private CharacterTalkingAnimation endDogronCharacterTalkingAnimation;
 
     [SerializeField] private ChosenChoiceEvent chosenChoiceEvent;
     [SerializeField] private StringEvent continueEvent;
@@ -52,29 +58,40 @@ public class LoungeManager : MonoBehaviour
         if (character != null)
         {
             SetRoomStyle(false);
-            var activeBalloon = character == youName ? leftBalloon : rightBalloon;
-            var nonActiveBalloon = character == youName ? rightBalloon : leftBalloon;
-            activeBalloon.gameObject.SetActive(true);
-            if (!hasHighlightIngredients)
+            for (var ie = 0; ie < 2; ie++)
             {
-                text = text.Replace("<b>", "").Replace("</b>", "");
-            }
-            activeBalloon.Write(text);
-            activeBalloon.EnableAdvanceButton(storyStep.CanContinue);
-            nonActiveBalloon.gameObject.SetActive(false);
-            if (character != youName && lastCharacterTalkingAnimation != null)
-            {
-                lastCharacterTalkingAnimation.ChangeSpriteAtRandom();
+                var isEnd = ie == 0;
+                var actualLeftBalloon = isEnd ? endLeftBalloon : leftBalloon;
+                var actualRightBalloon = isEnd ? endRightBalloon : rightBalloon;
+                var activeBalloon = character == youName ? actualLeftBalloon : actualRightBalloon;
+                var nonActiveBalloon = character == youName ? actualRightBalloon : actualLeftBalloon;
+                activeBalloon.gameObject.SetActive(true);
+                if (!hasHighlightIngredients)
+                {
+                    text = text.Replace("<b>", "").Replace("</b>", "");
+                }
+                activeBalloon.Write(text);
+                activeBalloon.EnableAdvanceButton(storyStep.CanContinue);
+                nonActiveBalloon.gameObject.SetActive(false);
+                if (character != youName && lastCharacterTalkingAnimation != null)
+                {
+                    lastCharacterTalkingAnimation.ChangeSpriteAtRandom();
+                }
             }
         }
         waitingForNextLine = storyStep.CanContinue;
 
         // check if there are choices
         bool hasChoices = storyStep.Choices.Length > 0;
-        choices.gameObject.SetActive(hasChoices);
-        if (hasChoices)
+        for (var ie = 0; ie < 2; ie++)
         {
-            choices.SetChoices(storyStep.Choices.Select(c => GetTalkingData(c.Text).text).ToArray());
+            var isEnd = ie == 0;
+            var actualChoices = (isEnd ? endChoices : choices);
+            actualChoices.gameObject.SetActive(hasChoices);
+            if (hasChoices)
+            {
+                actualChoices.SetChoices(storyStep.Choices.Select(c => GetTalkingData(c.Text).text).ToArray());
+            }
         }
     }
 
@@ -110,8 +127,18 @@ public class LoungeManager : MonoBehaviour
 
     private void SetRoomStyle(bool showCharacterSelection)
     {
-        contestantSelection.SetActive(showCharacterSelection);
-        characterTalk.SetActive(!showCharacterSelection);
+        if (isEnd)
+        {
+            contestantSelection.SetActive(false);
+            characterTalk.SetActive(false);
+            endTalkingRoot.SetActive(true);
+        }
+        else
+        {
+            contestantSelection.SetActive(showCharacterSelection);
+            characterTalk.SetActive(!showCharacterSelection);
+            endTalkingRoot.SetActive(false);
+        }
     }
 
     private IEnumerable<ContestantInSelection> GetContestantsInSelection()
@@ -147,13 +174,23 @@ public class LoungeManager : MonoBehaviour
 
     public void OnDialogueStarted(string characterName)
     {
-        foreach (var characterTalking in GetCharactersTalking())
+        if (isEnd)
         {
-            bool isActive = characterTalking.CharacterName == characterName;
-            characterTalking.gameObject.SetActive(isActive);
-            if (isActive && !characterTalking.TryGetComponent(out lastCharacterTalkingAnimation))
+            // there's only dogron
+            lastCharacterTalkingAnimation = endDogronCharacterTalkingAnimation;
+            //characterTalking.gameObject.SetActive(false);
+        }
+        else
+        {
+            SetRoomStyle(false);
+            foreach (var characterTalking in GetCharactersTalking())
             {
-                lastCharacterTalkingAnimation = null;
+                bool isActive = characterTalking.CharacterName == characterName;
+                characterTalking.gameObject.SetActive(isActive);
+                if (isActive && !characterTalking.TryGetComponent(out lastCharacterTalkingAnimation))
+                {
+                    lastCharacterTalkingAnimation = null;
+                }
             }
         }
     }
@@ -172,5 +209,14 @@ public class LoungeManager : MonoBehaviour
     {
         var newValue = pair.Item2.Value as InkList;
         aliveCharacters = newValue.Keys.Select(key => key.itemName).ToArray();
+    }
+
+    private bool isEnd = false;
+
+    internal void SetIsEnd(bool isEnd)
+    {
+        this.isEnd = isEnd;
+        SetRoomStyle(true);
+        OnDialogueStarted("DOGRON");
     }
 }

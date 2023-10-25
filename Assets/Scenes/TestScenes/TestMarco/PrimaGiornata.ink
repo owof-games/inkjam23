@@ -13,7 +13,8 @@ Dialoghi giorno 1..4: ogni personaggio ti da 2 ingredienti
     ~ temp num_loop_rimanenti = 3
     
     ~ loungeDialogue(DOGRON)
-    DOGRON: Buuuuuuuuongiorno persone concorrenti, e benvenute a questa prima puntata di THE GOOD DOG SHOW! Oggi vi metteremo alla prova chiedendovi di...
+    DOGRON: Ma cominciamo ufficialmente!
+    DOGRON: Concorrenti, con quuuuuuuuesta prima puntata di THE GOOD DOG SHOW oggi vi metteremo alla prova chiedendovi di...
     DOGRON: Cucinare qualcosa che mangereste tuuuuuuutti i giorni!
     DOGRON: Avete a disposizione qualche minuto per chiacchierare tra voi, prima di buuuuttarvi in cucina. Tradotto nelle regole del programma: un massimo di {num_loop_rimanenti+1} persone!
     DOGRON: Starà a voi decidere se condividere i vostri segreti, ingannare le altre persone, o farvi dare dei grattini! E massima attenzione, perché in THE GOOD DOG tuuuutto cambia in un battito di ciglia!
@@ -136,7 +137,7 @@ Dialoghi giorno 1..4: ogni personaggio ti da 2 ingredienti
         + YOU: Sto ancora pensando al rosario di Gucci.
         + YOU: No, ma settimana scorsa ho azzeccato al primo colpo il resto al supermercato.
         -
-    Piiiietro: Che se non trovo il rosario mia nonna mi uccide, sai?
+    Piiiietro: Certo certo, comunque sono preoccupata perché se non trovo il rosario mia nonna mi uccide, sai?
     Piiiietro: La famiglia tutta. Sono tutti così religiosi, pensa che hanno un santino di Paolo Brosio sul caminetto che sbatte gli occhi.
     Piiiietro: Mi hanno obbligata a studiare matematica per confermare l'esistenza di Dio.
         + YOU: E sei anche un'ottima cuoca, quindi?
@@ -219,6 +220,8 @@ Dialoghi giorno 1..4: ogni personaggio ti da 2 ingredienti
 
 === cucina_giorno_uno
 
+    ~ num_ingredients = 3
+
     // passa alla scena della cucina
     ~ moveToKitchen()
     // imposta gli ingredienti a disposizione per questa giornata
@@ -244,13 +247,14 @@ Dialoghi giorno 1..4: ogni personaggio ti da 2 ingredienti
     - (end)
 
     ~ moveToLounge()
+    ~ loungeDialogue(DOGRON)
 
 { 
 - not success && not ScampataLaMorte && abilities has SaltaMorte:
   ~ ScampataLaMorte = true
   ~ abilities -= SaltaMorte
-  DOGRON: Uh, ma una persona qui ha usato la possibilità di scampare la morte, anche se ha perso! Fortunata questa persona casuale, sì sì!
-- else:
+  DOGRON: Uh, avresti dovuto perdere, ma hai il bonus che ti permette di salvarti una volta ! Fortuuuna a te, sì sì!
+- not success:
   -> non_ce_lhai_fatta
 }
 {

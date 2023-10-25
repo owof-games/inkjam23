@@ -17,7 +17,8 @@ ne devi sempre beccare 3**/
     DOGRON: No no no amiche, non sono lacrime quelle che vedete, è solo allergia al fatto che è l'uuuultima puntata.
     DOGRON: Sob.
     DOGRON: L'ultima puntata di THE VERYSSIMAMENTE GOOD DOGGO BUONO BUONO DOGRON BUONO, QUALCUNO DICA A DOGRON CHE è BUUUUUUUUUUONO SHOWWWWW e si merita un pat-pat. U-u-u-u-uuuno!
-    DOGRON: Vi ricordo, finaliste, che in palio c'è la possibilità di avere un proprio mega ristorante su Nettuuuuuuuuuuuuuuuuuuuno, casualmente vicinissimo alla mia casetta senza uuuumani, e a quella del Grande Consiglio dei Carlini e della Suprema Chihuahua.
+    DOGRON: Vi ricordo, finaliste, che in palio c'è la possibilità di avere un proprio mega ristorante su Nettuuuuuuuuuuuuuuuuuuuno.
+    DOGRON: casualmente vicinissimo alla mia casetta senza uuuumani, e a quella del Grande Consiglio dei Carlini e della Suprema Chihuahua.
     DOGRON: Noi brave dogghe, si si.
     DOGRON: E per questo il tema di oggi, l'ultimo grande tema è:
     DOGRON: Un piatto che gridi al mondo che sei la migliore genitora per dogghe al mondo!
@@ -50,6 +51,7 @@ ne devi sempre beccare 3**/
 
   
     = UgoEMimi_choice
+    ~ loungeDialogue(UgoEMimi)
     //INGREDIENTI SUGGERITI: sventrare, emancipazione, MichelaMurgia
     UgoEMimi: Quindi: "Accabadora", "Stai zitta!", "God Save the Queer"...
         + YOU: Sta pregando, signora Mimi?
@@ -74,6 +76,7 @@ ne devi sempre beccare 3**/
         -> loop
     
     = BeBe_choice
+    ~ loungeDialogue(BeBe)
     //Ingredienti suggeriti: sacrificio, Peanutbutter, giocattoloPreferito
     BeBe: Questa sì che è pace.
         + YOU: Che hai fatto al tuo pelo?
@@ -114,6 +117,7 @@ ne devi sempre beccare 3**/
         -> loop
     
     = Piiiietro_choice
+    ~ loungeDialogue(Piiiietro)
     //Ingredienti: Kate Bush, l'idea di successo, cassaPortatile
     Piiiietro: Ehi, ti stavo cercando. Volevo ringraziarti, sai?
         + YOU: Uh, davvero?
@@ -147,6 +151,7 @@ ne devi sempre beccare 3**/
         -> loop
     
     = Quello_choice
+    ~ loungeDialogue(Quello)
     //Ingredienti: Padre, funghicida, mappa
     Quello: Bene, ho la <b>mappa</b> per fuggire da qui, persona amica!
     ~ dialogue_ingredients_of_the_day += mappa
@@ -172,6 +177,7 @@ ne devi sempre beccare 3**/
         -> loop
         
     = ilDivo_choice
+    ~ loungeDialogue(ilDivo)
     //Ingredienti: "Io sono ancora grande, è la ristorazione che è diventata piccola." e aiuto e aiuto.
     ilDivo: <b>Io sono ancora grande, è la ristorazione che è diventata piccola.</b>
     ~ dialogue_ingredients_of_the_day += grande
@@ -199,6 +205,8 @@ ne devi sempre beccare 3**/
 
 
 === cucina_giorno_cinque
+
+    ~ num_ingredients = 5
 
     // passa alla scena della cucina
     ~ moveToKitchen()
@@ -228,12 +236,15 @@ ne devi sempre beccare 3**/
 
 - (end)
 
+    ~ moveToLounge()
+    ~ loungeDialogue(DOGRON)
+
 { 
 - not success && not ScampataLaMorte && abilities has SaltaMorte:
   ~ ScampataLaMorte = true
   ~ abilities -= SaltaMorte
-  DOGRON: Uuuuuuuuh, ma una persona qui ha usato la possibilità di scampare la morte, anche se ha perso! Fortunata questa persona casuale, sì sì!
-- else:
+ DOGRON: Uh, avresti dovuto perdere, ma hai il bonus che ti permette di salvarti una volta ! Fortuuuna a te, sì sì!
+- not success:
   -> non_ce_lhai_fatta
 }
 

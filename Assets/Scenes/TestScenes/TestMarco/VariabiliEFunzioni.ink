@@ -227,8 +227,8 @@ VAR ScampataLaMorte = false
 
     ~ moveToLounge()
     
-    DOGRON: Ed ora, nostra persona concorrente preferita insieme a tutte le altre, ti ricordo che:
-    DOGRON: Ogni giorno perderai una delle tue abilità. Quelle che perdi oggi sono:
+    DOGRON: {E ora, un benvenuuuuto a tuuuutte le persone concorrenti e a chi ci segue da casa!|Eccoci nuovamente, concorrenti e spettatrici!|Buonasera a tuuuuutte le persone belle di questo pianeta e oltre!|Qualcuuuuuna ha visto il mio collare preferito?|L'ultima sera amiche, l'uuuultima sera assieme!}
+    DOGRON: {Concorrenti, ricordatevi che ogni giorno perderete una delle vostre abilità.  Persona uuuuumana qui davanti a me! Tu oggi perderai, rullo di tamburi...| Quuuuale abilità toglieremo oggi alla nostra persona umana?!?|Sempre meno gente, sempre meno abilità attive!|Uuuuh, mi fa male il pancino oggi.|Me doggo grande, non piange, no no, auuuuu!}
     ~ temp ability = LIST_RANDOM(abilities)
     { ability:
       - EvidenziaIngredienti: DOGRON: Non potrai più vedere in modo chiaro gli ingredienti.
@@ -257,27 +257,27 @@ VAR ScampataLaMorte = false
     = Eliminatrice_choice
         // TODO: visualizzare solo se ci sono almeno 2 persone vive
         DOGRON: Hai la possibilità di eliminare una di queste belle persone, di chi ti vuoi liberare?
-            + {alive_characters has BeBe} YOU:BeBe.
+            + {alive_characters has BeBe} YOU:BeBe
                 ~ alive_characters -= BeBe
                 DOGRON: Bebe, per te Miss Italia finisce qui!
                 ~ Eliminatrice = true
                 ~ abilities -= EliminaConcorrente
-            + {alive_characters has Piiiietro} YOU:Piiiietro.
+            + {alive_characters has Piiiietro} YOU:Piiiietro
                 ~ alive_characters -= Piiiietro
                 ~ Eliminatrice = true
                 ~ abilities -= EliminaConcorrente
                 DOGRON: Piiiietro, il mio numero preferito: sei stato eliminato!
-            + {alive_characters has UgoEMimi} YOU:Ugo e Mimi.
+            + {alive_characters has UgoEMimi} YOU:Ugo e Mimi
                 ~ alive_characters -= UgoEMimi
                 ~ Eliminatrice = true
                 ~ abilities -= EliminaConcorrente
                 DOGRON: Mimi, sashay away.
-            + {alive_characters has Quello} YOU:Quello.
+            + {alive_characters has Quello} YOU:Quello
                 ~ alive_characters -= Quello
                 ~ Eliminatrice = true
                 ~ abilities -= EliminaConcorrente
                 DOGRON: Oh. Oh. Amico mio, spero perdonerai questa persona concorrente, ma dovrai andartene. Ci rivedremo nel prato infinito!
-            + {alive_characters has ilDivo} YOU:Il divo.
+            + {alive_characters has ilDivo} YOU:Il divo
                 ~ alive_characters -= ilDivo
                 ~ Eliminatrice = true 
                 ~ abilities -= EliminaConcorrente
@@ -305,12 +305,12 @@ VAR ScampataLaMorte = false
             ~ Resuscitatrice = true
             ~ abilities -= RichiamaConcorrente
             DOGRON: Mimììì! Che bello averti qui con noi di nuovo!
-            + { alive_characters hasnt Quello } YOU: Quello.
+            + { alive_characters hasnt Quello } YOU: Quello
             ~ alive_characters += Quello
             ~ Resuscitatrice = true
             ~ abilities -= RichiamaConcorrente
             DOGRON: Ma ciao amico mio, finalmente!
-            + { alive_characters hasnt ilDivo } YOU: Il Divo.
+            + { alive_characters hasnt ilDivo } YOU: Il Divo
             ~ alive_characters += ilDivo
             ~ Resuscitatrice = true
             ~ abilities -= RichiamaConcorrente
@@ -344,6 +344,17 @@ EXTERNAL moveToKitchen()
 === function moveToKitchen() ===
 [[[move to kitchen]]]
 
+EXTERNAL moveToEnd()
+=== function moveToEnd() ===
+[[[move to kitchen]]]
+
 EXTERNAL loungeDialogue(char)
 === function loungeDialogue(char) ===
 [[[talk with {char}]]]
+
+
+
+
+
+
+VAR num_ingredients = 0

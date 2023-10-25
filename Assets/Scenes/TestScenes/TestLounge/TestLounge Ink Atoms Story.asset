@@ -39,6 +39,11 @@ MonoBehaviour:
     Regex: 
     List: []
     VariableChangeEvent: {fileID: 11400000, guid: 11f069319e7e6b445b38743a56a9f169, type: 2}
+  - MatchKind: 0
+    Name: num_ingredients
+    Regex: 
+    List: []
+    VariableChangeEvent: {fileID: 11400000, guid: e7b3fe1e81c714747bd71318972862cd, type: 2}
   FirstElement:
     MatchKind: 0
     Name: 
@@ -49,5 +54,6 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 0d30e14bf6796cf44a6adaf5026190ed, type: 2}
   - {fileID: 11400000, guid: ca23e803634af7847a7684b012f8cb20, type: 2}
   - {fileID: 11400000, guid: 95aaef44c1e671e4cbc906c7118cf43b, type: 2}
+  - {fileID: 11400000, guid: 58ef74bbb7cdd6241ac7b387e9a18deb, type: 2}
   commandLineParsers: []
   tagProcessors: []
