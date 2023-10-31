@@ -126,7 +126,7 @@ Dialoghi giorno 1..4: ogni personaggio ti da 2 ingredienti
             Piiiietro: Sì, come quel Bruiser, e non lo trovo!
         + YOU: Rosario di Gucci?
             Piiiietro: Sì, un regalo di mia nonna Scianel per festeggiare il mio sedicesimo.
-        + YOU: Snookie?
+        + YOU: Snooki?
             Piiiietro: Scusa, ho firmato un NDA, non posso dire altro.
         -
     Piiiietro: Tornerà, spero. Questo pianeta sembra minuscolo comunque, non ci saranno altre cagnoline.

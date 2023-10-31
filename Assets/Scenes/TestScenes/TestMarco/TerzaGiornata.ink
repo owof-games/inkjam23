@@ -16,7 +16,7 @@ Dialoghi giorno 1..4: ogni personaggio ti da 2 ingredienti
     DOGRON: Buondì a tuuuuuuuuuuuutte e benvenute alla terza puntata di THE VERY VERY VERY GOOD GOOD DOG SHOW!
     DOGRON: Non sentite un po' la tristezza? Già due persone ci hanno lasciate, e a me non va di farvi andare via, nuuuuuuuuuuuu!
     DOGRON: Ma la Suprema Chihuahua e il Gran Consiglio dei Carlini- no, nella loro saggezza loro sanno che è importante trovare la padroncina perfetta, no, la personcina perfetta per il ristorante su Satuuuuuurno!
-    DOGRON: E di sicuuuuuro questa persona magnifica con delle mani magnifiche che fanno dei bellissimi pat-pat sulla testa, deve sapere fare una ricetta per...
+    DOGRON: E di sicuuuuuro questa persona magnifica con delle mani magnifiche che fanno dei bellissimi patpat sulla testa, deve sapere fare una ricetta per...
     DOGRON: ... quando ti senti triste perché tuuuuuuutti gli uuuumani sono scomparsi!
     DOGRON: Come sempre avete qualche minuto per le chiacchiere, e poi si inizia a cuuuucinare!
     // passa alla scena lounge
@@ -132,7 +132,7 @@ Dialoghi giorno 1..4: ogni personaggio ti da 2 ingredienti
         + YOU: Ma io non ho una stanza, dormo tra le travi sopra la cucina.
             Piiiietro: E qui si vede chi ha un agente e chi no, mi dispiace!
         -
-    Piiiietro: Forse comunque ci fanno fare un karaoke. Piccolo, stasera, dopo la prova. Sembra che la mia pasta con <b>tonno in scatola</b> e pure <b>scolata/b> male sia un successone. La ripropongo anche stasera!
+    Piiiietro: Forse comunque ci fanno fare un karaoke. Piccolo, stasera, dopo la prova. Sembra che la mia pasta con <b>tonno in scatola</b> e pure <b>scolata</b> male sia un successone. La ripropongo anche stasera!
        ~ dialogue_ingredients_of_the_day += tonno_in_scatola
         ~ dialogue_ingredients_of_the_day += scolare
         + YOU: Ma a te il tema non preoccupa, per caso?

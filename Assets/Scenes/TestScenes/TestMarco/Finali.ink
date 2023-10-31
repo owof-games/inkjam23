@@ -14,7 +14,7 @@ DOGRON: Non sono ancora sicuro che tu sappia cucinare. Com'è andata oggi? {~ In
 
 === finale_tre
 -> EliminazioneConcorrente ->
-DOGRON: Vedo i tuoi sforzi, oggi, e che dire di ciò che hai cucinato? {~ Dal forno, lo sformato lancia grida strazianti|La cosa che era nel mio piatto sta ballando con la cameraman|Hai cucinato qualcosa che sa lanciarmi la palla!}. Hai vinto questa sfida! A domani!
+DOGRON: Vedo i tuoi sforzi, oggi, e che dire di ciò che hai cucinato? {~ Dal forno, lo sformato lancia grida strazianti|La cosa che era nel mio piatto sta ballando con la cameraman|Hai cucinato qualcosa che sa lanciarmi la palla}. Hai vinto questa sfida! A domani!
 ->->
 
 === finale_due
@@ -48,7 +48,7 @@ DOGRON: In merito alla tua ricetta: {~ Quello che c'è nella padella non grida, 
         + YOU: A fare cosa?
         -
     DOGRON: A sostituire gli umani sul nostro pianeta.
-    DOGRON: A prenderti cura della Suprema Chihuahua, dei Carlini e ovviamente di un labrador dolcissimo e bravissimo pat-pat!
+    DOGRON: A prenderti cura della Suprema Chihuahua, dei Carlini e ovviamente di un labrador dolcissimo e bravissimo come me, patpat!
         + YOU: E quale sarebbe questo labrador?
         -
     DOGRON: Non mi piacciono questi scherzi, no no.
@@ -57,7 +57,7 @@ DOGRON: In merito alla tua ricetta: {~ Quello che c'è nella padella non grida, 
     DOGRON: Io sono un bravo cane, uuuuuuuuuun bravo cane!!!
         + YOU: E dove si trova la vostra casa?
         -
-    DOGRON: Un pianeta molto semplice. Ci sono idranti, giardini, fiumi, un sacco di palline da tennis, cuccie, alberi della pizza e fontane di birra. Spero sia di tuo gradimento.
+    DOGRON: Un pianeta molto semplice. Ci sono idranti, giardini, fiumi, un sacco di palline da tennis, cucce, alberi della pizza e fontane di birra. Spero sia di tuo gradimento.
         + YOU: Alberi della pizza?
             DOGRON: Sì. Ti piace la pizza?
              + + YOU: Andiamo!

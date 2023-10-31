@@ -122,7 +122,7 @@ DOGRON: Ti portano al parco giochi. C'è il sole, un sacco di amici, e il tuo co
 
 = domanda7
 // TEST: DOMANDA 7: abilità SaltaMorte
-DOGRON: Sono giorni che ti fa male il pancino, tuuuuutto il pancino. Ti mettono il guinzaglio e fanno pat pat sul bagagliaio dell'automobile. Tu come reagisci?
+DOGRON: Sono giorni che ti fa male il pancino, tuuuuutto il pancino. Ti mettono il guinzaglio e fanno patpat sul bagagliaio dell'automobile. Tu come reagisci?
     + YOU: Ti prego ti prego liberami non ho fatto niente, la mia pianta grassa sentirà la mancanza!
     + YOU: Sono una persona coraggiosa, andrò incontro al mio destino!
     ~ abilities += SaltaMorte
