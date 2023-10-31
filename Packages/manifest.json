@@ -43,7 +43,8 @@
     "com.unity.modules.xr": "1.0.0",
     "com.inkle.ink-unity-integration": "1.1.8",
     "com.unity-atoms.unity-atoms-core": "4.4.8",
-    "com.unity-atoms.unity-atoms-base-atoms": "4.4.8"
+    "com.unity-atoms.unity-atoms-base-atoms": "4.4.8",
+    "it.lemurivolta.ink-translate": "0.1.0"
   },
   "scopedRegistries": [
     {
@@ -53,7 +54,8 @@
         "com.inkle.ink-unity-integration",
         "com.openupm",
         "com.unity-atoms.unity-atoms-base-atoms",
-        "com.unity-atoms.unity-atoms-core"
+        "com.unity-atoms.unity-atoms-core",
+        "it.lemurivolta.ink-translate"
       ]
     }
   ]
