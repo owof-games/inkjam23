@@ -44,7 +44,7 @@
     "com.inkle.ink-unity-integration": "1.1.8",
     "com.unity-atoms.unity-atoms-core": "4.4.8",
     "com.unity-atoms.unity-atoms-base-atoms": "4.4.8",
-    "it.lemurivolta.ink-translate": "0.1.0"
+    "it.lemurivolta.ink-translate": "https://github.com/lemurivolta/ink-translate.git#v0.2.0"
   },
   "scopedRegistries": [
     {
