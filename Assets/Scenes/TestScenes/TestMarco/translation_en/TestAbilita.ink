@@ -175,7 +175,7 @@ DOGRON: You buried someone, but you don't remember where you did it, and you're 
     - SceltaIngrediente: DOGRON:...the luck of being able to choose an ingredient at the beginning of the recipe.
     - PNGParliExtra: DOGRON:...the right to chat with an extra person in the lounge.
     - SaltaMorte: DOGRON:...the, um, uh, theabilitytoskipyourdeathonce uh look at that beautiful a labrador!
-    - EliminaConcorrente: DOGRON:...il diritto di cacciare dal programma un'altra persona che è qui a conconcorrere. Conrerrere. Cha fa il concorso.
+    - EliminaConcorrente: DOGRON: The right to kick another person out of the program who is here to contestantatan. Cronestant. Contrestant. Someone that is here to play.
     - RichiamaConcorrente: DOGRON:...the power to call back the dead once. Woah!
     }
 }

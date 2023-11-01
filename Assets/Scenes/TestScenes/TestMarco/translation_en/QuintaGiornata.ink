@@ -185,7 +185,7 @@ ne devi sempre beccare 3**/
         + YOU: Excuse me?
         + YOU: I said it, there is something wrong in the catering industry.
         -
-    ilDivo: E Quello... Quello se ne è andato, e il mio cuore, il mio cuore che non ho nemmeno perché sono un fungo ma oh, il mio cuore, <b>aiuto</b>!
+    ilDivo: And that... That One's gone, and my heart, my heart I don't even have because I'm a mushroom but oh, my heart, <b>help</b>!
     ~ dialogue_ingredients_of_the_day += aiuto
     IlDivo: But I don't care anyway. You! I want the coffin to be white.  And I want it specially lined with satin. White, or deep pink. It’s gayer!
         + YOU: Did you kill That One?

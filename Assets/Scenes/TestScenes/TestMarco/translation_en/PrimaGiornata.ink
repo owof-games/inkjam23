@@ -13,7 +13,7 @@ Dialoghi giorno 1..4: ogni personaggio ti da 2 ingredienti
     ~ temp num_loop_rimanenti = 3
     
     ~ loungeDialogue(DOGRON)
-    DOGRON: Ma cominciamo ufficialmente!
+    DOGRON: But, let’s officially start!
     DOGRON: Contestants, with this first episode of THE GOOD DOG SHOW today we will put youuuu to the test by asking you to...
     DOGRON: Coooooking something that you would eat every day!
     DOGRON: You have a few minutes to chat amongst yourselves, before buuuuut in thekitchen. Translated into the programme rules: a maximum of {num_loop_rimanenti+1}people!
