@@ -21,96 +21,96 @@ VAR ScampataLaMorte = false
 
 === function translate_ingredient(ingredient) ===
     { ingredient:
-    - uova: uova
-    - pentola: pentola
-    - noce_moscata: noce moscata
-    - farina: farina
-    - saltare: saltare
-    - sciogliere: sciogliere
-    - lievitare: lievitare
-    - sale: sale
-    - cipolla: cipolla
-    - affettare: affettare
-    - tonno_in_scatola: tonno in scatola
-    - mescolare: mescolare
-    - burro: burro
-    - montare: montare
-    - zafferano: zafferano
-    - mantecare: mantecare
-    - braciola: braciola
-    - arrosticino: arrosticino
-    - costina: costina
-    - osso: osso
-    - grigliare: grigliare
-    - crocchette: crocchette
-    - versare: versare
-    - riempire: riempire
-    - formaggio: formaggio
-    - fondere: fondere
-    - coccole: coccole
-    - brandina: brandina
-    - cuccia: cuccia
-    - sgranocchiare: sgranocchiare
-    - fidarsi: fidarsi
-    - barattoloDelloYogurt: il barattolo dello Yogurt
-    - pettorina: pettorina
-    - trasportino: trasportino
-    - veterinario: veterinario
-    - automobile: automobile
-    - viaggiare: viaggiare
-    - inconscio: inconscio
-    - correreneisogni: correre nei sogni
-    - coccolare: coccolare
-    - carezzare: carezzare
-    - pettare: pettare
-    - grattare: grattare
-    - dormireAssieme: dormire assieme
-    - protezione: protezione
-    - noGatti: niente gatti!
+    - uova: eggs
+    - pentola: pot
+    - noce_moscata: nutmeg
+    - farina: flour
+    - saltare: stir-frying
+    - sciogliere: melt
+    - lievitare: leavening
+    - sale: salt
+    - cipolla: onion
+    - affettare: slicing
+    - tonno_in_scatola: canned tuna
+    - mescolare: stirring
+    - burro: butter
+    - montare: whipping
+    - zafferano: saffron
+    - mantecare: sauteing
+    - braciola: pork chop
+    - arrosticino: lamb vindaloo
+    - costina: pork rib
+    - osso: bone
+    - grigliare: grilling
+    - crocchette: kibbles
+    - versare: pouring
+    - riempire: filling
+    - formaggio: cheese
+    - fondere: melting
+    - coccole: cuddles
+    - brandina: cot
+    - cuccia: kennel
+    - sgranocchiare: crunching
+    - fidarsi: trusting
+    - barattoloDelloYogurt: the yoghurt pot
+    - pettorina: harness
+    - trasportino: pet carrier
+    - veterinario: veterinarian
+    - automobile: car
+    - viaggiare: travel
+    - inconscio: subconscious
+    - correreneisogni: running in dreams
+    - coccolare: cuddling
+    - carezzare: caressing
+    - pettare: fondling a dog
+    - grattare: scratching
+    - dormireAssieme: sleeping together
+    - protezione: protection
+    - noGatti: no cats allowed!
     - volAuVent: vol-au-vent
     - Skyrim: Skyrim
-    - blocchiDiErba: blocchi di erba
-    - uovaDiPecora: uova di pecora
-    - scolare: scolare
-    - lacrime: lacrime
-    - cacaoAmaro: cacao amaro
-    - specchiarsi: specchiarsi
-    - scottare: scottare
-    - iverivideogiochi: i VERI videogiochi
+    - blocchiDiErba: blocks of grass
+    - uovaDiPecora: sheep eggs
+    - scolare: draining
+    - lacrime: tears
+    - cacaoAmaro: bitter cocoa
+    - specchiarsi: mirroring
+    - scottare: blanching
+    - iverivideogiochi: the REAL video games
     - canapé: canapé
-    - mungere: mungere
-    - cardare: cardare
-    - ChinottoDiSavona: Chinotto di Savona
-    - raccontare: raccontare
+    - mungere: milking
+    - cardare: carding
+    - ChinottoDiSavona: Savona's Chinotto
+    - raccontare: telling
     - selfie: selfie
-    - interviste: interviste
-    - avvelenare: avvelenare
-    - collareconetichetta: collare con un'etichetta col nome Dogron
-    - tonnoalnaturale: tonno in scatola al naturale
-    - cantare: cantare
-    - perdonare: perdonare
-    - evolversi: evolversi
-    - iomestessomemedesimo: iomestessomemedesimo
+    - interviste: interviews
+    - avvelenare: poisoning
+    - collareconetichetta: collar with a Dogron name tag
+    - tonnoalnaturale: canned tuna au naturel
+    - cantare: singing
+    - perdonare: forgiving
+    - evolversi: evolving
+    - iomestessomemedesimo: memyselfandI
     - selfcare: hashtagselfcare
-    - sventrare: sventrare
-    - emancipazione: emancipazione
-    - MichelaMurgia: Michela Murgia
-    - sacrificio: sacrificio
+    - sventrare: gutting
+    - emancipazione: empowerment
+    - MichelaMurgia: Virginia Woolf
+    - sacrificio: sacrifice
     - Peanutbutter: mr.Peanutbutter
-    - giocattoloPreferito: la pallina preferita di DOGRON
+    - giocattoloPreferito: the DOGRON's favourite ball
     - KateBush: Kate Bush
-    - ideaDiSuccesso: l'idea del successo
-    - cassaPortatile: una cassa portatile
-    - padre: padre
-    - funghicida: funghicida
-    - mappa: mappa
-    - grande: Io sono ancora grande, è la ristorazione che è diventata piccola.
-    - aiuto: aiuto
-    - aiutoooooo: AIUTOOOOOOOOOOOOOOOOOOOO
-    - colladipesce: colla di pesce
-    - filtrare: filtrare
-    - Mazinga: Mazinga
-    - orecchieUgo: orecchie di Ugo
+    - ideaDiSuccesso: the platonic idea of success
+    - cassaPortatile: a portable loudspeaker
+    - padre: father
+    - funghicida: fungicide
+    - mappa: map
+    - grande: I am still big, it is the catering industry that has become small.
+    - aiuto: help
+    - aiutoooooo: HEEEEEEEEEEEEEEEEELP!
+    - colladipesce: isinglass
+    - filtrare: filtering
+    - Mazinga: Great Mazinger
+    - orecchieUgo: Ugo's ears
 
     }
 
@@ -218,7 +218,7 @@ VAR ScampataLaMorte = false
     ~ temp ability = abilities(value)
     ~ abilities -= ability
     
-    Rimossa {ability}.
+    Removed {ability}.
 
 
 
@@ -227,23 +227,23 @@ VAR ScampataLaMorte = false
 
     ~ moveToLounge()
     
-    DOGRON: Ed ora, nostra persona concorrente preferita insieme a tutte le altre, ti ricordo che:
-    DOGRON: Ogni giorno perderai una delle tue abilità. Quelle che perdi oggi sono:
+    DOGRON: {E ora, un benvenuuuuto a tuuuutte le persone concorrenti e a chi ci segue da casa!|Eccoci nuovamente, concorrenti e spettatrici!|Buonasera a tuuuuutte le persone belle di questo pianeta e oltre!|Qualcuuuuuna ha visto il mio collare preferito?|L'ultima sera amiche, l'uuuultima sera assieme!}
+    DOGRON: {Concorrenti, ricordatevi che ogni giorno perderete una delle vostre abilità.  Persona uuuuumana qui davanti a me! Tu oggi perderai, rullo di tamburi...| Quuuuale abilità toglieremo oggi alla nostra persona umana?!?|Sempre meno gente, sempre meno abilità attive!|Uuuuh, mi fa male il pancino oggi.|Me doggo grande, non piange, no no, auuuuu!}
     ~ temp ability = LIST_RANDOM(abilities)
     { ability:
-      - EvidenziaIngredienti: DOGRON: Non potrai più vedere in modo chiaro gli ingredienti.
-      - ScelteLente: DOGRON: Le scelte ora scorreranno più veloci. 
-      - SceltaIngrediente: DOGRON: Non avrai più un ingrediente a scelta da selezionare a inizio partita.
-      - PNGParliExtra: DOGRON: Basta con le chiacchiere extra!
-      - SaltaMorte: DOGRON: Se sbagli la ricetta, non avrai più piani di salvataggio.
-      - EliminaConcorrente: DOGRON: Non potrai più eliminare un'altra persona concorrente.
-      - RichiamaConcorrente: DOGRON: Niente potere di richiamare una persona che se ne è andata.
+      - EvidenziaIngredienti: DOGRON: You will no longer be able to see the ingredients clearly.
+      - ScelteLente: DOGRON: Choices will now flow faster. 
+      - SceltaIngrediente: DOGRON: You no longer have an ingredient of your choice to select at the startof the game.
+      - PNGParliExtra: DOGRON: Enough with the extra chatter!
+      - SaltaMorte: DOGRON: If you get the recipe wrong, you won't have any rescue plans.
+      - EliminaConcorrente: DOGRON: You will no longer be able to eliminate another competitor.
+      - RichiamaConcorrente: DOGRON: No power to recall a person who has left.
     }
     
     ~ abilities -= ability
     
     { abilities has PNGParliExtra:
-      DOGRON: Ti ricordo cara persona che potrai parlare con una persona in più.
+      DOGRON: I remind you dear person that you will be able to talk to one moreperson.
     }
     { abilities has EliminaConcorrente and not Eliminatrice:
         -> Eliminatrice_choice ->
@@ -256,67 +256,67 @@ VAR ScampataLaMorte = false
 
     = Eliminatrice_choice
         // TODO: visualizzare solo se ci sono almeno 2 persone vive
-        DOGRON: Hai la possibilità di eliminare una di queste belle persone, di chi ti vuoi liberare?
-            + {alive_characters has BeBe} YOU:BeBe.
+        DOGRON: You have a chance to get rid of one of these beautiful people, who doyou want to get rid of?
+            + {alive_characters has BeBe} YOU:BeBe
                 ~ alive_characters -= BeBe
-                DOGRON: Bebe, per te Miss Italia finisce qui!
+                DOGRON: Bye Bye BeBe.
                 ~ Eliminatrice = true
                 ~ abilities -= EliminaConcorrente
-            + {alive_characters has Piiiietro} YOU:Piiiietro.
+            + {alive_characters has Piiiietro} YOU:Piiiietro
                 ~ alive_characters -= Piiiietro
                 ~ Eliminatrice = true
                 ~ abilities -= EliminaConcorrente
-                DOGRON: Piiiietro, il mio numero preferito: sei stato eliminato!
-            + {alive_characters has UgoEMimi} YOU:Ugo e Mimi.
+                DOGRON: Piiiietro, my favourite number: you've been eliminated!
+            + {alive_characters has UgoEMimi} YOU:Ugo e Mimi
                 ~ alive_characters -= UgoEMimi
                 ~ Eliminatrice = true
                 ~ abilities -= EliminaConcorrente
-                DOGRON: Mimi, sashay away.
-            + {alive_characters has Quello} YOU:Quello.
+                Mimi, sashay away.
+            + {alive_characters has Quello} YOU:Quello
                 ~ alive_characters -= Quello
                 ~ Eliminatrice = true
                 ~ abilities -= EliminaConcorrente
-                DOGRON: Oh. Oh. Amico mio, spero perdonerai questa persona concorrente, ma dovrai andartene. Ci rivedremo nel prato infinito!
-            + {alive_characters has ilDivo} YOU:Il divo.
+                DOGRON: Oh. Oh. My friend, I hope you will forgive this competitor, but you mustleave. I will see you again in the endless meadow!
+            + {alive_characters has ilDivo} YOU:Il divo
                 ~ alive_characters -= ilDivo
                 ~ Eliminatrice = true 
                 ~ abilities -= EliminaConcorrente
-                DOGRON: spiace, circa. Addio Divo!
-            + YOU: Nessuna persona!
-                DOGRON: Mi piace questo modo di ragionare!
+                DOGRON: sorry, sort of. Goodbye, Divo!
+            + YOU: No person!
+                DOGRON: I like this way of reasoning!
             -
         ->->
     
     = Resuscitatrice_choice
         // TODO: visualizzare solo se c'è almeno una persona che è uscita
-        DOGRON: Vuoi riportare una persona concorrente tra noi?
+        DOGRON: You want to bring a competitor back among us?
             + { alive_characters hasnt BeBe } YOU:BeBe!
             ~ alive_characters += BeBe
             ~ Resuscitatrice = true
             ~ abilities -= RichiamaConcorrente
-            DOGRON:Bentornata BeBe!
+            DOGRON: Welcome baaaaaack, BeBe!
             + { alive_characters hasnt Piiiietro } YOU:Piiiietro!
             ~ alive_characters += Piiiietro
             ~ Resuscitatrice = true
             ~ abilities -= RichiamaConcorrente
-            DOGRON: Ed ecco a voi di nuovo: Piiiietro!
-            + { alive_characters hasnt UgoEMimi } YOU: Ugo e Mimi!
+            DOGRON: And here you go again: Piiiietro!
+            + { alive_characters hasnt UgoEMimi } YOU: Ugo & Mimi!
             ~ alive_characters += UgoEMimi
             ~ Resuscitatrice = true
             ~ abilities -= RichiamaConcorrente
-            DOGRON: Mimììì! Che bello averti qui con noi di nuovo!
-            + { alive_characters hasnt Quello } YOU: Quello.
+            DOGRON: Mimi! How nice to have you here with us again!
+            + { alive_characters hasnt Quello } YOU: Quello
             ~ alive_characters += Quello
             ~ Resuscitatrice = true
             ~ abilities -= RichiamaConcorrente
-            DOGRON: Ma ciao amico mio, finalmente!
-            + { alive_characters hasnt ilDivo } YOU: Il Divo.
+            DOGRON: Hello my friend, at last!
+            + { alive_characters hasnt ilDivo } YOU: Il Divo
             ~ alive_characters += ilDivo
             ~ Resuscitatrice = true
             ~ abilities -= RichiamaConcorrente
-            DOGRON: Toh, è tornato!
-            + YOU: MMM, sto bene così, grazie.
-                DOGRON: Ah, uuuuh, mi sembra crudele ma il gioco è questo, no?
+            DOGRON: Well, he's back!
+            + YOU: MMM, I'm fine, thank you.
+                DOGRON: Ah, uh, it seems cruuuuuel but that's the game, isn't it?
             -
         ->->
 
@@ -327,7 +327,7 @@ VAR ScampataLaMorte = false
 == EliminazioneConcorrente
 
 ~ temp da_eliminare = LIST_RANDOM(alive_characters)
-DOGRON: Complimenti, hai vinto a scapito di: {da_eliminare}
+DOGRON: Congratulations, you won at the expense of: {da_eliminare}
 ~ alive_characters -= da_eliminare
 ->->
 
@@ -344,6 +344,17 @@ EXTERNAL moveToKitchen()
 === function moveToKitchen() ===
 [[[move to kitchen]]]
 
+EXTERNAL moveToEnd()
+=== function moveToEnd() ===
+[[[move to kitchen]]]
+
 EXTERNAL loungeDialogue(char)
 === function loungeDialogue(char) ===
 [[[talk with {char}]]]
+
+
+
+
+
+
+VAR num_ingredients = 0

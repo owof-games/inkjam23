@@ -13,10 +13,11 @@ Dialoghi giorno 1..4: ogni personaggio ti da 2 ingredienti
     ~ temp num_loop_rimanenti = 3
     
     ~ loungeDialogue(DOGRON)
-    DOGRON: Buuuuuuuuongiorno persone concorrenti, e benvenute a questa prima puntata di THE GOOD DOG SHOW! Oggi vi metteremo alla prova chiedendovi di...
-    DOGRON: Cucinare qualcosa che mangereste tuuuuuuutti i giorni!
-    DOGRON: Avete a disposizione qualche minuto per chiacchierare tra voi, prima di buuuuttarvi in cucina. Tradotto nelle regole del programma: un massimo di {num_loop_rimanenti+1} persone!
-    DOGRON: Starà a voi decidere se condividere i vostri segreti, ingannare le altre persone, o farvi dare dei grattini! E massima attenzione, perché in THE GOOD DOG tuuuutto cambia in un battito di ciglia!
+    DOGRON: Ma cominciamo ufficialmente!
+    DOGRON: Concorrenti, con quuuuuuuuesta prima puntata di THE GOOD DOG SHOW oggi vi metteremo alla prova chiedendovi di...
+    DOGRON: Coooooking something that you would eat every day!
+    DOGRON: You have a few minutes to chat amongst yourselves, before buuuuut in thekitchen. Translated into the programme rules: a maximum of {num_loop_rimanenti+1}people!
+    DOGRON: It's up to you to decide whether you want to share your secrets,trick other people, or get scratched! And be carefuuuuuuul, because in THE GOOD DOGeverything changes in the blink of an eye!
 
     ~ dialogue_ingredients_of_the_day = ()
     
@@ -44,34 +45,34 @@ Dialoghi giorno 1..4: ogni personaggio ti da 2 ingredienti
     = UgoEMimi_choice
     //Ingredienti suggeriti: colla di pesce e filtrare
         ~ loungeDialogue(UgoEMimi)
-    UgoEMimi: Ugo, non credo sia il caso.
-    UgoEMimi: Mimi, decido IO quando è il caso. E si dia il caso che qui sono pieni di soldi e io ho bisogno di un publisher!
-    UgoEMimi: Ugo, una persona ci sta guardando.
-        + YOU: Ehm, salve!
-            UgoEMimi: Salve, io sono Ugo, e lei è mia moglie Mimi. Mia.
-        + YOU: Anche voi siete qui contro la vostra volontà?
-            UgoEMimi: Beh, mio marito...
-            UgoEMimi: Mimi è timida ma sì, siamo qui perché lo vogliamo.
-        + YOU: Bel taglio di capelli, signora!
-            UgoEMimi: Merito mio, ho scelto io la sua parrucchiera, da bravo marito!
+    UgoEMimi: Ugo, I don't think so.
+    UgoEMimi: Mimi, I decide when it's appropriate. And it just so happens thatthere is a lot of money here and I need a publisher!
+    UgoEMimi: Ugo, a stranger is watching us.
+        + YOU: Um, hello!
+            UgoEMimi: Hello, I am Ugo, and this is my wife Mimi. MINE.
+        + YOU: Are you also here against your will?
+            UgoEMimi: Well, my husband…
+            UgoEMimi: Mimi is shy but yes, we are here because we want to be.
+        + YOU: Nice haircut, madam!
+            UgoEMimi: My merit, I chose her hairdresser, as a good husband must do!
         -
-    UgoEMimi: E tu, cosa ci fai qui?
-    UgoEMimi: Ugo, non essere scortese, siamo tutte tese da questa novità!
-        + YOU: Me lo chiedo anche io.
-        + YOU: Credo sia una punizione da parte del Culto.
-        + YOU: Ricordo solo la mia stanza, del cloroformio...
+    UgoEMimi: And you, what are you doing here?
+    UgoEMimi: Ugo, don't be rude, we are all tense from this news!
+        + YOU: I wonder about that too.
+        + YOU: I think it's a punishment from the Cult.
+        + YOU: I only remember my room, some chloroform.…
         -
-    UgoEMimi: Hai bisogno di una mano per cucinare, tesoro?
-    UgoEMimi: Mimi! Che aiuti la concorrenza? Mi servono i soldi per il publisher!
-    UgoEMimi: Ugo, ma non è che voglio dire a questa persona che per un aspic perfetto il segreto è la migliore <b>colla di pesce</b> e <b>filtrarla</b> con delicatezza.
+    UgoEMimi: Do you need a hand with the cooking, darling?
+    UgoEMimi: Mimi! Why are you helping the competition? I need the money for thepublisher!
+    UgoEMimi: Ugo, it's not that I want to tell this person that for a perfectaspic, the secret is the best <b>isinglass</b> and<b>filter</b> it gently.
         ~ dialogue_ingredients_of_the_day += colladipesce
         ~ dialogue_ingredients_of_the_day += filtrare
-        + YOU: La ringrazio signora, ma gli anni'80 sono finiti da quel dì!
-        + YOU: Non mangio un aspic dal giorno in cui hanno sacrificato nonna a Adramelech per la mia iniziazione, quanti ricordi!
-        + YOU: Signora, se ha bisogno di aiuto batta le ciglia due volte.
-            YOU: Con questa luce non si capisce un cazzo. Riprovi!
+        + YOU: Thank you ma'am, but the 1980s have been over since that day!
+        + YOU: I haven't had an aspic since the day they sacrificed Grandma toAdramelech for my initiation, so many memories!
+        + YOU: Madam, if you need help, blink twice.
+            YOU: In this light you can't understand shit. Try again!
         -
-    UgoEMimi: Mimi, andiamocene! Credo di aver visto una tizia con un iPod, forse è un audio designer!    
+    UgoEMimi: Mimi, let's go! I think I saw a chick with an iPod, maybeshe's an audio designer!    
         
         
         -> loop
@@ -125,7 +126,7 @@ Dialoghi giorno 1..4: ogni personaggio ti da 2 ingredienti
             Piiiietro: Sì, come quel Bruiser, e non lo trovo!
         + YOU: Rosario di Gucci?
             Piiiietro: Sì, un regalo di mia nonna Scianel per festeggiare il mio sedicesimo.
-        + YOU: Snookie?
+        + YOU: Snooki?
             Piiiietro: Scusa, ho firmato un NDA, non posso dire altro.
         -
     Piiiietro: Tornerà, spero. Questo pianeta sembra minuscolo comunque, non ci saranno altre cagnoline.
@@ -136,7 +137,7 @@ Dialoghi giorno 1..4: ogni personaggio ti da 2 ingredienti
         + YOU: Sto ancora pensando al rosario di Gucci.
         + YOU: No, ma settimana scorsa ho azzeccato al primo colpo il resto al supermercato.
         -
-    Piiiietro: Che se non trovo il rosario mia nonna mi uccide, sai?
+    Piiiietro: Certo certo, comunque sono preoccupata perché se non trovo il rosario mia nonna mi uccide, sai?
     Piiiietro: La famiglia tutta. Sono tutti così religiosi, pensa che hanno un santino di Paolo Brosio sul caminetto che sbatte gli occhi.
     Piiiietro: Mi hanno obbligata a studiare matematica per confermare l'esistenza di Dio.
         + YOU: E sei anche un'ottima cuoca, quindi?
@@ -219,6 +220,8 @@ Dialoghi giorno 1..4: ogni personaggio ti da 2 ingredienti
 
 === cucina_giorno_uno
 
+    ~ num_ingredients = 3
+
     // passa alla scena della cucina
     ~ moveToKitchen()
     // imposta gli ingredienti a disposizione per questa giornata
@@ -244,13 +247,14 @@ Dialoghi giorno 1..4: ogni personaggio ti da 2 ingredienti
     - (end)
 
     ~ moveToLounge()
+    ~ loungeDialogue(DOGRON)
 
 { 
 - not success && not ScampataLaMorte && abilities has SaltaMorte:
   ~ ScampataLaMorte = true
   ~ abilities -= SaltaMorte
-  DOGRON: Uh, ma una persona qui ha usato la possibilità di scampare la morte, anche se ha perso! Fortunata questa persona casuale, sì sì!
-- else:
+  DOGRON: Uh, avresti dovuto perdere, ma hai il bonus che ti permette di salvarti una volta ! Fortuuuna a te, sì sì!
+- not success:
   -> non_ce_lhai_fatta
 }
 {
