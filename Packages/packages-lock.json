@@ -284,13 +284,13 @@
       "url": "https://packages.unity.com"
     },
     "it.lemurivolta.ink-translate": {
-      "version": "0.1.0",
+      "version": "https://github.com/lemurivolta/ink-translate.git#tmp-0.2.0",
       "depth": 0,
-      "source": "registry",
+      "source": "git",
       "dependencies": {
         "com.inkle.ink-unity-integration": "1.1.8"
       },
-      "url": "https://package.openupm.com"
+      "hash": "c348cd9f9d39b0e70892bd6311a052eec2c8fee3"
     },
     "com.unity.modules.ai": {
       "version": "1.0.0",
