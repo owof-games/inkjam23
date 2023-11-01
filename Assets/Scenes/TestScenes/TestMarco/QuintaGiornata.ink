@@ -185,7 +185,7 @@ ne devi sempre beccare 3**/
         + YOU: Come, scusa?
         + YOU: Lo dicevo, nella ristorazione c'è qualcosa che non va.
         -
-    ilDivo: E Quello... Quello se ne è andato, e il mio cuore, il mio cuore che non ho nemmeno perché sono un fungo ma oh, il mio cuore, aiuto!
+    ilDivo: E Quello... Quello se ne è andato, e il mio cuore, il mio cuore che non ho nemmeno perché sono un fungo ma oh, il mio cuore, <b>aiuto</b>!
     ~ dialogue_ingredients_of_the_day += aiuto
     ilDivo: Ma non importa. Piuttosto, voi: la bara deve essere bianca, e imbottita di seta rosa carico. Rosa, oppure bianca. O meglio rossa. Sì, un bel rosso fiamma, sarà più gaya.
         + YOU: Hai ucciso Quello?

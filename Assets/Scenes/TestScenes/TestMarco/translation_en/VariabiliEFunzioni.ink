@@ -75,7 +75,7 @@ VAR ScampataLaMorte = false
     - lacrime: tears
     - cacaoAmaro: bitter cocoa
     - specchiarsi: mirroring
-    - scottare: blanching
+    - scottare: hot
     - iverivideogiochi: the REAL video games
     - canapé: canapé
     - mungere: milking
@@ -85,7 +85,7 @@ VAR ScampataLaMorte = false
     - selfie: selfie
     - interviste: interviews
     - avvelenare: poisoning
-    - collareconetichetta: collar with a Dogron name tag
+    - collareconetichetta: necklace with a Dogron name tag
     - tonnoalnaturale: canned tuna au naturel
     - cantare: singing
     - perdonare: forgiving
@@ -104,7 +104,7 @@ VAR ScampataLaMorte = false
     - padre: father
     - funghicida: fungicide
     - mappa: map
-    - grande: I am still big, it is the catering industry that has become small.
+    - grande: I Am Big, It's the Catering That Got Small
     - aiuto: help
     - aiutoooooo: HEEEEEEEEEEEEEEEEELP!
     - colladipesce: isinglass
@@ -227,8 +227,8 @@ VAR ScampataLaMorte = false
 
     ~ moveToLounge()
     
-    DOGRON: {E ora, un benvenuuuuto a tuuuutte le persone concorrenti e a chi ci segue da casa!|Eccoci nuovamente, concorrenti e spettatrici!|Buonasera a tuuuuutte le persone belle di questo pianeta e oltre!|Qualcuuuuuna ha visto il mio collare preferito?|L'ultima sera amiche, l'uuuultima sera assieme!}
-    DOGRON: {Concorrenti, ricordatevi che ogni giorno perderete una delle vostre abilità.  Persona uuuuumana qui davanti a me! Tu oggi perderai, rullo di tamburi...| Quuuuale abilità toglieremo oggi alla nostra persona umana?!?|Sempre meno gente, sempre meno abilità attive!|Uuuuh, mi fa male il pancino oggi.|Me doggo grande, non piange, no no, auuuuu!}
+    DOGRON: {And now, a welcome to all the contestants and those following us from home!|Here wwwwe go again, contestants and spectators!|Goooood evening to all the beautiful people on this planet and beyond!|Has anyone seen my favorite collar?|Last night friends, last night together!}
+    DOGRON: {Competitors, remember that every day youuuuu will lose one of your abilities. Human person here in front of me! You will lose today, drum roll...|What skill will we take away from our huuuuuman person today?!?|Fewer and fewer people, fewer and fewer active skills!|Uuuuh, my tummy hurts today.|Me doggo big, not crying, no no, wooooof!}
     ~ temp ability = LIST_RANDOM(abilities)
     { ability:
       - EvidenziaIngredienti: DOGRON: You will no longer be able to see the ingredients clearly.
@@ -305,7 +305,7 @@ VAR ScampataLaMorte = false
             ~ Resuscitatrice = true
             ~ abilities -= RichiamaConcorrente
             DOGRON: Mimi! How nice to have you here with us again!
-            + { alive_characters hasnt Quello } YOU: Quello
+            + { alive_characters hasnt Quello } YOU: That One
             ~ alive_characters += Quello
             ~ Resuscitatrice = true
             ~ abilities -= RichiamaConcorrente

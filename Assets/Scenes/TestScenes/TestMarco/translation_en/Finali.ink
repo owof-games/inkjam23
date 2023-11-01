@@ -1,30 +1,30 @@
 === non_ce_lhai_fatta
-DOGRON: {~ Il Gran Consiglio dei Carlini ha scoperto che copi le ricette da Benedetta Parodi|La Suprema Chihuahua ti ha morso il calcagno, ripetutamente. Morirai di rabbia|Bruiser Woods è entrato nel Gran Consiglio e ha fatto vincere Piiiietro}. THE GOOD DOG per te finisce qua.
+DOGRON: {~ The Great Council of Pugs discovered that you cup recipes from. Nigella Lawson|The Supreme Chihuahua has bitten your heel, repeatedly. You will die of rage|Bruiser Woods entered the Grand Council and made Piiiietro win}. THE GOOOOOOOOOD DOG for you ends here.
 -> END
 
 === finale_cinque
 -> EliminazioneConcorrente ->
-DOGRON: Tu porti qui della cucina metafisica! Cosa è successo quando hai finito di cucinare? {~ Pazuzu in persona sale dagli Inferi per chiederti quale orrore tu abbia cucinato|Hai cancellato la gravità.|Si è aperto un buco nero in cabina di regia, ripartiamo il prima possibile}. Non so perché, ma sei imbattibile!
+DOGRON: You bring some metaphysical cooking here! What happened when youuuu finished cooking? {~ Pazuzu himself rises from the Underworld to ask you what horror you have cooked|You have cancelled gravity.|A black hole has opened in the control room, let's restart as soon as possible}. I don't know why, but you are undefeatable!
 ->->
 
 === finale_quattro
 -> EliminazioneConcorrente ->
-DOGRON: Non sono ancora sicuro che tu sappia cucinare. Com'è andata oggi? {~ In cucina va tutto bene. Fuori, l'universo è stato cancellato| Mi avvisano che il pianeta ha smesso di girare| Chi sono? Da dove vengo? Cosa c'era nel mio piatto? Qualcuno mi aiuti}. Hai superato la sfida di oggi!
+DOGRON: I'm still not sure if you can cook. How did it go today? {~ Everything is fine in the kitchen. Outside, the universe has been erased| I'm being warned that the planet has stopped turning| Who am I? Where did I come from? What was on my plate? Someone help me}. You have passed today's challenge!
 ->->
 
 === finale_tre
 -> EliminazioneConcorrente ->
-DOGRON: Vedo i tuoi sforzi, oggi, e che dire di ciò che hai cucinato? {~ Dal forno, lo sformato lancia grida strazianti|La cosa che era nel mio piatto sta ballando con la cameraman|Hai cucinato qualcosa che sa lanciarmi la palla}. Hai vinto questa sfida! A domani!
+DOGRON: I see your efforts today, and what abouuuuut what you cooked? {~ Out of the oven, the flan lets out heartrending cries|The thing that was on my plate is dancing with the cameraman|You cooked something that can throw me the ball}. You have won this challenge! See you tomorrow!
 ->->
 
 === finale_due
 -> EliminazioneConcorrente ->
-DOGRON: Rispetto a quello che hai cucinato... {~ Dalla padella arriva un odore di cianuro e acqua di mare|Perché c'è della plastica fusa nel mio piatto?|Dopo averlo mangiato, ho tossito e mi è caduto un polmone}. Ma complimenti: ci vediamo al prossimo episodio!
+DOGRON: Compared to what you coooooooked... {~ From the frying pan comes a smell of cyanide and sea water|Why is there melted plastic on my plate?|After eating it, I coughed and dropped a lung}. But congratulations: see you in the next episode!
 ->->
 
 == finale_uno
 -> EliminazioneConcorrente ->
-DOGRON: In merito alla tua ricetta: {~ Quello che c'è nella padella non grida, non si muove, e non fa domande esistenziali|Potrebbe essere passabile per un McDonald's|Conosco degli studenti che forse potrebbero mangiarlo, forse}. Inaspettatamente passi alla prossima puntata!
+DOGRON: Regarding your recipe: {~ What's in the pan doesn't scream, doesn't move, and doesn't ask existential questions|Might be passable for a McDonald's|I know some students who might eat it, maybe}. Unexpectedly move on to the next installment!
 ->->
 
 
@@ -33,43 +33,43 @@ DOGRON: In merito alla tua ricetta: {~ Quello che c'è nella padella non grida, 
 // si usa per il finale del gioco
     ~ moveToEnd()
     // ~ loungeDialogue(DOGRON)
-    DOGRON: Uh, guarda che bella devastazione! Avresti mai pensato di vincere questo programma?
-        + YOU: Ovvio, son l'unica persona che ha davvero cucinato.
-        + YOU: Non stai per uccidermi, vero?
-        + YOU: Ora posso andare a casa?
+    DOGRON: Uh, look at that beautiful devastation! Did you ever think you would win this program?
+        + YOU: Of course, I'm the only person who actually cooked.
+        + YOU: You're not going to kill me, are you?
+        + YOU: Can I go home now?
         -
-    DOGRON: E ora, il premio!
-    DOGRON: Sorpresa: non un ristorante su Mercuuuuuuurio, ma, ma, lo vuoi sentire?
-        + YOU: Più prendi tempo, meno credo di volerlo sapere.
-        + YOU: Si, si, si!
-        + YOU: L'importante è tornare a casa, ti prego.
+    DOGRON: And nowwwww, the prize!
+    DOGRON: Surprise: not a restaurant on Mercury, but, but, do you want to hear it?
+        + YOU: The longer you take, the less I think I want to know.
+        + YOU: Yes, yes, yes!
+        + YOU: The important thing is to go home, please.
         -
-    DOGRON: Sarai la prima persona!
-        + YOU: A fare cosa?
+    DOGRON: You will be the first person!
+        + YOU: To do what?
         -
-    DOGRON: A sostituire gli umani sul nostro pianeta.
-    DOGRON: A prenderti cura della Suprema Chihuahua, dei Carlini e ovviamente di un labrador dolcissimo e bravissimo come me, patpat!
-        + YOU: E quale sarebbe questo labrador?
+    DOGRON: To replace humans on our planet.
+    DOGRON: To take care of the Supreme Chihuahua, the Pugs, and of course a very sweet and very good Labrador like me, patpat!
+        + YOU: And what would this labrador be?
         -
-    DOGRON: Non mi piacciono questi scherzi, no no.
-        + YOU: Chi è un bravo cane? Chi?
+    DOGRON: I don't like these jokes, no no.
+        + YOU: Who is a good dog? WwwwwHO?
         -
-    DOGRON: Io sono un bravo cane, uuuuuuuuuun bravo cane!!!
-        + YOU: E dove si trova la vostra casa?
+    DOGRON: I am a good dog, a good dog!!!
+        + YOU: And where is your home located?
         -
-    DOGRON: Un pianeta molto semplice. Ci sono idranti, giardini, fiumi, un sacco di palline da tennis, cucce, alberi della pizza e fontane di birra. Spero sia di tuo gradimento.
-        + YOU: Alberi della pizza?
-            DOGRON: Sì. Ti piace la pizza?
-             + + YOU: Andiamo!
-        + YOU: Fontane di birra?
-            DOGRON: Purtroppo crescono così, anche se non vogliamo.
-            + + YOU: Partiamo, subito!!!
-        + YOU: Idranti?
-            DOGRON: Sì! Piacciono anche a te? Non dirmi che sei un doggo!
-            + + YOU: Macchè doggo! Il Culto è allergico all'acqua, non mi prenderanno mai!
+    DOGRON: A very simple planet. There are fire hydrants, gardens, rivers, lots of tennis balls, kennels, pizza trees, and beer fouuuuuuntains. I hope it's to your liking.
+        + YOU: Pizza trees?
+            DOGRON: Yes. Do you like pizza?
+             + + YOU: Let's go!
+        + YOU: Beer fountains?
+            DOGRON: Unfortunately, they growwwww up that way, even if we don't want to.
+            + + YOU: We're leaving, right now!!!
+        + YOU: Fire hydrants?
+            DOGRON: Yes! Do youuuu like them too? Don't tell me you're a doggo!
+            + + YOU: Macchè doggo! The Cult is allergic to water, they'll never catch me!
         -
-    DOGRON: E allora, si parte! La nostra missione qui è completa!
-    DOGRON: Vai coi titoli di coda, Bruiser!
+    DOGRON: So, off we go! Our mission here is complete!
+    DOGRON: Go with the credits, Bruiser!
 -> END
 
 

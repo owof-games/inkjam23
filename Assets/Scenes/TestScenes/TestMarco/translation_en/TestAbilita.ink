@@ -5,16 +5,16 @@ TODO: riduci a uno ingrediente
 // permette di aggiungere o togliere concorrenti a seconda che l'abilità sia disponibile.
 
 //TEST: PRESENTAZIONE
-DOGRON: And here we are, human! I’m suuuuuuuper happy that you’re here with my new friends and me in this wooooooonderful adventure!
-DOGRON: Affronterai cinque episodi di THE GOOD DOG SHOW e sono sicuuuuro che sarai la persona che vincerà! Lo sono sicuuuuro di tutte le persone in realtà!
-DOGRON: E questo rende il programma difficile, forse.
-DOGRON: Comunque: per conoscerci meglio vorrei farti qualche domanda, giusto per vedere come te la cavi in cucina, e capire che concorrente sarai. Iniziamo?
+DOGRON: Here we are little human person! I am super glad you are here with me and my new friends on this wonderful adventure!
+DOGRON: You will face five episodes of THE GOOOOOOOOOD DOG SHOW and I'm sure you will be the person who wins! I am sure of all the people actually!
+DOGRON: And that makes the program difficult, perhaps.
+DOGRON: Anyway: to get to know each other better, I'd like to ask you a few questions, just to see how you're doing in the kitchen, and figure out what kind of competitor you're going to be. Shall we start?
 
-    + YOU: Certo!
-    + YOU: Ho delle alternative?
-        DOGRON: Ovviamente, ma poi ti perderesti tutto il divertimento!
-    + YOU: Dove mi trovo? Cosa sta accadendo? Chi sei tu?
-        DOGRON: No, aspetta, col test le domande te le faccio io persona amica!
+    + YOU: Sure!
+    + YOU: Do I have any alternatives?
+        DOGRON: Of course, but then you would miss all the fun!
+    + YOU: Where am I? What is happening? Who are you?
+        DOGRON: No, wait, with the test, I'll ask you the questions friend person!
     -    
 
 //TEST: DOMANDA 1: abilità richiama Concorrente
@@ -33,11 +33,11 @@ DOGRON: Comunque: per conoscerci meglio vorrei farti qualche domanda, giusto per
 }
 
 = domanda1
-DOGRON: Ti trovi su un pianeta sconosciuuuuto, hai fatto un grosso errore e non sai come tornare indietro. Che fai?
-    + YOU: Provo a chiedere aiuto?
+DOGRON: You're on an unknowwwwn planet, you've made a big mistake, and you don't know how to get back. What do you do?
+    + YOU: Do I try to ask for help?
       ~ abilities += RichiamaConcorrente
-    + YOU: Pianeta? No, seriamente, perché sono qui?
-    + YOU: Mi siedo in un angolo a piangere.
+    + YOU: Planet? No, seriously, why am I here?
+    + YOU: I sit in the corner and cry.
     -
     {
     - LIST_COUNT(abilities) >= 3:
@@ -48,10 +48,10 @@ DOGRON: Ti trovi su un pianeta sconosciuuuuto, hai fatto un grosso errore e non 
 
 = domanda2
 // TEST: DOMANDA 2: abilità EvidenziaIngredienti
-DOGRON: Tuuuutte le persone attorno a te parlano di colori, ma tuuuuu non hai capito che cosa sono. Come provi a capire qualcosa che non capisci per non farti scoprire?
-    + YOU: Non saprei, ho smesso di studiare alla tabellina del tre.
-    + YOU: Ma tutte queste luci? E perché la poltrona puzza di cane bagnato?
-    + YOU: Copio le cose che fanno le altre persone, sperando di non fare cazzate.
+DOGRON: All the people around youuuu talk about colors, but you haven't understood what they are. How do you try to understand something you don't understand so you don't get caught?
+    + YOU: I don't know, I stopped studying at the three-table.
+    + YOU: But all these lights? And why does the chair smell like wet dog?
+    + YOU: I copy things other people do, hoping I don't screw up.
       ~ abilities += EvidenziaIngredienti
     -
     {
@@ -63,10 +63,10 @@ DOGRON: Tuuuutte le persone attorno a te parlano di colori, ma tuuuuu non hai ca
 
 = domanda3
 // TEST: DOMANDA 3: abilità EvidenziaAzioni
-DOGRON: Qualcosa con i baffi lunghi il pelo corto e l'abilità di infilarsi negli scatoloni ha distrutto il tuo gioco preferito. Come reagisci?
-    + YOU: Distruggo tutto ciò che ha di più caro.
-    + YOU: Ma che c'entra tutto questo con un concorso di cucina?
-    + YOU: Strano, tutto questo mi ricorda Micia.
+DOGRON: Something with a long mustache short hair and the ability to get into boxes has destroyed your favorite game. How do you react?
+    + YOU: I destroy everything you hold dear.
+    + YOU: But what does this have to do with a cooking contest?
+    + YOU: Strange, all this reminds me of Kitty.
     -
     {
     - LIST_COUNT(abilities) >= 3:
@@ -77,10 +77,10 @@ DOGRON: Qualcosa con i baffi lunghi il pelo corto e l'abilità di infilarsi negl
 
 = domanda4
 // TEST: DOMANDA 4: abilità ScelteLente
-DOGRON: Qualcuuuuuuno a cui vuoi molto molto bene ti ha detto che sarebbe tornato suuubito, ma sono passati dieci minuti e ancora non si vede. Come affronti il luuuutto?
-    + YOU: Ma siamo qui per farti terapia, o per un concorso?
-    + YOU: Se non mi liberi subito chiamo il mio avvocato!
-    + YOU: Direi che è il momento di dormire, chillarsi un poco, mettersi in pari con la lista di videogiochi in coda.
+DOGRON: Someone you love very very much told youuuu he would be right back, but it's ten minutes later and still no sign of him. How do you deal with grief?
+    + YOU: But are we here for therapy, or for a competition?
+    + YOU: If you don't release me right now I'll call my lawyer!
+    + YOU: I'd say it's time to get some sleep, chill out a little bit, catch up on the list of video games in the queue.
      ~ abilities += ScelteLente
     -
     {
@@ -92,10 +92,10 @@ DOGRON: Qualcuuuuuuno a cui vuoi molto molto bene ti ha detto che sarebbe tornat
 
 = domanda5
 // TEST: DOMANDA 5: abilità SceltaIngrediente
-DOGRON: Qual è la tua pappa preferita, ma tipo la cosa suuuuuper preferita del mondo per te?
-    + YOU: Gli arrosticini.
-    + YOU: Ti prego fammi uscire da questo luogo, ti prego, cosa ti ho fatto di male?!?
-    + YOU: La fine del capitalismo.
+DOGRON: What is your favorite gruel, but like the suuuuuper favorite thing in the world for you?
+    + YOU: lamb vindaloo
+    + YOU: Please get me out of this place, please, what have I done wrong to you!!!?
+    + YOU: The end of capitalism.
       ~ abilities += SceltaIngrediente
     -
     {
@@ -107,11 +107,11 @@ DOGRON: Qual è la tua pappa preferita, ma tipo la cosa suuuuuper preferita del 
 
 = domanda6
 // TEST: DOMANDA 6: abilità PNGParliExtra
-DOGRON: Ti portano al parco giochi. C'è il sole, un sacco di amici, e il tuo collare preferito.
-    + YOU: Ma dov'è la domanda?
-    + YOU: Questa è perfezione!
+DOGRON: They take you to the playground. There's sunshine, lots of friends, and your favorite collar.
+    + YOU: But where is the question?
+    + YOU: This is perfection!
         ~ abilities += PNGParliExtra
-    + YOU: Uh, che tipo di collare? Anche un harness?
+    + YOU: Uh, what kind of collar? Even a harness?
     -
     {
     - LIST_COUNT(abilities) >= 3:
@@ -122,11 +122,11 @@ DOGRON: Ti portano al parco giochi. C'è il sole, un sacco di amici, e il tuo co
 
 = domanda7
 // TEST: DOMANDA 7: abilità SaltaMorte
-DOGRON: Sono giorni che ti fa male il pancino, tuuuuutto il pancino. Ti mettono il guinzaglio e fanno patpat sul bagagliaio dell'automobile. Tu come reagisci?
-    + YOU: Ti prego ti prego liberami non ho fatto niente, la mia pianta grassa sentirà la mancanza!
-    + YOU: Sono una persona coraggiosa, andrò incontro al mio destino!
+DOGRON: It's days that your tummy hurts, your whole tummy. They puuuut a leash on you and patpat on the trunk of the car. How do you react?
+    + YOU: Please please free me I didn't do anything, my succulent plant will miss it!
+    + YOU: I am a brave person, I will meet my destiny!
     ~ abilities += SaltaMorte
-    + YOU: Col cazzo. Mordo la loro mano e fuggo verso la libertà!
+    + YOU: No fucking way. I bite their hand and escape to freedom!
     -
     {
     - LIST_COUNT(abilities) >= 3:
@@ -137,12 +137,12 @@ DOGRON: Sono giorni che ti fa male il pancino, tuuuuutto il pancino. Ti mettono 
 
 = domanda8
 // TEST: DOMANDA 8: abilità EliminaConcorrente
-DOGRON: Hai seppellito qualcuno, ma non ti ricordi dove l'hai fatto, e sei molto triste, molto. Come reagisci?
-    + YOU: Oh. Stai per uccidermi, vero?
-        DOGRON: No no, ma che dici, mica sei un hotdog!
-    + YOU: Nessun corpo, nessun crimine. Mi spiace, Ermenegildo.
+DOGRON: You buried someone, but you don't remember where you did it, and you're very sad, very. How do you react?
+    + YOU: Oh. You're going to kill me, aren't you?
+        DOGRON: No no, what are you talking about, it's not like you're a hotdog!
+    + YOU: No body, no crime. I'm sorry, Ermenegildo.
         ~ abilities += EliminaConcorrente
-    + YOU: Mi consegno alla polizia, spontaneamente. Non trovi sia la cosa più sensata da fare? La farai vero?
+    + YOU: I turn myself in to the police, voluntarily. Don't you think that's the sensible thing to do? You're going to do it right?
     -
     {
     - LIST_COUNT(abilities) >= 3:
@@ -159,7 +159,7 @@ DOGRON: Hai seppellito qualcuno, ma non ti ricordi dove l'hai fatto, e sei molto
     ~ abilities += ability
     -> loop
 - else:
-    DOGRON: Le domande sono finite! E grazie al nostro accuratissimo sistema psicologico approvato dal Gran Consiglio dei Carlini e dalla Suprema Chihuahua, io, Dogron III Ti assegno...
+    DOGRON: The questions are over! And thanks to our very accurate psychological system approved by the Grand Council of Pugs and the Supreme Chihuahua, I, Dogron the III I awwwward you...
 
     -> recap(LIST_VALUE(LIST_MIN(LIST_ALL(abilities))))
 }
@@ -170,13 +170,13 @@ DOGRON: Hai seppellito qualcuno, ma non ti ricordi dove l'hai fatto, e sei molto
 {abilities has ability:
     
     {ability:
-    - EvidenziaIngredienti: DOGRON:...la capacità di notare subito gli ingredienti!
-    - ScelteLente: DOGRON:...la possibilità di rallentare il tempo.
-    - SceltaIngrediente: DOGRON:...la fortuna di poterti scegliere un ingrediente a inizio ricetta.
-    - PNGParliExtra: DOGRON:...il diritto di chiacchierare con una persona in più in lounge.
-    - SaltaMorte: DOGRON:...il, ehm, uh, lapossibilitàdisaltarelatuamorteunavolta uh guarda che bello un labrador!
-    - EliminaConcorrente: DOGRON:...il diritto di cacciare dal programma un'altra persona che è qui a conconcorrere. Conrerrere. Cha fai il concorso.
-    - RichiamaConcorrente: DOGRON:...il potere di richiamare una volta i morti. Woah!
+    - EvidenziaIngredienti: DOGRON:...the ability to notice the ingredients right away!
+    - ScelteLente: DOGRON:...the ability to slow down time.
+    - SceltaIngrediente: DOGRON:...the luck of being able to choose an ingredient at the beginning of the recipe.
+    - PNGParliExtra: DOGRON:...the right to chat with an extra person in the lounge.
+    - SaltaMorte: DOGRON:...the, um, uh, theabilitytoskipyourdeathonce uh look at that beautiful a labrador!
+    - EliminaConcorrente: DOGRON:...il diritto di cacciare dal programma un'altra persona che è qui a conconcorrere. Conrerrere. Cha fa il concorso.
+    - RichiamaConcorrente: DOGRON:...the power to call back the dead once. Woah!
     }
 }
 {i < LIST_VALUE(LIST_MAX(LIST_ALL(abilities))):

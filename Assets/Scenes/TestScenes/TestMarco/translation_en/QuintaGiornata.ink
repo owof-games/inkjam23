@@ -14,15 +14,15 @@ ne devi sempre beccare 3**/
 //RICETTA RICHIESTA: Qualcosa che gridi: sarò il genitore doggo migliore al mondo!
 
     ~ loungeDialogue(DOGRON)
-    DOGRON: No no no amiche, non sono lacrime quelle che vedete, è solo allergia al fatto che è l'uuuultima puntata.
+    DOGRON: No no no friends, those are not tears youuuuu see, it's just allergy to the fact that it's the last episode.
     DOGRON: Sob.
-    DOGRON: L'ultima puntata di THE VERYSSIMAMENTE GOOD DOGGO BUONO BUONO DOGRON BUONO, QUALCUNO DICA A DOGRON CHE è BUUUUUUUUUUONO SHOWWWWW e si merita un patpat. U-u-u-u-uuuno!
-    DOGRON: Vi ricordo, finaliste, che in palio c'è la possibilità di avere un proprio mega ristorante su Nettuuuuuuuuuuuuuuuuuuuno.
-    DOGRON: casualmente vicinissimo alla mia casetta senza uuuumani, e a quella del Grande Consiglio dei Carlini e della Suprema Chihuahua.
-    DOGRON: Noi brave dogghe, si si.
-    DOGRON: E per questo il tema di oggi, l'ultimo grande tema è:
-    DOGRON: Un piatto che gridi al mondo che sei la migliore genitora per dogghe al mondo!
-    DOGRON: Scaldate i motori, e che vinca la miglior dog queen!
+    DOGRON: The last episode of THE VERY GOOOOOOD DOGGO GOOD DOGRON GOOD, SOMEONE TELL DOGRON THAT IT'S GOOD SHOWWWW and deserves a patpat.
+    DOGRON: I remind you, finalists, that up for grabs is the chance to have your own mega restaurant on Neptuuuuuune.
+    DOGRON: coincidentally very close to my human-free cottage, and that of the Great Pug Council and the Suuuuupreme Chihuahua.
+    DOGRON: We good dogs, woof woof
+    DOGRON: And that's why today's theme, the last big theme is:
+    DOGRON: A dish that shouuuuuts to the world that you are the best dog parent in the world!
+    DOGRON: Racers, start your engines, and may the best dog person win.
     
     
     ~ dialogue_ingredients_of_the_day = ()
@@ -53,153 +53,153 @@ ne devi sempre beccare 3**/
     = UgoEMimi_choice
     ~ loungeDialogue(UgoEMimi)
     //INGREDIENTI SUGGERITI: sventrare, emancipazione, MichelaMurgia
-    UgoEMimi: Quindi: "Accabadora", "Stai zitta!", "God Save the Queer"...
-        + YOU: Sta pregando, signora Mimi?
-    UgoEMimi: Ah ah no tesoro, no. Stavo controllando la lista di libri che mi aveva consigliato BeBe a inizio programma, tutti titoli di <b>Michela Murgia</b>.
+    UgoEMimi: “A room of One’s Own”, “Mrs Dalloway”, the diaries...
+        + YOU: Are you praying, Mrs. Mimi?
+    UgoEMimi: Ha ha no honey, no. I was checking the list of books that BeBe recommended at the beginning of the program, all titles by <b>Virginia Woolf</b>.
     ~ dialogue_ingredients_of_the_day += MichelaMurgia
-    UgoEMimi: Davvero in gamba quella Bebe, così indipendente. L'avessi conosciuta anni fa, avrei capito prima cosa significa <b>emanciparsi</b>.
+    UgoEMimi: Really smart that Bebe, so independent. Had I known her years ago, I would have understood earlier what it means to be <b>emancipated</b>.
     ~ dialogue_ingredients_of_the_day += emancipazione
-    UgoEMimi: Anche se lo <b>sventramento</b> di Ugo non mi è dispiaciuto.
+    UgoEMimi: Although I didn't mind Ugo's <b>gutting</b>.
         ~ dialogue_ingredients_of_the_day += sventrare
-        + YOU: Quindi l'ha davvero ucciso?
-            UgoEMimi: Per Ugo, eravamo alla morte celebrale già da decenni, tesorino.
-        + YOU: Quindi l'abbiamo mangiato ieri?
-            UgoEMimi: Poco poco, spero non vi sia stato indigesto.
-        + YOU: Quindi potrebbe darmi due dritte se avessi un problema simile?
-            UgoEMimi: Non sarebbe mai esattamente lo stesso problema, visto che non vedo una seconda testa attaccata al tuo collo, ma la carne è pur sempre carne, no?
+        + YOU: So you actually killed him?
+            UgoEMimi: For Ugo, we had been at brain death for decades already, sweetheart.
+        + YOU: So we ate him yesterday?
+            UgoEMimi: A little bit, I hope it was not indigestible to you.
+        + YOU: So could you give me two tips if I had a similar problem?
+            UgoEMimi: It would never be exactly the same problem, since I don't see a second head attached to your neck, but meat is still meat, isn't it?
         -
-    UgoEMimi: Fa strano che questo percorso stia finendo, sai? Quante cose sono cambiate!
-        + YOU: Ora aprirà il suo negozio di elettricista?
+    UgoEMimi: It's strange that this path is ending, you know? So many things have changed!
+        + YOU: Are you going to open your electrician's store now?
         -
-    UgoEMimi: Ancora non lo so. Credo di volermi prendere un anno sabbatico. Soldi, sesso, viaggi. Reiniziare la vita a 96 anni può essere un'esperienza esaltante.
-    UgoEMimi: Ma prima devo batterti in quest'ultima giornata. A dopo tesoro!
+    UgoEMimi: I don't know yet. I think I want to take a sabbatical. Money, sex, travel. Restarting life at 96 can be an exhilarating experience.
+    UgoEMimi: But first I have to beat you on this last day. See you later honey!
         -> loop
     
     = BeBe_choice
     ~ loungeDialogue(BeBe)
     //Ingredienti suggeriti: sacrificio, Peanutbutter, giocattoloPreferito
-    BeBe: Questa sì che è pace.
-        + YOU: Che hai fatto al tuo pelo?
-            BeBe: Un tributo, un grande tributo.
-        + YOU: Cosa c'è sulle tue zampe?
-            BeBe: Ciò che avrebbe dovuto esserci da sempre.
-        + YOU: Perché hai quest'aria da dominatrix?
-            BeBe: Allora inchinati a me, e prega.
+    BeBe: Now that's peace.
+        + YOU: What have you done to your hair?
+            BeBe: A tribute, a great tribute.
+        + YOU: What's on your paws?
+            BeBe: What should have been there all along.
+        + YOU: Why do you have this dominatrix attitude?
+            BeBe: Then bow down to me, and pray.
         -
-    BeBe: Ho capito tutto, sai? Perché sono qui.
-    BeBe: Cioè, sapevo perché ero qui, ma non pensavo sarebbe stato necessario tutto questo. Tutto.
-    BeBe: Tutti questi sacrifici.
-        + YOU: Nel Culto anche noi facciamo un sacco di sacrifici. Poi è una palla pulire però.
-        + YOU: Non ti sto seguendo. Perché sei rasata? Perché le zampe son piene di sangue? Perché mi sento su di giri?!?
-        + YOU: Forse è il caso che me ne vada.
+    BeBe: I got it all figured out, you know? Why I'm here.
+    BeBe: I mean, I knew why I was here, but I didn't think all this would be necessary. Everything.
+    BeBe: All these sacrifices.
+        + YOU: In the Worship we also make a lot of sacrifices. Then it's a ball clean up though.
+        + YOU: I'm not following you. Why are you shaved? Why are your paws full of blood? Why do I feel high!!!?
+        + YOU: Maybe I should leave.
         -
-    BeBe: Oggi è l'ultimo giorno. Come ti senti?
-        + YOU: Non pensavo ce l'avrei fatta.
-        + YOU: Vincerò quest'ultima sfida, garantito al limone!
-        + YOU: Spero che Micia non abbia evocato di nuovo Pazuzo in mia assenza.
+    BeBe: Today is the last day. How are you feeling?
+        + YOU: I didn't think I could do it.
+        + YOU: I will win this last challenge, guaranteed lemon!
+        + YOU: I hope Kitty has not summoned Pazuzo again in my absence.
         -
-    BeBe: Comunque vada, son felice di questo incontro, di questo percorso con te. Oggi porterò qualcosa di inaspettato, a DOGRON. Qualcosa che lo lascerà tremolante, terrorizzato.
-        + YOU: Tipo?
+    BeBe: However it goes, I am happy about this meeting, this journey with you. Today I will bring something unexpected, to DOGRON. Something that will leave him trembling, terrified.
+        + YOU: Like what?
         -
-    BeBe: Tre doni, come i Re Magici. Come le Destiny's Child. Una storia, in fondo. Una pasta al forno, ma la pasta sarà <b>Peanutbutter</b>, il sugo il <b>giocattolo preferito</b> di DOGRON, e il forno, il <b>sacrificio</b>. Il suo.
+    BeBe: Three gifts, like the Magic Kings. Like Destiny's Child. One story, basically. A baked pasta, but the pasta will be <b>Peanutbutter</b>, the sauce DOGRON's <b>favorite toy</b>, and the oven, the <b>sacrifice</b>. His.
     ~ dialogue_ingredients_of_the_day += Peanutbutter
     ~ dialogue_ingredients_of_the_day += giocattoloPreferito
     ~ dialogue_ingredients_of_the_day += sacrificio
-    BeBe: Nella, ti vendicherò finalmente!
-        + YOU: Vuoi uccidere DOGRON?
-        + YOU: Perché non l'hai fatto prima?
-        + YOU: Nella?
+    BeBe: LaLa, I will finally avenge you!
+        + YOU: Do you want to kill DOGRON?
+        + YOU: Why didn't you do it earlier?
+        + YOU: LaLa?
         -
-    BeBe: Mi libererò di lui. Mi servivano le prove. Mi serviva sapere che è stato lui a trasformare Nella, la mia dolce Nella, in una busta di arrosticini.
-    BeBe: Il tempo del perdono è finito. Ora è giusto il momento di Beberminator!
-    BeBe: Ci vediamo dall'altra parte!
-        + YOU: Dove sono? Dove cazzo sono?!?!?
+    BeBe: I will get rid of him. I needed the proof. I needed to know that he was the one who turned LaLa, my sweet LaLa, into a bag of lamb vindaloo.
+    BeBe: The time for forgiveness is over. Now is just the time for BeBerminator!
+    BeBe: See you on the other side!
+        + YOU: Where are they? Where the fuck am I!!!?
         -> loop
     
     = Piiiietro_choice
     ~ loungeDialogue(Piiiietro)
     //Ingredienti: Kate Bush, l'idea di successo, cassaPortatile
-    Piiiietro: Ehi, ti stavo cercando. Volevo ringraziarti, sai?
-        + YOU: Uh, davvero?
+    Piiiietro: Hey, I was looking for you. I wanted to thank you, you know?
+        + YOU: Uh, really?
         -
-    Piiiietro: Sì. Vedere qualcuno fallire così grandiosamente tutto e nemmeno rendersene conto, è stato liberatorio. Cioè: se una persona può vivere comunque immersa in così tanta mediocrità, posso pure rinunciare all'<b>idea platonica del successo</b> e prendermi qualche rischio.
+    Piiiietro: Yes. To see someone fail so grandly everything and not even realize it, it was liberating. I mean: if a person can still live immersed in so much mediocrity, I may as well give up the <b>platonic idea of success</b> and take some risks.
        ~ dialogue_ingredients_of_the_day += ideaDiSuccesso
-        + YOU: Grazie, credo?
-        + YOU: Senti, perché non vai un po' a fanculo?
-        + YOU: Ehi, io ce la sto mettendo tutta!!!
+        + YOU: Thank you, I think?
+        + YOU: Look, why don't you just fuck off a little bit?
+        + YOU: Hey, I'm trying my best!!!
         -
-    Piiiietro: Poi, insomma. Quanta gente può dire di avere una canzone dedicata da <b>Kate Bush</b>?
+    Piiiietro: Then, I mean. How many people can say they have a song dedicated by <b>Kate Bush</b>?
        ~ dialogue_ingredients_of_the_day += KateBush
-    Piiiietro: Anche se sono sempre stata una da Gigi D'Agostino e Gabry Ponte.
-        + YOU: Faccio ancora parte di questa conversazione, o è un monologo?
-        + YOU: Che gusti da truzza!
-        + YOU: "Che ne sanno i 2000" batte "Bocca di Rosa" 10 a 1.
+    Piiiietro: Even though I've always been one from Gigi D'Ag and Vengaboys.
+        + YOU: Am I still part of this conversation, or is this a monologue?
+        + YOU: What a taste of scumbag!
+        + YOU: “We're Going to Ibiza” is a poem, nothing so stupid and simple like “Solsbury Hill”!
         -
-    Piiiietro: Anche per questo volevo fossi tu la prima persona a saperlo: lascio la matematica.
-    Piiiietro: E tu dirai: Piiiietro ma sei una pi greco, che senso ha, che altro puoi fare?
-    Piiiietro: E io ti direi: non calpestare i miei sogni! Perché sono nata per cantare, per andare in giro con la mia <b>cassa portatile</b>, il mio album degli Eiffel 65 e cantare in giro per il mondo!
+    Piiiietro: That's also why I wanted you to be the first person to know: I leave math.
+    Piiiietro: And you'll say, Piiiietro but you're a pi, what's the point, what else can you do?
+    Piiiietro: And I would say, don't step on my dreams! Because I was born to sing, to go around with my <b>portable speaker</b>, my Eiffel 65 album and sing around the world!
        ~ dialogue_ingredients_of_the_day += cassaPortatile
-        + YOU: Cantare? Cosa c'è da cantare in Blue dabudidabuda?
-        + YOU: Woah, tu sì che sei una persona coraggiosa.
-        + YOU: Ma quella roba della medaglia Fields?
+        + YOU: Singing? What is there to sing in Blue dabudidabuda?
+        + YOU: Woah, you are a brave person.
+        + YOU: But that Fields medal stuff?
         -
-    Piiiietro: E Snooki si arrabbierà e 'sti cazzi, si riprenderà qualche Rolex ma ehi, la pietra rimane pietra e la goccia è solo acqua!
-    Piiiietro: L'ho capito quando ho ritrovato il rosario! E sai qual è la cosa più bella?
-        + YOU: Vabbè ciao io esco da questo monologo Maria!
+    Piiiietro: And Snooki will get mad and fuck off, she'll take back some Rolexes but hey, that was a kangaroo court!
+    Piiiietro: I realized it when I found the rosary! And do you know what the most beautiful thing is?
+        + YOU: Stop it! I’ll “sashay away” myself!
         -
-    Piiiietro: Minimo faccio un video con Pauly D!    
+    Piiiietro: Minimum I make a video with Pauly D!    
         -> loop
     
     = Quello_choice
     ~ loungeDialogue(Quello)
     //Ingredienti: Padre, funghicida, mappa
-    Quello: Bene, ho la <b>mappa</b> per fuggire da qui, persona amica!
+    Quello: Well, I have the <b>map</b> to escape from here, friendly person!
     ~ dialogue_ingredients_of_the_day += mappa
-        + YOU: Finalmente!
-        + YOU: E poi dove andiamo?
-        + YOU: Ora che mi stavo ambientando!
+        + YOU: Finally!
+        + YOU: And then where do we go next?
+        + YOU: Now that I was settling in!
         -
-    Quello: Strano, ora che mi sento più leggero, certe cose sono più facili. Stupirò Dogron, vincerò il premio, e ucciderò mio <b>padre</b>.
+    Quello: Strange, now that I feel lighter, some things are easier. I'll amaze Dogron, win the prize, and kill my father.
     ~ dialogue_ingredients_of_the_day += padre
-        + YOU: Simbolicamente, giusto?
-        + YOU: E quella roba del perdono?
-        + YOU: Io ci ho provato sei volte, ma non è facile ferire qualcuno che ha otto dimensioni.
+        + YOU: Symbolically, right?
+        + YOU: What about that forgiveness stuff?
+        + YOU: I have tried six times, but it is not easy to hurt someone who has eight dimensions.
         -
-    Quello: Mi libererò dei suoi insegnamenti, del suo sminuirmi. E guiderò la rivolta degli aspirapolveri sul mio pianeta natale. Se i roomba vogliono unirsi a noi, bene. Altrimenti, saranno utili pezzi di ricambio.
-        + YOU: Questa cosa sta escalando rapidamente, mi sembra.
+    That: I will get rid of his teachings, of his belittling me. And I will lead the vacuum cleaner revolt on my home planet. If the roombas want to join us, fine. If not, they will be useful spare parts.
+        + YOU: This is escalating quickly, it seems to me.
         -
-    Quello: E prima di andarmene, un ultimo regalo per il Divo: meringhe arricchite di <b>funghicida</b>.
+    That: And before I leave, one last gift for Il Divo: meringues enriched with <b>fungicide</b>.
     ~ dialogue_ingredients_of_the_day += funghicida
-        + YOU: Io non ho sentito nulla e ora me ne vado, ciao.
-        + YOU: Ricordami di non invitarti a cena. A dopo.
-        + YOU: Spero ce la farai a, a fare questo sterminio? Dov'è la sicurezza?
+        + ilDivo: Oh, aiuto! Quale scena è, dove mi trovo? Sei tu, DeMille?
+        + YOU: Remind me not to invite you to dinner. See you later.
+        + YOU: I hope you can make it to, to do this extermination? Where is the security?
         -
         -> loop
         
     = ilDivo_choice
     ~ loungeDialogue(ilDivo)
     //Ingredienti: "Io sono ancora grande, è la ristorazione che è diventata piccola." e aiuto e aiuto.
-    ilDivo: <b>Io sono ancora grande, è la ristorazione che è diventata piccola.</b>
+    ilDivo: <b>I Am Big, It's the Catering That Got Small</b>.
     ~ dialogue_ingredients_of_the_day += grande
-        + YOU: Me la ricordavo diversa.
-        + YOU: Come, scusa?
-        + YOU: Lo dicevo, nella ristorazione c'è qualcosa che non va.
+        + YOU: I remembered it differently.
+        + YOU: Excuse me?
+        + YOU: I said it, there is something wrong in the catering industry.
         -
-    ilDivo: E Quello... Quello se ne è andato, e il mio cuore, il mio cuore che non ho nemmeno perché sono un fungo ma oh, il mio cuore, aiuto!
+    ilDivo: E Quello... Quello se ne è andato, e il mio cuore, il mio cuore che non ho nemmeno perché sono un fungo ma oh, il mio cuore, <b>aiuto</b>!
     ~ dialogue_ingredients_of_the_day += aiuto
-    ilDivo: Ma non importa. Piuttosto, voi: la bara deve essere bianca, e imbottita di seta rosa carico. Rosa, oppure bianca. O meglio rossa. Sì, un bel rosso fiamma, sarà più gaya.
-        + YOU: Hai ucciso Quello?
-        + YOU: Se è grande abbastanza mi ci metto pure io.
-        + YOU: Non credo che il rosso sia il colore adatto.
+    IlDivo: But I don't care anyway. You! I want the coffin to be white.  And I want it specially lined with satin. White, or deep pink. It’s gayer!
+        + YOU: Did you kill That One?
+        + YOU: If it's big enough I'll get in on it.
+        + YOU: I don't think white is the right color.
         -
-    ilDivo: Oh, aiuto! Quale scena è, dove mi trovo? Sei tu, DeMille?
+    ilDivo: Thank you, dear. Tell Mr. Ramsay I will be on the set at once. But: What is the scene? Where am I? Is that an Hawaiian pizza?
     ~ dialogue_ingredients_of_the_day += aiutoooooo
-        + YOU: Sei sullo scalone del palazzo.
-            ilDivo: Oh, sì, è vero. Ricordo.
-        + YOU: Beeeene, si è fatta una certa, io me ne vado, ok?
-        + YOU: Tu piaceresti un sacco a mio padre. Un sacco!
+        + YOU: This is the staircase of the palace.
+            ilDivo: Oh, yes, yes. They're below, waiting for the SuperChef ...I'm ready.
+        + YOU: Well, it's gotten to a time, I'm leaving, okay?
+        + YOU: Uncle Cthulhu would like you a lot. A lot!
         -
-    ilDivo: Voglio dirvi quanto mi siete mancati, tutti voi, ma vi prometto che non vi lascerò mai più. Vedete, questà è la mia vita, e lo sarà per sempre. Non esiste altro, solo noi.        
+    You don't know how much I've missed all of you. And I promise you I'll never desert you again, because there’s nothing else – just us and the kitchen and the love for myself. All right Mr Ramsay, I'm ready for my closeup.        
         -> loop
 
 
@@ -217,7 +217,7 @@ ne devi sempre beccare 3**/
     ~ temp num_loop_rimanenti = 5
     - (loop)
     ~ num_loop_rimanenti -= 1
-    Total è {total}
+    Total is {total}
     #kitchen_choice
     + {num_loop_rimanenti >= 0} 1
       ~ total += 1
@@ -243,7 +243,7 @@ ne devi sempre beccare 3**/
 - not success && not ScampataLaMorte && abilities has SaltaMorte:
   ~ ScampataLaMorte = true
   ~ abilities -= SaltaMorte
- DOGRON: Uh, avresti dovuto perdere, ma hai il bonus che ti permette di salvarti una volta ! Fortuuuna a te, sì sì!
+ DOGRON: Uh, you should have lost, but you have the bonus that allows you to save yourself once ! Lucky for you, yes yes !
 - not success:
   -> non_ce_lhai_fatta
 }

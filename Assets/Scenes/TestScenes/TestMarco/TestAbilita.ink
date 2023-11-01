@@ -175,7 +175,7 @@ DOGRON: Hai seppellito qualcuno, ma non ti ricordi dove l'hai fatto, e sei molto
     - SceltaIngrediente: DOGRON:...la fortuna di poterti scegliere un ingrediente a inizio ricetta.
     - PNGParliExtra: DOGRON:...il diritto di chiacchierare con una persona in più in lounge.
     - SaltaMorte: DOGRON:...il, ehm, uh, lapossibilitàdisaltarelatuamorteunavolta uh guarda che bello un labrador!
-    - EliminaConcorrente: DOGRON:...il diritto di cacciare dal programma un'altra persona che è qui a conconcorrere. Conrerrere. Cha fai il concorso.
+    - EliminaConcorrente: DOGRON:...il diritto di cacciare dal programma un'altra persona che è qui a conconcorrere. Conrerrere. Cha fa il concorso.
     - RichiamaConcorrente: DOGRON:...il potere di richiamare una volta i morti. Woah!
     }
 }

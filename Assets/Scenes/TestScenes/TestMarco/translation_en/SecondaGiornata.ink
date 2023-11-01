@@ -13,10 +13,10 @@ Dialoghi giorno 1..4: ogni personaggio ti da 2 ingredienti
     //RICETTA RICHIESTA: un pasto per quando vengono i veri amici.
 
     ~ loungeDialogue(DOGRON)
-    DOGRON: Ma persone amiche, siamo già alla seconda giornata di THE GOOD DOG (very very good dog!) SHOW!!! Non siete suuuuuupermegafelici e scodinzolanti?!? Oh, quanto non vorrei vedervi mai andare via!
-    DOGRON: Ma se non eliminassimo qualcuno, come potremmo trovare un sostituto perfetto per, per, per la cucina più grande di Urano?
-    DOGRON: E a proposito di Uuuuuuuurano, il tema di oggi è: un pasto per quando vengono i veri veri amici!
-    DOGRON: Vi lascio qualche minuto per le chiacchiere e poi si parte!
+    DOGRON: But people friends, we are already on the second day of THE GOOD DOG (very very goooood dog!) SHOW!!! Aren't you super mega happy and wagging your tails!!!? Oh, hoooowwwww I would hate to see you all ever leave!
+    DOGRON: But if we didn't eliminate someone, how could we find a perfect replacement for, for, for the larger kitchen of Uuuuuranus?
+    DOGRON: And speaking of Uranus, today's theme is: a meal for when real friends come!
+    DOGRON: I'll give you a few minutes for chit-chat and then we're off!
     // passa alla scena lounge
     
     
@@ -50,20 +50,20 @@ Dialoghi giorno 1..4: ogni personaggio ti da 2 ingredienti
     = UgoEMimi_choice
     ~ loungeDialogue(UgoEMimi)
     //Ingredienti suggeriti: Vol-au-vent e Skyrim
-    UgoEMimi: Mimi, no, sei tu che non capisci! Kojima l'ha paragonato a <b>Skyrim</b>! E Kojima non sbaglia mai!
+    UgoEMimi: Mimi, no, you're the one who doesn't understand! Kojima compared it to <b>Skyrim</b>! And Kojima is never wrong!
         ~ dialogue_ingredients_of_the_day += Skyrim
-    UgoEMimi: Ugo, non voglio contraddirti, lo sai, ma era un sogno!
-    UgoEMimi: E mi dici che i sogni mentono, eh?! Non sognavi di cucinare per sempre, e ora vedi dove siamo?
-    UgoEMimi: Il mio sogno era aprire un negozio di attrezzi per elettricisti, non cucinare <b>vol-au-vent</b> tutto il sabato per quei buzzurri dei tuoi amici!
+    UgoEMimi: Ugo, I don't want to contradict you, you know, but it was a dream!
+    UgoEMimi: And you tell me that dreams lie, huh! Didn't you dream of cooking forever, and now you see where we are?
+    UgoEMimi: My dream was to open an electrician's tool store, not to cook <b>vol-au-vents</b> every Saturday for your boorish friends!
      ~ dialogue_ingredients_of_the_day += volAuVent
-    UgoEMimi: Mimi, stai esagerando, ora! E sai cosa succede quando mi incazzo!
-        + YOU: Signor Ugo, quindi sta creando un videogioco?
-            UgoEMimi: Oh, più di un videogioco, IL videogioco! Sarà uno sparatutto slasher stealth ma non troppo con elementi 4X e una gara di macchine e gestione delle risorse in modalità multiplayer con microtransazioni, NFT e un sacco di DLC!
-            UgoEMimi: Ma per ora Ugo ha creato solo il titolo e una cover con Paint.
-        + YOU: Signora Mimi, quindi è appassionata di elettricismo, si dice così?
-            UgoEMimi: Una donna non può appassionarsi di elettricità, Mimì è brava solo a pulire, cucinare e stirare.
-            UgoEMimi: Infatti viviamo solo in una casa dove ho fatto tutte le messe a terra.
-        + YOU: Non so cosa abbiate, ma nel culto se non ti fai i cazzi tuoi muori male. Ciaone.
+    UgoEMimi: Mimi, you're going too far now! And you know what happens when I get pissed off!
+        + YOU: Mr. Hugh, so you are creating a video game?
+            UgoEMimi: Oh, more than a video game, THE video game! It will be a stealth but not too much slasher shooter with 4X elements and a car race and resource management multiplayer mode with microtransactions, NFT and lots of DLC!
+            UgoEMimi: But for now Ugo has only created the title and a cover with Paint.
+        + YOU: Mrs. Mimi, so you're into electricality, is that what they say?
+            UgoEMimi: A woman cannot be passionate about electricity, Mimi is only good at cleaning, cooking and ironing.
+            UgoEMimi: In fact we only live in one house where I did all the grounding.
+        + YOU: I don't know what you have, but in worship if you don't mind your own business you die badly. Bye.
         -
     
         -> loop
@@ -71,115 +71,115 @@ Dialoghi giorno 1..4: ogni personaggio ti da 2 ingredienti
     = BeBe_choice
     ~ loungeDialogue(BeBe)
     //Ingredienti: blocchi d'erba e uova di pecora (sacrificio)
-    BeBe: Ma ciao! Chi l'avrebbe mai detto che sarei sopravvissuta al primo giorno? Nella non ce l'ha fatta.
-    {not passaggio_lounge_giorno_uno.BeBe_choice: BeBe: Comunque ieri non ho avuto modo di presentarmi, sono BeBe, madre single di otto, ehm, sette agnelline.}
-        + YOU: Nella?
-            BeBe: Una lunga storia, una lunga lunga storia.
-        + YOU: Perché giri con una mannaia?
-            BeBe: Mannaia? Quale mannaia?
-        + YOU: Mi dispiace per chi è uscito. Ma scusa, chi è uscito?!?
-            BeBe: Secondo te mi ricordo i nomi di tutti voi, con le mie agnelline a casa?
+    BeBe: Well, hello there! Who would have thought I would survive the first day? Nella didn't make it.
+    {not passaggio_lounge_giorno_uno.BeBe_choice: BeBe: Anyway, I didn't get a chance to introduce myself yesterday, I'm BeBe, single mother of eight, er, seven little lambs.}
+        + You: Lala?
+            BeBe: A long history, a long long history.
+        + YOU: Why are you walking around with a cleaver?
+            BeBe: Cleaver? What cleaver?
+        + YOU: I feel sorry for those who got out. But sorry, who got out!!!
+            BeBe: Do you think I remember the names of all of you, with my lambs at home?
         -
-    BeBe: Ma parliamo di cose belle, visto il tema di oggi: hai persone amiche che ti aspettano? Io ho solo le mie otto, uh, sette figlie, e sono la loro migliore amica.
-    BeBe: La migliore mamma e amica che ci sia. Farei di tutto per loro!
-        + YOU: Certo, se ne sei convinta tu...
-        + YOU: Ho Micia che mi aspetta a casa, lei è la mia vita.
-        + YOU: Ci sono un po' di persone nel culto con cui vado d'accordo, sai? Ma non troppe.
+    BeBe: But let's talk about good things, given today's theme: do you have people friends waiting for you? I only have my eight, uh, seven daughters, and I'm their best friend.
+    BeBe: The best mom and friend there is. I would do anything for them!
+        + YOU: Of course, if you are convinced of it.…
+        + YOU: I have Kitty waiting for me at home, she is my life.
+        + YOU: There are a few people in the cult that I get along with, you know? But not too many.
         -
-        + YOU: Hai qualche ricetta segreta su cui puntare, oggi?
+        + YOU: Do you have any secret recipes to focus on today?
         -
-    BeBe: Se te la dicessi, non sarebbe segreta, non trovi?
-    BeBe: Scherzo, se il tema è "cibo per persone amiche" è ovvio che condivido.
-    BeBe: E tu sei una persona amica per me vero?
-        + YOU: Ceeerto che sì!
-        + YOU: (menti) Ceeeerto che sì!
-        + YOU: (ironicamente) Ceeerto che sì!
+    BeBe: If I told you, it wouldn't be secret, would it?
+    BeBe: Just kidding, if the theme is "food for friendly people," of course I agree.
+    BeBe: And you are a friend to me aren't you?
+        + YOU: Of course I do!
+        + YOU: (lie) Of course I do!
+        + YOU: (ironically) Of course I do!
         -
-    BeBe: Questo mi rassicura. Non amo le persone che mi prendono per le orecchie.
-    BeBe: Comunque, pensavo: cos'è la vera amicizia? E ovviamente ho pensato alle mie otto, ehm, sette figlie. E cosa amano fare quando siamo tutte assieme? I videogiochi!
-    BeBe: Mi diverte un sacco quando dicono in modo affettuoso "No mamma, non giocare con noi stasera, ti preghiamo!". Son così tenere.
-    BeBe: E quindi pensavo di fare dei cestini con dei <b>blocchi d'erba</b> fritti, e le <b>uova di pecora</b>.
+    BeBe: That reassures me. I don't like people who take me by the ears.
+    BeBe: Anyway, I was thinking, what is true friendship? And of course I thought about my eight, er, seven daughters. And what do they love to do when we're all together? Video games!
+    BeBe: It amuses me a lot when they say in an affectionate way, "No mom, don't play with us tonight, please!" They are so tender.
+    BeBe: And so I was thinking of making baskets with fried <b>grass blocks</b>, and <b>sheep eggs</b>.
     ~ dialogue_ingredients_of_the_day += blocchiDiErba
     ~ dialogue_ingredients_of_the_day += uovaDiPecora
-        + YOU: Uova di pecora?
+        + YOU: Sheep eggs?
         -
-    BeBe: Certo. In amicizia il sacrificio è importante!.
-    BeBe: Ma ora devo andare un attimo a covare. A dopo!
-        + YOU: Ehm, a dopo.
+    BeBe: Sure. In friendship, sacrifice is important!!!
+    BeBe: But now I have to go brood for a moment. See you later!
+        + YOU: Um, later.
         -
         -> loop
     
     = Piiiietro_choice
     ~ loungeDialogue(Piiiietro)
     //Ingredienti: tonno in scatola e scolare
-    Piiiietro: <b>Tonno in scatola</b> e <b>scolare</b>.
+    Piiiietro: <b>Canned tuna</b>, <b>drain</b>.
        ~ dialogue_ingredients_of_the_day += tonno_in_scatola
         ~ dialogue_ingredients_of_the_day += scolare
-        + YOU: Come, scusa?
-        + YOU: Ah, perfetto, a dopo.
+        + YOU: I beg your pardon?
+        + YOU: Ah, great, see you later.
         -> loop
-        + YOU: Non sai cucinare altro?
+        + YOU: Is that all you can cook?
         -
-    Piiiietro: Che ho visto ieri che guardavi cosa stavo cucinando. Fanno tutte così, a copiare il lavoro delle altre persone, e poi.
-        + YOU: Potrebbe sorprenderti, ma cucino persino peggio di te.
-            Piiiietro: Non esageriamo, ho visto cosa hai tirato fuori ieri!
-        + YOU: Hai trovato poi il tuo cane?
-            Piiiietro: No, e ho trovato la sua pelliccia di zibellino russo abbandonata dietro una poltrona.
-            Piiiietro: Ma fa sempre così, quando gli vieto di andare in vacanza da qualche parte.
-        + YOU: Ma il rosario poi?
-            Piiiietro: Credo di averlo visto addosso a Dogron, dovrò indagare meglio.
+    Piiiietro: That I saw yesterday that you were watching what I was cooking. They all do that, copying other people's work, and then.
+        + YOU: It may surprise you, but I cook even worse than you do.
+            Piiiietro: Let's not exaggerate, I saw what you brought up yesterday!
+        + YOU: Did you then find your dog?
+            Piiiietro: No, and I found his Russian sable fur coat abandoned behind an armchair.
+            Piiiietro: But he always does this when I forbid him to go on vacation somewhere.
+        + YOU: But the rosary then?
+            Piiiietro: I think I saw it on Dogron, I'll have to investigate further.
         -
-    Piiiietro: Comunque ieri la produzione mi ha detto che non me ne posso andare, che ho firmato un contratto, e che se l'errore è del mio agente a loro non cambia nulla.
-        + YOU: Agente?
+    Piiiietro: However, yesterday the production told me that I can't leave, that I signed a contract, and that if the mistake is my agent's it doesn't change anything to them.
+        + YOU: Agent?
         -
-    Piiiietro: Agente matematico. Facciamo sfide tipo come il rap, ma a suon di equazioni. Non sembra ma è superfaticoso, l'anno scorso due concorrenti sono morti disidratati pur di finire, oh, non ricordo manco cosa, tanto vinco sempre.
-    Piiiietro: Sono così brava in matematica.
-    Piiiietro: Ma ora ti saluto, che devo sistemare i diamantini sui denti prima dell'episodio.
-    {not passaggio_lounge_giorno_uno.Piiiietro_choice: Piiiietro: Ah, ieri non ci siamo presentate: mi chiamo Piiiietro.}
+    Piiiietro: Math agent. We do challenges like rap, but with equations. It doesn't look like it but it's super tiring, last year two contestants died of dehydration just to finish, oh, I don't even remember what, I always win anyway.
+    Piiiietro: I'm so good at math.
+    Piiiietro: But now I say goodbye, that I have to fix the diamonds on my teeth before the episode.
+    {not passaggio_lounge_giorno_uno.Piiiietro_choice: Piiiietro: Ah, we didn't introduce ourselves yesterday: my name is Piiiietro.}
         -> loop
         
     = Quello_choice
     ~ loungeDialogue(Quello)
     //Ingredienti: lacrime e cacao amaro
-    {not passaggio_lounge_giorno_uno.Quello_choice: Quello: Ciao! Io sono Quello, o Quello Lì a volte. Ti guardavo cucinare ieri e woah, te la cavi benissimo!}
-    Quello: Io sono un po' in difficoltà oggi, sai?
-    Quello: Tutti i miei "veri amici" sono morti, sai?
-        + YOU: Ma come quella battuta sui dinosauri?
-        + YOU: Questo è il momento in cui devo dire che mi dispiace, vero?
-        + YOU: Ho visto una pecora molto amichevole prima. Se vuoi parlare con lei...
+    {not passaggio_lounge_giorno_uno.Quello_choice: Quello: Hello! I am That One, or It, sometimes. I was watching you cook yesterday and woah, you're doing great!}
+    Quello: I'm kind of struggling today, you know?
+    Quello: All my "real friends" are dead, you know?
+        + YOU: But like that dinosaur joke?
+        + YOU: This is the time when I have to say I'm sorry, right?
+        + YOU: I saw a very friendly sheep earlier. If you want to talk to her…
         -
-    Quello: Non ti ammorbo con questa storia triste, promesso. Però non riesco a non pensare a ricette che non abbiano delle <b>lacrime</b>. Un sacco.
+    Quello: I won't bore you with this sad story, I promise. I can't help but think of recipes that don't have <b>tears</b> in them, though. Lots.
     ~ dialogue_ingredients_of_the_day += lacrime
-        + YOU: Non rovinano il sapore?
+        + YOU: Don't they spoil the flavor?
         -
-    Quello: Dipende. Con il <b>cacao amaro</b> il salato ci sta bene. Potrei fare una torta.
+    Quello: It depends. With <b>bitter cocoa</b>, the salty goes well with it. I might make a cake.
     ~ dialogue_ingredients_of_the_day += cacaoAmaro
-    Quello: Una torta da non dividere con nessuna persona.
-    Quello: A parte il Divo, che non mangerebbe però mai, perché gli farebbe schifo sulla fiducia. E ha ragione.
-    Quello: Scusa, la tristezza è vietata dal contratto di lavoro. A dopo, in bocca al lupo!
+    Quello: A cake not to be shared with any person.
+    Quello: Except for Il Divo, which he would never eat, however, because it would gross him out on trust. And he's right.
+    Quello: Sorry, sadness is forbidden by the labor contract. See you later, good luck!
         -> loop
     
     = ilDivo_choice
     ~ loungeDialogue(ilDivo)
     //Ingredienti: specchiarsi e scottare
-    ilDivo: Ho capito che è il Papa, ma può pure aspettare, che c'ho da aprire una nuova sede a Dubai prima di pranzo, va bene?!?
-        + YOU: Ma perché mi ostino a parlare con questo?
+    ilDivo: I get that it's the Pope, but it can wait, that I have to open a new office in Dubai before lunch, alright!!!?
+        + YOU: But why do I persist in talking to this?
         -
-    ilDivo: Ma ciao splendore! Ci conosciamo?
-        + {passaggio_lounge_giorno_uno.ilDivo_choice} YOU: Abbiamo parlato ieri assieme, tipo. Oprah, la bamba, lo zafferano?
-        + {not passaggio_lounge_giorno_uno.ilDivo_choice} YOU: Non ho ancora avuto la fortuna, no.
+    ilDivo: Why hello gorgeous! Have we met?
+        + {passaggio_lounge_giorno_uno.ilDivo_choice} YOU: We talked together yesterday, like. Oprah, the cocaine, the saffron?
+        + {not passaggio_lounge_giorno_uno.ilDivo_choice} YOU: I haven't had the luck yet, no.
         -
-    ilDivo: Mi chiamano il Divo, ma è un eufemismo. Pensa che alla Casa Bianca hanno un mio ritratto, così per dire.
-    ilDivo: Sulla Treccani c'è la mia foto sotto la definizione di "In", non come la preposizione ovvio ma che te lo dico che forse non hai fatto le medie ma te l'ho già chiesto, sei single?
-        + YOU: Sì, e ogni volta che incontro un uomo mi ricordo perché.
-        + YOU: No, ho qualcuno che mi aspetta a casa, ma non so come tornarci!
-        + YOU: Credo di avere una cotta per una delle persone qui in studio.
+    ilDivo: They call me il Divo, but that's an understatement. He thinks the White House has a portrait of me, so to speak.
+    ilDivo: Wikipedia has my picture under the definition of "Cool," not as the obvious preposition but what am I telling you that you may not have been in middle school but I already asked you, are you single?
+        + YOU: Yes, and every time I meet a man I remember why.
+        + YOU: No, I have someone waiting for me at home, but I don't know how to get back!
+        + YOU: I think I have a crush on one of the people here in the studio.
         -
-    ilDivo: Ovvio che poi ti innamori di me, ovvio. Bella Hadid ha deciso di non <b>specchiarsi</b> più dopo che mi ha visto.
+    ilDivo: Of course you then fall in love with me, of course. Bella Hadid decided not to <b>mirror</b> herself after she saw me.
         ~ dialogue_ingredients_of_the_day += specchiarsi
-    ilDivo: Però poi la vita è difficile.
-    ilDivo: Perché ti dicono "Ehi, che fortuna essere una specie con 23000 generi sessuali diversi, deve essere una gran bazza", ma poi anche da noi ci son cose binarie, e finisce che io mi innamoro, e...
-    ilDivo: Ma che ti sto a dire? Io sono roba che <b>scotta</b> baby, mica mi puoi agguantare così! E ora devo lavorare, lavorare, produrre, riempire il vuoto! Vattene!
+    ilDivo: But then life is difficult.
+    ilDivo: Because they tell you, "Hey, how fortunate to be a species with 23000 different sexual genders, it must be a great bazaar," but then we have binary things too, and I end up falling in love, and…
+    ilDivo: What am I telling you? I'm <b>hot</b> stuff baby, you can't just grab me like that! And now I have to work, work, produce, fill in the blank! Get out!
         ~ dialogue_ingredients_of_the_day += scottare
         -> loop
 
@@ -198,7 +198,7 @@ Dialoghi giorno 1..4: ogni personaggio ti da 2 ingredienti
 ~ temp num_loop_rimanenti = 3
 - (loop)
 ~ num_loop_rimanenti -= 1
-Total è {total}
+Total is {total}
 #kitchen_choice
 + {num_loop_rimanenti >= 0} 1
   ~ total += 1
@@ -221,7 +221,7 @@ Total è {total}
 - not success && not ScampataLaMorte && abilities has SaltaMorte:
   ~ ScampataLaMorte = true
   ~ abilities -= SaltaMorte
-  DOGRON: Uh, avresti dovuto perdere, ma hai il bonus che ti permette di salvarti una volta ! Fortuuuna a te, sì sì!
+  DOGRON: Uh, you should have lost, but you have the bonus that allows you to save yourself once ! Lucky for you, yes yes !
 - not success:
   -> non_ce_lhai_fatta
 }
