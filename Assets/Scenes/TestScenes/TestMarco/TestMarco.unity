@@ -507,8 +507,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   continueEvent: {fileID: 11400000, guid: 74398120320ca8046ad055551d04ad1c, type: 2}
-  inkAsset: {fileID: 4900000, guid: f78790f2d061f6b40840775d9e3d2be3, type: 3}
+  inkAssetEN: {fileID: 4900000, guid: c0d8bdc0f66d3844fa02932712fae1d9, type: 3}
+  inkAssetIT: {fileID: 4900000, guid: f78790f2d061f6b40840775d9e3d2be3, type: 3}
   inkAtomsStory: {fileID: 11400000, guid: a126e3948f9c90643836fbd3e7c6f17f, type: 2}
+  language:
+    _usage: 2
+    _value: 
+    _constant: {fileID: 0}
+    _variable: {fileID: 11400000, guid: a1517b75e9c2e4c44a1247768f0e9e4d, type: 2}
+    _variableInstancer: {fileID: 0}
 --- !u!1 &698819261
 GameObject:
   m_ObjectHideFlags: 0
