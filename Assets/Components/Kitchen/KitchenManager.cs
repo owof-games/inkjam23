@@ -21,10 +21,13 @@ public class KitchenManager : MonoBehaviour
     [SerializeField] private int minRightIngredients = 2;
     [SerializeField] private string chooseIngredientText;
     [SerializeField] private string explanationText;
+    [SerializeField] private string chooseIngredientTextEN;
+    [SerializeField] private string explanationTextEN;
     [SerializeField] private GameObject infoBoxRoot;
     [SerializeField] private TextMeshProUGUI infoBoxText;
     [SerializeField] private DogronReactions dogronReactions;
     [SerializeField] private PotAnimation potAnimation;
+    [SerializeField] private StringVariable languageVariable;
 
     private int numRightIngredients;
     private bool hasUsedChooseIngredientAbility;
@@ -91,13 +94,14 @@ public class KitchenManager : MonoBehaviour
                     if (chooseIngredient)
                     {
                         infoBoxRoot.SetActive(true);
-                        infoBoxText.text = chooseIngredientText;
+                        infoBoxText.text = languageVariable.Value == "EN" ? chooseIngredientTextEN : chooseIngredientText;
                         hasUsedChooseIngredientAbility = true;
                     }
                     else if (!hasDisplayedExplanationBox)
                     {
                         infoBoxRoot.SetActive(true);
-                        infoBoxText.text = explanationText.Replace("{X}", numIngredients.ToString());
+                        infoBoxText.text = (languageVariable.Value == "EN" ? explanationTextEN : explanationText)
+                            .Replace("{X}", numIngredients.ToString());
                         hasDisplayedExplanationBox = true;
                     }
                     else

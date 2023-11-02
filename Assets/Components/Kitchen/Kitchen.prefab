@@ -1372,10 +1372,13 @@ MonoBehaviour:
   chooseIngredientText: Ha la fortuna di poter scegliere un ingrediente a inizio
     ricetta.
   explanationText: Ci sono {X} ingredienti da scegliere per la ricetta, fai in fretta!
+  chooseIngredientTextEN: You're lucky, you can choose an ingredient at the beginning.
+  explanationTextEN: There are {X} ingredients to choose in this recipe, be quick!
   infoBoxRoot: {fileID: 6268684953368402136}
   infoBoxText: {fileID: 2853091321624602604}
   dogronReactions: {fileID: 8196912222860468998}
   potAnimation: {fileID: 6070226457121799248}
+  languageVariable: {fileID: 11400000, guid: a1517b75e9c2e4c44a1247768f0e9e4d, type: 2}
   rightIngredientAudioSource: {fileID: 4149533475076469285}
   wrongIngredientAudioSource: {fileID: 5319447182863456449}
 --- !u!114 &8449911695939338529
